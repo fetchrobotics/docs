@@ -1,17 +1,39 @@
-.. Fetch Robotics Documentation documentation master file, created by
+.. Fetch Robotics documentation master file, created by
    sphinx-quickstart on Sun Feb 15 02:38:06 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 Welcome to Fetch Robotics' documentation!
 ========================================================
 
-Contents:
+This document covers how to use this preview repository
+to evaluate the Fetch Robotics Research Edition Robot (FR3?)
+
+Getting Started
+---------------
 
 .. toctree::
    :maxdepth: 2
 
+   introduction
 
+Tutorials
+---------
+
+.. toctree::
+   :maxdepth: 2
+
+   gazebo
+   teleop
+   navigation
+   manipulation
+   perception
+
+ROS APIs
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   api_overview
 
 Indices and tables
 ==================
