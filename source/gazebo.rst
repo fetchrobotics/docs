@@ -36,6 +36,17 @@ tool for interacting with your robot.
 
 .. todo:: ADD IMAGE OF RVIZ
 
+You can now `manually set up your RVIZ visualization 
+<http://gazebosim.org/tutorials?tut=drcsim_visualization&cat=drcsim#VisualizingtheRobotmodel>`_
+or re-run RVIZ with a configuration file using the command line.
+
+The default ``.rviz`` configuration file for Fetch can be loaded using:
+::
+	>$ roscd fetch_navigation
+	>$ rviz navigation.rviz
+
+.. todo:: ADD IMAGE OF DEFAULT CONFIG
+
 Simulation vs. Real Robots
 --------------------------
 The simulated robot may not be identical to the real robot. In fact, the
