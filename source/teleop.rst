@@ -3,28 +3,14 @@ Tutorial: Robot Teleop
 
 Starting the Teleop
 -------------------
-To use the teleop, launch the gazebo simulation using the steps in the :doc:`previous tutorial</gazebo>`.
+The keyboard teleop uses ``teleop_twist_keyboard.py`` from `teleop_twist_keyboard <http://wiki.ros.org/teleop_twist_keyboard>`_.
 
-The keyboard teleop is launched from the ``fetch_gazebo`` package:
-
+It can be launched by running the script and remapping ``cmd_vel`` to ``base_controller/command``:
 ::
 
-	>$ rosrun fetch_gazebo teleop_freight.py
+	>$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=base_controller/command
 
-A prompt similar to the one below will appear and your keyboard will now operate the robot.
-::
-	Reading from the keyboard  and Publishing to Twist!
-	---------------------------
-	Moving around:
-	   u    i    o
-	   j    k    l
-	   m    ,    .
 
-	q/z : increase/decrease max speeds by 10%
-	w/x : increase/decrease only linear speed by 10%
-	e/c : increase/decrease only angular speed by 10%
-	anything else : stop
 
-	CTRL-C to quit
 
 .. todo:: JOYSTICK TELEOP
