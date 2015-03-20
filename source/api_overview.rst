@@ -69,6 +69,8 @@ the gripper is commanded to a fully closed or fully opened position, so
 the closed position, the grasp strength will be determined by the maximum
 effort.
 
+.. _camera_api:
+
 Head Camera Interface
 ---------------------
 The head camera exposes several topics of interest:
