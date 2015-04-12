@@ -14,6 +14,7 @@ Getting Started
    :maxdepth: 2
 
    introduction
+   care_and_feeding
 
 Tutorials
 ---------
