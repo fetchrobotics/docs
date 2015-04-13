@@ -1,38 +1,49 @@
 Introduction
 ============
 
-This documentation shows how to use the Fetch simulator preview. It
-also provides some basic tutorials on using the robot. Please also
-refer to the documentation at http://wiki.ros.org
+This manual is intended to give Fetch & Freight R&D users information to
+successfully install, use, and develop code on the Fetch & Freight R&D robots. The
+software installed on both robots is based on ROS. Please visit ros.org to lean
+more about ROS. To get started as quickly as possible; please start by reading
+Section 2, Safety, it is important not to operate a robot before reading Section
+2. If you are setting up Fetch or Freight for the first time please see the
+tutorial videos for unboxing Fetch & Freight to learn how to properly unpackage
+and setup the robots for the first time.
 
-Installation
-------------
-At this time, the preview repository is only available from source. We
-recommend using a standard installation of
-`ROS Indigo on Ubuntu 14.04 <http://wiki.ros.org/indigo/Installation/Ubuntu>`_.
+Before you Start
+----------------
 
-Once you have installed ROS, the following set of commands will create
-a new ROS workspace with just the preview repository inside, and then
-install the remaining dependencies from debian packages:
+Before getting started, below is an overview of what you need to use and operate
+Fetch & Freight safely.
 
-::
+* Fetch & Freight Safety 
+ 
+ - Please read **Section 2: Safety** in its entirety before using either robot.
 
-   mkdir ~/catkin_ws/src
-   cd ~/catkin_ws/src
-   git clone https://github.com/fetchrobotics/preview.git
-   git clone https://github.com/mikeferguson/moveit_planners.git
-   cd ~/catkin_ws
-   source /opt/ros/indigo/setup.bash
-   rosdep install --from-paths src --ignore-src --rosdistro indigo -y
-   catkin_make
+* Safe Environment 
+ 
+ - Operate Fetch & Freight in an enviroment free of hazards. Specifically, stairways and large drop offs can cause personal injury and extreme damage. Avoid dangerous objects, sharp objects (such as knives), fire sources, or hazardous chemicals. A robot with a knife or hot object is inherrently dangerous.
 
-Note: the above instructions currently build moveit_planners from source,
-while this is not required, it is highly recommended until certain patches
-are moved upstream to fix extremely long planning times with OMPL. We also
-recommend making sure your gazebo_ros_pkgs and rviz installs are up to date
-as we have recently patched some issues with both:
+* Space 
 
-::
+ - Make sure that there is enough space for Fetch & Freight to drive around and preform tasks. Both Fetch & Freight are designed to operate in ADA-compliant enviroments (Americans with Disabilities Act.)
 
-    sudo apt-get update
-    sudo apt-get install ros-indigo-rviz ros-indigo-gazebo-plugins
+* Development Tools 
+ 
+ - To connect with Fetch & Freight, a laptop or desktop computer is needed. Ideally Fetch & Freight can connect to a wireless network but users can also directly to Fetch or Freight via an ethernet port on each robot. 
+
+* Linux
+ 
+ - Familarity with the Linux command-line is strongly recommended. The computers in both Fetch & Freight have Ubuntu Linux installed. Tasks can be preformed by logging in remotely by using ssh or other similar tool. Users can also directly plug in a display, mouse, and keyboard to the access panels on Fetch & Freight.
+
+* Electrical 
+
+ - Fetch & Freight charge using a power brick that uses a standard 120V or 220VAC power outlet.
+
+* ROS and Fetch & Freight
+
+ - All Fetch & Freight R&D software is based on ROS. Completing the beginner tutorials in Section TODO will help users understand how to operate and write applications for the Fetch & Freight.
+
+* Fetch & Freight Support
+
+ - Please visit the Fetch Robotics support portal at TODO  and login to review service information, modularity specifications, important safety updates, and submit hardware or software support tickets for your robot. 

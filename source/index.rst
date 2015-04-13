@@ -14,6 +14,9 @@ Getting Started
    :maxdepth: 2
 
    introduction
+   safety 
+   in_the_box
+   robot_hardware
    care_and_feeding
 
 Tutorials
