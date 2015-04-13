@@ -74,4 +74,4 @@ similar (e.g. forearm_link and forearm_frame). For components such
 drive wheels that are included in the robot in multiple locations, a
 short prefix is used to indicate which location is referred.
 
-TODO include image of fetch and freight naming scheme
+.. TODO:: include image of fetch and freight naming scheme

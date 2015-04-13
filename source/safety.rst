@@ -81,11 +81,13 @@ guarantee safety, only reduce risk.
 \
 
 * Do not allow the robot to come in contact with liquids (spilled drink, rain, ect.) If the robots do get wet, turn off the breaker switch at the back of the robot and contact Fetch Robotics.
+\
  
 * Before removing any covers, the robot should be unplugged and the breaker switch at the back of the robot should be off. 
 \
 
 * Make sure that the power cord is in good condition. Cord insulation must be intact with no crack or deterioration Both connectors should be undamaged. If the power supply is damaged in anyway, it should be discarded and replaces with a new one from Fetch Robotics. 
+\
 
 * Do not run the robot without its covers, the covers help to protect users from internal mechanism pinch points and potential electrical shock.
 \
@@ -98,3 +100,10 @@ guarantee safety, only reduce risk.
  - Pay attention to the **warning labels** on the robots.
  - **Do not modify or remove any part of the software safety features.**
 
+Warning Labels
+--------------
+
+Below are pictures of all the warning labels that can be found on the
+robot and associated safety issue.
+
+.. TODO:: add images and descriptions

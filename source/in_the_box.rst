@@ -14,7 +14,7 @@ the robot, and driving the robot via the provided joystick.
 Toolkit
 -------
 
-TODO PIC of kit
+.. TODO:: PIC of kit
 
 * Wireless Joystick 
 
@@ -26,3 +26,5 @@ TODO PIC of kit
 
 Robot Power Supply 
 ------------------
+
+.. TODO:: PIC of power supply
