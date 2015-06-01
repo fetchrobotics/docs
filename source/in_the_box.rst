@@ -11,6 +11,8 @@ Please watch the respective video for unpacking Fetch or Frieght. The
 video covers unpacking the robot, connecting the batteries, turning on
 the robot, and driving the robot via the provided joystick.
 
+.. TODO:: PIC of robot in box
+
 Toolkit
 -------
 

@@ -106,4 +106,15 @@ Warning Labels
 Below are pictures of all the warning labels that can be found on the
 robot and associated safety issue.
 
-.. TODO:: add images and descriptions
+.. TODO:: add images and descriptions... the table sucks.. 
+
+.. csv-table:: 
+   :widths: 50 50
+
+   .. image:: _static/electrical_shock_charge.jpg, "**Electrical Shock** 
+   Make sure that no foreign objects become lodged in the connector"
+   .. image:: _static/pinch_point_head.jpg, **Pinch Point** Do not place fingers near the head while rotatingxs
+   .. image:: _static/pinch_point_torso.jpg, **Pinch Point** Do not place fingers under the torso skin while the moving
+
+
+
