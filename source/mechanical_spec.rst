@@ -24,14 +24,14 @@ Incline Surface
 
 Water
 '''''
- - Fetch & Freight have not been tested for any type of contact with water or any other liquid. Under no circumstances should Fetch & Freight come in contact with water from rain, mist, ground water (puddles) and any other liquid. Water contact can cause damage to the electrical circuitry and the mechanism.
+ - Fetch & Freight have not been tested for any type of contact with water or any other liquid. Under no circumstances should Fetch nor Freight come in contact with water from rain, mist, ground water (puddles) and any other liquid. Water contact can cause damage to the electrical circuitry and the mechanism.
 
 Temperature and Humidity 
 ''''''''''''''''''''''''
  - Temperature testing of the Fetch & Freight has allowed the unit to run between 15C and 35C. 
 .. TODO:: get real operating temperature numbers
 \
- - Keep the Fetch & Freight away from open flames and other heat sources.  Never use the Fetch & Freight around stoves or ovens.
+ - Keep the Fetch & Freight away from open flames and other heat sources.  Never use the Fetch or Freight around stoves or ovens.
 
 Forces and Torques 
 ++++++++++++++++++ 
@@ -71,6 +71,8 @@ Joint Limits and Types
 
 The position limits for the Fetch & Freight are specified below. These
 "hard limits" are the maximum travel for the mechanism.
+
+.. TODO:: check ranges below (head_tilt is wrong)
 
 ====================== ========== ========== ==========
 Joint                  Type       Limit (+)  Limit (-)
