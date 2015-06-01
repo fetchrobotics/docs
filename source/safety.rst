@@ -113,8 +113,8 @@ robot and associated safety issue.
 
    .. image:: _static/electrical_shock_charge.jpg, "**Electrical Shock** 
    Make sure that no foreign objects become lodged in the connector"
-   .. image:: _static/pinch_point_head.jpg, **Pinch Point** Do not place fingers near the head while rotatingxs
-   .. image:: _static/pinch_point_torso.jpg, **Pinch Point** Do not place fingers under the torso skin while the moving
+   .. image:: _static/pinch_point_head.jpg, **Pinch Point** Do not place fingers near the head while rotating
+   .. image:: _static/pinch_point_torso.jpg, **Pinch Point** Do not place fingers under the torso skin while moving
 
 
 
