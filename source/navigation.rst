@@ -34,12 +34,14 @@ Once you are happy with the map, you can save the map:
 
 ::
 
-    >$ rosrun map_server map_saver -f <map_directory>
+    >$ rosrun map_server map_saver -f <map_directory/map_name>
 
-The map saver will create two files in the specified directory. The
-first is the map in a ``.pgm`` image format, and the second is a
-YAML file that specifies metadata for the image. This file can then
-be later served by the map_server:
+The map saver will create two files in the specified
+``map_directory``. The directory must already exist if it doesn't,
+just run ``mkdir map_directory``. The two files are map_name.pgm and
+map_name.yaml. The first is the map in a ``.pgm`` image format, and
+the second is a YAML file that specifies metadata for the image. These
+files can then be served by the map_server:
 
 ::
 
