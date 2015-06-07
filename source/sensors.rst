@@ -14,14 +14,16 @@ IMU
 +++
 
 The mainboard of Fetch and Freight have a 6-axis interial measurement
-unit (IMU). This publishes to the **imu** topic. The gyroscope within
-the IMU is capable of measuring +/-2000 degrees per second, while the
-accelerometers are capable of measuriing +/-2g
+unit (IMU). The gyroscope within the IMU is capable of measuring
++/-2000 degrees per second, while the accelerometers are capable
+of measuriing +/-2g. See :ref:`imu_api` for details on the ROS API.
 
 Speakers
 ++++++++
 
 The mainboard of Fetch and Freight contains a USB audio device.
+
+.. TODO:: Add audio server usage.
 
 Head Camera
 +++++++++++
@@ -34,7 +36,7 @@ Gripper Sensors
 +++++++++++++++
 
 In addition to the position and effort feedback of the gripper joint, the
-gripper incorporates a 6-axis interial measurement unit (IMU). This
-publishes to the **gripper_imu** topic. The gyroscope within
+gripper incorporates a 6-axis interial measurement unit (IMU). The gyroscope within
 the IMU is capable of measuring +/-2000 degrees per second, while the
-accelerometers are capable of measuriing +/-2g
+accelerometers are capable of measuriing +/-2g.
+See :ref:`imu_api` for details on the ROS API.
