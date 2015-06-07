@@ -14,8 +14,8 @@ Once your APT repositories are configured, you can install the simulator:
 
 ::
 
-    >sudo apt-get update
-    >sudo apt-get install ros-indigo-fetch-gazebo-demo
+    >$ sudo apt-get update
+    >$ sudo apt-get install ros-indigo-fetch-gazebo-demo
 
 .. warning::
 
@@ -51,6 +51,15 @@ To start the simplest environment:
 
 Note that all of the environments will prepare the robot by tucking the
 arm and giving the head an initial command.
+
+Simulating a Freight
+--------------------
+
+Freight uses the same launch files as Fetch, simply pass the robot argument:
+
+::
+
+    >$ roslaunch fetch_gazebo simulation.launch robot:=freight
 
 Visualizing with RVIZ
 ---------------------
@@ -131,5 +140,3 @@ real robot is likely quite a bit better behaved. Also:
    so the object will always be grasped in the center of the gripper. With
    the simulated robot, the fingers are independently actuated, and so the
    object may drift to one side.
- * Currently, the simulator package does not include a multiplexor for the
-   cmd_vel topic.
