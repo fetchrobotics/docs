@@ -1,9 +1,35 @@
 Tutorial: Gazebo Simulation
 ===========================
 
+Fetch and Freight have simulated counterparts using the
+`Gazebo Simulator <http://gazebosim.org>`_.
+
+Installation
+------------
+
+Before installing the simulation environment, make sure your desktop
+is setup with a standard installation of
+`ROS Indigo on Ubuntu 14.04 <http://wiki.ros.org/indigo/Installation/Ubuntu>`_.
+Once your APT repositories are configured, you can install the simulator:
+
+::
+
+    >sudo apt-get update
+    >sudo apt-get install ros-indigo-fetch-gazebo-demo
+
+.. warning::
+
+    Never run the simulator on the robot. Simulation requires that
+    the ROS parameter use_sim_time be set to true, which will cause
+    the robot drivers to stop working correctly. In addition, be sure
+    to never start the simulator in a terminal that has the ROS_MASTER_URI
+    set to your robot for the same reasons.
+
 Starting the Simulator
 ----------------------
-The ``fetch_gazebo`` package includes several launch files:
+
+The ``fetch_gazebo`` and ``fetch_gazebo_demo`` packages provide the Gazebo
+environment for Fetch. ``fetch_gazebo`` includes several launch files:
 
  * simulation.launch spawns a robot in an empty world.
  * playground.launch spawns a robot inside a lab-like test environment.
@@ -46,7 +72,7 @@ The default ``.rviz`` configuration file for Fetch can be loaded using:
 ::
 
 	>$ roscd fetch_navigation/config
-	>$ rviz navigation.rviz
+	>$ rviz -d navigation.rviz
 
 .. todo:: ADD IMAGE OF DEFAULT CONFIG
 
@@ -68,11 +94,11 @@ launch file:
 
 ::
 
-    >$ roslaunch fetch_gazebo demo.launch
+    >$ roslaunch fetch_gazebo_demo demo.launch
 
 This will start:
 
- * navigation.launch - this is the navigation stack with a pre-built map of
+ * fetch_nav.launch - this is the navigation stack with a pre-built map of
    the environment.
  * move_group.launch - this is the MoveIt configuration which can plan for
    the movement of the arm.
@@ -106,5 +132,4 @@ real robot is likely quite a bit better behaved. Also:
    the simulated robot, the fingers are independently actuated, and so the
    object may drift to one side.
  * Currently, the simulator package does not include a multiplexor for the
-   cmd_vel topic. The real robot will certainly include a multiplexor that
-   allows the joystick teleop to override the commands sent to cmd_vel.
+   cmd_vel topic.
