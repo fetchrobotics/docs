@@ -14,6 +14,8 @@ to REP-compatible interfaces, we have adopted a number of the community-accepted
 standard interfaces, such as those provided by the 
 `control_msgs <http://wiki.ros.org/control_msgs>`_ package.
 
+.. _arm_api:
+
 Arm and Torso
 -------------
 The arm and torso of the robot are controlled by
@@ -26,6 +28,8 @@ the arm to execute a pre-defined trajectory. Three interfaces are provided:
  * `torso_controller/follow_joint_trajectory` to control just the torso.
 
 Only one controller is allowed to control a joint at a time.
+
+.. _base_api:
 
 Base Interface
 --------------
@@ -42,8 +46,14 @@ Only two fields are used in the message:
  * ``linear.x`` specifies the robot's forward velocity
  * ``angular.z`` specifies the robot's turning velocity
 
+User applications will typically not connect directly to `base_controller/command`,
+but rather to `cmd_vel`. A multiplexor is always running between `cmd_vel/teleop`
+and `cmd_vel`. Whenever the deadman on the robot controller is held, `cmd_vel/teleop`
+will override `cmd_vel`. The advantage of having your application publish to `cmd_vel`
+rather than directly to `base_controller/command` is that you can override bad
+commands by simply pressing the deadman on the robot controller.
 
-.. todo:: DESCRIBE MULTIPLEXOR
+.. _head_api:
 
 Head Interface
 --------------
@@ -58,6 +68,8 @@ available on `head_controller/point_head`. It is of type
 Although the interface currently does not support any of the ``pointing_axis`` or ``pointing_frame``
 fields, it points the `head_tilt_link` (which is very near the camera optical
 axis) towards the `target` point to achieve a similar effect. A ``min_duration`` or ``max_velocity`` can also be specified.
+
+.. _gripper_api:
 
 Gripper Interface
 -----------------
@@ -86,13 +98,29 @@ The head camera exposes several topics of interest:
    This is just the 2d color data. It is published at VGA resolution (640x480)
    at 15hz.
 
+.. _laser_api:
+
 Laser Interface
 ---------------
+
 `base_scan` is a `sensor_msgs/LaserScan <http://docs.ros.org/api/sensor_msgs/html/msg/LaserScan.html>`_
 message published at 15hz.
 
+Note: the raw laser information as reported by the laser hardware is published to
+`base_scan_raw`. The information published to `base_scan` is filtered to remove
+shadow points.
+
+.. _imu_api:
+
 IMU Interface
 -------------
-The IMU is not present in the simulated robot.
 
-.. todo:: DESCRIBE IMU TOPICS ON REAL ROBOT
+`imu` is a `sensor_msgs/Imu <http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html>`_
+message published at 100hz. This message contains the linear acceleration and
+rotational velocities as measured by the IMU located in the base of the robot.
+
+On Fetch robots, the gripper IMU publishes to `gripper_imu`. This is also
+a `sensor_msgs/Imu <http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html>`_
+message published at 100hz.
+
+The IMUs are not present in the simulated robot.
