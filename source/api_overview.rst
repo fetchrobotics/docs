@@ -53,6 +53,10 @@ will override `cmd_vel`. The advantage of having your application publish to `cm
 rather than directly to `base_controller/command` is that you can override bad
 commands by simply pressing the deadman on the robot controller.
 
+The base controller implements a speed reduction when in the proximity of
+obstacles. This will not entirely stop the robot if it is about to hit something,
+but will prevent full speed collisions.
+
 .. _head_api:
 
 Head Interface
