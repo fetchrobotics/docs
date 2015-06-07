@@ -69,6 +69,8 @@ chrony installed. To install chrony on Ubuntu:
     > sudo apt-get update
     > sudo apt-get install chrony
 
+.. _upstart_services:
+
 Upstart Services
 ++++++++++++++++
 
@@ -80,7 +82,7 @@ Name        Description
 =========== ========================================
 roscore     starts a roscore
 robot       starts robot drivers, requires roscore
-sixad       driver for PS3 controller over bluetooth
+sixad       driver for robot joystick over bluetooth
 =========== ========================================
 
 Upstart service can be restart with the `service` command. For instance, to

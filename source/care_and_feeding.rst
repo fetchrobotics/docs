@@ -4,7 +4,7 @@ Care And Feeding
 Charging
 --------
 
-TODO
+.. TODO:: add information on charging
 
 Updating Your Robot
 -------------------

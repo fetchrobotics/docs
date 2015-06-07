@@ -30,6 +30,7 @@ Tutorials
    navigation
    manipulation
    perception
+   calibration
 
 ROS APIs
 --------
