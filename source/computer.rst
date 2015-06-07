@@ -1,41 +1,108 @@
 Computer Overview and Configuration
 -----------------------------------
-Both Fetch and Freight have an internal computer
 
-BIOS
-++++
+Both Fetch and Freight have an internal computer which runs a
+Long Term Support (LTS) release of Ubuntu and an LTS release of
+ROS. These releases are intended to give long-term stability to
+the system.
 
-Networking 
-++++++++++ 
+Default User Account
+++++++++++++++++++++
 
-The majority of communication between components onboard the Fetch &
-Freight happens via an onboard ethernet network, referred to as the
-"robot internal network". This internal network can be accessed
-indirectly via the internal computer via either wired connection
-(through the access panel), or wireless connection.
+Each robot ships with a default user account, with username `fetch` and
+password `robotics`. It is recommended to change the password when
+setting up the robot.
 
-The 10.42.42.0 subnet is the primary network used internally by the
-computer on the robot. Additionally many of the ethernet-based
-devices, such as the mainboard board, gripper, and laser, are given
-addresses on this subnet.
+Creating User Accounts
+++++++++++++++++++++++
 
-Home Directories
-++++++++++++++++
+It is recommended that each user create their own account on the robot, especially
+when developing from source. To create an account on the robot, ssh into the
+robot as the `fetch` user, and run the following commands:
 
-Storage
-+++++++
+::
 
-Formatting Drives
-+++++++++++++++++
+    >sudo adduser USERNAME
+    >sudo usermod -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare USERNAME
 
-Drive Maintenance
-+++++++++++++++++
+Networking
+++++++++++
+
+The robot has both internal and external Ethernet-based networks,
+as well as an external wireless network interface. The external
+network interfaces are intended for users to connect to the robot,
+while the internal networks are used to send data between the
+internal components of the robot.
+
+The majority of communication between components onboard Fetch &
+Freight happen via the internal ethernet network. This network
+is located in the 10.42.42.0/24 subnet and connects the robot
+computer to the laser range finder, mainboard, gripper, and
+other devices. As such, it is important that your building
+networks do not use the same subnet.
+
+There are two possible interfaces for connecting to the robot
+computer: the wireless interface and the wired interface. Most users
+will prefer to use the wireless interface, however the access panel
+also includes a Gigabit Ethernet interface for stationary tasks that
+require higher bandwidth.
+
+.. warning::
+
+    Never drive the robot with an Ethernet cable attached to the access panel.
+
+Connecting the Robot to a Wireless Network
+++++++++++++++++++++++++++++++++++++++++++
+
+The easiest way to configure the wireless networking is to connect a monitor,
+keyboard, and mouse and use the Network Manager interface.
 
 Clock Synchronization
 +++++++++++++++++++++
 
-udev
-++++
+It is recommended to install the chrony NTP client on both robots and desktops
+in order to keep their time synchronized. By default, robots do not ship with
+chrony installed. To install chrony on Ubuntu:
 
-Upstart Jobs
-++++++++++++
+::
+
+    > sudo apt-get update
+    > sudo apt-get install chrony
+
+Upstart Services
+++++++++++++++++
+
+Fetch and Freight use upstart to start and manage various services on the robot.
+The following upstart services start when the robot is booted:
+
+=========== ========================================
+Name        Description
+=========== ========================================
+roscore     starts a roscore
+robot       starts robot drivers, requires roscore
+sixad       driver for PS3 controller over bluetooth
+=========== ========================================
+
+Upstart service can be restart with the `service` command. For instance, to
+restart the robot drivers:
+
+::
+
+    >sudo service robot stop
+    >sudo service robot start
+
+Since the roscore runs independently of the drivers, the drivers can be
+restarted without having to restart remote instances of RVIZ or similar ROS
+tools. Note that this also means the parameter server will not be reset
+when restarting the drivers, and so a roscore restart may be required
+if the parameter server has been corrupted by a user script.
+
+Log Files
++++++++++
+
+A number of log files are created on the robot. Log files related to upstart
+services can be found in the /var/log/upstart folder, the name of the log
+will be service.log.
+
+ROS logs for the robot and roscore upstart services will be created in the
+/var/log/ros folder.

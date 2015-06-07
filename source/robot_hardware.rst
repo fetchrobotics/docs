@@ -5,5 +5,4 @@ Robot Hardware Overview
 .. include:: mechanical_spec.rst
 .. include:: sensors.rst
 .. include:: motion_control.rst
-.. include:: computer.rst 
-.. include:: networking.rst 
+.. include:: computer.rst
