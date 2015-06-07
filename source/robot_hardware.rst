@@ -7,6 +7,3 @@ Robot Hardware Overview
 .. include:: motion_control.rst
 .. include:: computer.rst 
 .. include:: networking.rst 
-
-
-
