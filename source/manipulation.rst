@@ -1,9 +1,7 @@
 Tutorial: Manipulation
 ======================
 
-Once you have :doc:`Fetch running in Gazebo </gazebo>`, you can
-start moving the arm with MoveIt!
-
+Once you have Fetch running, you can start moving the arm with MoveIt!
 
 Getting Started
 ---------------
@@ -21,17 +19,15 @@ publisher window to move the joints to new starting positions
 and use interactive markers to create new locations to plan
 to and from.
 
+Running MoveIt!
+---------------
 
-Running MoveIt! in Gazebo
--------------------------
-
-To run MoveIt! alongside a simulated robot, launch the
+To run MoveIt! on a real or simulated robot, launch the
 move_group.launch file from the ``fetch_moveit_config`` package:
 
 ::
 
 	>$ roslaunch fetch_moveit_config move_group.launch
-
 
 Running the Pick and Place Demo
 -------------------------------
