@@ -1,6 +1,8 @@
 Care And Feeding
 ================
 
+.. _charging:
+
 Charging
 --------
 

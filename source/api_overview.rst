@@ -29,6 +29,9 @@ the arm to execute a pre-defined trajectory. Three interfaces are provided:
 
 Only one controller is allowed to control a joint at a time.
 
+In addition to the trajectory controllers, the arm is always running a gravity
+compensation controller.
+
 .. _base_api:
 
 Base Interface

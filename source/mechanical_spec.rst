@@ -97,6 +97,14 @@ wrist_roll_joint       continuous    --           --
 *_gripper_finger_joint prismatic   50mm       0mm
 ====================== ========== =========== ==========
 
+Mount Points
+++++++++++++
+
+Fetch and Freight both have mount points on top of the robot base. Fetch also
+has mount points on the head and gripper.
+
+.. TODO:: Add details on screw size, torque limits, etc of these mounts.
+
 Gripper Modularity Interface
 ++++++++++++++++++++++++++++
 
