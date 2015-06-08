@@ -24,17 +24,17 @@ Fetch & Freight safely.
 
 * **Safe Environment** 
  
- - Only operate Fetch & Freight in an enviroment free of hazards. Specifically,
+ - Only operate Fetch & Freight in an environment free of hazards. Specifically,
    stairways and large drop offs can cause personal injury and extreme damage.
    Avoid dangerous objects, sharp objects (such as knives), fire sources, or
-   hazardous chemicals. A robot with a knife or hot object is inherrently
+   hazardous chemicals. A robot with a knife or hot object is inherently
    dangerous.
 
 * **Space** 
 
  - Make sure that there is enough space for Fetch & Freight to drive around
    and preform tasks. Both Fetch & Freight are designed to operate in ADA-compliant
-   enviroments (Americans with Disabilities Act).
+   environments (Americans with Disabilities Act).
 
 * **Development Tools** 
  
@@ -44,7 +44,7 @@ Fetch & Freight safely.
 
 * **Linux**
  
- - Familarity with the Linux command-line is strongly recommended. The computers
+ - Familiarity with the Linux command-line is strongly recommended. The computers
    in both Fetch & Freight have Ubuntu Linux installed. Tasks can be preformed
    by logging in remotely by using ssh or other similar tool. Users can also
    directly plug in a display, mouse, and keyboard to the access panels on

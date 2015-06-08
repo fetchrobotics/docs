@@ -25,9 +25,9 @@ Drive Surface
 
 Incline Surface
 '''''''''''''''
- - Fetch & Fright are ready for ADA-compliant ramps, which are at no more
-   than a 1/12 slope. Ramps that are steeper than a 1/12 slope are unsafe
-   and may be a tip-over hazard.
+ - Fetch & Freight are ready for ADA-compliant ramps, which are at no
+   more than a 1/12 slope. Ramps that are steeper than a 1/12 slope
+   are unsafe and may be a tipping hazard.
 
 Water
 '''''
@@ -48,11 +48,11 @@ Forces and Torques
 
 Joint position, velocity, and force limits are implemented in the
 Fetch & Freight URDF file as well as in firmware. Firmware implements
-additional power limits. These joint limits
-control the range of travel of the mechanism and the allowable velocity
-to prevent over-travel. These limits are enforced by the controller,
-and are designed to prevent poorly commanded control efforts from
-damaging the robot or harming operators.
+additional power limits. These joint limits control the range of
+travel of the mechanism and the allowable velocity to prevent
+over-travel. These limits are enforced by the controller, and are
+designed to prevent poorly commanded control efforts from damaging the
+robot or harming operators.
 
 The limits below are from the Fetch & Freight URDF files. If a
 velocity or torque limit is not specified, no value is enforced.
@@ -77,7 +77,7 @@ wrist_roll_joint       2.26rad/s  7.36Nm       TBD
 Joint Limits and Types
 ++++++++++++++++++++++
 
-The position limits for the Fetch & Freight are specified below. These
+The position limits for Fetch & Freight are specified below. These
 "hard limits" are the maximum travel for the mechanism.
 
 ====================== ========== =========== ==========
