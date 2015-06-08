@@ -44,7 +44,7 @@ These design features help make the Fetch & Freight more
 robust. However a R&D robot is **never** absolutely safe. The
 application developers' safety, as well as the safety of others,
 depends on the developers' constant attention. It is important for the
-user to be aware of potential dangrs and learn to anticipate and
+user to be aware of potential dangers and learn to anticipate and
 prevent problems.
 
 General Usage Guidelines
@@ -70,23 +70,23 @@ guarantee safety, only reduce risk.
  - Keep the robots **at least 5 meters from the top of a stairway or any other drop off**. 
  - Make sure the robots have adequate and level space for any expected or unexpected operation. 
  - If Fetch travels on a ramp, make sure that the spine is lowered and the arm is tucked so that the center of gravity is as low as possible. The slope of the ramp should not exceed 1:12. Also make sure that the robot cannot drive off the edge of the ramp. 
- - Make sure the enviroment is free of objects that could pose a risk id knocked, hit, or otherwise affected by the robots. 
+ - Make sure the enviroment is free of objects that could pose a risk if knocked, hit, or otherwise affected by the robots. 
  - Make sure that there are now ropes or cables that could get caught in the covers, wheels, or arm. 
  - Make sure that no animals are near the robots.
  - Keep fingers, hair, and clothing away from wheels, gears, and any location marked as a potential pinch point. 
- - Be aware of the location of emergency exist and ensure that the robots cannot block them. 
+ - Be aware of the location of emergency exits and ensure that the robots cannot block them. 
  - Do not operate the robots outdoors. 
 
 * **The Fetch & Freight covers are flame-retardent**. However keep the robots away from open flames. Never use the robots around stoves or ovens.
 \
 
-* Do not allow the robot to come in contact with liquids (spilled drink, rain, ect.) If the robots do get wet, turn off the breaker switch at the back of the robot and contact Fetch Robotics.
+* Do not allow the robot to come in contact with liquids (spilled drink, rain, etc.) If the robots do get wet, turn off the breaker switch at the back of the robot and contact Fetch Robotics.
 \
  
 * Before removing any covers, the robot should be unplugged and the breaker switch at the back of the robot should be off. 
 \
 
-* Make sure that the power cord is in good condition. Cord insulation must be intact with no crack or deterioration Both connectors should be undamaged. If the power supply is damaged in anyway, it should be discarded and replaces with a new one from Fetch Robotics. 
+* Make sure that the power cord is in good condition. Cord insulation must be intact with no crack or deterioration. Both connectors should be undamaged. If the power supply is damaged in anyway, it should be discarded and replaced with a new one from Fetch Robotics. 
 \
 
 * Do not run the robot without its covers, the covers help to protect users from internal mechanism pinch points and potential electrical shock.
