@@ -1,8 +1,8 @@
-Mechanical Specification 
------------------------- 
+Mechanical Overview
+-------------------
 
 Do not operate Fetch or Freight before reviewing the mechanical
-specifications listed below.
+information listed below.
 
 Environmental
 +++++++++++++
@@ -96,3 +96,11 @@ wrist_flex_joint       revolute    125°        125°
 wrist_roll_joint       continuous    --           --
 *_gripper_finger_joint prismatic   50mm       0mm
 ====================== ========== =========== ==========
+
+Gripper Modularity Interface
+++++++++++++++++++++++++++++
+
+The gripper interface is modular, allowing the gripper to be replaced with alternate
+configurations. The gripper interface is based on an ISO mechanical standard,
+Ethernet communications and 24V power. For further details, contact Fetch Robotics
+for the `Gripper Interface Specification` document.
