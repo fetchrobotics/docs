@@ -6,7 +6,7 @@ code on Fetch & Freight Research Edition robots. The software installed on
 both robots is based on ROS. Please visit ros.org to learn more about ROS.
 
 All users should read and become familiar with the safe operating procedures
-set out in :doc:`Section 2: Safety</safety>` before operating a robot.
+set out in :doc:`Safety Section</safety>` before operating a robot.
 
 If you are setting up Fetch or Freight for the first time please see the
 tutorial videos for unboxing Fetch & Freight to learn how to properly unpackage
@@ -20,7 +20,7 @@ Fetch & Freight safely.
 
 * **Fetch & Freight Safety** 
  
- - Read :doc:`Section 2: Safety</safety>` in its entirety before using either robot.
+ - Read :doc:`Safety Section</safety>` in its entirety before using either robot.
 
 * **Safe Environment** 
  
