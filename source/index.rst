@@ -40,12 +40,13 @@ ROS APIs
 
    api_overview
 
-License
+Legal
 -------
 
 .. toctree::
    :maxdepth: 2
 
+   notices
    license
 
 Indices and tables
