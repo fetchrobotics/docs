@@ -4,9 +4,6 @@
 Welcome to Fetch Robotics' documentation!
 ========================================================
 
-This document covers how to use this preview repository
-to evaluate the Fetch Robotics Research Edition Robot.
-
 Getting Started
 ---------------
 
