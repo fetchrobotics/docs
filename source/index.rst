@@ -22,6 +22,7 @@ Tutorials
 .. toctree::
    :maxdepth: 2
 
+   visualization
    gazebo
    teleop
    navigation

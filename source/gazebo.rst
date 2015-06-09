@@ -63,27 +63,10 @@ Freight uses the same launch files as Fetch, simply pass the robot argument:
 
 Visualizing with RVIZ
 ---------------------
+
 Even though Gazebo has a graphical visualization, RVIZ is still the preferred
-tool for interacting with your robot.
-
-::
-
-    >$ rosrun rviz rviz
-
-.. todo:: ADD IMAGE OF RVIZ
-
-You can now `manually set up your RVIZ visualization 
-<http://gazebosim.org/tutorials?tut=drcsim_visualization&cat=drcsim#VisualizingtheRobotmodel>`_
-or re-run RVIZ with a configuration file using the command line.
-
-The default ``.rviz`` configuration file for Fetch can be loaded using:
-
-::
-
-	>$ roscd fetch_navigation/config
-	>$ rviz -d navigation.rviz
-
-.. todo:: ADD IMAGE OF DEFAULT CONFIG
+tool for interacting with your robot. See the :ref:`tutorial on rviz<rviz>`
+for usage and details.
 
 .. _mm_demo:
 
