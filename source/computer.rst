@@ -37,9 +37,17 @@ internal components of the robot.
 The majority of communication between components onboard Fetch &
 Freight happen via the internal ethernet network. This network
 is located in the 10.42.42.0/24 subnet and connects the robot
-computer to the laser range finder, mainboard, gripper, and
-other devices. As such, it is important that your building
-networks do not use the same subnet.
+computer to the devices listed in the table below. As such,
+it is important that your building networks do not use the
+same subnet.
+
+====================== =============
+Device                 IP Address
+====================== =============
+Laser range finder     10.42.42.10
+Mainboard              10.42.42.42
+Gripper                10.42.42.43
+====================== =============
 
 There are two possible interfaces for connecting to the robot
 computer: the wireless interface and the wired interface. Most users
@@ -77,13 +85,14 @@ Upstart Services
 Fetch and Freight use upstart to start and manage various services on the robot.
 The following upstart services start when the robot is booted:
 
-=========== ========================================
+=========== ===========================================
 Name        Description
-=========== ========================================
+=========== ===========================================
 roscore     starts a roscore
 robot       starts robot drivers, requires roscore
 sixad       driver for robot joystick over bluetooth
-=========== ========================================
+soundplay   starts the sound_play node for audio in ROS
+=========== ===========================================
 
 Upstart service can be restart with the `service` command. For instance, to
 restart the robot drivers:
