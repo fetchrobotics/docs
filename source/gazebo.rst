@@ -65,8 +65,11 @@ Visualizing with RVIZ
 ---------------------
 
 Even though Gazebo has a graphical visualization, RVIZ is still the preferred
-tool for interacting with your robot. See the :ref:`tutorial on rviz<rviz>`
-for usage and details.
+tool for interacting with your robot.
+
+.. include:: visualization.rst
+   :start-after: embed-rviz-start
+   :end-before: embed-rviz-end
 
 .. _mm_demo:
 

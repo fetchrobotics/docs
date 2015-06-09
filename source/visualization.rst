@@ -3,9 +3,10 @@ Tutorial: Visualization
 
 .. _rviz:
 
-.. embed-pt
 Visualizing with RVIZ
 ---------------------
+
+.. embed-rviz-start
 
 ::
 
@@ -30,6 +31,9 @@ The default ``.rviz`` configuration file for Fetch can be loaded using:
    :width: 100%
    :align: center
    :figclass: align-centered
+
+.. embed-rviz-end
+.. embed-runtime-monitor-start
 
 .. _runtime_monitor:
 
@@ -67,3 +71,5 @@ Fetch might look like:
    :width: 50%
    :align: center
    :figclass: align-centered
+
+.. embed-runtime-monitor-end

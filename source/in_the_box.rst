@@ -80,7 +80,7 @@ Driving Fetch & Freight with a Joystick
 Visualizing Data
 ~~~~~~~~~~~~~~~~
 .. include:: visualization.rst
-   :start-after: embed-pt
+   :start-after: embed-rviz-start
 
 Putting Fetch & Freight Away
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
