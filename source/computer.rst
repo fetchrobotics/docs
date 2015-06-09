@@ -6,7 +6,7 @@ Long Term Support (LTS) release of Ubuntu and an LTS release of
 ROS. These releases are intended to give long-term stability to
 the system.
 
-.. embed-pt1
+.. embed-user-accounts-start
 Default User Account
 --------------------
 
@@ -23,9 +23,10 @@ robot as the `fetch` user, and run the following commands:
 
 ::
 
-    >sudo adduser USERNAME
-    >sudo usermod -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare USERNAME
-.. embed-pt2
+    >$ sudo adduser USERNAME
+    >$ sudo usermod -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare USERNAME
+
+.. embed-user-accounts-end
 
 Networking
 ----------
