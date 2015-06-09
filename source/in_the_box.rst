@@ -51,12 +51,11 @@ Logging In
 ~~~~~~~~~~ 
 
 Once the robot is turned on, ssh in the computer of the robot using
-the default account, shown below, where <X> is the number of the robot
-you are logging into.
+the default account, shown below.
 
 :: 
 
->ssh fetch@fetch<X>
+>ssh fetch@ROBOT_IP
 
 ::
 
