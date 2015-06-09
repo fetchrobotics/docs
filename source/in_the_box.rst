@@ -48,9 +48,23 @@ Turning on Fetch & Freight
 
 
 Logging In 
-~~~~~~~~~~
+~~~~~~~~~~ 
+
+Once the robot is turned on, ssh in the computer of the robot using
+the default account, shown below, where <X> is the number of the robot
+you are logging into.
+
+:: 
+
+>ssh fetch@fetch<X>
+
+::
+
+Then create your user account if you have not already done so as shown
+below.
+
 .. include:: computer.rst
-   :start-after: embed-pt1
+   :start-after: embed-pt1 
    :end-before: embed-pt2
 
 
@@ -68,8 +82,6 @@ Visualizing Data
 ~~~~~~~~~~~~~~~~
 .. include:: visualization.rst
    :start-after: embed-pt
-
-
 
 Putting Fetch & Freight Away
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
