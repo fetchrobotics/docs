@@ -3,7 +3,7 @@ Tutorial: Robot Teleop
 
 Using the Robot Joystick
 ------------------------
-
+.. embed-pt
 Each Fetch and Freight ship with a robot joystick.
 Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot

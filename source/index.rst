@@ -4,8 +4,8 @@
 Welcome to Fetch Robotics' documentation!
 ========================================================
 
-Getting Started
----------------
+Fetch & Freight Manual
+----------------------
 
 .. toctree::
    :maxdepth: 2

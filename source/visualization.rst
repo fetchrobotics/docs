@@ -3,6 +3,7 @@ Tutorial: Visualization
 
 .. _rviz:
 
+.. embed-pt
 Visualizing with RVIZ
 ---------------------
 

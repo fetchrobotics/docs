@@ -1,20 +1,21 @@
 Computer Overview and Configuration
------------------------------------
+===================================
 
 Both Fetch and Freight have an internal computer which runs a
 Long Term Support (LTS) release of Ubuntu and an LTS release of
 ROS. These releases are intended to give long-term stability to
 the system.
 
+.. embed-pt1
 Default User Account
-++++++++++++++++++++
+--------------------
 
 Each robot ships with a default user account, with username `fetch` and
 password `robotics`. It is recommended to change the password when
 setting up the robot.
 
 Creating User Accounts
-++++++++++++++++++++++
+----------------------
 
 It is recommended that each user create their own account on the robot, especially
 when developing from source. To create an account on the robot, ssh into the
@@ -24,9 +25,10 @@ robot as the `fetch` user, and run the following commands:
 
     >sudo adduser USERNAME
     >sudo usermod -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare USERNAME
+.. embed-pt2
 
 Networking
-++++++++++
+----------
 
 The robot has both internal and external Ethernet-based networks,
 as well as an external wireless network interface. The external
@@ -60,13 +62,13 @@ require higher bandwidth.
     Never drive the robot with an Ethernet cable attached to the access panel.
 
 Connecting the Robot to a Wireless Network
-++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------
 
 The easiest way to configure the wireless networking is to connect a monitor,
 keyboard, and mouse and use the Network Manager interface.
 
 Clock Synchronization
-+++++++++++++++++++++
+---------------------
 
 It is recommended to install the chrony NTP client on both robots and desktops
 in order to keep their time synchronized. By default, robots do not ship with
@@ -80,7 +82,7 @@ chrony installed. To install chrony on Ubuntu:
 .. _upstart_services:
 
 Upstart Services
-++++++++++++++++
+----------------
 
 Fetch and Freight use upstart to start and manage various services on the robot.
 The following upstart services start when the robot is booted:
@@ -109,7 +111,7 @@ when restarting the drivers, and so a roscore restart may be required
 if the parameter server has been corrupted by a user script.
 
 Log Files
-+++++++++
+---------
 
 A number of log files are created on the robot. Log files related to upstart
 services can be found in the /var/log/upstart folder, the name of the log
