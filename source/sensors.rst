@@ -13,10 +13,10 @@ to the **base_scan** topic.
 IMU
 +++
 
-The mainboard of Fetch and Freight have a 6-axis interial measurement
+The mainboard of Fetch and Freight have a 6-axis inertial measurement
 unit (IMU). The gyroscope within the IMU is capable of measuring
-+/-2000 degrees per second, while the accelerometers are capable
-of measuriing +/-2g. See :ref:`imu_api` for details on the ROS API.
++/-2000 degrees per second, while the accelerometers are capable of
+measuring +/-2g. See :ref:`imu_api` for details on the ROS API.
 
 Speakers
 ++++++++

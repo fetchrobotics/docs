@@ -5,9 +5,9 @@ The Fetch & Freight kinematics are defined by using the concepts of
 joints, links, and coordinate frames. The robot URDF (unified robot
 description format) model specifies the attributes (kinematic tree,
 names, ranges, etc.) of the joints, links, and frames of the robot. A
-link element in the URDF describes a rigid body with interia, visual
+link element in the URDF describes a rigid body with inertia, visual
 features, and coordinate frames. A joint element in the URDF defines
-the kinematics, dynamics, saftey limits, and type (revolute,
+the kinematics, dynamics, safety limits, and type (revolute,
 continuous fixed, prismatic, floating, or planar). Fixed joints are
 typically used to describe the relationship between two rigidly joined
 components in the robot.
@@ -24,7 +24,7 @@ Frame
 
 Frames represent the coordinate frames of links, detected objects,
 sensors, or the location of another robot in the world. Frames are
-define relative to other frames and the transofrmations between each
+define relative to other frames and the transformations between each
 frame is tracked using tf. 
 
 Joint
