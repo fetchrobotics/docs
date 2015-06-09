@@ -14,6 +14,7 @@ Fetch & Freight Manual
    safety 
    in_the_box
    robot_hardware
+   computer
    care_and_feeding
 
 Tutorials

@@ -36,7 +36,7 @@ freight_description package respectively. In the Fetch & Freight the
 majority of the joints are rotational, the torso is prismatic, and
 there are several fixed joints describing the location of sensors
 within the robot. Rotational and translational joints are represented
-similarly in the URDF, and joint forces are described as ”effort”
+similarly in the URDF, and joint forces are described as *effort*
 instead of force or torque. Position, and velocity are both used to
 describe linear and angular motion of a joint.
 

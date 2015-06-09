@@ -6,4 +6,4 @@ Robot Hardware Overview
 .. include:: electrical.rst
 .. include:: motion_control.rst
 .. include:: sensors.rst
-.. include:: computer.rst
+

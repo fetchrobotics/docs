@@ -97,7 +97,11 @@ guarantee safety, only reduce risk.
  - Do not allow the robot to interact with any sharp or dangerous items.
  - Do not allow the robot to operate potentially dangerous appliances (like stoves) or power tools. 
  - Pay attention to the **warning labels** on the robots.
- - **Do not modify or remove any part of the software safety features.**
+
+.. warning::
+    Do not modify or remove any part of the software safety features
+
+
 
 Warning Labels
 --------------
