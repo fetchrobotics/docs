@@ -12,7 +12,8 @@ Updating Your Robot
 -------------------
 
 Your robot has been pre-configured with ROS Indigo and the appropriate
-Apt repositories. Upgrading to the latest packages is as easy as:
+APT repositories from which to fetch package updates.
+Upgrading to the latest packages is as easy as:
 
 ::
 
@@ -21,12 +22,12 @@ Apt repositories. Upgrading to the latest packages is as easy as:
    sudo service robot stop
    sudo service robot start
 
-.. note::
-
-    New releases of the `fetch-drivers` package may include updated firmware
-    for your robot. When restarting the robot service, there may be a slight
-    delay before the drivers are fully operational if a new firmware upgrade
-    is included.
+Each circuit board within the robot is equipped with a bootloader, allowing
+new and updated firmware to be installed. New releases of the `fetch-drivers`
+package may include updated firmware for your robot, which will automatically
+be installed when the drivers are next started (typically by the robot upstart
+service). When restarting the robot service, there may be a slight delay
+before the drivers are fully operational if a new firmware upgrade is included.
 
 Cleaning Your Robot
 -------------------
@@ -50,5 +51,3 @@ options for cleaning the optics of the robot.
 
     Do not use window cleaner, acetone, or abrasive cloths,
     as this may cause damage to the lens.
-
-.. TODO:: check that windex works for cleaning the robot as well as isopropyl, do we want to put something in here about the cleaning the fan?
