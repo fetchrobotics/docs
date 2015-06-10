@@ -18,19 +18,6 @@ unit (IMU). The gyroscope within the IMU is capable of measuring
 +/-2000 degrees per second, while the accelerometers are capable of
 measuring +/-2g. See :ref:`imu_api` for details on the ROS API.
 
-Speakers
-++++++++
-
-The mainboard of Fetch and Freight contains a USB audio device.
-While the device enumerates as a standard Linux audio device, we recommend
-using the `sound_play ROS package <http://wiki.ros.org/sound_play>`_ to
-access the speakers. ``sound_play`` is automatically started as
-an :ref:`upstart service<upstart_services>` when the robot starts.
-This service is pre-configured to have the correct group-level access
-to the audio system. If using the speakers directly through a Linux
-interface, be sure to add your user to the ``audio`` group in order
-to actually access the speakers.
-
 Head Camera
 +++++++++++
 
