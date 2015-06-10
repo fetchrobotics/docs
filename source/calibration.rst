@@ -75,8 +75,9 @@ Running Calibration
 
 .. warning::
 
-    Calibration will cause the arm to move through the environment. Be sure that
-    robot has at least 1 meter of free space all around it.
+    Calibration will cause the arm to move through the environment. Raise the
+    torso to full extension and be sure that the robot has at least 1 meter
+    of free space all around it.
 
 The first step to calibrate the robot is to reset the calibration to factory
 defaults:
