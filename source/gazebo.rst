@@ -114,9 +114,9 @@ Simulation vs. Real Robots
 The simulated robot may not be identical to the real robot. In fact, the
 real robot is likely quite a bit better behaved. Also:
 
- * The simulator does include the IMU. Therefore, there is also no
-   base odometry fusion with IMU data, and the base_controller publishes
-   all required TF data directly.
+ * The simulator does not include the IMU. Therefore, there is also no
+   base odometry fusion with IMU data, and the base_controller directly
+   publishes all required TF data directly.
  * The simulated robot arm is not as well tuned as the real robot. The real
    arm will not wobble the way the simulated arm does when executing a
    trajectory. The simulated robot has also not been tuned with various
