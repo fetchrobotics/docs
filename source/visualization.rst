@@ -35,8 +35,6 @@ The default ``.rviz`` configuration file for Fetch can be loaded using:
 .. embed-rviz-end
 .. embed-runtime-monitor-start
 
-.. _runtime_monitor:
-
 Using the Runtime Monitor
 -------------------------
 

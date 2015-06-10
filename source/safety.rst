@@ -55,6 +55,7 @@ guidelines, but please note that these guidelines alone do not
 guarantee safety, only reduce risk.
 
 * **Before operating** or working with a Fetch or Freight each user must:
+
  - Watch the safety video.
  - Read this user manual, specifically the entirety of Section 2 on Safety.
 
@@ -65,7 +66,8 @@ guarantee safety, only reduce risk.
  - Are not alone with Fetch or Freight.  
  - Do not operate Fetch or Freight. 
 
-* **Maintain a safe environment**. Safety is not only impacted by how a developer operates a robot, but the environment as well. The Fetch & Freight R&D robots are designed to operate in laboratory environments. 
+* **Maintain a safe environment**. Safety is not only impacted by how a developer operates a robot, but the environment as well. The Fetch & Freight R&D robots are designed to operate in laboratory environments.
+
  - Keep the robots **at least 5 meters from the top of a stairway or any other drop off**. 
  - Make sure the robots have adequate and level space for any expected or unexpected operation. 
  - If Fetch travels on a ramp, make sure that the spine is lowered and the arm is tucked so that the center of gravity is as low as possible. The slope of the ramp should not exceed 1:12. Also make sure that the robot cannot drive off the edge of the ramp. 
@@ -77,21 +79,27 @@ guarantee safety, only reduce risk.
  - Do not operate the robots outdoors. 
 
 * **The Fetch & Freight covers are flame-retardant**. However keep the robots away from open flames. Never use the robots around stoves or ovens.
+
 \
 
 * Do not allow the robot to come in contact with liquids (spilled drink, rain, etc.) If the robots do get wet, turn off the breaker switch at the back of the robot and contact Fetch Robotics.
+
 \
  
 * Before removing any covers, the robot should be unplugged and the breaker switch at the back of the robot should be off. 
+
 \
 
 * Make sure that the power cord is in good condition. Cord insulation must be intact with no crack or deterioration. Both connectors should be undamaged. If the power supply is damaged in anyway, it should be discarded and replaces with a new one from Fetch Robotics. 
+
 \
 
 * Do not run the robot without its covers, the covers help to protect users from internal mechanism pinch points and potential electrical shock.
+
 \
 
-* Use **common sense** when operating the Fetch & Freight R&D robots. 
+* Use **common sense** when operating the Fetch & Freight R&D robots.
+
  - Do not allow the robots to grab or hit any person.
  - Do not allow the robots to drive into contact with, or over, any body part. 
  - Do not allow the robot to interact with any sharp or dangerous items.
@@ -100,8 +108,6 @@ guarantee safety, only reduce risk.
 
 .. warning::
     Do not modify or remove any part of the software safety features
-
-
 
 Warning Labels
 --------------
