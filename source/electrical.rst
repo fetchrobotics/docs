@@ -29,6 +29,12 @@ comprises:
    all other MCBs share the other RS-485 bus. The microcontroller on
    each MCB is where the real-time control loops run.
 
+
+.. figure:: _static/communications.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
 Fetch and Freight both have two 12V Sealed Lead Acid (SLA) batteries located
 in the robot base. The batteries are connected in series, providing the nominal
 24V power rail for the robot. These batteries are kept charged by the mainboard (see
