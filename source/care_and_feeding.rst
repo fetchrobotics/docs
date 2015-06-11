@@ -136,7 +136,7 @@ before the drivers are fully operational if a new firmware upgrade is included.
 Cleaning Your Robot
 -------------------
 
-To clean fingerprints, dirt, and smudges from the skin of Fetch &
+To clean fingerprints, dirt, and smudges from the skin of Fetch and
 Freight use a clean soft cloth and isopropyl alcohol or window cleaner
 (i.e. Windex). Make sure to wet the cloth with the isopropyl alcohol
 or windex then gently clean the skins of the robot.
@@ -147,7 +147,7 @@ or windex then gently clean the skins of the robot.
     on the skins of the robot, this may damage the skins or worse
     cause fluids to enter the robot.
 
-To clean the sensor optics of Fetch & Freight use the lens cloth
+To clean the sensor optics of Fetch and Freight use the lens cloth
 provided in the tool kit. Lens tissues or cotton swabs are also good
 options for cleaning the optics of the robot.
 

@@ -1,7 +1,7 @@
 Mechanism Terminology
 ---------------------
 
-The Fetch & Freight kinematics are defined by using the concepts of
+The Fetch and Freight kinematics are defined by using the concepts of
 joints, links, and coordinate frames. The robot URDF (unified robot
 description format) model specifies the attributes (kinematic tree,
 names, ranges, etc.) of the joints, links, and frames of the robot. A
@@ -15,7 +15,7 @@ components in the robot.
 Link 
 ++++ 
 
-The links for the Fetch & Freight are defined in the URDF description
+The links for the Fetch and Freight are defined in the URDF description
 that are located in the fetch_description or freight_description
 package respectively. 
 
@@ -32,7 +32,7 @@ Joint
 
 A joints define the relationship between links and are defined in the
 URDF description that can be found in the fetch_description or
-freight_description package respectively. In the Fetch & Freight the
+freight_description package respectively. In the Fetch and Freight the
 majority of the joints are rotational, the torso is prismatic, and
 there are several fixed joints describing the location of sensors
 within the robot. Rotational and translational joints are represented
@@ -55,7 +55,7 @@ offsets for each joint.
 Coordinate System
 +++++++++++++++++
 
-The coordinate frames for all links in the Fetch & Freight are defined
+The coordinate frames for all links in the Fetch and Freight are defined
 with positive z-axis up, positive x-axis forward, and positive y-axis
 to the robot-left when Fetch is in the home pose. All joint angle
 conventions are chosen such that from the home pose, positive motion

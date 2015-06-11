@@ -5,12 +5,12 @@ Getting Started
 What's In Box 
 `````````````
 
-The Fetch & Freight Research Edition robots each ship in reusable ATA
+The Fetch and Freight Research Edition robots each ship in reusable ATA
 cases. Inside each case you will find the robot, toolkit, and power
 supply for charging the robot.
 
 
-Fetch & Freight
+Fetch and Freight
 ~~~~~~~~~~~~~~~
 
 Please watch the respective video for unpacking Fetch or Freight. The
@@ -23,7 +23,7 @@ Toolkit
 ~~~~~~~ 
 
 The toolkit contains the tools, accessories, and fasteners needed to
-use the Fetch & Freight. The picture below shows packaged toolkit.
+use the Fetch and Freight. The picture below shows packaged toolkit.
 
 .. figure:: _static/toolkit_in_box.png
    :width: 100%
@@ -78,10 +78,10 @@ robot **always** grab the plug by the housing and not the cable.
     injury to the robot or user.
 
 
-Running Fetch & Freight
+Running Fetch and Freight
 ```````````````````````
 
-Turning on Fetch & Freight
+Turning on Fetch and Freight
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To turn on the robot, set the :ref:`power_disconnect` (the red one
@@ -117,7 +117,7 @@ Tucking Fetch's Arm
 
 .. TODO:: add notes on tucking the arm
 
-Driving Fetch & Freight with a Joystick
+Driving Fetch and Freight with a Joystick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. include:: teleop.rst
     :start-after: embed-pt
@@ -127,7 +127,7 @@ Visualizing Data
 .. include:: visualization.rst
    :start-after: embed-rviz-start
 
-Putting Fetch & Freight Away
+Putting Fetch and Freight Away
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before turning the robot off, it is recommended that you tuck the arm.

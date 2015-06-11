@@ -6,33 +6,33 @@ robots is important yet challenging and it is important to remember
 that safety is a continual process that is shared by the robot
 designer, operator, and administrator. The following section provides
 an overview of the issues, safety-related design features, and a basic
-set of guidelines to support safety when using the Fetch & Freight
+set of guidelines to support safety when using the Fetch and Freight
 R&D robots.
 
 Safety Overview
 ---------------
 
-When operating Fetch & Freight R&D robots users should always be
+When operating Fetch and Freight R&D robots users should always be
 conscious of safety. Remember the robots are heavy pieces of equipment
 and have moving parts. As the robots travel through an environment they can
 carry and manipulate a wide variety of objects. Since the Fetch &
 Freight R&D robots are for applications development, their moves and
-actions may not be entirely predictable. Both the Fetch & Freight
+actions may not be entirely predictable. Both the Fetch and Freight
 robots can cause significant damage if they fall on or run into a
 person. There are also several ways that the robots can pinch, grab,
 or twist fingers or other body parts (these regions are
 labeled). Fetch can also manipulate dangerous objects and knock over
 heavy objects. People should always be cautious and attentive around
-Fetch & Freight R&D robots.
+Fetch and Freight R&D robots.
 
 Design Features
 ---------------
 
 While retaining the power of a R&D platform, both the hardware and
-software of Fetch & Freight are designed to minimize risk. The
-exterior of both Fetch & Freight clearly mark regions that could pinch
+software of Fetch and Freight are designed to minimize risk. The
+exterior of both Fetch and Freight clearly mark regions that could pinch
 or injure while mechanism is in motion or being moved by hand. Both
-Fetch & Freight have emergency stop buttons in case there is a need to
+Fetch and Freight have emergency stop buttons in case there is a need to
 immediately stop the motion of the robot.
 
 In software, low-level safety limits have been incorporated to limit
@@ -40,7 +40,7 @@ motor current, motor velocity, range of joint motion, and trajectory
 deviations. High-level applications also integrate the various
 on-board sensors to avoid obstacles when navigating or moving the arm.
 
-These design features help make Fetch & Freight more robust. However a
+These design features help make Fetch and Freight more robust. However a
 R&D robot is **never** absolutely safe. The application developers'
 safety, as well as the safety of others, depends on the developers'
 constant attention. It is important for the user to be aware of
@@ -66,7 +66,7 @@ guarantee safety, only reduce risk.
  - Are not alone with Fetch or Freight.  
  - Do not operate Fetch or Freight. 
 
-* **Maintain a safe environment**. Safety is not only impacted by how a developer operates a robot, but the environment as well. The Fetch & Freight R&D robots are designed to operate in laboratory environments.
+* **Maintain a safe environment**. Safety is not only impacted by how a developer operates a robot, but the environment as well. The Fetch and Freight R&D robots are designed to operate in laboratory environments.
 
  - Keep the robots **at least 5 meters from the top of a stairway or any other drop off**. 
  - Make sure the robots have adequate and level space for any expected or unexpected operation. 
@@ -78,7 +78,7 @@ guarantee safety, only reduce risk.
  - Be aware of the location of emergency exits and ensure that the robots cannot block them. 
  - Do not operate the robots outdoors. 
 
-* **The Fetch & Freight covers are flame-retardant**. However keep the robots away from open flames. Never use the robots around stoves or ovens.
+* **The Fetch and Freight covers are flame-retardant**. However keep the robots away from open flames. Never use the robots around stoves or ovens.
 
 \
 
@@ -98,7 +98,7 @@ guarantee safety, only reduce risk.
 
 \
 
-* Use **common sense** when operating the Fetch & Freight R&D robots.
+* Use **common sense** when operating the Fetch and Freight R&D robots.
 
  - Do not allow the robots to grab or hit any person.
  - Do not allow the robots to drive into contact with, or over, any body part. 

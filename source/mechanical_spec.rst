@@ -7,9 +7,9 @@ information listed below.
 Environmental
 +++++++++++++
 
-The Fetch & Freight Research Edition Robots are indoor laboratory
+The Fetch and Freight Research Edition Robots are indoor laboratory
 robots. Operating outside this type of environment could cause
-damage to the Fetch & Freight robots, and injury or death to
+damage to the Fetch and Freight robots, and injury or death to
 operators.
 
 Drive Surface
@@ -25,13 +25,13 @@ Drive Surface
 
 Incline Surface
 '''''''''''''''
- - Fetch & Freight are ready for ADA-compliant ramps, which are at no
+ - Fetch and Freight are ready for ADA-compliant ramps, which are at no
    more than a 1/12 slope. Ramps that are steeper than a 1/12 slope
    are unsafe and may be a tipping hazard.
 
 Water
 '''''
- - Fetch & Freight have not been tested for any type of contact with water
+ - Fetch and Freight have not been tested for any type of contact with water
    or any other liquid. Under no circumstances should Fetch nor Freight
    come in contact with water from rain, mist, ground water (puddles)
    and any other liquid. Water contact can cause damage to the electrical
@@ -39,22 +39,22 @@ Water
 
 Temperature and Humidity 
 ''''''''''''''''''''''''
- - Fetch & Freight are designed to run in environments between 15C and 35C.
- - Keep Fetch & Freight away from open flames and other heat sources.
+ - Fetch and Freight are designed to run in environments between 15C and 35C.
+ - Keep Fetch and Freight away from open flames and other heat sources.
    Never use Fetch or Freight around stoves or ovens.
 
 Forces and Torques 
 ++++++++++++++++++ 
 
 Joint position, velocity, and force limits are implemented in the
-Fetch & Freight URDF file as well as in firmware. Firmware implements
+Fetch and Freight URDF file as well as in firmware. Firmware implements
 additional power limits. These joint limits control the range of
 travel of the mechanism and the allowable velocity to prevent
 over-travel. These limits are enforced by the controller, and are
 designed to prevent poorly commanded control efforts from damaging the
 robot or harming operators.
 
-The limits below are from the Fetch & Freight URDF files. If a
+The limits below are from the Fetch and Freight URDF files. If a
 velocity or torque limit is not specified, no value is enforced.
 
 ======================== ========== ============ =====
@@ -77,7 +77,7 @@ wrist_roll_joint         2.26rad/s  7.36Nm       TBD
 Joint Limits and Types
 ++++++++++++++++++++++
 
-The position limits for Fetch & Freight are specified below. These
+The position limits for Fetch and Freight are specified below. These
 "hard limits" are the maximum travel for the mechanism.
 
 ======================== ========== =========== ==========

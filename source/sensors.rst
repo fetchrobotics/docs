@@ -4,7 +4,7 @@ Sensor Overview
 Base Laser
 ++++++++++
 
-Both Fetch & Freight have a SICK TIM571 scanning range finder. The
+Both Fetch and Freight have a SICK TIM571 scanning range finder. The
 laser has a range of 25m, 220° field of view, 15Hz update rate
 and angular resolution of 1/3°. The laser publishes both distance
 and RSSI (Received Signal Strength Indication)
