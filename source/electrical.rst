@@ -17,7 +17,7 @@ comprises:
 
  * The mainboard then communicates with the various motor controller
    boards (MCB) located throughout the robot. Communication with the
-   MCBs is done over several half-duplex RS-485 busses. In addition
+   MCBs is done over several half-duplex RS-485 buses. In addition
    to communications-related tasks, the mainboard also controls a
    number of electronic circuit breakers and also carries the charger
    circuitry which charges the batteries.

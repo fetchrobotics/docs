@@ -12,23 +12,23 @@ The `fetch_calibration` package provides a method of making sure that the
 hand-eye coordination of the robot is well calibrated. Calibration involves:
 
  * Moving the arm to a series of poses
- * At each pose, calibration records the joint_angles reported by the
+ * At each pose, recording the joint_angles reported by the
    drivers. Calibration then blinks the gripper LEDs several times to
    find their pose in the camera frame and records it.
  * Performing a non-linear optimization which adjusts joint offsets and
-   the head camera pose to minimize the error between expected pose of the
-   the LEDs based on projection of the kinematics of the arm and the
+   the head camera pose to minimize the error between the expected pose of the
+   the LEDs based on projection of the kinematics of the arm and the actual
    pose seen by the camera.
- * Updating the URDF and robot launch files with new offsets.
+ * Updating the URDF and robot launch files with newly determined offsets.
 
 The :ref:`upstart_services` that start the robot will use the launch
-file in `/etc/ros/indigo/robot.launch'. Thus the last step in calibration
+file in `/etc/ros/indigo/robot.launch'. Therefore, the last step in calibration
 is to update that launch file and restart the drivers. Currently, the
 following aspects are updated:
 
  * The URDF file is copied to /etc/ros/indigo, and the name of the file is put
-   into robot.launch.
- * The camera calibration yaml files are copied to /etc/ros/indigo, and the
+   into robot.launch. The calibration offsets are updated in the URDF file.
+ * The camera calibration YAML files are copied to /etc/ros/indigo, and the
    name of the files are put into robot.launch.
  * The head_camera driver has two parameters, z_offset_mm and z_scale which
    are calibrated. Their updated values are stored in robot.launch.
@@ -52,7 +52,7 @@ show the list of valid arguments:
     optional arguments:
       -h, --help            show this help message and exit
       --arm                 Capture arm/head calibration data
-      --base                Captyure base calibration data
+      --base                Capture base calibration data
       --install             Install new calibration to /etc/ros (restarts drivers)
       --reset               Reset the calibration to factory defaults (restarts
                             drivers)
@@ -87,7 +87,7 @@ defaults:
     >$ calibrate_robot --reset
 
 This command might ask for your password, as it requires sudo to update the
-/etc/ros/indigo/robot.launch file. This will also restart the drivers to
+files in /etc/ros/. This will also restart the drivers to
 make the changes take effect.
 
 .. warning::
@@ -115,3 +115,4 @@ back to the previous calibration with:
 ::
 
     >$ calibrate_robot --restore
+

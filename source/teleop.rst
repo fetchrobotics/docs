@@ -37,7 +37,7 @@ button (3). To open, hold the primary deadman and press the open
 button (0).
 
 Some controllers, such as the arm and head controllers, will attempt to
-hold position indefintely. Sometimes this is not desired. Holding button (4)
+hold position indefinitely. Sometimes this is not desired. Holding button (4)
 for 1 second will stop all controllers except the base controller and
 the arm gravity compensation.
 
@@ -52,3 +52,4 @@ package.
 ::
 
 	>$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+

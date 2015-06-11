@@ -38,8 +38,8 @@ network interfaces are intended for users to connect to the robot,
 while the internal networks are used to send data between the
 internal components of the robot.
 
-The majority of communication between components onboard Fetch &
-Freight happen via the internal ethernet network. This network
+The majority of communication between components onboard Fetch and
+Freight happen via the internal Ethernet network. This network
 is located in the 10.42.42.0/24 subnet and connects the robot
 computer to the devices listed in the table below. As such,
 it is important that your building networks do not use the
@@ -137,7 +137,7 @@ to actually access the speakers.
 
 While the ``sound_play`` ROS interface allows users to set an audio
 level, the audio level set is a percentage of the audio level set
-for linux. To adjust the Linux audio level, use the following command
+for Linux. To adjust the Linux audio level, use the following command
 and follow the on-screen instructions:
 
 ::

@@ -5,7 +5,7 @@ Base Laser
 ++++++++++
 
 Both Fetch & Freight have a SICK TIM571 scanning range finder. The
-laser has a range of 25m, 220° field of view, 15hz update rate
+laser has a range of 25m, 220° field of view, 15Hz update rate
 and angular resolution of 1/3°. The laser publishes both distance
 and RSSI (Received Signal Strength Indication)
 to the **base_scan** topic.
@@ -29,7 +29,7 @@ Gripper Sensors
 +++++++++++++++
 
 In addition to the position and effort feedback of the gripper joint, the
-gripper incorporates a 6-axis interial measurement unit (IMU). The gyroscope within
+gripper incorporates a 6-axis inertial measurement unit (IMU). The gyroscope within
 the IMU is capable of measuring +/-2000 degrees per second, while the
-accelerometers are capable of measuriing +/-2g.
+accelerometers are capable of measuring +/-2g.
 See :ref:`imu_api` for details on the ROS API.

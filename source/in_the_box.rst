@@ -5,7 +5,7 @@ Getting Started
 What's In Box 
 `````````````
 
-The Fetch & Freight Research Edition robots each ship in reuseable ATA
+The Fetch & Freight Research Edition robots each ship in reusable ATA
 cases. Inside each case you will find the robot, toolkit, and power
 supply for charging the robot.
 
@@ -13,7 +13,7 @@ supply for charging the robot.
 Fetch & Freight
 ~~~~~~~~~~~~~~~
 
-Please watch the respective video for unpacking Fetch or Frieght. The
+Please watch the respective video for unpacking Fetch or Freight. The
 video covers unpacking the robot, connecting the batteries, turning on
 the robot, and driving the robot via the provided joystick.
 

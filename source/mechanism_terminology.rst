@@ -25,7 +25,7 @@ Frame
 Frames represent the coordinate frames of links, detected objects,
 sensors, or the location of another robot in the world. Frames are
 define relative to other frames and the transformations between each
-frame is tracked using tf. 
+frame is tracked using TF. 
 
 Joint
 +++++

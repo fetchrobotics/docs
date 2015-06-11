@@ -40,7 +40,7 @@ Fetch & Freight safely.
  
  - To connect with Fetch & Freight, a laptop or desktop computer is needed.
    Ideally Fetch & Freight can connect to a wireless network but users can
-   also directly to Fetch or Freight via the ethernet port on each robot. 
+   also directly to Fetch or Freight via the Ethernet port on each robot. 
 
 * **Linux**
  

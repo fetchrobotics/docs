@@ -26,8 +26,8 @@ Copyright Notices for Open Source Software
 
 Fetch Robotics uses open-source software in Fetch and Freight. This
 software is licensed by the rights holders under the following licenses,
-among others: GNU General Publich License (GPL2, GPL3), GNU Lesser
-Public License (LGPL), MIT Licnese, zlib License, Apache2 license,
+among others: GNU General Public License (GPL2, GPL3), GNU Lesser
+Public License (LGPL), MIT License, zlib License, Apache2 license,
 and various forms and derivatives of the BSD license.
 
 There are thousands of files installed by the Ubuntu installer, see

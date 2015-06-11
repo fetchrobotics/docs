@@ -29,7 +29,7 @@ Charge Indicator  Meaning
 Solid Green       Robot is fully charged
 Blinking green    Robot is charging
 Solid Red         Battery voltage is low
-Blinking red      Charging error has occured
+Blinking red      Charging error has occurred
 ================= =================
 
 The charge indicator light will flash green when the robot is charging.
@@ -37,6 +37,7 @@ When the robot is completely charged the indicator light will stay
 solid green.
 
 The charge indicator light will turn red when the battery voltage is low.
+When the charge indicator turns red, you should recharge the robot.
 If the battery voltage gets low enough, the robot power will automatically
 turn off.
 
@@ -154,3 +155,4 @@ options for cleaning the optics of the robot.
 
     Do not use window cleaner, acetone, or abrasive cloths,
     as this may cause damage to the lens.
+

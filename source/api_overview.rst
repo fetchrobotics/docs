@@ -50,7 +50,7 @@ Only two fields are used in the message:
  * ``angular.z`` specifies the robot's turning velocity
 
 User applications will typically not connect directly to `base_controller/command`,
-but rather to `cmd_vel`. A multiplexor is always running between `cmd_vel/teleop`
+but rather to `cmd_vel`. A multiplexer is always running between `cmd_vel/teleop`
 and `cmd_vel`. Whenever the deadman on the robot controller is held, `cmd_vel/teleop`
 will override `cmd_vel`. The advantage of having your application publish to `cmd_vel`
 rather than directly to `base_controller/command` is that you can override bad
@@ -96,14 +96,14 @@ The head camera exposes several topics of interest:
 
  * `head_camera/depth_registered/points` is a `sensor_msgs/PointCloud2 <http://docs.ros.org/api/sensor_msgs/html/msg/PointCloud2.html>`_
    which has both 3d and color data. It is published at VGA resolution (640x480)
-   at 15hz.
+   at 15Hz.
  * `head_camera/depth_downsampled/points` is a `sensor_msgs/PointCloud2 <http://docs.ros.org/api/sensor_msgs/html/msg/PointCloud2.html>`_
    which has only 3d data. It is published at QQVGA (160x120) resolution at
-   15hz and is intended primarily for use in navigation/moveit for obstacle
+   15Hz and is intended primarily for use in navigation/moveit for obstacle
    avoidance.
  * `head_camera/rgb/image_raw` is a `sensor_msgs/Image <http://docs.ros.org/api/sensor_msgs/html/msg/Image.html>`_.
    This is just the 2d color data. It is published at VGA resolution (640x480)
-   at 15hz.
+   at 15Hz.
 
 .. _laser_api:
 
@@ -111,7 +111,7 @@ Laser Interface
 ---------------
 
 `base_scan` is a `sensor_msgs/LaserScan <http://docs.ros.org/api/sensor_msgs/html/msg/LaserScan.html>`_
-message published at 15hz.
+message published at 15Hz.
 
 Note: the raw laser information as reported by the laser hardware is published to
 `base_scan_raw`. The information published to `base_scan` is filtered to remove
@@ -123,11 +123,11 @@ IMU Interface
 -------------
 
 `imu` is a `sensor_msgs/Imu <http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html>`_
-message published at 100hz. This message contains the linear acceleration and
+message published at 100Hz. This message contains the linear acceleration and
 rotational velocities as measured by the IMU located in the base of the robot.
 
 On Fetch robots, the gripper IMU publishes to `gripper_imu`. This is also
 a `sensor_msgs/Imu <http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html>`_
-message published at 100hz.
+message published at 100Hz.
 
 The IMUs are not present in the simulated robot.
