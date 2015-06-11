@@ -6,41 +6,59 @@ Care And Feeding
 Charging
 --------
 
-The robot can be charged by plugging the plugging the supply connector into
-the front of the robot.  Make sure the "Fetch" logo is facing up, otherwise
-the connector will not properly mate.
+The robot can be charged by plugging the supply connector of the power
+brick into the front of the robot or by docking with the robot charge
+dock. When using the supply connector, make sure the "Fetch" logo is
+facing up, otherwise the connector will not properly mate:
 
-.. TODO:: Picture of plugging charger in
+.. figure:: _static/charge_plug.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
 
 The connector needs roughly 100 newtons (24 lbs) of force to plug in.
-If it seems the connector will not mate with this much force, check that
-the plug and connector for damaged or foreign objects.
+If it seems the connector will not mate with this much force, chec
+the plug and connector for damage or foreign objects.
 
-The green indicator light on the right side panel will flash green when the robot is charging.
-When the robot is completely charged the indicator LED will stay solid green.
+The charge indicator light on the :ref:`access_panel` indicates
+the status of the battery and charging:
 
-.. TODO:: Picture of LED indicator on side panel
+================= =================
+Charge Indicator  Meaning
+================= =================
+Solid Green       Robot is fully charged
+Blinking green    Robot is charging
+Solid Red         Battery voltage is low
+Blinking red      Charging error has occured
+================= =================
 
-The charge indicator will turn red when the battery voltage is low.
-If the battery voltage gets low enough, the robot power will be automatically disabled.
+The charge indicator light will flash green when the robot is charging.
+When the robot is completely charged the indicator light will stay
+solid green.
 
-In some cases the charging circuit may detect an error condition and will flash
-the charging indicator red.  After about 1 minute, the charger will attempt charging again.
-If the error condition does persist, a support ticket should be created to address the problem.
+The charge indicator light will turn red when the battery voltage is low.
+If the battery voltage gets low enough, the robot power will automatically
+turn off.
 
-One notable charging error is caused by the power disconnect switch being switched off.
+In some cases, the charging circuit may detect an error condition
+and will flash the charging indicator red. After about 1 minute, the
+charger will attempt charging again. If the error condition persists,
+a support ticket should be created to address the problem.
+
+One notable charging error is caused by the :ref:`power_disconnect` being switched off.
 When the power disconnect is switch off, it disconnects the battery which prevents the
 charger from working.  When the charger detects this situation it will flash both the
 charge indicator red, and the power button at the same time.
 
-.. TODO:: Picture of breaker switch on back of robot
-
 The robot will typically need about 3.5 hours to charge batteries from empty to
-90% capacity.  It will take an additional 3 hours to charge remaining %10 of battery capacity.
-Charging works whether the boot is on or off.
-It is perfectly acceptable to have robot move its arm, torso, and head while charging.
-However, we strongly discourage driving robot while charging because it is easy
-misjudge the cable length and damage the wiring or connector.
+90% capacity.  It will take an additional 3 hours to charge remaining %10 of
+battery capacity. While the robot does not need to get to 100% on every charge,
+it is strongly recommended that the robot be fully charged at least once a week
+to get the best possible life out of the batteries. Charging works whether
+the robot is on or off. It is perfectly acceptable to have robot move its arm,
+torso, and head while charging. However, you should not drive the
+robot while charging because it is easy to misjudge the cable length
+and damage the wiring or connector.
 
 There are also some important rules that should be followed to prevent damage to
 robot and charging supply.

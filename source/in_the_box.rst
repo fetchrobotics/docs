@@ -84,7 +84,7 @@ Running Fetch & Freight
 Turning on Fetch & Freight
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To turn on the robot, set the main power disconnect switch (the red one
+To turn on the robot, set the :ref:`power_disconnect` (the red one
 on the lower back of the robot) to the ON position and then press the
 power switch on the access panel until it lights up.
 

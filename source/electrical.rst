@@ -31,7 +31,7 @@ comprises:
 
 
 .. figure:: _static/communications.png
-   :width: 100%
+   :width: 80%
    :align: center
    :figclass: align-centered
 
@@ -64,6 +64,18 @@ When a breaker is disabled or tripped, power will no longer flow to the connecte
 devices. In the case of MCBs, this means that they will not be able to communicate
 with the mainboard.
 
+.. _power_disconnect:
+
+Power Disconnect Switch
++++++++++++++++++++++++
+
+The power disconnect is on the lower back of the robot. This switch
+cuts the power between the battery and the mainboard. It also acts as
+a breaker, limiting the total current that can be delivered by the
+batteries.
+
+.. TODO:: add image of power disconnect
+
 Runstop
 +++++++
 
@@ -71,6 +83,8 @@ The runstop is used to stop all operation of the joints. It works by disabling
 the base, arm and gripper breakers. When the runstop is pressed, the drivers
 will not be able to communicate with the MCBs, and thus their position and
 other data will not update in RVIZ nor the runtime monitor.
+
+.. _access_panel:
 
 Access Panel
 ++++++++++++

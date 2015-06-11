@@ -6,7 +6,7 @@ microcontroller. The real-time components of the controls run on the
 MCBs, while the robot computer streams commands to the MCBs.
 
 .. figure:: _static/motion_control_overview.png
-   :width: 100%
+   :width: 80%
    :align: center
    :figclass: align-centered
 
