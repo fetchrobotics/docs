@@ -117,7 +117,7 @@ Item # Item Name
  3     USB Port 2
  4     Ethernet Port
  5     Power Button
- 6     Charge LED
+ 6     Charge Indicator Light
 ====== =========================
 
 The access panel is also the location of the power button which turns
