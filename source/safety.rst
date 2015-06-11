@@ -14,7 +14,7 @@ Safety Overview
 
 When operating Fetch & Freight R&D robots users should always be
 conscious of safety. Remember the robots are heavy pieces of equipment
-and moving parts. As the robots travel through an environment they can
+and have moving parts. As the robots travel through an environment they can
 carry and manipulate a wide variety of objects. Since the Fetch &
 Freight R&D robots are for applications development, their moves and
 actions may not be entirely predictable. Both the Fetch & Freight
@@ -90,7 +90,7 @@ guarantee safety, only reduce risk.
 
 \
 
-* Make sure that the power cord is in good condition. Cord insulation must be intact with no crack or deterioration. Both connectors should be undamaged. If the power supply is damaged in anyway, it should be discarded and replaces with a new one from Fetch Robotics. 
+* Make sure that the power cord is in good condition. Cord insulation must be intact with no crack or deterioration. Both connectors should be undamaged. If the power supply is damaged in anyway, it should be discarded and replaced with a new one from Fetch Robotics. 
 
 \
 

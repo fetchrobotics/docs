@@ -69,6 +69,16 @@ Naming Conventions
 In general, the names for a link, a joint, and frame will be similar
 (e.g. shoulder_pan_link, shoulder_pan_joint, and
 shoulder_pan_frame). Short prefixes are used to describe the location
-of repeated components (i.e. drive wheels).
+of repeated components (i.e. drive wheels). The diagrams below show
+the link and joint naming conventions as well as the positive
+direction of joint motion.
 
-.. TODO:: include image of fetch and freight naming scheme
+.. figure:: _static/fetch_link_names.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+.. figure:: _static/fetch_joint_names.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered

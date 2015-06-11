@@ -19,23 +19,63 @@ the robot, and driving the robot via the provided joystick.
 
 .. TODO:: PIC of robot in box
 
-Toolkit
-~~~~~~~
+Toolkit 
+~~~~~~~ 
 
-.. TODO:: PIC of kit
+The toolkit contains the tools, accessories, and fasteners needed to
+use the Fetch & Freight. The picture below shows packaged toolkit.
 
-* Wireless Joystick 
+.. figure:: _static/toolkit_in_box.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
 
-* Hardware & Tools
+Inside the toolkit box you will find: 
 
-* Finger Tip Covers
+.. figure:: _static/toolkit_numbering.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
 
-* Ethernet Cable
+====== ========================= ======= ===============================================================
+Item # Item Name                 QTY     Purpose
+====== ========================= ======= ===============================================================
+ 1     Metric Hex Key Set         1      For removing screws and attaching accessories
+ 2     Right Angle USB Connector  1      To prevent USB connector damage while driving
+ 3     Wireless Joystick	  1      For teleoperating the robot
+ 4     USB Cable		  1 	 For charging the wireless joystick
+ 5     Finger Tip Covers	  4	 To replace damaged finger tips
+ 6     M5x10mm SHCS		  4	 For attaching accessories to the base mount points
+ 7     M4x10mm SHCS		  4	 For attaching accessories to the head mount points
+ 8     M3x14mm Standoffs          4      For attaching accessories to the gripper
+ 9     3ft Ethernet Cable         1	 For connecting the robot to the network
+ 10    Fetch Robotics Stickers    5      For your laptop :)
+ 11    Mircofiber Lens Cloth      1      For cleaning optics of the robot
+====== ========================= ======= ===============================================================
+
 
 Robot Power Supply 
 ~~~~~~~~~~~~~~~~~~
+The robot power supply is shown below in the packaging:
 
-.. TODO:: PIC of power supply
+.. figure:: _static/charger.JPG
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+The robot plug end is shown below, when removing the charge plug from the
+robot **always** grab the plug by the housing and not the cable.
+
+.. figure:: _static/charge_plug.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+.. warning:: 
+    
+    Pulling on the charge plug cable instead of the handle can cause
+    damage to the cable assembly over time and could potentially cause
+    injury to the robot or user.
 
 
 Running Fetch & Freight
@@ -94,6 +134,7 @@ Before turning the robot off, it is recommended that you tuck the arm.
 When power is shut off, the arm will want to slowly fall and will be
 more difficult to backdrive when in the off configuration.
 
-To turn the robot off, press and hold the switch on the access panel
-until it starts blinking. The switch will continue blinking until the
-computer has successfully shut down, and then power will be disconnected.
+To turn the robot off, press and hold the illuminated power button on
+the access panel until it starts blinking. The power button will
+continue blinking until the computer has successfully shut down, and
+then power will be disconnected.

@@ -10,7 +10,10 @@ Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot
 base, torso, head and gripper.
 
-.. TODO:: add image of joystick (http://wiki.ros.org/ps3joy)
+.. figure:: _static/joystick_numbered.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
 
 To drive the robot base, hold the primary deadman button (button 10
 above) and use the two joysticks. The left joystick controls turning

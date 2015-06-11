@@ -73,16 +73,28 @@ Fetch and Freight both have an access panel with 2 USB, an Ethernet, and an
 HD Video port. All of these ports are connected directly to the onboard
 computer. In addition, Fetch has an extra USB port on the head.
 
-.. figure:: _static/access_panel.jpg
-   :width: 60%
+.. figure:: _static/access_panel_numbered.png
+   :width: 100%
    :align: center
    :figclass: align-centered
 
-The access panel is also the location of the power button which
-turns the robot on or off. This switch is connected to the mainboard and will
-only work if the power disconnect switch (the red one on the
-lower back of the robot) is in the ON position. Pressing the
-power button until it lights up with boot the robot, including the computer.
-To turn the robot off, press and hold the switch on the access panel
-until it starts blinking. The switch will continue blinking until the
-computer has successfully shut down, and then power will be disconnected.
+====== =========================
+Item # Item Name                
+====== =========================
+ 1     HD Video Port       
+ 2     USB Port 1
+ 3     USB Port 2
+ 4     Ethernet Port
+ 5     Power Button
+ 6     Charge LED
+====== =========================
+
+The access panel is also the location of the power button which turns
+the robot on or off. This switch is connected to the mainboard and
+will only work if the power disconnect switch (the red one on the
+lower back of the robot) is in the ON position. Pressing the power
+button until it lights up with boot the robot, including the computer.
+To turn the robot off, press and hold the illuminated power button on
+the access panel until it starts blinking. The button will continue
+blinking until the computer has successfully shut down, and then power
+will be disconnected.
