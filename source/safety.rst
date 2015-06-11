@@ -115,15 +115,58 @@ Warning Labels
 Below are pictures of all the warning labels that can be found on the
 robot and associated safety issue.
 
-.. TODO:: add images and descriptions... the table sucks.. 
+Pinch Point
++++++++++++
+.. figure:: _static/pinch_point_label.gif
+   :width: 30%
+   :align: center
+   :figclass: align-centered
 
-.. csv-table:: 
-   :widths: 50 50
+There are several pinch point warning labels on the robot. The labels
+mark the regions of the robot that could cause injury to hands or
+finger while moving. It is important to hit the run stop immediately
+if a finger or hand becomes trapped in a pinch point.
 
-   .. image:: _static/electrical_shock_charge.jpg, "**Electrical Shock** 
-   Make sure that no foreign objects become lodged in the connector"
-   .. image:: _static/pinch_point_head.jpg, **Pinch Point** Do not place fingers near the head while rotating
-   .. image:: _static/pinch_point_torso.jpg, **Pinch Point** Do not place fingers under the torso skin while moving
+Electrical Shock
+++++++++++++++++
+.. figure:: _static/electrical_shock_label.gif
+   :width: 30%
+   :align: center
+   :figclass: align-centered
+
+The electrical shock labels mark regions of the robot that could cause
+electrical shock if damaged or wet. If the water enters the battery
+compartment of the robot or the power intlet connector, do not
+continue operating the robot. Shut the robot down and turn of the
+robot using the power disconnect switch on the back of the robot. Then
+contact Fetch Robotics support.
+
+Laser Beam
+++++++++++
+.. figure:: _static/laser_beam_label.gif
+   :width: 30%
+   :align: center
+   :figclass: align-centered
+
+The laser beam warning label is to remind the user that there is an
+active laser scanner in the robot. The laser scanner is a class 1
+laser scanner and is eye safe under all **normal** operating
+conditions. However it is important to note that incorrect use can
+lead to the user being exposed to dangerous radiation. If the laser
+housing is damaged on the robot do not continue using the robot or
+look directly into the laser beam region.
+
+Read The Manual
++++++++++++++++
+.. figure:: _static/read_manual_label.png
+   :width: 50%
+   :align: center
+   :figclass: align-centered
+
+Read the manual stickers are found beneath the skins of the
+robot. It is important for the user to read the manual and other
+maintenance documents before attempting to repair or perform
+maintenance on the robot.
 
 
 
