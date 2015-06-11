@@ -64,6 +64,12 @@ When a breaker is disabled or tripped, power will no longer flow to the connecte
 devices. In the case of MCBs, this means that they will not be able to communicate
 with the mainboard.
 
+.. figure:: _static/power_distribution.png 
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+
 .. _power_disconnect:
 
 Power Disconnect Switch
@@ -74,7 +80,12 @@ cuts the power between the battery and the mainboard. It also acts as
 a breaker, limiting the total current that can be delivered by the
 batteries.
 
-.. TODO:: add image of power disconnect
+.. figure:: _static/power_disconnect.png
+   :width: 80%
+   :align: center
+   :figclass: align-centered
+
+
 
 Runstop
 +++++++

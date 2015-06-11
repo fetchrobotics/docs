@@ -17,7 +17,7 @@ facing up, otherwise the connector will not properly mate:
    :figclass: align-centered
 
 The connector needs roughly 100 newtons (24 lbs) of force to plug in.
-If it seems the connector will not mate with this much force, chec
+If it seems the connector will not mate with this much force, check
 the plug and connector for damage or foreign objects.
 
 The charge indicator light on the :ref:`access_panel` indicates
@@ -63,9 +63,9 @@ and damage the wiring or connector.
 There are also some important rules that should be followed to prevent damage to
 robot and charging supply.
 
-1. When disconnecting the supply from robot, grab plug and pull out
+1. When disconnecting the supply from robot, grab plug and pull out.
    Never pull on the cable to pull out the plug.
-   Also, when moving power supply brick, do around use cable to pull it around.
+   Also, when moving power supply brick, do not around use cable to pull it around.
    All copper wire has poor tensile strength and can break with too much abuse.
 
 2. Pull straight back when disconnecting the supply plug, do not pull out at an angle.
@@ -85,7 +85,7 @@ If the supply wiring or connector is damaged, do not attempt use the damaged sup
 Instead create a support ticket to get the damage part fixed or replaced.
 
 The robot uses large sealed lead-acid (SLA) batteries.  These batteries should provide a many hours
-of robot running time.   Like most chemical batteries technologies, the amount energy the
+of robot run time.   Like most chemical batteries technologies, the amount energy the
 batteries can provide will decrease as they age.
 Luckily, replacing the batteries is simple and relatively inexpensive.
 Even so, there are few things that can done to improve battery lifetime.
@@ -101,12 +101,12 @@ Even so, there are few things that can done to improve battery lifetime.
    uses.  While this is not always feasible, it will slow the rate at which
    individual battery cells get out of balance.
 
-4. When doing heavily cycling of batteries, leave charge batteries for extra long
-   period of time at least once a week.
+4. When doing heavily cycling of batteries, leave the batteries charging for an extra long
+   period of time, at least once a week.
    Even though the batteries may be fully charged, leaving
    the batteries on charger for longer period of time will help balance out
    differences in individual cell voltages that accumulate over time.
-   This not as important when batteries or only discharged small amounts for each use.
+   This not as important when batteries are only discharged small amounts during each use.
 
 5. Keep robot cool.  Cool batteries age less than warm ones.
 
