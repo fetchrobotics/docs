@@ -57,8 +57,8 @@ Fetch & Freight safely.
 
 * **ROS and Fetch & Freight**
 
- - Fetch & Freight R&D software is based on ROS. Completing the beginner
-   tutorials in Section TODO will help users understand how to operate and
+ - Fetch & Freight R&D software is based on ROS. Completing the
+   beginner tutorials will help users understand how to operate and
    write applications for the Fetch & Freight.
 
 * **Fetch & Freight Support**
