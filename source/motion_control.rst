@@ -5,7 +5,10 @@ Each joint has a dedicated motor controller board (MCB) with a dedicated
 microcontroller. The real-time components of the controls run on the
 MCBs, while the robot computer streams commands to the MCBs.
 
-.. TODO:: add image of control overview
+.. figure:: _static/motion_control_overview.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
 
 All motors are brushless and each MCB runs an effort controller at 17.5kHz.
 Each MCB can also run an optional velocity controller which takes a desired
