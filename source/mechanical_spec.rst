@@ -100,10 +100,19 @@ wrist_roll_joint         continuous    --           --
 Mount Points
 ++++++++++++
 
-Fetch and Freight both have mount points on top of the robot base. Fetch also
-has mount points on the head and gripper.
+Fetch and Freight both have mount points on top of the robot
+base. Fetch also has mount points on the head and gripper. The table
+below lists the fasteners that should be used and the max torques to
+use when installing fasteners.
 
-.. TODO:: Add details on screw size, torque limits, etc of these mounts.
+=========== ============ ========================= 
+Location    Fastener     Max Torque 
+=========== ============ ========================= 
+Base        M5           8.5Nm
+Head        M4           4.2Nm
+Gripper     M3           0.7Nm (into the standoff)
+=========== ============ ========================= 
+
 
 Gripper Modularity Interface
 ++++++++++++++++++++++++++++
