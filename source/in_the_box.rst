@@ -11,7 +11,7 @@ supply for charging the robot.
 
 
 Fetch and Freight
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Please watch the respective video for unpacking Fetch or Freight. The
 video covers unpacking the robot, connecting the batteries, turning on
@@ -79,10 +79,10 @@ robot **always** grab the plug by the housing and not the cable.
 
 
 Running Fetch and Freight
-```````````````````````
+`````````````````````````
 
 Turning on Fetch and Freight
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To turn on the robot, set the :ref:`power_disconnect` (the red one
 on the lower back of the robot) to the ON position and then press the
@@ -118,7 +118,7 @@ Tucking Fetch's Arm
 .. TODO:: add notes on tucking the arm
 
 Driving Fetch and Freight with a Joystick
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. include:: teleop.rst
     :start-after: embed-pt
 
@@ -128,7 +128,7 @@ Visualizing Data
    :start-after: embed-rviz-start
 
 Putting Fetch and Freight Away
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before turning the robot off, it is recommended that you tuck the arm.
 When power is shut off, the arm will want to slowly fall and will be
