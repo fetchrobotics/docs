@@ -10,3 +10,6 @@
   text-align: right;
   float: right;
 }
+.header-override img {
+  width: 200px;
+}
