@@ -1,9 +1,6 @@
 .. Fetch Robotics documentation master file, created by
    sphinx-quickstart on Sun Feb 15 02:38:06 2015.
 
-Welcome to Fetch Robotics' documentation!
-========================================================
-
 Fetch & Freight Manual
 ----------------------
 
