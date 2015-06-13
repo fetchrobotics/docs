@@ -65,7 +65,7 @@ devices. In the case of MCBs, this means that they will not be able to communica
 with the mainboard.
 
 .. figure:: _static/power_distribution.png 
-   :width: 100%
+   :width: 80%
    :align: center
    :figclass: align-centered
 
