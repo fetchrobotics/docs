@@ -89,7 +89,7 @@ launch file:
 
 ::
 
-    >$ roslaunch fetch_gazebo_demo demo.launch
+    >$ roslaunch fetch_gazebo demo.launch
 
 This will start:
 
