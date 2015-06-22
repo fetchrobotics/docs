@@ -19,7 +19,7 @@ Operation of this equipment in a residential area is likely to cause harmful
 interference in which case the user will be required to correct the interference 
 at their own expense.
 
-Contains Transmitter Module FCC ID: PD97620H
+Contains Transmitter Module FCC ID: PD97260H
 
 Copyright Notices for Open Source Software
 ------------------------------------------
