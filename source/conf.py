@@ -139,7 +139,7 @@ html_context = {
   "display_github": True,
   "github_user": "fetchrobotics",
   "github_repo": "docs",
-  "github_version": "master/",
+  "github_version": "master/source/",
   "conf_py_path": "",
   "source_suffix": source_suffix,
   "css_files": ['_static/override.css']
