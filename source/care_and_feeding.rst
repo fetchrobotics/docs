@@ -38,7 +38,7 @@ solid green.
 
 The charge indicator light will turn red when the battery voltage is low.
 When the charge indicator turns red, you should recharge the robot.
-If the battery voltage gets low enough, the robot power will automatically
+If the battery voltage gets low enough, the robot will automatically
 turn off.
 
 In some cases, the charging circuit may detect an error condition
@@ -48,11 +48,11 @@ a support ticket should be created to address the problem.
 
 One notable charging error is caused by the :ref:`power_disconnect` being switched off.
 When the power disconnect is switch off, it disconnects the battery which prevents the
-charger from working.  When the charger detects this situation it will flash both the
+charger from working. When the charger detects this situation it will flash both the
 charge indicator red, and the power button at the same time.
 
 The robot will typically need about 3.5 hours to charge batteries from empty to
-90% capacity.  It will take an additional 3 hours to charge remaining %10 of
+90% capacity. It will take an additional 3 hours to charge remaining 10% of
 battery capacity. While the robot does not need to get to 100% on every charge,
 it is strongly recommended that the robot be fully charged at least once a week
 to get the best possible life out of the batteries. Charging works whether
@@ -66,7 +66,7 @@ robot and charging supply.
 
 1. When disconnecting the supply from robot, grab plug and pull out.
    Never pull on the cable to pull out the plug.
-   Also, when moving power supply brick, do not around use cable to pull it around.
+   Also, when moving power supply brick, do not use cable to pull it around.
    All copper wire has poor tensile strength and can break with too much abuse.
 
 2. Pull straight back when disconnecting the supply plug, do not pull out at an angle.
@@ -85,8 +85,8 @@ robot and charging supply.
 If the supply wiring or connector is damaged, do not attempt use the damaged supply.
 Instead create a support ticket to get the damage part fixed or replaced.
 
-The robot uses large sealed lead-acid (SLA) batteries.  These batteries should provide a many hours
-of robot run time.   Like most chemical batteries technologies, the amount energy the
+The robot uses large sealed lead-acid (SLA) batteries. These batteries should provide a many hours
+of robot run time. Like most chemical batteries technologies, the amount energy the
 batteries can provide will decrease as they age.
 Luckily, replacing the batteries is simple and relatively inexpensive.
 Even so, there are few things that can done to improve battery lifetime.
@@ -138,8 +138,8 @@ Cleaning Your Robot
 
 To clean fingerprints, dirt, and smudges from the skin of Fetch and
 Freight use a clean soft cloth and isopropyl alcohol or window cleaner
-(i.e. Windex). Make sure to wet the cloth with the isopropyl alcohol
-or windex then gently clean the skins of the robot.
+(e.g. Windex). Make sure to wet the cloth with the isopropyl alcohol
+or window cleaner, and then gently clean the skins of the robot.
 
 .. warning::
 
@@ -153,6 +153,6 @@ options for cleaning the optics of the robot.
 
 .. warning::
 
-    Do not use window cleaner, acetone, or abrasive cloths,
-    as this may cause damage to the lens.
+    Do not use window cleaner, acetone, or abrasive cloths on the sensor
+    lenses as this may cause damage to the lens.
 
