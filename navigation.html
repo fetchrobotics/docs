@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial: Navigation &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
+        <link rel="next" title="Tutorial: Manipulation" href="manipulation.html"/>
+        <link rel="prev" title="Tutorial: Robot Teleop" href="teleop.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home">
+        
+
+          Fetch & Freight <br/> Research Edition
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#before-you-start">Before you Start</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#safety-overview">Safety Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-features">Design Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#general-usage-guidelines">General Usage Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#warning-labels">Warning Labels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#pinch-point">Pinch Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#electrical-shock">Electrical Shock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#laser-beam">Laser Beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#read-the-manual">Read The Manual</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#running-fetch-and-freight">Running Fetch and Freight</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#turning-on-fetch-and-freight">Turning on Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#logging-in">Logging In</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#putting-fetch-and-freight-away">Putting Fetch and Freight Away</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="robot_hardware.html">Robot Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanism-terminology">Mechanism Terminology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#link">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#frame">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#joint">Joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#fetch-home-pose">Fetch Home Pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#coordinate-system">Coordinate System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#naming-conventions">Naming Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanical-overview">Mechanical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#environmental">Environmental</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#drive-surface">Drive Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#incline-surface">Incline Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#water">Water</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#temperature-and-humidity">Temperature and Humidity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#forces-and-torques">Forces and Torques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#joint-limits-and-types">Joint Limits and Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#mount-points">Mount Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#gripper-modularity-interface">Gripper Modularity Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#electrical-overview">Electrical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#breakers">Breakers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#power-disconnect-switch">Power Disconnect Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#runstop">Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#access-panel">Access Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#motion-control">Motion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#sensor-overview">Sensor Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#base-laser">Base Laser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#imu">IMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#head-camera">Head Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#gripper-sensors">Gripper Sensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Overview and Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#creating-user-accounts">Creating User Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#networking">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#connecting-the-robot-to-a-wireless-network">Connecting the Robot to a Wireless Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#clock-synchronization">Clock Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#upstart-services">Upstart Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#log-files">Log Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#speakers-and-audio">Speakers and Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gazebo.html">Tutorial: Gazebo Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#starting-the-simulator">Starting the Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial: Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-navigation-in-gazebo">Running Navigation in Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-a-map">Building A Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sending-waypoints">Sending Waypoints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Tutorial: Manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit">Running MoveIt!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Tutorial: Perception</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#head-camera-topics">Head Camera Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#understanding-calibration">Understanding Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrate-robot-tool">Calibrate Robot Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#arm-and-torso">Arm and Torso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#base-interface">Base Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-interface">Head Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#gripper-interface">Gripper Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-camera-interface">Head Camera Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#laser-interface">Laser Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#imu-interface">IMU Interface</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notices.html">Notices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#fcc-notice">FCC Notice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#copyright-notices-for-open-source-software">Copyright Notices for Open Source Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#trademarks">Trademarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Fetch & Freight Research Edition</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+
+        <div class="header-override">
+          <p>
+            <a href="http://www.fetchrobotics.com/research">Fetch & Freight</a><br/>
+            <a href="http://www.fetchrobotics.com/blog">Blog</a>
+          </p>
+          <a href="http://www.fetchrobotics.com"><img src="_static/logo.png"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Tutorial: Navigation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/fetchrobotics/docs/blob/master/navigation.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-navigation">
+<h1>Tutorial: Navigation<a class="headerlink" href="#tutorial-navigation" title="Permalink to this headline">¶</a></h1>
+<p>Once you have Fetch or Freight running, you can start navigating.
+Fetch and Freight ship with configurations for using the
+ROS Navigation Stack. A number of tutorials related to navigation
+can be found in the documentation on the
+<a class="reference external" href="http://wiki.ros.org/navigation">ROS Wiki</a>.</p>
+<div class="section" id="running-navigation-in-gazebo">
+<h2>Running Navigation in Gazebo<a class="headerlink" href="#running-navigation-in-gazebo" title="Permalink to this headline">¶</a></h2>
+<p>To run navigation in simulation, launch the navigation launch file
+from the <tt class="docutils literal"><span class="pre">fetch_gazebo_demo</span></tt> package:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ roslaunch fetch_gazebo_demo fetch_nav.launch
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-a-map">
+<h2>Building A Map<a class="headerlink" href="#building-a-map" title="Permalink to this headline">¶</a></h2>
+<p>The launch file for navigation in Gazebo depends on a pre-built
+map of the environment. In order to use navigation in the real world,
+you will need to first build a map of your environment:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ roslaunch fetch_navigation build_map.launch
+</pre></div>
+</div>
+<p>Once you launch build_map, you will want to
+<a class="reference internal" href="teleop.html"><em>tele-operate the robot</em></a> the robot around and build
+the map, which can be visualized in RVIZ.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The build_map.launch file is not intended to be run at the same time
+as fetch_nav.launch</p>
+</div>
+<p>While driving the robot around, you can view the map in RVIZ.
+Once you are happy with the map, you can save the map:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ rosrun map_server map_saver -f &lt;map_directory/map_name&gt;
+</pre></div>
+</div>
+<p>The map saver will create two files in the specified
+<tt class="docutils literal"><span class="pre">map_directory</span></tt>. The directory must already exist.
+The two files are map_name.pgm and map_name.yaml.
+The first is the map in a <tt class="docutils literal"><span class="pre">.pgm</span></tt> image format, and
+the second is a YAML file that specifies metadata for the image.
+These files can then be served by the map_server:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ rosrun map_server map_server &lt;map.yaml&gt;
+</pre></div>
+</div>
+<p>The fetch_nav.launch file used above launches an instance of map_server. It
+has three arguments which control the behavior:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Argument</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>map_file</td>
+<td>YAML file containing map metadata</td>
+</tr>
+<tr class="row-odd"><td>map_keepout_file</td>
+<td>Additional YAML file containing metadata for a keepout map</td>
+</tr>
+<tr class="row-even"><td>use_keepout</td>
+<td>Whether to load and use a keepout map (default: False)</td>
+</tr>
+</tbody>
+</table>
+<p>You can either pass the arguments from the command line, like:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ roslaunch fetch_navigation fetch_nav.launch map_file:=/path/to/map.yaml
+</pre></div>
+</div>
+<p>Or create a new launch file in your own package which includes launch
+file and passes in arguments:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;launch&gt;
+  &lt;include file=&quot;$(find fetch_navigation)/launch/fetch_nav.launch&quot; &gt;
+    &lt;arg name=&quot;map_file&quot; value=&quot;$(find my_package)/maps/my_map.yaml&quot; /&gt;
+    &lt;arg name=&quot;map_keepout_file&quot; value=&quot;$(find my_package)/maps/my_keepout_map.yaml&quot; /&gt;
+    &lt;arg name=&quot;use_keepout&quot; value=&quot;true&quot; /&gt;
+  &lt;/include&gt;
+&lt;/launch&gt;
+</pre></div>
+</div>
+<p>The &#8220;keepout&#8221; map can be created by copying the YAML file of your saved map,
+editing the name of the <tt class="docutils literal"><span class="pre">.pgm</span></tt> file and then copying the <tt class="docutils literal"><span class="pre">.pgm</span></tt> file.
+You can then open the <tt class="docutils literal"><span class="pre">.pgm</span></tt> file in an image editor, such as GIMP, and
+black out areas that you do not want the robot to drive through. This must be
+done in a separate map that is only used for planning so that the edits do
+not disturb the functionality of localization (AMCL).</p>
+</div>
+<div class="section" id="sending-waypoints">
+<h2>Sending Waypoints<a class="headerlink" href="#sending-waypoints" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to send a goal to the navigation stack is using RVIZ and the
+<tt class="docutils literal"><span class="pre">2D</span> <span class="pre">Nav</span> <span class="pre">Goal</span></tt> button. See the tutorial on using RVIZ with navigation in the RVIZ
+<a class="reference external" href="http://wiki.ros.org/navigation/Tutorials/Using%20rviz%20with%20the%20Navigation%20Stack">documentation</a></p>
+<p>However, you probably want to program your robot. There is a
+<a class="reference external" href="http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals">tutorial</a>
+on commanding the robot with C++. For examples in Python, look at the demo.py
+code in the <tt class="docutils literal"><span class="pre">fetch_gazebo_demo</span></tt> package.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manipulation.html" class="btn btn-neutral float-right" title="Tutorial: Manipulation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="teleop.html" class="btn btn-neutral" title="Tutorial: Robot Teleop" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2015, Fetch Robotics Inc.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'Indigo',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

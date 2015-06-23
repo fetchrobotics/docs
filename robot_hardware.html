@@ -1,0 +1,924 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Robot Hardware Overview &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
+        <link rel="next" title="Computer Overview and Configuration" href="computer.html"/>
+        <link rel="prev" title="Getting Started" href="in_the_box.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home">
+        
+
+          Fetch & Freight <br/> Research Edition
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#before-you-start">Before you Start</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#safety-overview">Safety Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-features">Design Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#general-usage-guidelines">General Usage Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#warning-labels">Warning Labels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#pinch-point">Pinch Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#electrical-shock">Electrical Shock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#laser-beam">Laser Beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#read-the-manual">Read The Manual</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#running-fetch-and-freight">Running Fetch and Freight</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#turning-on-fetch-and-freight">Turning on Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#logging-in">Logging In</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#putting-fetch-and-freight-away">Putting Fetch and Freight Away</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Robot Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mechanism-terminology">Mechanism Terminology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#link">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frame">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#joint">Joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fetch-home-pose">Fetch Home Pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coordinate-system">Coordinate System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#naming-conventions">Naming Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mechanical-overview">Mechanical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#environmental">Environmental</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#drive-surface">Drive Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#incline-surface">Incline Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#water">Water</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temperature-and-humidity">Temperature and Humidity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#forces-and-torques">Forces and Torques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#joint-limits-and-types">Joint Limits and Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mount-points">Mount Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gripper-modularity-interface">Gripper Modularity Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#electrical-overview">Electrical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#breakers">Breakers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power-disconnect-switch">Power Disconnect Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#runstop">Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-panel">Access Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#motion-control">Motion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensor-overview">Sensor Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-laser">Base Laser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imu">IMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#head-camera">Head Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gripper-sensors">Gripper Sensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Overview and Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#creating-user-accounts">Creating User Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#networking">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#connecting-the-robot-to-a-wireless-network">Connecting the Robot to a Wireless Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#clock-synchronization">Clock Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#upstart-services">Upstart Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#log-files">Log Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#speakers-and-audio">Speakers and Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gazebo.html">Tutorial: Gazebo Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#starting-the-simulator">Starting the Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-in-gazebo">Running Navigation in Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building A Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-waypoints">Sending Waypoints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Tutorial: Manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit">Running MoveIt!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Tutorial: Perception</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#head-camera-topics">Head Camera Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#understanding-calibration">Understanding Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrate-robot-tool">Calibrate Robot Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#arm-and-torso">Arm and Torso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#base-interface">Base Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-interface">Head Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#gripper-interface">Gripper Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-camera-interface">Head Camera Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#laser-interface">Laser Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#imu-interface">IMU Interface</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notices.html">Notices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#fcc-notice">FCC Notice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#copyright-notices-for-open-source-software">Copyright Notices for Open Source Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#trademarks">Trademarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Fetch & Freight Research Edition</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+
+        <div class="header-override">
+          <p>
+            <a href="http://www.fetchrobotics.com/research">Fetch & Freight</a><br/>
+            <a href="http://www.fetchrobotics.com/blog">Blog</a>
+          </p>
+          <a href="http://www.fetchrobotics.com"><img src="_static/logo.png"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Robot Hardware Overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/fetchrobotics/docs/blob/master/robot_hardware.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="robot-hardware-overview">
+<h1>Robot Hardware Overview<a class="headerlink" href="#robot-hardware-overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mechanism-terminology">
+<h2>Mechanism Terminology<a class="headerlink" href="#mechanism-terminology" title="Permalink to this headline">¶</a></h2>
+<p>The Fetch and Freight kinematics are defined by using the concepts of
+joints, links, and coordinate frames. The robot URDF (unified robot
+description format) model specifies the attributes (kinematic tree,
+names, ranges, etc.) of the joints, links, and frames of the robot. A
+link element in the URDF describes a rigid body with inertia, visual
+features, and coordinate frames. A joint element in the URDF defines
+the kinematics, dynamics, safety limits, and type (revolute,
+continuous fixed, prismatic, floating, or planar). Fixed joints are
+typically used to describe the relationship between two rigidly joined
+components in the robot.</p>
+<div class="section" id="link">
+<h3>Link<a class="headerlink" href="#link" title="Permalink to this headline">¶</a></h3>
+<p>The links for the Fetch and Freight are defined in the URDF description
+that are located in the fetch_description or freight_description
+package respectively.</p>
+</div>
+<div class="section" id="frame">
+<h3>Frame<a class="headerlink" href="#frame" title="Permalink to this headline">¶</a></h3>
+<p>Frames represent the coordinate frames of links, detected objects,
+sensors, or the location of another robot in the world. Frames are
+define relative to other frames and the transformations between each
+frame is tracked using TF.</p>
+</div>
+<div class="section" id="joint">
+<h3>Joint<a class="headerlink" href="#joint" title="Permalink to this headline">¶</a></h3>
+<p>A joints define the relationship between links and are defined in the
+URDF description that can be found in the fetch_description or
+freight_description package respectively. In the Fetch and Freight the
+majority of the joints are rotational, the torso is prismatic, and
+there are several fixed joints describing the location of sensors
+within the robot. Rotational and translational joints are represented
+similarly in the URDF, and joint forces are described as <em>effort</em>
+instead of force or torque. Position, and velocity are both used to
+describe linear and angular motion of a joint.</p>
+</div>
+<div class="section" id="fetch-home-pose">
+<h3>Fetch Home Pose<a class="headerlink" href="#fetch-home-pose" title="Permalink to this headline">¶</a></h3>
+<p>The home pose of the Fetch robot is used to describe the joint
+positions in a consistent manner. The home pose is defined as the
+robot arm straight out in front of the robot with all x-axes aligned,
+the gripper in the closed position, and the x-axes of the head
+parallel and aligned with the arm, in this position all of the joints
+are considered to be zeroed. The calibration reference for most joints
+are not at the joint zero and the URDF of the Fetch contains the
+offsets for each joint.</p>
+</div>
+<div class="section" id="coordinate-system">
+<h3>Coordinate System<a class="headerlink" href="#coordinate-system" title="Permalink to this headline">¶</a></h3>
+<p>The coordinate frames for all links in the Fetch and Freight are defined
+with positive z-axis up, positive x-axis forward, and positive y-axis
+to the robot-left when Fetch is in the home pose. All joint angle
+conventions are chosen such that from the home pose, positive motion
+of the joint results in positive motion around a positive axis of a
+joint coordinate frame (i.e. right handed).</p>
+</div>
+<div class="section" id="naming-conventions">
+<h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h3>
+<p>In general, the names for a link, a joint, and frame will be similar
+(e.g. shoulder_pan_link, shoulder_pan_joint, and
+shoulder_pan_frame). Short prefixes are used to describe the location
+of repeated components (i.e. drive wheels). The diagrams below show
+the link and joint naming conventions as well as the positive
+direction of joint motion.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_link_names.png"><img alt="_images/fetch_link_names.png" src="_images/fetch_link_names.png" style="width: 100%;" /></a>
+</div>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_joint_names.png"><img alt="_images/fetch_joint_names.png" src="_images/fetch_joint_names.png" style="width: 100%;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="mechanical-overview">
+<h2>Mechanical Overview<a class="headerlink" href="#mechanical-overview" title="Permalink to this headline">¶</a></h2>
+<p>Do not operate Fetch or Freight before reviewing the mechanical
+information listed below.</p>
+<div class="section" id="environmental">
+<h3>Environmental<a class="headerlink" href="#environmental" title="Permalink to this headline">¶</a></h3>
+<p>The Fetch and Freight Research Edition Robots are indoor laboratory
+robots. Operating outside this type of environment could cause
+damage to the Fetch and Freight robots, and injury or death to
+operators.</p>
+<div class="section" id="drive-surface">
+<h4>Drive Surface<a class="headerlink" href="#drive-surface" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>The drive surface of the Fetch must be capable of supporting the
+entire weight of Fetch, about 250 lbs (113.3 kgs). If the surface is too
+soft, Fetch can get stuck and fail to drive. A commercial carpet or
+tile is recommended.</li>
+<li>The drive surface of the Freight must be capable of supporting the
+entire weight of the Freight about 150 lbs (68 kgs) plus the weight
+of the payload. If the surface is too soft, Freight can get stuck
+and fail to drive. A commercial carpet or tile is recommended.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="incline-surface">
+<h4>Incline Surface<a class="headerlink" href="#incline-surface" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>Fetch and Freight are ready for ADA-compliant ramps, which are at no
+more than a 1/12 slope. Ramps that are steeper than a 1/12 slope
+are unsafe and may be a tipping hazard.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="water">
+<h4>Water<a class="headerlink" href="#water" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>Fetch and Freight have not been tested for any type of contact with water
+or any other liquid. Under no circumstances should Fetch nor Freight
+come in contact with water from rain, mist, ground water (puddles)
+and any other liquid. Water contact can cause damage to the electrical
+circuitry and the mechanism.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="temperature-and-humidity">
+<h4>Temperature and Humidity<a class="headerlink" href="#temperature-and-humidity" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>Fetch and Freight are designed to run in environments between 15C and 35C.</li>
+<li>Keep Fetch and Freight away from open flames and other heat sources.
+Never use Fetch or Freight around stoves or ovens.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="forces-and-torques">
+<h3>Forces and Torques<a class="headerlink" href="#forces-and-torques" title="Permalink to this headline">¶</a></h3>
+<p>Joint position, velocity, and force limits are implemented in the
+Fetch and Freight URDF file as well as in firmware. Firmware implements
+additional power limits. These joint limits control the range of
+travel of the mechanism and the allowable velocity to prevent
+over-travel. These limits are enforced by the controller, and are
+designed to prevent poorly commanded control efforts from damaging the
+robot or harming operators.</p>
+<p>The limits below are from the Fetch and Freight URDF files. If a
+velocity or torque limit is not specified, no value is enforced.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="20%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Joint</th>
+<th class="head">Velocity</th>
+<th class="head">Torque/Force</th>
+<th class="head">Power</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#8220;*&#8221;_wheel_joint</td>
+<td>17.4rad/s</td>
+<td>8.85Nm</td>
+<td>120W</td>
+</tr>
+<tr class="row-odd"><td>torso_lift_joint</td>
+<td>0.1m/s</td>
+<td>450N</td>
+<td>TBD</td>
+</tr>
+<tr class="row-even"><td>head_pan_joint</td>
+<td>1.57rad/s</td>
+<td>0.32Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-odd"><td>head_tilt_joint</td>
+<td>1.57rad/s</td>
+<td>0.68Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-even"><td>shoulder_pan_joint</td>
+<td>1.25rad/s</td>
+<td>33.82Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-odd"><td>shoulder_lift_joint</td>
+<td>1.45rad/s</td>
+<td>131.76Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-even"><td>upperarm_roll_joint</td>
+<td>1.57rad/s</td>
+<td>76.94Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-odd"><td>elbow_flex_joint</td>
+<td>1.52rad/s</td>
+<td>66.18Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-even"><td>forearm_roll_joint</td>
+<td>1.57rad/s</td>
+<td>29.35Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-odd"><td>wrist_flex_joint</td>
+<td>2.26rad/s</td>
+<td>25.70Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-even"><td>wrist_roll_joint</td>
+<td>2.26rad/s</td>
+<td>7.36Nm</td>
+<td>TBD</td>
+</tr>
+<tr class="row-odd"><td>&#8220;*&#8221;_gripper_finger_joint</td>
+<td>0.05m/s</td>
+<td>60N</td>
+<td>&#8211;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="joint-limits-and-types">
+<h3>Joint Limits and Types<a class="headerlink" href="#joint-limits-and-types" title="Permalink to this headline">¶</a></h3>
+<p>The position limits for Fetch and Freight are specified below. These
+&#8220;hard limits&#8221; are the maximum travel for the mechanism.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="18%" />
+<col width="20%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Joint</th>
+<th class="head">Type</th>
+<th class="head">Limit (+)</th>
+<th class="head">Limit (-)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#8220;*&#8221;_wheel_joint</td>
+<td>continuous</td>
+<td>&#8211;</td>
+<td>&#8211;</td>
+</tr>
+<tr class="row-odd"><td>torso_lift_joint</td>
+<td>prismatic</td>
+<td>400mm</td>
+<td>0mm</td>
+</tr>
+<tr class="row-even"><td>head_pan_joint</td>
+<td>revolute</td>
+<td>90°</td>
+<td>90°</td>
+</tr>
+<tr class="row-odd"><td>head_tilt_joint</td>
+<td>revolute</td>
+<td>90° (down)</td>
+<td>45° (up)</td>
+</tr>
+<tr class="row-even"><td>shoulder_pan_joint</td>
+<td>revolute</td>
+<td>92°</td>
+<td>92°</td>
+</tr>
+<tr class="row-odd"><td>shoulder_lift_joint</td>
+<td>revolute</td>
+<td>87°</td>
+<td>70°</td>
+</tr>
+<tr class="row-even"><td>upperarm_roll_joint</td>
+<td>continuous</td>
+<td>&#8211;</td>
+<td>&#8211;</td>
+</tr>
+<tr class="row-odd"><td>elbow_flex_joint</td>
+<td>revolute</td>
+<td>129°</td>
+<td>129°</td>
+</tr>
+<tr class="row-even"><td>forearm_roll_joint</td>
+<td>continuous</td>
+<td>&#8211;</td>
+<td>&#8211;</td>
+</tr>
+<tr class="row-odd"><td>wrist_flex_joint</td>
+<td>revolute</td>
+<td>125°</td>
+<td>125°</td>
+</tr>
+<tr class="row-even"><td>wrist_roll_joint</td>
+<td>continuous</td>
+<td>&#8211;</td>
+<td>&#8211;</td>
+</tr>
+<tr class="row-odd"><td>&#8220;*&#8221;_gripper_finger_joint</td>
+<td>prismatic</td>
+<td>50mm</td>
+<td>0mm</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mount-points">
+<h3>Mount Points<a class="headerlink" href="#mount-points" title="Permalink to this headline">¶</a></h3>
+<p>Fetch and Freight both have mount points on top of the robot
+base. Fetch also has mount points on the head and gripper. The table
+below lists the fasteners that should be used and the max torques to
+use when installing fasteners.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="25%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Location</th>
+<th class="head">Fastener</th>
+<th class="head">Max Torque</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Base</td>
+<td>M5</td>
+<td>8.5Nm</td>
+</tr>
+<tr class="row-odd"><td>Head</td>
+<td>M4</td>
+<td>4.2Nm</td>
+</tr>
+<tr class="row-even"><td>Gripper</td>
+<td>M3</td>
+<td>0.7Nm (into the standoff)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="gripper-modularity-interface">
+<h3>Gripper Modularity Interface<a class="headerlink" href="#gripper-modularity-interface" title="Permalink to this headline">¶</a></h3>
+<p>The gripper interface is modular, allowing the gripper to be replaced with alternate
+configurations. The gripper interface is based on an ISO mechanical standard,
+Ethernet communications and 24V power. For further details, contact Fetch Robotics
+for the <cite>Gripper Interface Specification</cite> document.</p>
+</div>
+</div>
+<div class="section" id="electrical-overview">
+<h2>Electrical Overview<a class="headerlink" href="#electrical-overview" title="Permalink to this headline">¶</a></h2>
+<p>Internally, Fetch and Freight have a number of circuit boards,
+communication buses, and other components which
+handle power distribution and motion control. The system
+comprises:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The robot computer, running ROS, sends commands to the mainboard
+and gripper board over an Ethernet interface. This same Ethernet
+interface is used to communicate with the scanning laser range
+finder in the base of the robot. The <tt class="docutils literal"><span class="pre">fetch_drivers</span></tt> package
+provides an interface from the robot computer to the mainboard,
+and the default gripper.</li>
+</ul>
+</div></blockquote>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li>The mainboard then communicates with the various motor controller
+boards (MCB) located throughout the robot. Communication with the
+MCBs is done over several half-duplex RS-485 buses. In addition
+to communications-related tasks, the mainboard also controls a
+number of electronic circuit breakers and also carries the charger
+circuitry which charges the batteries.</li>
+</ul>
+</div></blockquote>
+<p></p>
+<blockquote>
+<div><ul class="simple">
+<li>Each joint has a dedicated MCB with a dedicated microcontroller
+and an RS-485 connection. The arm MCBs all share one bus while
+all other MCBs share the other RS-485 bus. The microcontroller on
+each MCB is where the real-time control loops run.</li>
+</ul>
+</div></blockquote>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/communications.png"><img alt="_images/communications.png" src="_images/communications.png" style="width: 80%;" /></a>
+</div>
+<p>Fetch and Freight both have two 12V Sealed Lead Acid (SLA) batteries located
+in the robot base. The batteries are connected in series, providing the nominal
+24V power rail for the robot. These batteries are kept charged by the mainboard (see
+<a class="reference internal" href="care_and_feeding.html#charging"><em>Charging</em></a>).</p>
+<div class="section" id="breakers">
+<h3>Breakers<a class="headerlink" href="#breakers" title="Permalink to this headline">¶</a></h3>
+<p>There are several breakers within the robot. These are designed in order to prevent
+damage to the robot if cabling should become worn or shorted out, or in the case
+of sudden, unexpected overload of a joint. The table below describes each breaker,
+using the names that are used in <tt class="docutils literal"><span class="pre">fetch_drivers</span></tt> and diagnostics:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Breaker Name</th>
+<th class="head">Usage</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>supply_breaker</td>
+<td>Limits current between the charging inlet and mainboard.</td>
+</tr>
+<tr class="row-odd"><td>battery_breaker</td>
+<td>Limits current between the mainboard and batteries.</td>
+</tr>
+<tr class="row-even"><td>computer_breaker</td>
+<td>Limits current delivered to the robot computer.</td>
+</tr>
+<tr class="row-odd"><td>base_breaker</td>
+<td>Limits current delivered to base MCBs, as well as torso
+and head MCBs on Fetch.</td>
+</tr>
+<tr class="row-even"><td>arm_breaker</td>
+<td>Limits current delivered to the MCBs located in the arm</td>
+</tr>
+<tr class="row-odd"><td>gripper_breaker</td>
+<td>Limits current delivered to the gripper.</td>
+</tr>
+</tbody>
+</table>
+<p>When a breaker is disabled or tripped, power will no longer flow to the connected
+devices. In the case of MCBs, this means that they will not be able to communicate
+with the mainboard.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/power_distribution.png"><img alt="_images/power_distribution.png" src="_images/power_distribution.png" style="width: 80%;" /></a>
+</div>
+</div>
+<div class="section" id="power-disconnect-switch">
+<span id="power-disconnect"></span><h3>Power Disconnect Switch<a class="headerlink" href="#power-disconnect-switch" title="Permalink to this headline">¶</a></h3>
+<p>The power disconnect is on the lower back of the robot. This switch
+cuts the power between the battery and the mainboard. It also acts as
+a breaker, limiting the total current that can be delivered by the
+batteries.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/power_disconnect.png"><img alt="_images/power_disconnect.png" src="_images/power_disconnect.png" style="width: 80%;" /></a>
+</div>
+</div>
+<div class="section" id="runstop">
+<h3>Runstop<a class="headerlink" href="#runstop" title="Permalink to this headline">¶</a></h3>
+<p>The runstop is used to stop all operation of the joints. It works by disabling
+the base, arm and gripper breakers. When the runstop is pressed, the drivers
+will not be able to communicate with the MCBs, and thus their position and
+other data will not update in RVIZ nor the runtime monitor.</p>
+</div>
+<div class="section" id="access-panel">
+<span id="id1"></span><h3>Access Panel<a class="headerlink" href="#access-panel" title="Permalink to this headline">¶</a></h3>
+<p>Fetch and Freight both have an access panel with 2 USB, an Ethernet, and an
+HD Video port. All of these ports are connected directly to the onboard
+computer. In addition, Fetch has an extra USB port on the head.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/access_panel_numbered.png"><img alt="_images/access_panel_numbered.png" src="_images/access_panel_numbered.png" style="width: 100%;" /></a>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Item #</th>
+<th class="head">Item Name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>HD Video Port</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>USB Port 1</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>USB Port 2</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>Ethernet Port</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>Power Button</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>Charge Indicator Light</td>
+</tr>
+</tbody>
+</table>
+<p>The access panel is also the location of the power button which turns
+the robot on or off. This switch is connected to the mainboard and
+will only work if the power disconnect switch (the red one on the
+lower back of the robot) is in the ON position. Pressing the power
+button until it lights up with boot the robot, including the computer.
+To turn the robot off, press and hold the illuminated power button on
+the access panel until it starts blinking. The button will continue
+blinking until the computer has successfully shut down, and then power
+will be disconnected.</p>
+</div>
+</div>
+<div class="section" id="motion-control">
+<h2>Motion Control<a class="headerlink" href="#motion-control" title="Permalink to this headline">¶</a></h2>
+<p>Each joint has a dedicated motor controller board (MCB) with a dedicated
+microcontroller. The real-time components of the controls run on the
+MCBs, while the robot computer streams commands to the MCBs.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/motion_control_overview.png"><img alt="_images/motion_control_overview.png" src="_images/motion_control_overview.png" style="width: 80%;" /></a>
+</div>
+<p>All motors are brushless and each MCB runs an effort controller at 17.5kHz.
+Each MCB can also run an optional velocity controller which takes a desired
+velocity and outputs a control into the effort controller. Further, each
+MCB can run a position controller which can feed into the velocity controller.
+The position and velocity controllers each run at 1kHz, and the default
+rate for the commands streaming from the robot computer is 200Hz.
+Each MCB can then receive any of the following types of commands:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Desired position, desired velocity, and desired effort</li>
+<li>Desired velocity and desired effort</li>
+<li>Desired effort</li>
+</ul>
+</div></blockquote>
+<p>Each MCB returns the measured effort, velocity and position of the joint it
+is controlling.</p>
+<p>Most users will want to use the high-level <a class="reference internal" href="api_overview.html#arm-api"><em>Arm and Torso</em></a> ROS API, however,
+users can also create their own controllers as ROS plugins that run on the
+robot computer and send commands to the MCBs using the
+robot_controllers_interface package.</p>
+</div>
+<div class="section" id="sensor-overview">
+<h2>Sensor Overview<a class="headerlink" href="#sensor-overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-laser">
+<h3>Base Laser<a class="headerlink" href="#base-laser" title="Permalink to this headline">¶</a></h3>
+<p>Both Fetch and Freight have a SICK TIM571 scanning range finder. The
+laser has a range of 25m, 220° field of view, 15Hz update rate
+and angular resolution of 1/3°. The laser publishes both distance
+and RSSI (Received Signal Strength Indication)
+to the <strong>base_scan</strong> topic.</p>
+</div>
+<div class="section" id="imu">
+<h3>IMU<a class="headerlink" href="#imu" title="Permalink to this headline">¶</a></h3>
+<p>The mainboard of Fetch and Freight have a 6-axis inertial measurement
+unit (IMU). The gyroscope within the IMU is capable of measuring
++/-2000 degrees per second, while the accelerometers are capable of
+measuring +/-2g. See <a class="reference internal" href="api_overview.html#imu-api"><em>IMU Interface</em></a> for details on the ROS API.</p>
+</div>
+<div class="section" id="head-camera">
+<h3>Head Camera<a class="headerlink" href="#head-camera" title="Permalink to this headline">¶</a></h3>
+<p>Fetch has a Primesense Carmine 1.09 short-range RGBD sensor. This
+camera is best calibrated in the 0.35-1.4m range. See <a class="reference internal" href="api_overview.html#camera-api"><em>Head Camera Interface</em></a>
+for details on the ROS API.</p>
+</div>
+<div class="section" id="gripper-sensors">
+<h3>Gripper Sensors<a class="headerlink" href="#gripper-sensors" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the position and effort feedback of the gripper joint, the
+gripper incorporates a 6-axis inertial measurement unit (IMU). The gyroscope within
+the IMU is capable of measuring +/-2000 degrees per second, while the
+accelerometers are capable of measuring +/-2g.
+See <a class="reference internal" href="api_overview.html#imu-api"><em>IMU Interface</em></a> for details on the ROS API.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="computer.html" class="btn btn-neutral float-right" title="Computer Overview and Configuration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="in_the_box.html" class="btn btn-neutral" title="Getting Started" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2015, Fetch Robotics Inc.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'Indigo',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

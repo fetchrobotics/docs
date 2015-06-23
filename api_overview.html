@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Overview &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
+        <link rel="next" title="Notices" href="notices.html"/>
+        <link rel="prev" title="Tutorial: Calibrating Fetch" href="calibration.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home">
+        
+
+          Fetch & Freight <br/> Research Edition
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#before-you-start">Before you Start</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#safety-overview">Safety Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-features">Design Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#general-usage-guidelines">General Usage Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#warning-labels">Warning Labels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#pinch-point">Pinch Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#electrical-shock">Electrical Shock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#laser-beam">Laser Beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#read-the-manual">Read The Manual</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#running-fetch-and-freight">Running Fetch and Freight</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#turning-on-fetch-and-freight">Turning on Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#logging-in">Logging In</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#putting-fetch-and-freight-away">Putting Fetch and Freight Away</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="robot_hardware.html">Robot Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanism-terminology">Mechanism Terminology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#link">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#frame">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#joint">Joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#fetch-home-pose">Fetch Home Pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#coordinate-system">Coordinate System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#naming-conventions">Naming Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanical-overview">Mechanical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#environmental">Environmental</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#drive-surface">Drive Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#incline-surface">Incline Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#water">Water</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#temperature-and-humidity">Temperature and Humidity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#forces-and-torques">Forces and Torques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#joint-limits-and-types">Joint Limits and Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#mount-points">Mount Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#gripper-modularity-interface">Gripper Modularity Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#electrical-overview">Electrical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#breakers">Breakers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#power-disconnect-switch">Power Disconnect Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#runstop">Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#access-panel">Access Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#motion-control">Motion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#sensor-overview">Sensor Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#base-laser">Base Laser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#imu">IMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#head-camera">Head Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#gripper-sensors">Gripper Sensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Overview and Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#creating-user-accounts">Creating User Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#networking">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#connecting-the-robot-to-a-wireless-network">Connecting the Robot to a Wireless Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#clock-synchronization">Clock Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#upstart-services">Upstart Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#log-files">Log Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#speakers-and-audio">Speakers and Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gazebo.html">Tutorial: Gazebo Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#starting-the-simulator">Starting the Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-in-gazebo">Running Navigation in Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building A Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-waypoints">Sending Waypoints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Tutorial: Manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit">Running MoveIt!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Tutorial: Perception</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#head-camera-topics">Head Camera Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#understanding-calibration">Understanding Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrate-robot-tool">Calibrate Robot Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">API Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arm-and-torso">Arm and Torso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#base-interface">Base Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#head-interface">Head Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gripper-interface">Gripper Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#head-camera-interface">Head Camera Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#laser-interface">Laser Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imu-interface">IMU Interface</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notices.html">Notices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#fcc-notice">FCC Notice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#copyright-notices-for-open-source-software">Copyright Notices for Open Source Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#trademarks">Trademarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Fetch & Freight Research Edition</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+
+        <div class="header-override">
+          <p>
+            <a href="http://www.fetchrobotics.com/research">Fetch & Freight</a><br/>
+            <a href="http://www.fetchrobotics.com/blog">Blog</a>
+          </p>
+          <a href="http://www.fetchrobotics.com"><img src="_static/logo.png"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>API Overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/fetchrobotics/docs/blob/master/api_overview.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-overview">
+<h1>API Overview<a class="headerlink" href="#api-overview" title="Permalink to this headline">¶</a></h1>
+<p>Fetch Robotics is committed to providing an exceptional out-of-the-box
+experience for new robot owners. One of the ways in which we create a great
+experience is by using standard ROS interfaces. This means that code you
+might have written for other robots in the past should be easily portable
+to your new robot.</p>
+<p>Whenever possible, we have conformed to the
+<a class="reference external" href="http://www.ros.org/reps/rep-0000.html">ROS Enhancement Proposals (REPs)</a>.
+These documents provide the foundation of standard ROS interfaces. In addition
+to REP-compatible interfaces, we have adopted a number of the community-accepted
+standard interfaces, such as those provided by the
+<a class="reference external" href="http://wiki.ros.org/control_msgs">control_msgs</a> package.</p>
+<div class="section" id="arm-and-torso">
+<span id="arm-api"></span><h2>Arm and Torso<a class="headerlink" href="#arm-and-torso" title="Permalink to this headline">¶</a></h2>
+<p>The arm and torso of the robot are controlled by
+<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/FollowJointTrajectory.html">control_msgs/FollowJointTrajectory</a>
+actions. This <a class="reference external" href="http://wiki.ros.org/actionlib/DetailedDescription#Action_Interface_.26_Transport_Layer">action interface</a> is the output of packages such as MoveIt, and allows
+the arm to execute a pre-defined trajectory. Three interfaces are provided:</p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>arm_controller/follow_joint_trajectory</cite> to control just the seven joints of the arm.</li>
+<li><cite>arm_with_torso_controller/follow_joint_trajectory</cite> to control the seven joints of the arm plus the torso.</li>
+<li><cite>torso_controller/follow_joint_trajectory</cite> to control just the torso.</li>
+</ul>
+</div></blockquote>
+<p>Only one controller is allowed to control a joint at a time.</p>
+<p>In addition to the trajectory controllers, the arm is always running a gravity
+compensation controller.</p>
+</div>
+<div class="section" id="base-interface">
+<span id="base-api"></span><h2>Base Interface<a class="headerlink" href="#base-interface" title="Permalink to this headline">¶</a></h2>
+<p>Support for mobile bases is quite standard and robust in ROS, however it is one
+of the older interfaces. As such, it is one of the few interfaces which is not
+action-based.</p>
+<p>The mobile base subscribes to <cite>base_controller/command</cite>, and accepts a
+<a class="reference external" href="http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html">geometry_msgs/Twist</a>
+message.</p>
+<p>Only two fields are used in the message:</p>
+<blockquote>
+<div><ul class="simple">
+<li><tt class="docutils literal"><span class="pre">linear.x</span></tt> specifies the robot&#8217;s forward velocity</li>
+<li><tt class="docutils literal"><span class="pre">angular.z</span></tt> specifies the robot&#8217;s turning velocity</li>
+</ul>
+</div></blockquote>
+<p>User applications will typically not connect directly to <cite>base_controller/command</cite>,
+but rather to <cite>cmd_vel</cite>. A multiplexer is always running between <cite>cmd_vel/teleop</cite>
+and <cite>cmd_vel</cite>. Whenever the deadman on the robot controller is held, <cite>cmd_vel/teleop</cite>
+will override <cite>cmd_vel</cite>. The advantage of having your application publish to <cite>cmd_vel</cite>
+rather than directly to <cite>base_controller/command</cite> is that you can override bad
+commands by simply pressing the deadman on the robot controller.</p>
+<p>The base controller implements a speed reduction when in the proximity of
+obstacles. This will not entirely stop the robot if it is about to hit something,
+but will prevent full speed collisions.</p>
+</div>
+<div class="section" id="head-interface">
+<span id="head-api"></span><h2>Head Interface<a class="headerlink" href="#head-interface" title="Permalink to this headline">¶</a></h2>
+<p>The head exposes two potential interfaces. The first is an <a class="reference external" href="http://wiki.ros.org/actionlib#Client-Server_Interaction">ActionServer</a>
+available on <cite>head_controller/follow_joint_trajectory</cite> which follows a joint trajectory as with the
+arm and torso (described above).</p>
+<p>The second interface is unique to the head, and allows the user to easily point the
+head (and head sensors) at a point of interest. This action-based interface is
+available on <cite>head_controller/point_head</cite>. It is of type
+<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/PointHead.html">control_msgs/PointHead</a>.
+Although the interface currently does not support any of the <tt class="docutils literal"><span class="pre">pointing_axis</span></tt> or <tt class="docutils literal"><span class="pre">pointing_frame</span></tt>
+fields, it points the <cite>head_tilt_link</cite> (which is very near the camera optical
+axis) towards the <cite>target</cite> point to achieve a similar effect. A <tt class="docutils literal"><span class="pre">min_duration</span></tt> or <tt class="docutils literal"><span class="pre">max_velocity</span></tt> can also be specified.</p>
+</div>
+<div class="section" id="gripper-interface">
+<span id="gripper-api"></span><h2>Gripper Interface<a class="headerlink" href="#gripper-interface" title="Permalink to this headline">¶</a></h2>
+<p><cite>gripper_controller/command</cite> exposes a
+<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/GripperCommand.html">control_msgs/GripperCommand</a>
+ActionServer. The gripper command takes in <tt class="docutils literal"><span class="pre">position</span></tt> and <tt class="docutils literal"><span class="pre">effort</span></tt> as parameters. Generally,
+the gripper is commanded to a fully closed or fully opened position, so
+<tt class="docutils literal"><span class="pre">effort</span></tt> is used to limit the maximum effort. As the gripper never fully reaches
+the closed position, the grasp strength will be determined by the maximum
+effort.</p>
+</div>
+<div class="section" id="head-camera-interface">
+<span id="camera-api"></span><h2>Head Camera Interface<a class="headerlink" href="#head-camera-interface" title="Permalink to this headline">¶</a></h2>
+<p>The head camera exposes several topics of interest:</p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>head_camera/depth_registered/points</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/PointCloud2.html">sensor_msgs/PointCloud2</a>
+which has both 3d and color data. It is published at VGA resolution (640x480)
+at 15Hz.</li>
+<li><cite>head_camera/depth_downsampled/points</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/PointCloud2.html">sensor_msgs/PointCloud2</a>
+which has only 3d data. It is published at QQVGA (160x120) resolution at
+15Hz and is intended primarily for use in navigation/moveit for obstacle
+avoidance.</li>
+<li><cite>head_camera/rgb/image_raw</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Image.html">sensor_msgs/Image</a>.
+This is just the 2d color data. It is published at VGA resolution (640x480)
+at 15Hz.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="laser-interface">
+<span id="laser-api"></span><h2>Laser Interface<a class="headerlink" href="#laser-interface" title="Permalink to this headline">¶</a></h2>
+<p><cite>base_scan</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/LaserScan.html">sensor_msgs/LaserScan</a>
+message published at 15Hz.</p>
+<p>Note: the raw laser information as reported by the laser hardware is published to
+<cite>base_scan_raw</cite>. The information published to <cite>base_scan</cite> is filtered to remove
+shadow points.</p>
+</div>
+<div class="section" id="imu-interface">
+<span id="imu-api"></span><h2>IMU Interface<a class="headerlink" href="#imu-interface" title="Permalink to this headline">¶</a></h2>
+<p><cite>imu</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html">sensor_msgs/Imu</a>
+message published at 100Hz. This message contains the linear acceleration and
+rotational velocities as measured by the IMU located in the base of the robot.</p>
+<p>On Fetch robots, the gripper IMU publishes to <cite>gripper_imu</cite>. This is also
+a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html">sensor_msgs/Imu</a>
+message published at 100Hz.</p>
+<p>The IMUs are not present in the simulated robot.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="notices.html" class="btn btn-neutral float-right" title="Notices" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="calibration.html" class="btn btn-neutral" title="Tutorial: Calibrating Fetch" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2015, Fetch Robotics Inc.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'Indigo',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
