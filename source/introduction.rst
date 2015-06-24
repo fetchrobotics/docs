@@ -33,7 +33,7 @@ Fetch and Freight safely.
 * **Space** 
 
  - Make sure that there is enough space for Fetch and Freight to drive around
-   and preform tasks. Both Fetch and Freight are designed to operate in ADA-compliant
+   and perform tasks. Both Fetch and Freight are designed to operate in ADA-compliant
    environments (Americans with Disabilities Act).
 
 * **Development Tools** 
@@ -45,7 +45,7 @@ Fetch and Freight safely.
 * **Linux**
  
  - Familiarity with the Linux command-line is strongly recommended. The computers
-   in both Fetch and Freight have Ubuntu Linux installed. Tasks can be preformed
+   in both Fetch and Freight have Ubuntu Linux installed. Tasks can be performed
    by logging in remotely by using ssh or other similar tool. Users can also
    directly plug in a display, mouse, and keyboard to the access panels on
    Fetch and Freight.
