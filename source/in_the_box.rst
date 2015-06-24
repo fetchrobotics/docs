@@ -115,7 +115,16 @@ below.
 Tucking Fetch's Arm
 ~~~~~~~~~~~~~~~~~~~
 
-.. TODO:: add notes on tucking the arm
+.. note::
+
+   The tuck arm server is a new feature released in
+   fetch_teleop and fetch_bringup 0.6.0
+
+To tuck the arm, press and hold button 6, as shown in the image of the
+controller below, for one second. This will trigger the tuck_arm server
+to tuck the arm. While tucking the arm, Fetch will avoid collisions with
+itself, however it will not be using any active perception, so be sure to
+keep the space in front of the robot clear when running the tuck arm.
 
 Driving Fetch and Freight with a Joystick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
