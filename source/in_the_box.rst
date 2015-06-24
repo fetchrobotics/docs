@@ -13,11 +13,14 @@ supply for charging the robot.
 Fetch and Freight
 ~~~~~~~~~~~~~~~~~
 
-Please watch the respective video for unpacking Fetch or Freight. The
+Please watch the video below for unpacking Fetch or Freight. The
 video covers unpacking the robot, connecting the batteries, turning on
 the robot, and driving the robot via the provided joystick.
 
-.. TODO:: PIC of robot in box
+.. raw:: html
+
+   <iframe src="https://player.vimeo.com/video/131612734" width="700" height="393"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+   </iframe>
 
 Toolkit 
 ~~~~~~~ 
