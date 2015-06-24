@@ -299,14 +299,11 @@ cases. Inside each case you will find the robot, toolkit, and power
 supply for charging the robot.</p>
 <div class="section" id="fetch-and-freight">
 <h3>Fetch and Freight<a class="headerlink" href="#fetch-and-freight" title="Permalink to this headline">¶</a></h3>
-<p>Please watch the respective video for unpacking Fetch or Freight. The
+<p>Please watch the video below for unpacking Fetch or Freight. The
 video covers unpacking the robot, connecting the batteries, turning on
 the robot, and driving the robot via the provided joystick.</p>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">PIC of robot in box</p>
-</div>
-</div>
+<iframe src="https://player.vimeo.com/video/131612734" width="700" height="393"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe></div>
 <div class="section" id="toolkit">
 <h3>Toolkit<a class="headerlink" href="#toolkit" title="Permalink to this headline">¶</a></h3>
 <p>The toolkit contains the tools, accessories, and fasteners needed to
@@ -451,10 +448,16 @@ robot as the <cite>fetch</cite> user, and run the following commands:</p>
 </div>
 <div class="section" id="tucking-fetch-s-arm">
 <h3>Tucking Fetch&#8217;s Arm<a class="headerlink" href="#tucking-fetch-s-arm" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">add notes on tucking the arm</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The tuck arm server is a new feature released in
+fetch_teleop and fetch_bringup 0.6.0</p>
 </div>
+<p>To tuck the arm, press and hold button 6, as shown in the image of the
+controller below, for one second. This will trigger the tuck_arm server
+to tuck the arm. While tucking the arm, Fetch will avoid collisions with
+itself, however it will not be using any active perception, so be sure to
+keep the space in front of the robot clear when running the tuck arm.</p>
 </div>
 <div class="section" id="driving-fetch-and-freight-with-a-joystick">
 <h3>Driving Fetch and Freight with a Joystick<a class="headerlink" href="#driving-fetch-and-freight-with-a-joystick" title="Permalink to this headline">¶</a></h3>

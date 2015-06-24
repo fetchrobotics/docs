@@ -13,11 +13,14 @@ supply for charging the robot.
 Fetch and Freight
 ~~~~~~~~~~~~~~~~~
 
-Please watch the respective video for unpacking Fetch or Freight. The
+Please watch the video below for unpacking Fetch or Freight. The
 video covers unpacking the robot, connecting the batteries, turning on
 the robot, and driving the robot via the provided joystick.
 
-.. TODO:: PIC of robot in box
+.. raw:: html
+
+   <iframe src="https://player.vimeo.com/video/131612734" width="700" height="393"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+   </iframe>
 
 Toolkit 
 ~~~~~~~ 
@@ -115,7 +118,16 @@ below.
 Tucking Fetch's Arm
 ~~~~~~~~~~~~~~~~~~~
 
-.. TODO:: add notes on tucking the arm
+.. note::
+
+   The tuck arm server is a new feature released in
+   fetch_teleop and fetch_bringup 0.6.0
+
+To tuck the arm, press and hold button 6, as shown in the image of the
+controller below, for one second. This will trigger the tuck_arm server
+to tuck the arm. While tucking the arm, Fetch will avoid collisions with
+itself, however it will not be using any active perception, so be sure to
+keep the space in front of the robot clear when running the tuck arm.
 
 Driving Fetch and Freight with a Joystick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
