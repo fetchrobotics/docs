@@ -15,6 +15,36 @@ base, torso, head and gripper.
    :align: center
    :figclass: align-centered
 
+.. figure:: _static/joystick_numbered2.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+======== =================================
+Button # Function (details below)
+======== =================================
+ 0       Open gripper
+ 1       Control robot turning
+ 2       Control forward/backward driving
+ 3       Close gripper
+ 4       Disable motor position holding
+ 5       Not used
+ 6       Arm tuck
+ 7       Not used
+ 8       Head control deadman
+ 9       Not used
+ 10      Primary deadman
+ 11      Not used
+ 12      Torso up
+ 13      Not used
+ 14      Torso down
+ 15      Not used
+ 16      Pair with robot
+======== =================================
+
+To pair the controller with the robot, press the middle button (16) once
+the robot has powered on.  The controller will vibrate once successful.
+
 To drive the robot base, hold the primary deadman button (button 10
 above) and use the two joysticks. The left joystick controls turning
 velocity while the right joystick controls forward velocity.
