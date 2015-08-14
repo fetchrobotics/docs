@@ -126,12 +126,32 @@ Upgrading to the latest packages is as easy as:
    sudo service robot stop
    sudo service robot start
 
+.. warning::
+
+    Using 'apt-get upgrade' and 'apt-get dist-upgrade' could cause critical
+    software, such as the kernel, to change. We can not guarantee your robot
+    will function after making such a change. We recommend against using these commands unless you understand and accept the risks.
+
 Each circuit board within the robot is equipped with a bootloader, allowing
 new and updated firmware to be installed. New releases of the `fetch-drivers`
 package may include updated firmware for your robot, which will automatically
 be installed when the drivers are next started (typically by the robot upstart
 service). When restarting the robot service, there may be a slight delay
 before the drivers are fully operational if a new firmware upgrade is included.
+
+Re-Setting up apt-get Sources
+--------------------
+
+If someone has changed or deleted the default apt-get sources then the
+following commands will create sources.list files so that the robot can see
+the public ros package server and the Fetch Robotics package server.
+
+::
+
+    >$ sudo sh -c 'echo "deb http://packages.fetchrobotics.com/ros/ubuntu trusty main" > /etc/apt/sources.list.d/fetch-latest.list'
+
+    >$ sudo sh -c 'echo "deb http://packages.fetchrobotics.com/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+
 
 Cleaning Your Robot
 -------------------
