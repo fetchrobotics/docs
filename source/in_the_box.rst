@@ -2,7 +2,7 @@ Getting Started
 ===============
 
 
-What's In Box 
+What's In Box
 `````````````
 
 The Fetch and Freight Research Edition robots each ship in reusable ATA
@@ -22,8 +22,8 @@ the robot, and driving the robot via the provided joystick.
    <iframe src="https://player.vimeo.com/video/131612734" width="700" height="393"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
    </iframe>
 
-Toolkit 
-~~~~~~~ 
+Toolkit
+~~~~~~~
 
 The toolkit contains the tools, accessories, and fasteners needed to
 use the Fetch and Freight. The picture below shows packaged toolkit.
@@ -33,7 +33,7 @@ use the Fetch and Freight. The picture below shows packaged toolkit.
    :align: center
    :figclass: align-centered
 
-Inside the toolkit box you will find: 
+Inside the toolkit box you will find:
 
 .. figure:: _static/toolkit_numbering.png
    :width: 100%
@@ -57,7 +57,7 @@ Item # Item Name                 QTY     Purpose
 ====== ========================= ======= ===============================================================
 
 
-Robot Power Supply 
+Robot Power Supply
 ~~~~~~~~~~~~~~~~~~
 The robot power supply is shown below in the packaging:
 
@@ -74,8 +74,8 @@ robot **always** grab the plug by the housing and not the cable.
    :align: center
    :figclass: align-centered
 
-.. warning:: 
-    
+.. warning::
+
     Pulling on the charge plug cable instead of the handle can cause
     damage to the cable assembly over time and could potentially cause
     injury to the robot or user.
@@ -91,13 +91,13 @@ To turn on the robot, set the :ref:`power_disconnect` (the red one
 on the lower back of the robot) to the ON position and then press the
 power switch on the access panel until it lights up.
 
-Logging In 
-~~~~~~~~~~ 
+Logging In
+~~~~~~~~~~
 
 Once the robot is turned on, ssh into the computer of the robot using
 the default ``fetch`` user account:
 
-:: 
+::
 
 	>$ ssh fetch@ROBOT_IP
 
@@ -114,6 +114,12 @@ below.
    :start-after: embed-user-accounts-start
    :end-before: embed-user-accounts-end
 
+Connecting a Monitor
+~~~~~~~~~~~~~~~~~~~
+If you are unable to access the robot through ssh due to your network settings you will need to connect an HDMI monitor, USB keyboard and USB mouse to the side panel ports. Then use them to select your network as you would a normal Ubuntu computer. Once it is set it should remain connected through reboots.
+
+.. warning::
+    Monitor cables that conform to HDMI specifications will fit the robot's monitor port. But some cheaper cables have overmolding that is too large given the spec and may not seat properly. Please ensure the HDMI cable you are using is the correct size.
 
 Tucking Fetch's Arm
 ~~~~~~~~~~~~~~~~~~~
