@@ -39,11 +39,12 @@ Button # Function (details below)
  13      Not used
  14      Torso down
  15      Not used
- 16      Pair with robot
+ 16      Pair/unpair with robot
 ======== =================================
 
 To pair the controller with the robot, press the middle button (16) once
 the robot has powered on.  The controller will vibrate once successful.
+To unpair, hold the button for 10 s.  The LED indicator on top will turn off.
 
 To drive the robot base, hold the primary deadman button (button 10
 above) and use the two joysticks. The left joystick controls turning
