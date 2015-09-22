@@ -137,3 +137,16 @@ a `sensor_msgs/Imu <http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html>`_
 message published at 100Hz.
 
 The IMUs are not present in the simulated robot.
+
+Resetting Breakers
+-------------
+
+There are 3 breakers governing power on the fetch. One each for the arm, gripper 
+and base. If the motors are commanded to perform beyond their limits they will 
+shut down for safety. To reset them you will either need to toggle the e-stop or 
+use the following service calls:
+
+
+ * $ rosservice call /arm_breaker false && rosservice call /arm_breaker true
+ * $ rosservice call /base_breaker false && rosservice call /base_breaker true
+ * $ rosservice call /gripper_breaker false && rosservice call /gripper_breaker true
