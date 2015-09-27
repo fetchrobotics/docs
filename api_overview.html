@@ -107,6 +107,7 @@
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#connecting-a-monitor">Connecting a Monitor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
@@ -176,6 +177,7 @@
 <li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
 </ul>
 </li>
@@ -233,6 +235,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#head-camera-interface">Head Camera Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#laser-interface">Laser Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#imu-interface">IMU Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resetting-breakers">Resetting Breakers</a></li>
 </ul>
 </li>
 </ul>
@@ -317,6 +320,13 @@ the arm to execute a pre-defined trajectory. Three interfaces are provided:</p>
 </ul>
 </div></blockquote>
 <p>Only one controller is allowed to control a joint at a time.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Fetch is tuned to work with smooth paths. The tuning performs best when paths are
+properly smoothed and timed, such as those generated from MoveIt! Fetch has a number
+of mechanisms in place to prevent damage from improper trajectories. Improperly
+constructed paths may cause motor or breaker shutdown.</p>
+</div>
 <p>In addition to the trajectory controllers, the arm is always running a gravity
 compensation controller.</p>
 </div>
@@ -380,6 +390,12 @@ at 15Hz.</li>
 which has only 3d data. It is published at QQVGA (160x120) resolution at
 15Hz and is intended primarily for use in navigation/moveit for obstacle
 avoidance.</li>
+<li><cite>head_camera/depth/image_raw</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Image.html">sensor_msgs/Image</a>.
+This is unit16 depth image (2D) in mm . It is published at VGA resolution (640x480)
+at 15Hz.</li>
+<li><cite>head_camera/depth/image</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Image.html">sensor_msgs/Image</a>.
+This is float depth image (2D) in m. It is published at VGA resolution (640x480)
+at 15Hz.</li>
 <li><cite>head_camera/rgb/image_raw</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Image.html">sensor_msgs/Image</a>.
 This is just the 2d color data. It is published at VGA resolution (640x480)
 at 15Hz.</li>
@@ -403,6 +419,20 @@ rotational velocities as measured by the IMU located in the base of the robot.</
 a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html">sensor_msgs/Imu</a>
 message published at 100Hz.</p>
 <p>The IMUs are not present in the simulated robot.</p>
+</div>
+<div class="section" id="resetting-breakers">
+<h2>Resetting Breakers<a class="headerlink" href="#resetting-breakers" title="Permalink to this headline">¶</a></h2>
+<p>There are 3 breakers governing power on the fetch. One each for the arm, gripper
+and base. If the motors are commanded to perform beyond their limits they will
+shut down for safety. To reset them you will either need to toggle the e-stop or
+use the following service calls:</p>
+<blockquote>
+<div><ul class="simple">
+<li>$ rosservice call /arm_breaker false &amp;&amp; rosservice call /arm_breaker true</li>
+<li>$ rosservice call /base_breaker false &amp;&amp; rosservice call /base_breaker true</li>
+<li>$ rosservice call /gripper_breaker false &amp;&amp; rosservice call /gripper_breaker true</li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 

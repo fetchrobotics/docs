@@ -107,6 +107,7 @@
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#connecting-a-monitor">Connecting a Monitor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
@@ -176,6 +177,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">Care And Feeding</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#charging">Charging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cleaning-your-robot">Cleaning Your Robot</a></li>
 </ul>
 </li>
@@ -233,6 +235,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-camera-interface">Head Camera Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#laser-interface">Laser Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#imu-interface">IMU Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#resetting-breakers">Resetting Breakers</a></li>
 </ul>
 </li>
 </ul>
@@ -410,12 +413,29 @@ sudo service robot stop
 sudo service robot start
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Using &#8216;apt-get upgrade&#8217; and &#8216;apt-get dist-upgrade&#8217; could cause critical
+software, such as the kernel, to change. We can not guarantee your robot
+will function after making such a change. We recommend against using these commands unless you understand and accept the risks.</p>
+</div>
 <p>Each circuit board within the robot is equipped with a bootloader, allowing
 new and updated firmware to be installed. New releases of the <cite>fetch-drivers</cite>
 package may include updated firmware for your robot, which will automatically
 be installed when the drivers are next started (typically by the robot upstart
 service). When restarting the robot service, there may be a slight delay
 before the drivers are fully operational if a new firmware upgrade is included.</p>
+</div>
+<div class="section" id="re-setting-up-apt-get-sources">
+<h2>Re-Setting up apt-get Sources<a class="headerlink" href="#re-setting-up-apt-get-sources" title="Permalink to this headline">¶</a></h2>
+<p>If someone has changed or deleted the default apt-get sources then the
+following commands will create sources.list files so that the robot can see
+the public ros package server and the Fetch Robotics package server.</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/fetch-latest.list&#39;
+
+&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
+</pre></div>
+</div>
 </div>
 <div class="section" id="cleaning-your-robot">
 <h2>Cleaning Your Robot<a class="headerlink" href="#cleaning-your-robot" title="Permalink to this headline">¶</a></h2>

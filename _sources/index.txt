@@ -8,7 +8,7 @@ Fetch & Freight Manual
    :maxdepth: 2
 
    introduction
-   safety 
+   safety
    in_the_box
    robot_hardware
    computer

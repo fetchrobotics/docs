@@ -29,6 +29,13 @@ the arm to execute a pre-defined trajectory. Three interfaces are provided:
 
 Only one controller is allowed to control a joint at a time.
 
+.. warning::
+
+    Fetch is tuned to work with smooth paths. The tuning performs best when paths are
+    properly smoothed and timed, such as those generated from MoveIt! Fetch has a number
+    of mechanisms in place to prevent damage from improper trajectories. Improperly
+    constructed paths may cause motor or breaker shutdown.
+
 In addition to the trajectory controllers, the arm is always running a gravity
 compensation controller.
 
@@ -101,10 +108,16 @@ The head camera exposes several topics of interest:
    which has only 3d data. It is published at QQVGA (160x120) resolution at
    15Hz and is intended primarily for use in navigation/moveit for obstacle
    avoidance.
+ * `head_camera/depth/image_raw` is a `sensor_msgs/Image <http://docs.ros.org/api/sensor_msgs/html/msg/Image.html>`_.
+   This is unit16 depth image (2D) in mm . It is published at VGA resolution (640x480)
+   at 15Hz.
+ * `head_camera/depth/image` is a `sensor_msgs/Image <http://docs.ros.org/api/sensor_msgs/html/msg/Image.html>`_.
+   This is float depth image (2D) in m. It is published at VGA resolution (640x480)
+   at 15Hz.
  * `head_camera/rgb/image_raw` is a `sensor_msgs/Image <http://docs.ros.org/api/sensor_msgs/html/msg/Image.html>`_.
    This is just the 2d color data. It is published at VGA resolution (640x480)
    at 15Hz.
-
+ 
 .. _laser_api:
 
 Laser Interface
@@ -131,3 +144,16 @@ a `sensor_msgs/Imu <http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html>`_
 message published at 100Hz.
 
 The IMUs are not present in the simulated robot.
+
+Resetting Breakers
+-------------
+
+There are 3 breakers governing power on the fetch. One each for the arm, gripper 
+and base. If the motors are commanded to perform beyond their limits they will 
+shut down for safety. To reset them you will either need to toggle the e-stop or 
+use the following service calls:
+
+
+ * $ rosservice call /arm_breaker false && rosservice call /arm_breaker true
+ * $ rosservice call /base_breaker false && rosservice call /base_breaker true
+ * $ rosservice call /gripper_breaker false && rosservice call /gripper_breaker true
