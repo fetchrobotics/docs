@@ -29,6 +29,13 @@ the arm to execute a pre-defined trajectory. Three interfaces are provided:
 
 Only one controller is allowed to control a joint at a time.
 
+.. warning::
+
+    Fetch is tuned to work with smooth paths. The tuning performs best when paths are
+    properly smoothed and timed, such as those generated from MoveIt! Fetch has a number
+    of mechanisms in place to prevent damage from improper trajectories. Improperly
+    constructed paths may cause motor or breaker shutdown.
+
 In addition to the trajectory controllers, the arm is always running a gravity
 compensation controller.
 
