@@ -10,6 +10,7 @@ Visualizing with RVIZ
 
 ::
 
+    >$ export ROS_MASTER_URI=http://<robot_name_or_ip>:11311
     >$ rosrun rviz rviz
 
 .. figure:: _static/rviz.png
@@ -17,7 +18,14 @@ Visualizing with RVIZ
    :align: center
    :figclass: align-centered
 
-You can now `manually set up your RVIZ visualization 
+.. note::
+
+   You will need a computer with ROS installed to properly
+   communicate with the robot. Please consult the `ROS Wiki <http://wiki.ros.org/indigo/Installation>`_
+   for more information. We strongly suggest an Ubuntu machine
+   with ROS Indigo installed.
+
+You can now `manually set up your RVIZ visualization
 <http://gazebosim.org/tutorials?tut=drcsim_visualization&cat=drcsim#VisualizingtheRobotmodel>`_
 or re-run RVIZ with a configuration file using the command line.
 The default ``.rviz`` configuration file for Fetch can be loaded using:
@@ -25,6 +33,7 @@ The default ``.rviz`` configuration file for Fetch can be loaded using:
 ::
 
     >$ roscd fetch_navigation/config
+    >$ export ROS_MASTER_URI=http://<robot_name_or_ip>:11311
     >$ rviz -d navigation.rviz
 
 .. figure:: _static/rviz_navigation.png

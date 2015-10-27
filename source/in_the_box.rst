@@ -94,8 +94,9 @@ power switch on the access panel until it lights up.
 Logging In
 ~~~~~~~~~~
 
-Once the robot is turned on, ssh into the computer of the robot using
-the default ``fetch`` user account:
+Once the robot is turned on and the robot is on the network, ssh
+into the computer of the robot using the default ``fetch`` user
+account:
 
 ::
 
@@ -107,19 +108,33 @@ and network is setup for multicast DNS (mDNS) then you may be able to use
 ``fetchXYZ.local`` as the network name where XYZ will be the serial number
 of your robot (remove any leading zeros from the serial number).
 
-Then create your user account if you have not already done so as shown
-below.
+Connecting a Monitor (Optional)
+~~~~~~~~~~~~~~~~~~~
+If you are unable to access the robot through ssh due to your network settings
+you will need to connect an HDMI monitor, USB keyboard and USB mouse to the
+side panel ports. Then use them to select your network from the networking
+menu, it looks like an empty quarter circle pointed downward when disconnected,
+in the upper right hand corner of the screen. Once it is set it should remain
+connected through all reboots.
+
+.. warning::
+    Monitor cables that conform to HDMI specifications will fit the robot's
+    monitor port. But some cheaper cables have overmolding that is too large
+    given the spec and may not seat properly. Please ensure the HDMI cable you
+    are using is the correct size.
+
+.. note::
+
+   If you are still having difficulty connecting to your robot you will need
+   to contact your network administrator for specific instructions on how
+   to connect the robot to your network.
+
+
+Once connected then create your user account as shown below.
 
 .. include:: computer.rst
    :start-after: embed-user-accounts-start
    :end-before: embed-user-accounts-end
-
-Connecting a Monitor
-~~~~~~~~~~~~~~~~~~~
-If you are unable to access the robot through ssh due to your network settings you will need to connect an HDMI monitor, USB keyboard and USB mouse to the side panel ports. Then use them to select your network as you would a normal Ubuntu computer. Once it is set it should remain connected through reboots.
-
-.. warning::
-    Monitor cables that conform to HDMI specifications will fit the robot's monitor port. But some cheaper cables have overmolding that is too large given the spec and may not seat properly. Please ensure the HDMI cable you are using is the correct size.
 
 Tucking Fetch's Arm
 ~~~~~~~~~~~~~~~~~~~
@@ -144,6 +159,7 @@ Visualizing Data
 ~~~~~~~~~~~~~~~~
 .. include:: visualization.rst
    :start-after: embed-rviz-start
+
 
 Putting Fetch and Freight Away
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
