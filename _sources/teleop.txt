@@ -75,6 +75,13 @@ the arm gravity compensation.
 Moving the Base with your Keyboard
 ----------------------------------
 
+.. note::
+
+   You will need a computer with ROS installed to properly
+   communicate with the robot. Please consult the `ROS Wiki <http://wiki.ros.org/indigo/Installation>`_
+   for more information. We strongly suggest an Ubuntu machine
+   with ROS Indigo installed.
+
 To teleoperate the robot base in simulation, we recommend
 using the ``teleop_twist_keyboard.py`` script from
 `teleop_twist_keyboard <http://wiki.ros.org/teleop_twist_keyboard>`_
@@ -82,5 +89,6 @@ package.
 
 ::
 
-	>$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+  >$ export ROS_MASTER_URI=http://<robot_name_or_ip>:11311
+  >$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 

@@ -102,12 +102,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="in_the_box.html#running-fetch-and-freight">Running Fetch and Freight</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#turning-on-fetch-and-freight">Turning on Fetch and Freight</a></li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#logging-in">Logging In</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#logging-in">Logging In</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#connecting-a-monitor-optional">Connecting a Monitor (Optional)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#default-user-account">Default User Account</a></li>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#connecting-a-monitor">Connecting a Monitor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
@@ -212,6 +212,7 @@
 <li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit">Running MoveIt!</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#more-information-and-tutorials-on-moveit">More information and Tutorials on MoveIt!</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="perception.html">Tutorial: Perception</a><ul>
@@ -398,11 +399,19 @@ the arm gravity compensation.</p>
 </div>
 <div class="section" id="moving-the-base-with-your-keyboard">
 <h2>Moving the Base with your Keyboard<a class="headerlink" href="#moving-the-base-with-your-keyboard" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need a computer with ROS installed to properly
+communicate with the robot. Please consult the <a class="reference external" href="http://wiki.ros.org/indigo/Installation">ROS Wiki</a>
+for more information. We strongly suggest an Ubuntu machine
+with ROS Indigo installed.</p>
+</div>
 <p>To teleoperate the robot base in simulation, we recommend
 using the <tt class="docutils literal"><span class="pre">teleop_twist_keyboard.py</span></tt> script from
 <a class="reference external" href="http://wiki.ros.org/teleop_twist_keyboard">teleop_twist_keyboard</a>
 package.</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
+&gt;$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 </pre></div>
 </div>
 </div>
