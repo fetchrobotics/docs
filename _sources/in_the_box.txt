@@ -100,9 +100,9 @@ account:
 
 ::
 
-	>$ ssh fetch@ROBOT_IP
+	>$ ssh fetch@<robot_name_or_ip>
 
-ROBOT_IP will be either an IPv4 network address, or a network name, depending
+robot_name_or_ip will be either an IPv4 network address, or a network name, depending
 on the configuration of your local network. If your computer
 and network is setup for multicast DNS (mDNS) then you may be able to use
 ``fetchXYZ.local`` as the network name where XYZ will be the serial number

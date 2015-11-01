@@ -112,7 +112,11 @@ Base        M5*           8.5Nm
 Head        M4           4.2Nm
 Gripper     M3           0.7Nm (into the standoff)
 =========== ============ ========================= 
-*Note: When mounting additional items on top of the base, a 4mm maximum thread engagement into the mounting holes must be maintained. Exceeding this maximum will cause the top plate of the base to deflect.
+
+.. note::
+   When mounting additional items on top of the base, a 4mm maximum
+   thread engagement into the mounting holes must be maintained.
+   Exceeding this maximum may cause the top plate of the base to deflect.
 
 Gripper Modularity Interface
 ++++++++++++++++++++++++++++

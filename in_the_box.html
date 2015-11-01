@@ -424,10 +424,10 @@ power switch on the access panel until it lights up.</p>
 <p>Once the robot is turned on and the robot is on the network, ssh
 into the computer of the robot using the default <tt class="docutils literal"><span class="pre">fetch</span></tt> user
 account:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ ssh fetch@ROBOT_IP
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ ssh fetch@&lt;robot_name_or_ip&gt;
 </pre></div>
 </div>
-<p>ROBOT_IP will be either an IPv4 network address, or a network name, depending
+<p>robot_name_or_ip will be either an IPv4 network address, or a network name, depending
 on the configuration of your local network. If your computer
 and network is setup for multicast DNS (mDNS) then you may be able to use
 <tt class="docutils literal"><span class="pre">fetchXYZ.local</span></tt> as the network name where XYZ will be the serial number
