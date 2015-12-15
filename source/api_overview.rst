@@ -87,7 +87,7 @@ axis) towards the `target` point to achieve a similar effect. A ``min_duration``
 
 Gripper Interface
 -----------------
-`gripper_controller/command` exposes a
+`gripper_controller/gripper_action` exposes a
 `control_msgs/GripperCommand <http://docs.ros.org/api/control_msgs/html/action/GripperCommand.html>`_
 ActionServer. The gripper command takes in ``position`` and ``effort`` as parameters. Generally,
 the gripper is commanded to a fully closed or fully opened position, so
