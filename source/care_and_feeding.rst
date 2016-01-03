@@ -46,10 +46,12 @@ and will flash the charging indicator red. After about 1 minute, the
 charger will attempt charging again. If the error condition persists,
 a support ticket should be created to address the problem.
 
-One notable charging error is caused by the :ref:`power_disconnect` being switched off.
-When the power disconnect is switch off, it disconnects the battery which prevents the
-charger from working. When the charger detects this situation it will flash both the
-charge indicator red, and the power button at the same time.
+.. note::
+
+   One notable charging error is caused by the :ref:`power_disconnect` being switched off.
+   When the power disconnect is switch off, it disconnects the battery which prevents the
+   charger from working. When the charger detects this situation it will flash both the
+   charge indicator red, and the power button at the same time.
 
 The robot will typically need about 3.5 hours to charge batteries from empty to
 90% capacity. It will take an additional 3 hours to charge remaining 10% of
