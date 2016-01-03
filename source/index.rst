@@ -42,6 +42,7 @@ Legal
 .. toctree::
    :maxdepth: 2
 
+   release_notes
    notices
    license
 

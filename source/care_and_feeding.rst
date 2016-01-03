@@ -113,6 +113,7 @@ Even so, there are few things that can done to improve battery lifetime.
 
 5. Keep robot cool.  Cool batteries age less than warm ones.
 
+.. _updating:
 
 Updating Your Robot
 -------------------
