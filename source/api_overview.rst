@@ -11,7 +11,7 @@ Whenever possible, we have conformed to the
 `ROS Enhancement Proposals (REPs) <http://www.ros.org/reps/rep-0000.html>`_.
 These documents provide the foundation of standard ROS interfaces. In addition
 to REP-compatible interfaces, we have adopted a number of the community-accepted
-standard interfaces, such as those provided by the 
+standard interfaces, such as those provided by the
 `control_msgs <http://wiki.ros.org/control_msgs>`_ package.
 
 .. _arm_api:
@@ -117,7 +117,7 @@ The head camera exposes several topics of interest:
  * `head_camera/rgb/image_raw` is a `sensor_msgs/Image <http://docs.ros.org/api/sensor_msgs/html/msg/Image.html>`_.
    This is just the 2d color data. It is published at VGA resolution (640x480)
    at 15Hz.
- 
+
 .. _laser_api:
 
 Laser Interface
@@ -145,12 +145,14 @@ message published at 100Hz.
 
 The IMUs are not present in the simulated robot.
 
+.. _resetting_breakers:
+
 Resetting Breakers
 -------------
 
-There are 3 breakers governing power on the fetch. One each for the arm, gripper 
-and base. If the motors are commanded to perform beyond their limits they will 
-shut down for safety. To reset them you will either need to toggle the e-stop or 
+There are 3 breakers governing power on the fetch. One each for the arm, gripper
+and base. If the motors are commanded to perform beyond their limits they will
+shut down for safety. To reset them you will either need to toggle the e-stop or
 use the following service calls:
 
 
