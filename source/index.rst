@@ -13,7 +13,6 @@ Fetch & Freight Manual
    robot_hardware
    computer
    care_and_feeding
-   faq
 
 Tutorials
 ---------
@@ -27,15 +26,17 @@ Tutorials
    navigation
    manipulation
    perception
-   calibration
 
-ROS APIs
---------
+   
+Other
+-----
 
 .. toctree::
    :maxdepth: 2
-
+   
    api_overview
+   release_notes
+   faq
 
 Legal
 -------
@@ -43,7 +44,6 @@ Legal
 .. toctree::
    :maxdepth: 2
 
-   release_notes
    notices
    license
 
