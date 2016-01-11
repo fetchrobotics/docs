@@ -143,7 +143,7 @@ service). When restarting the robot service, there may be a slight delay
 before the drivers are fully operational if a new firmware upgrade is included.
 
 Re-Setting up apt-get Sources
---------------------
+-----------------------------
 
 If someone has changed or deleted the default apt-get sources then the
 following commands will create sources.list files so that the robot can see

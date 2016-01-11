@@ -36,8 +36,7 @@ See :ref:`mm_demo`.
 
 
 More information and Tutorials on MoveIt!
--------------------------------
+-----------------------------------------
 
-`General information, Documentation<http://moveit.ros.org/documentation/>`_ and `Tutorials
-<http://moveit.ros.org/documentation/tutorials/>`_ available at moveit.ros.org
+`General information, Documentation <http://moveit.ros.org/documentation/>`_ and `Tutorials <http://moveit.ros.org/documentation/tutorials/>`_ available at moveit.ros.org
 

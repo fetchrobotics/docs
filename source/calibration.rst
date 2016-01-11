@@ -22,7 +22,7 @@ hand-eye coordination of the robot is well calibrated. Calibration involves:
  * Updating the URDF and robot launch files with newly determined offsets.
 
 The :ref:`upstart_services` that start the robot will use the launch
-file in `/etc/ros/indigo/robot.launch'. Therefore, the last step in calibration
+file in `/etc/ros/indigo/robot.launch`. Therefore, the last step in calibration
 is to update that launch file and restart the drivers. Currently, the
 following aspects are updated:
 

@@ -109,7 +109,7 @@ and network is setup for multicast DNS (mDNS) then you may be able to use
 of your robot (remove any leading zeros from the serial number).
 
 Connecting a Monitor (Optional)
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you are unable to access the robot through ssh due to your network settings
 you will need to connect an HDMI monitor, USB keyboard and USB mouse to the
 side panel ports. Then use them to select your network from the networking

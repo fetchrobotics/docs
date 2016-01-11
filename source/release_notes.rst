@@ -24,7 +24,7 @@ recalibrating the robot from a clean URDF after updating
 your packages.
 
 Maps have been removed from the fetch_navigation package and
-moved to their own package, fetch_maps. 
+moved to their own package, fetch_maps.
 
 Updated Fetch Packages:
  * ros-indigo-fetch-drivers: 0.7.1-0 -> 0.7.3-0
