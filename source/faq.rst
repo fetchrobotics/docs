@@ -36,7 +36,12 @@ Why won't my robot move when I use my PS3 joystick?
    :width: 50%
    :align: center
    :figclass: align-centered
-* Please verify that the e-stop is in the off position
+* Please verify that the runstop (seen below) has not been pressed.
+ - If it is pressed twist it to turn it off
+.. figure:: _static/runstop_panel.png
+   :width: 50%
+   :align: center
+   :figclass: align-centered
 * If this did not solve your problem please contact Fetch Support
 
 
