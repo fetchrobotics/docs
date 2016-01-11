@@ -148,7 +148,7 @@ The IMUs are not present in the simulated robot.
 .. _resetting_breakers:
 
 Resetting Breakers
--------------
+------------------
 
 There are 3 breakers governing power on the fetch. One each for the arm, gripper
 and base. If the motors are commanded to perform beyond their limits they will
