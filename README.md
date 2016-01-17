@@ -18,8 +18,10 @@ Build new release from master, store into gh-pages branch:
 ```
 git checkout master
 make html
+make pdflatex
 git checkout gh-pages
 cp -r build/html/* .
+cp build/latex/FetchRobotics.pdf .
 rm -rf build
 git commit -a "new build"
 git push origin gh-pages

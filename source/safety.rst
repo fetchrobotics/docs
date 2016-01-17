@@ -122,7 +122,7 @@ robot and associated safety issue.
 
 Pinch Point
 +++++++++++
-.. figure:: _static/pinch_point_label.gif
+.. figure:: _static/pinch_point_label.png
    :width: 30%
    :align: center
    :figclass: align-centered
@@ -134,7 +134,7 @@ if a finger or hand becomes trapped in a pinch point.
 
 Electrical Shock
 ++++++++++++++++
-.. figure:: _static/electrical_shock_label.gif
+.. figure:: _static/electrical_shock_label.png
    :width: 30%
    :align: center
    :figclass: align-centered
@@ -148,7 +148,7 @@ contact Fetch Robotics support.
 
 Laser Beam
 ++++++++++
-.. figure:: _static/laser_beam_label.gif
+.. figure:: _static/laser_beam_label.png
    :width: 30%
    :align: center
    :figclass: align-centered

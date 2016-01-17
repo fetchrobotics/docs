@@ -4,6 +4,8 @@
 Fetch & Freight Manual
 ----------------------
 
+This manual can also be downloaded as a `PDF <http://docs.fetchrobotics.com/FetchRobotics.pdf>`_.
+
 .. toctree::
    :maxdepth: 2
 
