@@ -304,7 +304,7 @@ can be found in the documentation on the
 <div class="section" id="running-navigation-in-gazebo">
 <h2>Running Navigation in Gazebo<a class="headerlink" href="#running-navigation-in-gazebo" title="Permalink to this headline">¶</a></h2>
 <p>To run navigation in simulation, launch the navigation launch file
-from the <tt class="docutils literal"><span class="pre">fetch_gazebo_demo</span></tt> package:</p>
+from the <code class="docutils literal"><span class="pre">fetch_gazebo_demo</span></code> package:</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;$ roslaunch fetch_gazebo_demo fetch_nav.launch
 </pre></div>
 </div>
@@ -331,9 +331,9 @@ Once you are happy with the map, you can save the map:</p>
 </pre></div>
 </div>
 <p>The map saver will create two files in the specified
-<tt class="docutils literal"><span class="pre">map_directory</span></tt>. The directory must already exist.
+<code class="docutils literal"><span class="pre">map_directory</span></code>. The directory must already exist.
 The two files are map_name.pgm and map_name.yaml.
-The first is the map in a <tt class="docutils literal"><span class="pre">.pgm</span></tt> image format, and
+The first is the map in a <code class="docutils literal"><span class="pre">.pgm</span></code> image format, and
 the second is a YAML file that specifies metadata for the image.
 These files can then be served by the map_server:</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;$ rosrun map_server map_server &lt;map.yaml&gt;
@@ -379,8 +379,8 @@ file and passes in arguments:</p>
 </pre></div>
 </div>
 <p>The &#8220;keepout&#8221; map can be created by copying the YAML file of your saved map,
-editing the name of the <tt class="docutils literal"><span class="pre">.pgm</span></tt> file and then copying the <tt class="docutils literal"><span class="pre">.pgm</span></tt> file.
-You can then open the <tt class="docutils literal"><span class="pre">.pgm</span></tt> file in an image editor, such as GIMP, and
+editing the name of the <code class="docutils literal"><span class="pre">.pgm</span></code> file and then copying the <code class="docutils literal"><span class="pre">.pgm</span></code> file.
+You can then open the <code class="docutils literal"><span class="pre">.pgm</span></code> file in an image editor, such as GIMP, and
 black out areas that you do not want the robot to drive through. This must be
 done in a separate map that is only used for planning so that the edits do
 not disturb the functionality of localization (AMCL).</p>
@@ -388,12 +388,12 @@ not disturb the functionality of localization (AMCL).</p>
 <div class="section" id="sending-waypoints">
 <h2>Sending Waypoints<a class="headerlink" href="#sending-waypoints" title="Permalink to this headline">¶</a></h2>
 <p>The easiest way to send a goal to the navigation stack is using RVIZ and the
-<tt class="docutils literal"><span class="pre">2D</span> <span class="pre">Nav</span> <span class="pre">Goal</span></tt> button. See the tutorial on using RVIZ with navigation in the RVIZ
+<code class="docutils literal"><span class="pre">2D</span> <span class="pre">Nav</span> <span class="pre">Goal</span></code> button. See the tutorial on using RVIZ with navigation in the RVIZ
 <a class="reference external" href="http://wiki.ros.org/navigation/Tutorials/Using%20rviz%20with%20the%20Navigation%20Stack">documentation</a></p>
 <p>However, you probably want to program your robot. There is a
 <a class="reference external" href="http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals">tutorial</a>
 on commanding the robot with C++. For examples in Python, look at the demo.py
-code in the <tt class="docutils literal"><span class="pre">fetch_gazebo_demo</span></tt> package.</p>
+code in the <code class="docutils literal"><span class="pre">fetch_gazebo_demo</span></code> package.</p>
 </div>
 </div>
 

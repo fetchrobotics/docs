@@ -109,7 +109,7 @@ and network is setup for multicast DNS (mDNS) then you may be able to use
 of your robot (remove any leading zeros from the serial number).
 
 Connecting a Monitor (Optional)
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you are unable to access the robot through ssh due to your network settings
 you will need to connect an HDMI monitor, USB keyboard and USB mouse to the
 side panel ports. Then use them to select your network from the networking
@@ -142,13 +142,16 @@ Tucking Fetch's Arm
 .. note::
 
    The tuck arm server is a new feature released in
-   fetch_teleop and fetch_bringup 0.6.0
+   fetch_teleop and fetch_bringup 0.6.0. The deadman
+   became required in fetch_teleop 0.7.0.
 
 To tuck the arm, press and hold button 6, as shown in the image of the
 controller below, for one second. This will trigger the tuck_arm server
 to tuck the arm. While tucking the arm, Fetch will avoid collisions with
 itself, however it will not be using any active perception, so be sure to
 keep the space in front of the robot clear when running the tuck arm.
+While the arm is tucking, you will have to hold the deadman. Releasing the
+deadman will stop the tucking action.
 
 Driving Fetch and Freight with a Joystick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

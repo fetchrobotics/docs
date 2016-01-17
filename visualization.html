@@ -314,7 +314,7 @@ with ROS Indigo installed.</p>
 </div>
 <p>You can now <a class="reference external" href="http://gazebosim.org/tutorials?tut=drcsim_visualization&amp;cat=drcsim#VisualizingtheRobotmodel">manually set up your RVIZ visualization</a>
 or re-run RVIZ with a configuration file using the command line.
-The default <tt class="docutils literal"><span class="pre">.rviz</span></tt> configuration file for Fetch can be loaded using:</p>
+The default <code class="docutils literal"><span class="pre">.rviz</span></code> configuration file for Fetch can be loaded using:</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;$ roscd fetch_navigation/config
 &gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rviz -d navigation.rviz
@@ -328,7 +328,7 @@ The default <tt class="docutils literal"><span class="pre">.rviz</span></tt> con
 <h2>Using the Runtime Monitor<a class="headerlink" href="#using-the-runtime-monitor" title="Permalink to this headline">¶</a></h2>
 <p>Fetch and Freight publish ROS diagnostics messages. These are human-readable
 messages that inform users of the robot system state. The <cite>runtime_monitor</cite>,
-part of <tt class="docutils literal"><span class="pre">rqt_robot_plugins</span></tt> can be used to view diagnostics from your
+part of <code class="docutils literal"><span class="pre">rqt_robot_plugins</span></code> can be used to view diagnostics from your
 desktop computer:</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rosrun rqt_runtime_monitor rqt_runtime_monitor

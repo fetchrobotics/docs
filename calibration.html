@@ -32,9 +32,7 @@
   
 
   
-    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
-        <link rel="next" title="API Overview" href="api_overview.html"/>
-        <link rel="prev" title="Tutorial: Perception" href="perception.html"/> 
+    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -182,7 +180,7 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
@@ -220,12 +218,6 @@
 <li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial: Calibrating Fetch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#understanding-calibration">Understanding Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calibrate-robot-tool">Calibrate Robot Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-calibration">Running Calibration</a></li>
-</ul>
-</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -237,6 +229,21 @@
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#laser-interface">Laser Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#imu-interface">IMU Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#resetting-breakers">Resetting Breakers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-23-2015">November 23, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-12-2015">November 12, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#august-5-2015">August 5, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#july-9-2015">July 9, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#june-8-2015">June 8, 2015</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
 </ul>
 </li>
 </ul>
@@ -316,8 +323,8 @@ pose seen by the camera.</li>
 <li>Updating the URDF and robot launch files with newly determined offsets.</li>
 </ul>
 </div></blockquote>
-<p>The <a class="reference internal" href="computer.html#upstart-services"><em>Upstart Services</em></a> that start the robot will use the launch
-file in <a href="#id1"><span class="problematic" id="id2">`</span></a>/etc/ros/indigo/robot.launch&#8217;. Therefore, the last step in calibration
+<p>The <a class="reference internal" href="computer.html#upstart-services"><span>Upstart Services</span></a> that start the robot will use the launch
+file in <cite>/etc/ros/indigo/robot.launch</cite>. Therefore, the last step in calibration
 is to update that launch file and restart the drivers. Currently, the
 following aspects are updated:</p>
 <blockquote>
@@ -403,21 +410,99 @@ back to the previous calibration with:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="calibrating-fetch-torso">
+<h2>Calibrating Fetch Torso<a class="headerlink" href="#calibrating-fetch-torso" title="Permalink to this headline">¶</a></h2>
+<p>When the torso controller board is first powered, it uses measurements from two different
+position sensors to determine the absolute starting position of the torso.
+Once the absolute starting position of the torso is determined, the position measurement
+will retain millimeter precision as long torso remains powered.</p>
+<p>To work properly, the two torso sensors must be calibrated together.
+If the sensors are not properly calibrated, the calculation of the initial torso position
+could be incorrect in some situations. This problem is more likely to occur if the torso is
+first powered when in the &#8220;up&#8221; position.
+A bad torso position should be easy to detect when using RVIZ since the torso position
+shown in RVIZ will always be more than +/-10cm different than the true torso position.</p>
+<p>The torso sensors are calibrated in production, so they will not usually need
+to be recalibrated.  If there seems to be a torso positioning problem,
+the torso calibration tool should be first used to verify the calibration of the torso.</p>
+<p>In release 0.7.4 of fetch_drivers package there is a tool
+to verify or calibrate the torso sensors.
+The tool has two options: verify and calibrate.
+The verify option will only verify that the calibration is good,
+it will not change any stored calibration parameters.
+The calibrate option will calibrate the sensors and update the parameters
+stored on the torso controller.</p>
+<p>For both options, the torso will travel through its entire range of
+motion while sensor data is collected.  While the tool is being run,
+the robot drivers will be stopped and the robot arm will not hold its position.
+Because of this, the arm should be tucked or soft fabric or cardboard
+should be placed between arm and base to avoid scratching any covers.</p>
+<div class="section" id="torso-calibration-procedure">
+<h3>Torso Calibration Procedure<a class="headerlink" href="#torso-calibration-procedure" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">During torso calibration the arm will not hold position.
+Place cardboard or soft fabric between arm and base to avoid
+scratching covers during data collection.</p>
+</div>
+<p>Follow these steps in order to verify or calibrate the torso position
+sensors:</p>
+<ol class="arabic simple">
+<li>Move torso to lowest position, and tuck the arm.</li>
+<li>Place a protective barrier between the arm and top base cover.</li>
+<li>Disable robot drivers by running : <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">stop</span></code></li>
+<li>Run torso calibration tool:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>To run calibration : <code class="docutils literal"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">torso_calibrate</span> <span class="pre">calibrate</span></code></li>
+<li>To verify calibration : <code class="docutils literal"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">torso_calibrate</span> <span class="pre">verify</span></code></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li>Wait for torso to collect sensor data.  The torso will move upwards in small increments through the entire range of motion.  A clicking sound will be produced by the torso while moving, and is normal.</li>
+<li>Cycle Run-stop (optional).  Sometimes tool will request that run-stop be cycled
+after it completes.  Cycling run-stop will cycle power to the torso controller board,
+and is required in some situations.</li>
+<li>On tool has completed, restart robot drivers with <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">start</span></code></li>
+</ol>
+</div>
+<div class="section" id="verify-output">
+<h3>Verify Output<a class="headerlink" href="#verify-output" title="Permalink to this headline">¶</a></h3>
+<p>Verification will produce output stating whether sensors are well calibrated.
+If the sensor calibration is good the tool will output something similar to:</p>
+<blockquote>
+<div>VERIFY PASSED : max sensor error of 0.0109411 is within acceptable limit</div></blockquote>
+<p>Otherwise it will produce output like:</p>
+<blockquote>
+<div>VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04</div></blockquote>
+<p>When verification fails, run calibration produce.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The value for max sensor error is the mismatch between the two torso sensors.
+The accuracy of the torso position measurement is unrelated to this value.</p>
+</div>
+</div>
+<div class="section" id="calibrate-output">
+<h3>Calibrate Output<a class="headerlink" href="#calibrate-output" title="Permalink to this headline">¶</a></h3>
+<p>Once the tool has completed the calibration procedure it will check the expected results of calibration.
+If everything checks out, the tool will output something similar to:</p>
+<div class="highlight-python"><div class="highlight"><pre>VERIFY PASSED : max sensor error of 0.0116824 is within acceptable limit
+</pre></div>
+</div>
+<p>If there was a problem calculating good calibration parameters, the output might look like:</p>
+<div class="highlight-python"><div class="highlight"><pre>VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04
+</pre></div>
+</div>
+<p>In case of failure, the torso sensor may be malfunctioning or damaged and a support ticket should be created.</p>
+</div>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="api_overview.html" class="btn btn-neutral float-right" title="API Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="perception.html" class="btn btn-neutral" title="Tutorial: Perception" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

@@ -46,10 +46,12 @@ and will flash the charging indicator red. After about 1 minute, the
 charger will attempt charging again. If the error condition persists,
 a support ticket should be created to address the problem.
 
-One notable charging error is caused by the :ref:`power_disconnect` being switched off.
-When the power disconnect is switch off, it disconnects the battery which prevents the
-charger from working. When the charger detects this situation it will flash both the
-charge indicator red, and the power button at the same time.
+.. note::
+
+   One notable charging error is caused by the :ref:`power_disconnect` being switched off.
+   When the power disconnect is switch off, it disconnects the battery which prevents the
+   charger from working. When the charger detects this situation it will flash both the
+   charge indicator red, and the power button at the same time.
 
 The robot will typically need about 3.5 hours to charge batteries from empty to
 90% capacity. It will take an additional 3 hours to charge remaining 10% of
@@ -111,6 +113,7 @@ Even so, there are few things that can done to improve battery lifetime.
 
 5. Keep robot cool.  Cool batteries age less than warm ones.
 
+.. _updating:
 
 Updating Your Robot
 -------------------
@@ -140,7 +143,7 @@ service). When restarting the robot service, there may be a slight delay
 before the drivers are fully operational if a new firmware upgrade is included.
 
 Re-Setting up apt-get Sources
---------------------
+-----------------------------
 
 If someone has changed or deleted the default apt-get sources then the
 following commands will create sources.list files so that the robot can see

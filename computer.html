@@ -430,13 +430,13 @@ will be service.log.</p>
 <p>The mainboard of Fetch and Freight contains a USB audio device.
 While the device enumerates as a standard Linux audio device, we recommend
 using the <a class="reference external" href="http://wiki.ros.org/sound_play">sound_play ROS package</a> to
-access the speakers. <tt class="docutils literal"><span class="pre">sound_play</span></tt> is automatically started as
-an <a class="reference internal" href="#upstart-services"><em>upstart service</em></a> when the robot starts.
+access the speakers. <code class="docutils literal"><span class="pre">sound_play</span></code> is automatically started as
+an <a class="reference internal" href="#upstart-services"><span>upstart service</span></a> when the robot starts.
 This service is pre-configured to have the correct group-level access
 to the audio system. If using the speakers directly through a Linux
-interface, be sure to add your user to the <tt class="docutils literal"><span class="pre">audio</span></tt> group in order
+interface, be sure to add your user to the <code class="docutils literal"><span class="pre">audio</span></code> group in order
 to actually access the speakers.</p>
-<p>While the <tt class="docutils literal"><span class="pre">sound_play</span></tt> ROS interface allows users to set an audio
+<p>While the <code class="docutils literal"><span class="pre">sound_play</span></code> ROS interface allows users to set an audio
 level, the audio level set is a percentage of the audio level set
 for Linux. To adjust the Linux audio level, use the following command
 and follow the on-screen instructions:</p>

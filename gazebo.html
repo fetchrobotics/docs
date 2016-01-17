@@ -319,8 +319,8 @@ set to your robot for the same reasons.</p>
 </div>
 <div class="section" id="starting-the-simulator">
 <h2>Starting the Simulator<a class="headerlink" href="#starting-the-simulator" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="docutils literal"><span class="pre">fetch_gazebo</span></tt> and <tt class="docutils literal"><span class="pre">fetch_gazebo_demo</span></tt> packages provide the Gazebo
-environment for Fetch. <tt class="docutils literal"><span class="pre">fetch_gazebo</span></tt> includes several launch files:</p>
+<p>The <code class="docutils literal"><span class="pre">fetch_gazebo</span></code> and <code class="docutils literal"><span class="pre">fetch_gazebo_demo</span></code> packages provide the Gazebo
+environment for Fetch. <code class="docutils literal"><span class="pre">fetch_gazebo</span></code> includes several launch files:</p>
 <blockquote>
 <div><ul class="simple">
 <li>simulation.launch spawns a robot in an empty world.</li>
@@ -368,7 +368,7 @@ with ROS Indigo installed.</p>
 </div>
 <p>You can now <a class="reference external" href="http://gazebosim.org/tutorials?tut=drcsim_visualization&amp;cat=drcsim#VisualizingtheRobotmodel">manually set up your RVIZ visualization</a>
 or re-run RVIZ with a configuration file using the command line.
-The default <tt class="docutils literal"><span class="pre">.rviz</span></tt> configuration file for Fetch can be loaded using:</p>
+The default <code class="docutils literal"><span class="pre">.rviz</span></code> configuration file for Fetch can be loaded using:</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;$ roscd fetch_navigation/config
 &gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rviz -d navigation.rviz
@@ -399,7 +399,7 @@ the environment.</li>
 <li>move_group.launch - this is the MoveIt configuration which can plan for
 the movement of the arm.</li>
 <li>basic_grasping_perception - this is a simple demo found in the
-<tt class="docutils literal"><span class="pre">simple_grasping</span></tt> package which segments objects on tables and computes
+<code class="docutils literal"><span class="pre">simple_grasping</span></code> package which segments objects on tables and computes
 grasps for them.</li>
 <li>demo.py - this our specific demo which navigates the robot from the
 starting pose in Gazebo to the table, raises the torso, lowers the head

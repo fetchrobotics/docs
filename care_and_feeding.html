@@ -220,12 +220,6 @@
 <li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html#understanding-calibration">Understanding Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrate-robot-tool">Calibrate Robot Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
-</ul>
-</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -237,6 +231,21 @@
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#laser-interface">Laser Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#imu-interface">IMU Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api_overview.html#resetting-breakers">Resetting Breakers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-23-2015">November 23, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-12-2015">November 12, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#august-5-2015">August 5, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#july-9-2015">July 9, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#june-8-2015">June 8, 2015</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
 </ul>
 </li>
 </ul>
@@ -308,7 +317,7 @@ facing up, otherwise the connector will not properly mate:</p>
 <p>The connector needs roughly 100 newtons (24 lbs) of force to plug in.
 If it seems the connector will not mate with this much force, check
 the plug and connector for damage or foreign objects.</p>
-<p>The charge indicator light on the <a class="reference internal" href="robot_hardware.html#access-panel"><em>Access Panel</em></a> indicates
+<p>The charge indicator light on the <a class="reference internal" href="robot_hardware.html#access-panel"><span>Access Panel</span></a> indicates
 the status of the battery and charging:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -346,10 +355,13 @@ turn off.</p>
 and will flash the charging indicator red. After about 1 minute, the
 charger will attempt charging again. If the error condition persists,
 a support ticket should be created to address the problem.</p>
-<p>One notable charging error is caused by the <a class="reference internal" href="robot_hardware.html#power-disconnect"><em>Power Disconnect Switch</em></a> being switched off.
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">One notable charging error is caused by the <a class="reference internal" href="robot_hardware.html#power-disconnect"><span>Power Disconnect Switch</span></a> being switched off.
 When the power disconnect is switch off, it disconnects the battery which prevents the
 charger from working. When the charger detects this situation it will flash both the
 charge indicator red, and the power button at the same time.</p>
+</div>
 <p>The robot will typically need about 3.5 hours to charge batteries from empty to
 90% capacity. It will take an additional 3 hours to charge remaining 10% of
 battery capacity. While the robot does not need to get to 100% on every charge,
@@ -404,7 +416,7 @@ This not as important when batteries are only discharged small amounts during ea
 </ol>
 </div>
 <div class="section" id="updating-your-robot">
-<h2>Updating Your Robot<a class="headerlink" href="#updating-your-robot" title="Permalink to this headline">¶</a></h2>
+<span id="updating"></span><h2>Updating Your Robot<a class="headerlink" href="#updating-your-robot" title="Permalink to this headline">¶</a></h2>
 <p>Your robot has been pre-configured with ROS Indigo and the appropriate
 APT repositories from which to fetch package updates.
 Upgrading to the latest packages is as easy as:</p>

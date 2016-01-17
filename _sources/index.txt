@@ -4,6 +4,8 @@
 Fetch & Freight Manual
 ----------------------
 
+This manual can also be downloaded as a `PDF <http://docs.fetchrobotics.com/FetchRobotics.pdf>`_.
+
 .. toctree::
    :maxdepth: 2
 
@@ -26,15 +28,17 @@ Tutorials
    navigation
    manipulation
    perception
-   calibration
 
-ROS APIs
---------
+   
+Other
+-----
 
 .. toctree::
    :maxdepth: 2
-
+   
    api_overview
+   release_notes
+   faq
 
 Legal
 -------

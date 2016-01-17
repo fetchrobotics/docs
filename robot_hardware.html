@@ -657,7 +657,7 @@ comprises:</p>
 <li>The robot computer, running ROS, sends commands to the mainboard
 and gripper board over an Ethernet interface. This same Ethernet
 interface is used to communicate with the scanning laser range
-finder in the base of the robot. The <tt class="docutils literal"><span class="pre">fetch_drivers</span></tt> package
+finder in the base of the robot. The <code class="docutils literal"><span class="pre">fetch_drivers</span></code> package
 provides an interface from the robot computer to the mainboard,
 and the default gripper.</li>
 </ul>
@@ -688,13 +688,13 @@ each MCB is where the real-time control loops run.</li>
 <p>Fetch and Freight both have two 12V Sealed Lead Acid (SLA) batteries located
 in the robot base. The batteries are connected in series, providing the nominal
 24V power rail for the robot. These batteries are kept charged by the mainboard (see
-<a class="reference internal" href="care_and_feeding.html#charging"><em>Charging</em></a>).</p>
+<a class="reference internal" href="care_and_feeding.html#charging"><span>Charging</span></a>).</p>
 <div class="section" id="breakers">
 <h3>Breakers<a class="headerlink" href="#breakers" title="Permalink to this headline">¶</a></h3>
 <p>There are several breakers within the robot. These are designed in order to prevent
 damage to the robot if cabling should become worn or shorted out, or in the case
 of sudden, unexpected overload of a joint. The table below describes each breaker,
-using the names that are used in <tt class="docutils literal"><span class="pre">fetch_drivers</span></tt> and diagnostics:</p>
+using the names that are used in <code class="docutils literal"><span class="pre">fetch_drivers</span></code> and diagnostics:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="22%" />
@@ -825,7 +825,7 @@ Each MCB can then receive any of the following types of commands:</p>
 </div></blockquote>
 <p>Each MCB returns the measured effort, velocity and position of the joint it
 is controlling.</p>
-<p>Most users will want to use the high-level <a class="reference internal" href="api_overview.html#arm-api"><em>Arm and Torso</em></a> ROS API, however,
+<p>Most users will want to use the high-level <a class="reference internal" href="api_overview.html#arm-api"><span>Arm and Torso</span></a> ROS API, however,
 users can also create their own controllers as ROS plugins that run on the
 robot computer and send commands to the MCBs using the
 robot_controllers_interface package.</p>
@@ -845,12 +845,12 @@ to the <strong>base_scan</strong> topic.</p>
 <p>The mainboard of Fetch and Freight have a 6-axis inertial measurement
 unit (IMU). The gyroscope within the IMU is capable of measuring
 +/-2000 degrees per second, while the accelerometers are capable of
-measuring +/-2g. See <a class="reference internal" href="api_overview.html#imu-api"><em>IMU Interface</em></a> for details on the ROS API.</p>
+measuring +/-2g. See <a class="reference internal" href="api_overview.html#imu-api"><span>IMU Interface</span></a> for details on the ROS API.</p>
 </div>
 <div class="section" id="head-camera">
 <h3>Head Camera<a class="headerlink" href="#head-camera" title="Permalink to this headline">¶</a></h3>
 <p>Fetch has a Primesense Carmine 1.09 short-range RGBD sensor. This
-camera is best calibrated in the 0.35-1.4m range. See <a class="reference internal" href="api_overview.html#camera-api"><em>Head Camera Interface</em></a>
+camera is best calibrated in the 0.35-1.4m range. See <a class="reference internal" href="api_overview.html#camera-api"><span>Head Camera Interface</span></a>
 for details on the ROS API.</p>
 </div>
 <div class="section" id="gripper-sensors">
@@ -859,7 +859,7 @@ for details on the ROS API.</p>
 gripper incorporates a 6-axis inertial measurement unit (IMU). The gyroscope within
 the IMU is capable of measuring +/-2000 degrees per second, while the
 accelerometers are capable of measuring +/-2g.
-See <a class="reference internal" href="api_overview.html#imu-api"><em>IMU Interface</em></a> for details on the ROS API.</p>
+See <a class="reference internal" href="api_overview.html#imu-api"><span>IMU Interface</span></a> for details on the ROS API.</p>
 </div>
 </div>
 </div>

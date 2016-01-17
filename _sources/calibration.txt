@@ -22,7 +22,7 @@ hand-eye coordination of the robot is well calibrated. Calibration involves:
  * Updating the URDF and robot launch files with newly determined offsets.
 
 The :ref:`upstart_services` that start the robot will use the launch
-file in `/etc/ros/indigo/robot.launch'. Therefore, the last step in calibration
+file in `/etc/ros/indigo/robot.launch`. Therefore, the last step in calibration
 is to update that launch file and restart the drivers. Currently, the
 following aspects are updated:
 
@@ -116,3 +116,95 @@ back to the previous calibration with:
 
     >$ calibrate_robot --restore
 
+
+Calibrating Fetch Torso
+-----------------------
+When the torso controller board is first powered, it uses measurements from two different
+position sensors to determine the absolute starting position of the torso.
+Once the absolute starting position of the torso is determined, the position measurement
+will retain millimeter precision as long torso remains powered.
+
+To work properly, the two torso sensors must be calibrated together.
+If the sensors are not properly calibrated, the calculation of the initial torso position
+could be incorrect in some situations. This problem is more likely to occur if the torso is
+first powered when in the "up" position.
+A bad torso position should be easy to detect when using RVIZ since the torso position
+shown in RVIZ will always be more than +/-10cm different than the true torso position.
+
+The torso sensors are calibrated in production, so they will not usually need
+to be recalibrated.  If there seems to be a torso positioning problem,
+the torso calibration tool should be first used to verify the calibration of the torso.
+
+In release 0.7.4 of fetch_drivers package there is a tool 
+to verify or calibrate the torso sensors.
+The tool has two options: verify and calibrate.
+The verify option will only verify that the calibration is good,
+it will not change any stored calibration parameters.
+The calibrate option will calibrate the sensors and update the parameters
+stored on the torso controller.
+
+For both options, the torso will travel through its entire range of
+motion while sensor data is collected.  While the tool is being run,
+the robot drivers will be stopped and the robot arm will not hold its position.
+Because of this, the arm should be tucked or soft fabric or cardboard
+should be placed between arm and base to avoid scratching any covers.
+
+
+Torso Calibration Procedure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. warning::
+    During torso calibration the arm will not hold position.
+    Place cardboard or soft fabric between arm and base to avoid
+    scratching covers during data collection.
+
+Follow these steps in order to verify or calibrate the torso position
+sensors:
+
+1. Move torso to lowest position, and tuck the arm.
+
+2. Place a protective barrier between the arm and top base cover.
+
+3. Disable robot drivers by running : ``sudo service robot stop``
+
+4. Run torso calibration tool:
+
+  * To run calibration : ``rosrun fetch_drivers torso_calibrate calibrate``
+  * To verify calibration : ``rosrun fetch_drivers torso_calibrate verify``
+
+6. Wait for torso to collect sensor data.  The torso will move upwards in small increments through the entire range of motion.  A clicking sound will be produced by the torso while moving, and is normal.
+
+7. Cycle Run-stop (optional).  Sometimes tool will request that run-stop be cycled
+   after it completes.  Cycling run-stop will cycle power to the torso controller board,
+   and is required in some situations.
+
+8. On tool has completed, restart robot drivers with ``sudo service robot start``
+
+Verify Output
+^^^^^^^^^^^^^
+Verification will produce output stating whether sensors are well calibrated.
+If the sensor calibration is good the tool will output something similar to:
+
+  VERIFY PASSED : max sensor error of 0.0109411 is within acceptable limit
+
+Otherwise it will produce output like:
+
+  VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04
+
+When verification fails, run calibration produce.
+
+.. note::
+  The value for max sensor error is the mismatch between the two torso sensors.
+  The accuracy of the torso position measurement is unrelated to this value.
+
+Calibrate Output
+^^^^^^^^^^^^^^^^
+Once the tool has completed the calibration procedure it will check the expected results of calibration.
+If everything checks out, the tool will output something similar to::
+
+  VERIFY PASSED : max sensor error of 0.0116824 is within acceptable limit
+
+If there was a problem calculating good calibration parameters, the output might look like::
+
+  VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04
+
+In case of failure, the torso sensor may be malfunctioning or damaged and a support ticket should be created.
