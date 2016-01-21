@@ -116,6 +116,7 @@ back to the previous calibration with:
 
     >$ calibrate_robot --restore
 
+.. _torso_calibration:
 
 Calibrating Fetch Torso
 -----------------------
