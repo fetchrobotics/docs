@@ -28,7 +28,7 @@ Tutorials
    navigation
    manipulation
    perception
-
+   calibration
    
 Other
 -----
