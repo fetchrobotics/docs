@@ -9,16 +9,18 @@ the installed package.
 For information on updating your robot to the latest packages, see
 :ref:`updating`.
 
-January 20, 2016
+January 21, 2016
 ----------------
 This sync includes new upstream ROS packages. New drivers
 include improvements to charge state estimation and a
 tool for :ref:`in-field calibration of the torso<torso_calibration>`.
-Auto docking includes several fixes for TF-related errors.
+Auto docking includes several fixes for TF-related errors,
+as well as a fix for reliability when the odom frame and dock
+are aligned.
 
 Updated Fetch Packages:
  * ros-indigo-fetch-drivers: 0.7.3-0 -> 0.7.4-0
- * ros-indigo-fetch-auto-dock: 0.1.0-0 -> 0.2.0-0
+ * ros-indigo-fetch-auto-dock: 0.1.0-0 -> 0.2.1-0
 
 A full list of new upstream packages can be found on the
 `ROS mailing list <http://lists.ros.org/pipermail/ros-users/2016-January/069795.html>`_
