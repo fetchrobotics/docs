@@ -220,6 +220,18 @@
 <li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#understanding-calibration">Understanding Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrate-robot-tool">Calibrate Robot Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrating-fetch-torso">Calibrating Fetch Torso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#torso-calibration-procedure">Torso Calibration Procedure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#verify-output">Verify Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#calibrate-output">Calibrate Output</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -317,12 +329,14 @@ the installed package.</p>
 <p>This sync includes new upstream ROS packages. New drivers
 include improvements to charge state estimation and a
 tool for <a class="reference internal" href="calibration.html#torso-calibration"><span>in-field calibration of the torso</span></a>.
-Auto docking includes several fixes for TF-related errors.</p>
+Auto docking includes several fixes for TF-related errors,
+as well as a fix for reliability when the odom frame and dock
+are aligned.</p>
 <dl class="docutils">
 <dt>Updated Fetch Packages:</dt>
 <dd><ul class="first last simple">
 <li>ros-indigo-fetch-drivers: 0.7.3-0 -&gt; 0.7.4-0</li>
-<li>ros-indigo-fetch-auto-dock: 0.1.0-0 -&gt; 0.2.0-0</li>
+<li>ros-indigo-fetch-auto-dock: 0.1.0-0 -&gt; 0.2.1-0</li>
 </ul>
 </dd>
 </dl>
