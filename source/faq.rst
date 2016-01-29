@@ -55,6 +55,16 @@ Why won't my robot move when I use my PS3 joystick?
 * If this did not solve your problem please contact Fetch Support
 
 
+The robot will not move and/or slows down near obstacles, why?
+-------------------------------------------------------------
+
+* Please be aware, The robot's max speed is reduced when the laser sees an object directly in front of it. Despite this reduction the robot will always be able to travel at least 0.1 m/s even when the robot is almost touching an obstacle so it can not get locked down. This behavior is at the driver level.
+
+* If you are autonomously navigating and the robot stops completely you should check your costmap and/or navigation algorithms
+
+* If you are using the controller, it is on/connected and the robot stops please contact Fetch Support
+
+
 I just sent a trajectory command to the arm and now it won't gravity compensate, help?
 --------------------------------------------------------------------------------------
 * Please verify that the trajectory command you sent to the arm was smoothed and doesn't exceed the velocity/acceleration limits of the arm. Otherwise when the arm exceeds its limits a breaker will trip cutting power to the arm
