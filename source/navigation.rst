@@ -7,8 +7,18 @@ ROS Navigation Stack. A number of tutorials related to navigation
 can be found in the documentation on the
 `ROS Wiki <http://wiki.ros.org/navigation>`_.
 
-Running Navigation in Gazebo
-----------------------------
+Running Navigation: Robot vs Simulation
+---------------------------------------
+
+To start navigation services on the robot you will need to launch the navigation launch file. There is one version of this file for a real robot and another for running in simulation.
+
+To run navigation on a fetch robot, launch the navigation launch file
+from the ``fetch_navigation`` package:
+
+::
+
+    >$ roslaunch fetch_navigation fetch_nav.launch
+
 
 To run navigation in simulation, launch the navigation launch file
 from the ``fetch_gazebo_demo`` package:
