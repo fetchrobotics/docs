@@ -91,13 +91,89 @@ This python script will run the robot through a simple disco dance motion.
           move_group.moveToJointPosition(joint_names, pose, wait=False)
           move_group.get_move_action().wait_for_result()
           result = move_group.get_move_action().get_result()
-          if result.error_code.val == MoveItErrorCodes.SUCCESS:
-              rospy.loginfo("Disco!")
-          if not result:
-              rospy.logerr("Arm goal in state: %s",
-                           move_group.get_move_action().get_state())
+
+          if result:
+              if result.error_code.val == MoveItErrorCodes.SUCCESS:
+                  rospy.loginfo("Disco!")
+              else:
+                  rospy.logerr("Arm goal in state: %s",
+                               move_group.get_move_action().get_state())
+          else:
+              rospy.logerr("MoveIt! failure no result returned.")
           rospy.sleep(0.1)
       move_group.get_move_action().cancel_all_goals()
+
+Simple MoveIt! Wave Example
+---------------------------
+
+This python script will cause the robot to do a simple "wave-like" motion
+until the script is stopped with ctrl-c
+
+::
+
+  #!/usr/bin/env python
+
+  # wave.py: "Wave" the fetch gripper
+  import rospy
+  from moveit_msgs.msg import MoveItErrorCodes
+  from moveit_python import MoveGroupInterface, PlanningSceneInterface
+  from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion
+
+  # Note: fetch_moveit_config move_group.launch must be running
+  # Safety!: Do NOT run this script near people or objects.
+  # Safety!: There is NO perception.
+  #          The ONLY objects the collision detection software is aware
+  #          of are itself & the floor.
+  if __name__ == '__main__':
+      rospy.init_node("hi")
+
+      # Create move group interface
+      move_group = MoveGroupInterface("arm_with_torso", "base_link")
+
+      # Define ground plane
+      planning_scene = PlanningSceneInterface("base_link")
+      planning_scene.removeCollisionObject("my_front_ground")
+      planning_scene.removeCollisionObject("my_back_ground")
+      planning_scene.removeCollisionObject("my_right_ground")
+      planning_scene.removeCollisionObject("my_left_ground")
+      planning_scene.addCube("my_front_ground", 2, 1.1, 0.0, -1.0)
+      planning_scene.addCube("my_back_ground", 2, -1.2, 0.0, -1.0)
+      planning_scene.addCube("my_left_ground", 2, 0.0, 1.2, -1.0)
+      planning_scene.addCube("my_right_ground", 2, 0.0, -1.2, -1.0)
+
+      gripper_frame = 'wrist_roll_link'
+      gripper_poses = [Pose(Point(0.042, 0.384, 1.826),
+                            Quaternion(0.173, -0.693, -0.242, 0.657)),
+                       Pose(Point(0.047, 0.545, 1.822),
+                            Quaternion(-0.274, -0.701, 0.173, 0.635))]
+
+      gripper_pose_stamped = PoseStamped()
+      gripper_pose_stamped.header.frame_id = 'base_link'
+
+      while not rospy.is_shutdown():
+          for pose in gripper_poses:
+              # Update pose info
+              gripper_pose_stamped.header.stamp = rospy.Time.now()
+              gripper_pose_stamped.pose = pose
+
+              # Move Gripper
+              move_group.moveToPose(gripper_pose_stamped, gripper_frame)
+
+              # Wait result and print result
+              move_group.get_move_action().wait_for_result()
+              result = move_group.get_move_action().get_result()
+              if result:
+                  if result.error_code.val == MoveItErrorCodes.SUCCESS:
+                      rospy.loginfo("Hello there!")
+                  else:
+                      rospy.logerr("Arm goal in state: %s",
+                                   move_group.get_move_action().get_state())
+              else:
+                  rospy.logerr("MoveIt! failure no result returned.")
+
+      move_group.get_move_action().cancel_all_goals()
+
+
 
 More information and Tutorials on MoveIt!
 -----------------------------------------
