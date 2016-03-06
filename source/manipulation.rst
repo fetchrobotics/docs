@@ -59,10 +59,12 @@ This python script will run the robot through a simple disco dance motion.
   if __name__ == '__main__':
       rospy.init_node("simple_disco")
 
-      # Create move group interface
+      # Create move group interface for a fetch robot
       move_group = MoveGroupInterface("arm_with_torso", "base_link")
 
       # Define ground plane
+      # This creates objects in the planning scene that mimic the ground
+      # If these were not in place gripper could hit the ground
       planning_scene = PlanningSceneInterface("base_link")
       planning_scene.removeCollisionObject("my_front_ground")
       planning_scene.removeCollisionObject("my_back_ground")
@@ -73,10 +75,12 @@ This python script will run the robot through a simple disco dance motion.
       planning_scene.addCube("my_left_ground", 2, 0.0, 1.2, -1.0)
       planning_scene.addCube("my_right_ground", 2, 0.0, -1.2, -1.0)
 
+      # TF joint names
       joint_names = ["torso_lift_joint", "shoulder_pan_joint",
                      "shoulder_lift_joint", "upperarm_roll_joint",
                      "elbow_flex_joint", "forearm_roll_joint",
                      "wrist_flex_joint", "wrist_roll_joint"]
+      # Lists of joint angles in the same order as in joint_names
       disco_poses = [[0.0, 1.5, -0.6, 3.0, 1.0, 3.0, 1.0, 3.0],
                      [0.133, 0.8, 0.75, 0.0, -2.0, 0.0, 2.0, 0.0],
                      [0.266, -0.8, 0.0, 0.0, 2.0, 0.0, -2.0, 0.0],
@@ -88,20 +92,30 @@ This python script will run the robot through a simple disco dance motion.
       for pose in disco_poses:
           if rospy.is_shutdown():
               break
+
+          # Plans the joints in joint_names to angles in pose
           move_group.moveToJointPosition(joint_names, pose, wait=False)
+
+          # Since we passed in wait=False above we need to wait here
           move_group.get_move_action().wait_for_result()
           result = move_group.get_move_action().get_result()
 
           if result:
+              # Checking the MoveItErrorCode
               if result.error_code.val == MoveItErrorCodes.SUCCESS:
                   rospy.loginfo("Disco!")
               else:
+                  # If you get to this point please search for:
+                  # moveit_msgs/MoveItErrorCodes.msg
                   rospy.logerr("Arm goal in state: %s",
                                move_group.get_move_action().get_state())
           else:
               rospy.logerr("MoveIt! failure no result returned.")
-          rospy.sleep(0.1)
+
+      # This stops all arm movement goals
+      # It should be called when a program is exiting so movement stops
       move_group.get_move_action().cancel_all_goals()
+
 
 Simple MoveIt! Wave Example
 ---------------------------
@@ -127,10 +141,12 @@ until the script is stopped with ctrl-c
   if __name__ == '__main__':
       rospy.init_node("hi")
 
-      # Create move group interface
+      # Create move group interface for a fetch robot
       move_group = MoveGroupInterface("arm_with_torso", "base_link")
 
       # Define ground plane
+      # This creates objects in the planning scene that mimic the ground
+      # If these were not in place gripper could hit the ground
       planning_scene = PlanningSceneInterface("base_link")
       planning_scene.removeCollisionObject("my_front_ground")
       planning_scene.removeCollisionObject("my_back_ground")
@@ -141,36 +157,44 @@ until the script is stopped with ctrl-c
       planning_scene.addCube("my_left_ground", 2, 0.0, 1.2, -1.0)
       planning_scene.addCube("my_right_ground", 2, 0.0, -1.2, -1.0)
 
+      # This is the wrist link not the gripper itself
       gripper_frame = 'wrist_roll_link'
+      # Position and rotation of two "wave end poses"
       gripper_poses = [Pose(Point(0.042, 0.384, 1.826),
                             Quaternion(0.173, -0.693, -0.242, 0.657)),
                        Pose(Point(0.047, 0.545, 1.822),
                             Quaternion(-0.274, -0.701, 0.173, 0.635))]
 
+      # Construct a "pose_stamped" message as required by moveToPose
       gripper_pose_stamped = PoseStamped()
       gripper_pose_stamped.header.frame_id = 'base_link'
 
       while not rospy.is_shutdown():
           for pose in gripper_poses:
-              # Update pose info
+              # Finish building the Pose_stamped message
+              # If the message stamp is not current it could be ignored
               gripper_pose_stamped.header.stamp = rospy.Time.now()
+              # Set the message pose
               gripper_pose_stamped.pose = pose
 
-              # Move Gripper
+              # Move gripper frame to the pose specified
               move_group.moveToPose(gripper_pose_stamped, gripper_frame)
-
-              # Wait result and print result
-              move_group.get_move_action().wait_for_result()
               result = move_group.get_move_action().get_result()
+
               if result:
+                  # Checking the MoveItErrorCode
                   if result.error_code.val == MoveItErrorCodes.SUCCESS:
                       rospy.loginfo("Hello there!")
                   else:
-                      rospy.logerr("Arm goal in state: %s",
+                  # If you get to this point please search for:
+                  # moveit_msgs/MoveItErrorCodes.msg
+                  rospy.logerr("Arm goal in state: %s",
                                    move_group.get_move_action().get_state())
               else:
                   rospy.logerr("MoveIt! failure no result returned.")
 
+      # This stops all arm movement goals
+      # It should be called when a program is exiting so movement stops
       move_group.get_move_action().cancel_all_goals()
 
 
