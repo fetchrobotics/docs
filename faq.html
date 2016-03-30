@@ -203,15 +203,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-in-gazebo">Running Navigation in Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-in-gazebo-simulation">Running Navigation in Gazebo Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-on-a-real-robot">Running Navigation on a Real Robot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building A Map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-waypoints">Sending Waypoints</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="manipulation.html">Tutorial: Manipulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit">Running MoveIt!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started-demo">Getting Started Demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit-on-a-robot">Running MoveIt! on a Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#simple-moveit-disco-example">Simple MoveIt! Disco Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#simple-moveit-wave-example">Simple MoveIt! Wave Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation.html#more-information-and-tutorials-on-moveit">More information and Tutorials on MoveIt!</a></li>
 </ul>
 </li>
@@ -255,9 +258,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
 </ul>
 </li>
@@ -318,6 +323,26 @@
             
   <div class="section" id="frequently-asked-questions">
 <h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-do-i-create-a-good-support-ticket">
+<h2>How do I create a good support ticket?<a class="headerlink" href="#how-do-i-create-a-good-support-ticket" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Go to the <a class="reference external" href="http://support.fetchrobotics.com:8080/">Fetch Support Website</a> and log in using your username and password</li>
+<li>Make sure the robot is not runstopped and then run the following commands on your local computer (Not the robot!)</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get update &amp;&amp; sudo apt-get install ros-indigo-fetch-tools
+declare -x ROS_MASTER_URI=&quot;http://*RobotHostNameGoesHere*:11311&quot;
+fetch debug-snapshot
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need ros-indigo-fetch-tools version 0.1.2 or greater to use the debug-snapshot command</p>
+</div>
+<ul class="simple">
+<li>Create a new support ticket and attach the zip file that was created</li>
+<li>Clearly state problem you are having in the ticket so we can better serve you</li>
+</ul>
+</div>
 <div class="section" id="why-won-t-my-robot-do-anything-at-all-charge-move-etc">
 <h2>Why won&#8217;t my robot do anything at all (charge, move, etc...)?<a class="headerlink" href="#why-won-t-my-robot-do-anything-at-all-charge-move-etc" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -370,6 +395,14 @@
 </div>
 <ul class="simple">
 <li>If this did not solve your problem please contact Fetch Support</li>
+</ul>
+</div>
+<div class="section" id="the-robot-will-not-move-and-or-slows-down-near-obstacles-why">
+<h2>The robot will not move and/or slows down near obstacles, why?<a class="headerlink" href="#the-robot-will-not-move-and-or-slows-down-near-obstacles-why" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Please be aware, The robot&#8217;s max speed is reduced when the laser sees an object directly in front of it. Despite this reduction the robot will always be able to travel at least 0.1 m/s even when the robot is almost touching an obstacle so it can not get locked down. This behavior is at the driver level.</li>
+<li>If you are autonomously navigating and the robot stops completely you should check your costmap and/or navigation algorithms</li>
+<li>If you are using the controller, it is on/connected and the robot stops please contact Fetch Support</li>
 </ul>
 </div>
 <div class="section" id="i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">
