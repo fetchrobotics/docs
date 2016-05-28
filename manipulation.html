@@ -249,6 +249,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-28-2016">May 28, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#january-21-2016">January 21, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-23-2015">November 23, 2015</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-12-2015">November 12, 2015</a></li>
@@ -432,77 +433,77 @@ the <a class="reference external" href="http://docs.ros.org/indigo/api/moveit_ro
 <h2>Simple MoveIt! Wave Example<a class="headerlink" href="#simple-moveit-wave-example" title="Permalink to this headline">¶</a></h2>
 <p>This python script will cause the robot to do a simple &#8220;wave-like&#8221; motion
 until the script is stopped with ctrl-c</p>
-<div class="highlight-python"><div class="highlight"><pre>#!/usr/bin/env python
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
 
-# wave.py: &quot;Wave&quot; the fetch gripper
-import rospy
-from moveit_msgs.msg import MoveItErrorCodes
-from moveit_python import MoveGroupInterface, PlanningSceneInterface
-from geometry_msgs.msg import PoseStamped, Pose, Point, Quaternion
+<span class="c"># wave.py: &quot;Wave&quot; the fetch gripper</span>
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">MoveItErrorCodes</span>
+<span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="n">MoveGroupInterface</span><span class="p">,</span> <span class="n">PlanningSceneInterface</span>
+<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">PoseStamped</span><span class="p">,</span> <span class="n">Pose</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span> <span class="n">Quaternion</span>
 
-# Note: fetch_moveit_config move_group.launch must be running
-# Safety!: Do NOT run this script near people or objects.
-# Safety!: There is NO perception.
-#          The ONLY objects the collision detection software is aware
-#          of are itself &amp; the floor.
-if __name__ == &#39;__main__&#39;:
-    rospy.init_node(&quot;hi&quot;)
+<span class="c"># Note: fetch_moveit_config move_group.launch must be running</span>
+<span class="c"># Safety!: Do NOT run this script near people or objects.</span>
+<span class="c"># Safety!: There is NO perception.</span>
+<span class="c">#          The ONLY objects the collision detection software is aware</span>
+<span class="c">#          of are itself &amp; the floor.</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">&quot;hi&quot;</span><span class="p">)</span>
 
-    # Create move group interface for a fetch robot
-    move_group = MoveGroupInterface(&quot;arm_with_torso&quot;, &quot;base_link&quot;)
+    <span class="c"># Create move group interface for a fetch robot</span>
+    <span class="n">move_group</span> <span class="o">=</span> <span class="n">MoveGroupInterface</span><span class="p">(</span><span class="s">&quot;arm_with_torso&quot;</span><span class="p">,</span> <span class="s">&quot;base_link&quot;</span><span class="p">)</span>
 
-    # Define ground plane
-    # This creates objects in the planning scene that mimic the ground
-    # If these were not in place gripper could hit the ground
-    planning_scene = PlanningSceneInterface(&quot;base_link&quot;)
-    planning_scene.removeCollisionObject(&quot;my_front_ground&quot;)
-    planning_scene.removeCollisionObject(&quot;my_back_ground&quot;)
-    planning_scene.removeCollisionObject(&quot;my_right_ground&quot;)
-    planning_scene.removeCollisionObject(&quot;my_left_ground&quot;)
-    planning_scene.addCube(&quot;my_front_ground&quot;, 2, 1.1, 0.0, -1.0)
-    planning_scene.addCube(&quot;my_back_ground&quot;, 2, -1.2, 0.0, -1.0)
-    planning_scene.addCube(&quot;my_left_ground&quot;, 2, 0.0, 1.2, -1.0)
-    planning_scene.addCube(&quot;my_right_ground&quot;, 2, 0.0, -1.2, -1.0)
+    <span class="c"># Define ground plane</span>
+    <span class="c"># This creates objects in the planning scene that mimic the ground</span>
+    <span class="c"># If these were not in place gripper could hit the ground</span>
+    <span class="n">planning_scene</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">&quot;base_link&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_front_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_back_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_right_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_left_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_front_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_back_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_left_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_right_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
 
-    # This is the wrist link not the gripper itself
-    gripper_frame = &#39;wrist_roll_link&#39;
-    # Position and rotation of two &quot;wave end poses&quot;
-    gripper_poses = [Pose(Point(0.042, 0.384, 1.826),
-                          Quaternion(0.173, -0.693, -0.242, 0.657)),
-                     Pose(Point(0.047, 0.545, 1.822),
-                          Quaternion(-0.274, -0.701, 0.173, 0.635))]
+    <span class="c"># This is the wrist link not the gripper itself</span>
+    <span class="n">gripper_frame</span> <span class="o">=</span> <span class="s">&#39;wrist_roll_link&#39;</span>
+    <span class="c"># Position and rotation of two &quot;wave end poses&quot;</span>
+    <span class="n">gripper_poses</span> <span class="o">=</span> <span class="p">[</span><span class="n">Pose</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mf">0.042</span><span class="p">,</span> <span class="mf">0.384</span><span class="p">,</span> <span class="mf">1.826</span><span class="p">),</span>
+                          <span class="n">Quaternion</span><span class="p">(</span><span class="mf">0.173</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.693</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.242</span><span class="p">,</span> <span class="mf">0.657</span><span class="p">)),</span>
+                     <span class="n">Pose</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mf">0.047</span><span class="p">,</span> <span class="mf">0.545</span><span class="p">,</span> <span class="mf">1.822</span><span class="p">),</span>
+                          <span class="n">Quaternion</span><span class="p">(</span><span class="o">-</span><span class="mf">0.274</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.701</span><span class="p">,</span> <span class="mf">0.173</span><span class="p">,</span> <span class="mf">0.635</span><span class="p">))]</span>
 
-    # Construct a &quot;pose_stamped&quot; message as required by moveToPose
-    gripper_pose_stamped = PoseStamped()
-    gripper_pose_stamped.header.frame_id = &#39;base_link&#39;
+    <span class="c"># Construct a &quot;pose_stamped&quot; message as required by moveToPose</span>
+    <span class="n">gripper_pose_stamped</span> <span class="o">=</span> <span class="n">PoseStamped</span><span class="p">()</span>
+    <span class="n">gripper_pose_stamped</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s">&#39;base_link&#39;</span>
 
-    while not rospy.is_shutdown():
-        for pose in gripper_poses:
-            # Finish building the Pose_stamped message
-            # If the message stamp is not current it could be ignored
-            gripper_pose_stamped.header.stamp = rospy.Time.now()
-            # Set the message pose
-            gripper_pose_stamped.pose = pose
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">pose</span> <span class="ow">in</span> <span class="n">gripper_poses</span><span class="p">:</span>
+            <span class="c"># Finish building the Pose_stamped message</span>
+            <span class="c"># If the message stamp is not current it could be ignored</span>
+            <span class="n">gripper_pose_stamped</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">stamp</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+            <span class="c"># Set the message pose</span>
+            <span class="n">gripper_pose_stamped</span><span class="o">.</span><span class="n">pose</span> <span class="o">=</span> <span class="n">pose</span>
 
-            # Move gripper frame to the pose specified
-            move_group.moveToPose(gripper_pose_stamped, gripper_frame)
-            result = move_group.get_move_action().get_result()
+            <span class="c"># Move gripper frame to the pose specified</span>
+            <span class="n">move_group</span><span class="o">.</span><span class="n">moveToPose</span><span class="p">(</span><span class="n">gripper_pose_stamped</span><span class="p">,</span> <span class="n">gripper_frame</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
 
-            if result:
-                # Checking the MoveItErrorCode
-                if result.error_code.val == MoveItErrorCodes.SUCCESS:
-                    rospy.loginfo(&quot;Hello there!&quot;)
-                else:
-                # If you get to this point please search for:
-                # moveit_msgs/MoveItErrorCodes.msg
-                rospy.logerr(&quot;Arm goal in state: %s&quot;,
-                                 move_group.get_move_action().get_state())
-            else:
-                rospy.logerr(&quot;MoveIt! failure no result returned.&quot;)
+            <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+                <span class="c"># Checking the MoveItErrorCode</span>
+                <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">error_code</span><span class="o">.</span><span class="n">val</span> <span class="o">==</span> <span class="n">MoveItErrorCodes</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">:</span>
+                    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s">&quot;Hello there!&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c"># If you get to this point please search for:</span>
+                    <span class="c"># moveit_msgs/MoveItErrorCodes.msg</span>
+                    <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s">&quot;Arm goal in state: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span>
+                                 <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">get_state</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s">&quot;MoveIt! failure no result returned.&quot;</span><span class="p">)</span>
 
-    # This stops all arm movement goals
-    # It should be called when a program is exiting so movement stops
-    move_group.get_move_action().cancel_all_goals()
+    <span class="c"># This stops all arm movement goals</span>
+    <span class="c"># It should be called when a program is exiting so movement stops</span>
+    <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">cancel_all_goals</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

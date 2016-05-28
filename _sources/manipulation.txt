@@ -186,9 +186,9 @@ until the script is stopped with ctrl-c
                   if result.error_code.val == MoveItErrorCodes.SUCCESS:
                       rospy.loginfo("Hello there!")
                   else:
-                  # If you get to this point please search for:
-                  # moveit_msgs/MoveItErrorCodes.msg
-                  rospy.logerr("Arm goal in state: %s",
+                      # If you get to this point please search for:
+                      # moveit_msgs/MoveItErrorCodes.msg
+                      rospy.logerr("Arm goal in state: %s",
                                    move_group.get_move_action().get_state())
               else:
                   rospy.logerr("MoveIt! failure no result returned.")
