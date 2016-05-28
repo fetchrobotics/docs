@@ -6,6 +6,7 @@ How do I create a good support ticket?
 * Go to the `Fetch Support Website <http://support.fetchrobotics.com:8080/>`_ and log in using your username and password
 
 * Make sure the robot is not runstopped and then run the following commands on your local computer (Not the robot!)
+
 ::
 
    sudo apt-get update && sudo apt-get install ros-indigo-fetch-tools
@@ -77,7 +78,7 @@ Why won't my robot move when I use my PS3 joystick?
 
 
 The robot will not move and/or slows down near obstacles, why?
--------------------------------------------------------------
+--------------------------------------------------------------
 
 * Please be aware, The robot's max speed is reduced when the laser sees an object directly in front of it. Despite this reduction the robot will always be able to travel at least 0.1 m/s even when the robot is almost touching an obstacle so it can not get locked down. This behavior is at the driver level.
 

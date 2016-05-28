@@ -85,8 +85,6 @@ batteries.
    :align: center
    :figclass: align-centered
 
-
-
 Runstop
 +++++++
 

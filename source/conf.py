@@ -70,7 +70,13 @@ release = 'Indigo'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = []
+# Note: these 5 files are included in hardware overview, they
+#       should not be processed separately.
+exclude_patterns = ["electrical.rst",
+                    "mechanical_spec.rst",
+                    "mechanism_terminology.rst",
+                    "motion_control.rst",
+                    "sensors.rst"]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.

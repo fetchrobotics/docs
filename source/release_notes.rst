@@ -46,7 +46,7 @@ Updated Fetch Packages:
  * ros-indigo-robot-controllers: 0.4.3-0 -> 0.5.0-0
 
 A full list of new upstream packages can be found on the
-`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2016-May/070011.html>`_
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2016-May/070011.html>`__
 
 January 21, 2016
 ----------------
@@ -62,7 +62,7 @@ Updated Fetch Packages:
  * ros-indigo-fetch-auto-dock: 0.1.0-0 -> 0.2.1-0
 
 A full list of new upstream packages can be found on the
-`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2016-January/069795.html>`_
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2016-January/069795.html>`__
 
 November 23, 2015
 -----------------
@@ -95,7 +95,7 @@ New Fetch Packages:
  * ros-indigo-fetch-maps: 0.7.0-0
 
 A full list of new upstream packages can be found on the
-`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-November/069765.html>`_
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-November/069765.html>`__
 
 November 12, 2015
 -----------------
@@ -116,7 +116,7 @@ New Fetch Packages:
  * ros-indigo-fetch-auto-dock: 0.1.0
 
 A full list of new upstream packages can be found on the
-`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-September/069629.html>`_
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-September/069629.html>`__
 
 August 5, 2015
 --------------
@@ -132,7 +132,7 @@ Updated Fetch Packages:
  * ros-indigo-fetch-teleop: 0.6.1-0 -> 0.6.2-0
 
 A full list of new upstream packages can be found on the
-`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-August/069564.html>`_
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-August/069564.html>`__
 
 July 9, 2015
 ------------
@@ -158,7 +158,7 @@ New Fetch Packages:
  * ros-indigo-fetch-auto-dock-msgs: 0.5.2-0
 
 A full list of new upstream packages can be found on the
-`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-July/069516.html>`_
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-July/069516.html>`__
 
 June 8, 2015
 ------------
@@ -176,4 +176,4 @@ New Fetch Packages:
  * ros-indigo-fetch-teleop: 0.5.13-0
 
 A full list of new upstream packages can be found on the
-`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-June/069467.html>`_
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2015-June/069467.html>`__
