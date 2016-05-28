@@ -125,7 +125,7 @@ Upgrading to the latest packages is as easy as:
 ::
 
    sudo apt-get update
-   sudo apt-get install --only-upgrade ros-indigo-*
+   sudo apt-get install --only-upgrade ros-indigo-* f.*-system-config
    sudo service robot stop
    sudo service robot start
 

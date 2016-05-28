@@ -9,6 +9,45 @@ the installed package.
 For information on updating your robot to the latest packages, see
 :ref:`updating`.
 
+May 28, 2016
+----------------
+This sync includes new upstream ROS packages. Notably this
+release includes updates for a udev rule that maps the PS3
+controller to /dev/ps3joy, therefore it is important that
+you also install the latest fetch-system-config or
+freight-system-config package depending on your robot model.
+The :ref:`updating` instructions have been updated to note that
+the correct update command is now:
+
+::
+
+   sudo apt-get update
+   sudo apt-get install --only-upgrade ros-indigo-* f.*-system-config
+   sudo service robot stop
+   sudo service robot start
+
+New drivers improve charge time and performance.
+A number of improvements have been made to the fetch_depth_layer
+including properly supporting deactivate/activate when plans
+are not in progress.
+
+Updated Fetch Packages:
+ * fetch-system-config: 0.8-0 -> 0.8-4
+ * ros-indigo-fetch-bringup: 0.6.0-0 -> 0.7.1-0
+ * ros-indigo-fetch-drivers: 0.7.4-0 -> 0.7.11-0
+ * ros-indigo-fetch-depth-layer: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-fetch-description: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-fetch-gazebo: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-fetch-gazebo-demo: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-fetch-moveit-config: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-fetch-navigation: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-fetch-teleop: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-freight-bringup: 0.6.0-0 -> 0.7.1-0
+ * ros-indigo-robot-controllers: 0.4.3-0 -> 0.5.0-0
+
+A full list of new upstream packages can be found on the
+`ROS mailing list <http://lists.ros.org/pipermail/ros-users/2016-May/070011.html>`_
+
 January 21, 2016
 ----------------
 This sync includes new upstream ROS packages. New drivers
