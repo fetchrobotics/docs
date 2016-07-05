@@ -92,3 +92,73 @@ package.
   >$ export ROS_MASTER_URI=http://<robot_name_or_ip>:11311
   >$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
+
+Software Runstop
+----------------
+
+In addition to the runstop button on the side of the robot, similar software
+functionality is also available, allowing for button presses on the
+PS3 controller or a program to disable the breakers.
+This functionality is available in release 0.7.3 of the
+fetch_bringup package. The teleop portion is disabled by default.
+
+Using Software Runstop
+~~~~~~~~~~~~~~~~~~~~~~
+
+To activate the software runstop, publish True to the /enable_software_runstop
+topic.
+
+Alternately, with the teleop runstop enabled, pressing both of the right
+trigger buttons (buttons 9 and 11) will activate the software runstop.
+The software_runstop.py script in fetch_bringup can be modified to change
+the button(s) for the software runstop.
+
+Once activated, the software runstop can be deactivated by (1) toggling the
+hardware runstop, or (2) disabling the software runstop by passing False to
+the /enable_software_runstop topic.
+
+Enable Teleop Software Runstop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+   In order to edit the robot.launch file, you will
+   need to use a terminal editor (such as nano or vim), or use the -X flag
+   with SSH to use a graphical editor (such as gedit). Additionally, the editor
+   must be launched with `sudo`. Instructions below use nano.
+
+To enable the software runstop, first SSH into the robot, and then
+modify the robot drivers launch file to use it.
+
+We need to modify the robot.launch file to pass the correct arg to the
+software runstop script:
+
+::
+
+  >$ sudo nano /etc/ros/indigo/robot.launch
+
+In this file there should be a Software Runstop entry near the end. By default
+this entry contains an args line, with a value of "-a -b -g". To add teleop
+control, add the "-t" flag as well. This section will then look like the below.
+If your robot is an older one and does not have a Software Runstop entry,
+you will want to simply copy the block the below.
+
+::
+
+  <!-- Software Runstop -->                                                     
+  <include file="$(find fetch_bringup)/launch/include/runstop.launch.xml">
+    <arg name="flags" value="-a -b -g -t" />
+  </include>
+
+Note that the -a, -b, -g flags correspond to letting the software runstop
+control the :ref:`arm, base and gripper breakers<breakers>`,
+respectively.
+
+Additionally, if completely disabling the software runstop functionality is
+desired, the above section in robot.launch can be commented out or removed.
+
+Finally, restart the drivers so that our changes take effect:
+
+::
+
+  >$ sudo service robot stop && sudo service robot stop

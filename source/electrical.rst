@@ -40,6 +40,8 @@ in the robot base. The batteries are connected in series, providing the nominal
 24V power rail for the robot. These batteries are kept charged by the mainboard (see
 :ref:`charging`).
 
+.. _breakers:
+
 Breakers
 ++++++++
 
