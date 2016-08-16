@@ -111,8 +111,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#software-runstop">Software Runstop</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#using-software-runstop">Using Software Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#visualizing-data">Visualizing Data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
 </ul>
@@ -200,6 +203,11 @@
 <li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#software-runstop">Software Runstop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="teleop.html#using-software-runstop">Using Software Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -259,6 +267,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-cite-fetch-or-freight-in-an-academic-paper">How can I cite Fetch or Freight in an Academic Paper?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
@@ -633,6 +642,63 @@ package.</p>
 &gt;$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 </pre></div>
 </div>
+</div>
+<div class="section" id="software-runstop">
+<h4>Software Runstop<a class="headerlink" href="#software-runstop" title="Permalink to this headline">¶</a></h4>
+<p>In addition to the runstop button on the side of the robot, similar software
+functionality is also available, allowing for button presses on the
+PS3 controller or a program to disable the breakers.
+This functionality is available in release 0.7.3 of the
+fetch_bringup package. The teleop portion is disabled by default.</p>
+</div>
+</div>
+<div class="section" id="using-software-runstop">
+<h3>Using Software Runstop<a class="headerlink" href="#using-software-runstop" title="Permalink to this headline">¶</a></h3>
+<p>To activate the software runstop, publish True to the /enable_software_runstop
+topic.</p>
+<p>Alternately, with the teleop runstop enabled, pressing both of the right
+trigger buttons (buttons 9 and 11) will activate the software runstop.
+The software_runstop.py script in fetch_bringup can be modified to change
+the button(s) for the software runstop.</p>
+<p>Once activated, the software runstop can be deactivated by (1) toggling the
+hardware runstop, or (2) disabling the software runstop by passing False to
+the /enable_software_runstop topic.</p>
+</div>
+<div class="section" id="enable-teleop-software-runstop">
+<h3>Enable Teleop Software Runstop<a class="headerlink" href="#enable-teleop-software-runstop" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to edit the robot.launch file, you will
+need to use a terminal editor (such as nano or vim), or use the -X flag
+with SSH to use a graphical editor (such as gedit). Additionally, the editor
+must be launched with <cite>sudo</cite>. Instructions below use nano.</p>
+</div>
+<p>To enable the software runstop, first SSH into the robot, and then
+modify the robot drivers launch file to use it.</p>
+<p>We need to modify the robot.launch file to pass the correct arg to the
+software runstop script:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo nano /etc/ros/indigo/robot.launch
+</pre></div>
+</div>
+<p>In this file there should be a Software Runstop entry near the end. By default
+this entry contains an args line, with a value of &#8220;-a -b -g&#8221;. To add teleop
+control, add the &#8220;-t&#8221; flag as well. This section will then look like the below.
+If your robot is an older one and does not have a Software Runstop entry,
+you will want to simply copy the block the below.</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;!-- Software Runstop --&gt;
+&lt;include file=&quot;$(find fetch_bringup)/launch/include/runstop.launch.xml&quot;&gt;
+  &lt;arg name=&quot;flags&quot; value=&quot;-a -b -g -t&quot; /&gt;
+&lt;/include&gt;
+</pre></div>
+</div>
+<p>Note that the -a, -b, -g flags correspond to letting the software runstop
+control the <a class="reference internal" href="robot_hardware.html#breakers"><span>arm, base and gripper breakers</span></a>,
+respectively.</p>
+<p>Additionally, if completely disabling the software runstop functionality is
+desired, the above section in robot.launch can be commented out or removed.</p>
+<p>Finally, restart the drivers so that our changes take effect:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo service robot stop &amp;&amp; sudo service robot stop
+</pre></div>
 </div>
 </div>
 <div class="section" id="visualizing-data">

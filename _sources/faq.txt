@@ -1,6 +1,18 @@
 Frequently Asked Questions
 ==========================
 
+How can I cite Fetch or Freight in an Academic Paper?
+-----------------------------------------------------
+
+We recommend citing our `workshop paper on Fetch & Freight <http://docs.fetchrobotics.com/FetchAndFreight2016.pdf>`_:
+
+::
+
+   Fetch & Freight: Standard Platforms for Service Robot Applications
+   Melonee Wise, Michael Ferguson, Derek King, Eric Diehr and David Dymesich
+   Workshop on Autonomous Mobile Service Robots, held at the
+   2016 International Joint Conference on Artificial Intelligence, NYC, July 2016
+
 How do I create a good support ticket?
 --------------------------------------
 * Go to the `Fetch Support Website <http://support.fetchrobotics.com:8080/>`_ and log in using your username and password
