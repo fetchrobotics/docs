@@ -1,7 +1,7 @@
 Tutorial: Fetch Programming by Demonstration
 ============================================
 
-This repository is based on PR2 Programming by Demonstration. This version is for Fetch. It will not work on Freight because Freight does not have an arm.
+The `fetch_pbd <https://github.com/fetchrobotics/fetch_pbd>`_ package is based on PR2 Programming by Demonstration. This version is for Fetch. It will not work on Freight because Freight does not have an arm.
 
 The original `PR2 Programming by Demonstration <https://github.com/PR2/pr2_pbd>`_ was done by `Maya Cakmak <http://www.mayacakmak.com/>`_ and the `Human-Centered Robotics Lab <https://hcrlab.cs.washington.edu>`_ at the University of Washington.
 
@@ -118,14 +118,14 @@ You can also access the actions you've programmed through code. You still need t
 System Overview
 ---------------
 
-Interaction Node:
+**Interaction Node:**
 The pbd_interaction_node.py handles the interaction between speech/GUI and the rest of the system. Changes happen through the update loop in interaction.py and also through the callbacks from speech/GUI commands. interaction.py also subscribes to updates from the pbd_world_node.py, which notifies it of changes in objects in the world. Through callbacks and the update loop, interaction.py hooks in to session.py. session.py handles creating actions and primitives and saving them to the database.
 
-Arm Control Node:
+**Arm Control Node:**
 The pbd_arm_control_node.py is how the robot's arm is controlled to execute actions/primitives. It provides a lower level service interface to move the arm. The interaction node interacts with this through the interface in robot.py.
 
-World Node:
+**World Node:**
 The pbd_world_node.py handles the robot's perception of the world. Other nodes ask the world node about the state of the world and can both send and subscribe to updates to the world. Its main function is to provide a list of objects currently in the scene.
 
-Social Gaze Node:
+**Social Gaze Node:**
 The social_gaze_server.py handles the movements of the robot's head. This is also controlled through the robot.py interface. The sounds are also provided through this interface.
