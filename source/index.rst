@@ -29,6 +29,7 @@ Tutorials
    manipulation
    perception
    calibration
+   fetch_pbd
    
 Other
 -----
