@@ -161,4 +161,4 @@ Finally, restart the drivers so that our changes take effect:
 
 ::
 
-  >$ sudo service robot stop && sudo service robot stop
+  >$ sudo service robot stop && sudo service robot start

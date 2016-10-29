@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Care And Feeding &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  <title>Tutorial: Auto Docking &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
   
 
   
@@ -33,8 +33,8 @@
 
   
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
-        <link rel="next" title="Tutorial: Visualization" href="visualization.html"/>
-        <link rel="prev" title="Computer Overview and Configuration" href="computer.html"/> 
+        <link rel="next" title="Tutorial: Calibrating Fetch" href="calibration.html"/>
+        <link rel="prev" title="Tutorial: Perception" href="perception.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -75,7 +75,7 @@
         
           
           
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#before-you-start">Before you Start</a></li>
 </ul>
@@ -177,15 +177,15 @@
 <li class="toctree-l2"><a class="reference internal" href="computer.html#speakers-and-audio">Speakers and Audio</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Care And Feeding</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#charging">Charging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#updating-your-robot">Updating Your Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cleaning-your-robot">Cleaning Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
 </ul>
 </li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
@@ -231,10 +231,10 @@
 <li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="docking.html">Tutorial: Auto Docking</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="docking.html#installing-fetch-auto-dock">Installing fetch_auto_dock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docking.html#running-the-auto-docking-action-server">Running The Auto Docking Action Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docking.html#auto-docking-a-robot-programmatically">Auto Docking a Robot Programmatically</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial: Auto Docking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-fetch-auto-dock">Installing fetch_auto_dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-docking-node">Running the Docking Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auto-docking-programmatically">Auto Docking Programmatically</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
@@ -332,11 +332,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Care And Feeding</li>
+    <li>Tutorial: Auto Docking</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="https://github.com/fetchrobotics/docs/blob/master/source/care_and_feeding.rst" class="fa fa-github"> Edit on GitHub</a>
+            <a href="https://github.com/fetchrobotics/docs/blob/master/source/docking.rst" class="fa fa-github"> Edit on GitHub</a>
           
         
       </li>
@@ -346,173 +346,105 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="care-and-feeding">
-<h1>Care And Feeding<a class="headerlink" href="#care-and-feeding" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="charging">
-<span id="id1"></span><h2>Charging<a class="headerlink" href="#charging" title="Permalink to this headline">¶</a></h2>
-<p>The robot can be charged by plugging the supply connector of the power
-brick into the front of the robot or by docking with the robot charge
-dock. When using the supply connector, make sure the &#8220;Fetch&#8221; logo is
-facing up, otherwise the connector will not properly mate:</p>
-<div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/charge_plug.png"><img alt="_images/charge_plug.png" src="_images/charge_plug.png" style="width: 100%;" /></a>
+  <div class="section" id="tutorial-auto-docking">
+<h1>Tutorial: Auto Docking<a class="headerlink" href="#tutorial-auto-docking" title="Permalink to this headline">¶</a></h1>
+<p>Fetch Robotics has released a ROS package for automatically docking your robot
+with a Fetch charging dock. This package uses the scanning laser range finder
+to detect the profile of the charge dock and steers the robot onto the dock.
+Since the profile of the charge dock must be clearly visible, it is important
+that there is separation between docks and any sort of laser-height obstacle
+on either side of the dock.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Charge dock installation must follow the specifications!</p>
 </div>
-<p>The connector needs roughly 100 newtons (24 lbs) of force to plug in.
-If it seems the connector will not mate with this much force, check
-the plug and connector for damage or foreign objects.</p>
-<p>The charge indicator light on the <a class="reference internal" href="robot_hardware.html#access-panel"><span>Access Panel</span></a> indicates
-the status of the battery and charging:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="39%" />
-<col width="61%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Charge Indicator</th>
-<th class="head">Meaning</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Solid Green</td>
-<td>Robot is fully charged</td>
-</tr>
-<tr class="row-odd"><td>Blinking green</td>
-<td>Robot is charging</td>
-</tr>
-<tr class="row-even"><td>Solid Red</td>
-<td>Battery voltage is low</td>
-</tr>
-<tr class="row-odd"><td>Blinking red</td>
-<td>Charging error has occurred</td>
-</tr>
-</tbody>
-</table>
-<p>The charge indicator light will flash green when the robot is charging.
-When the robot is completely charged the indicator light will stay
-solid green.</p>
-<p>The charge indicator light will turn red when the battery voltage is low.
-When the charge indicator turns red, you should recharge the robot.
-If the battery voltage gets low enough, the robot will automatically
-turn off.</p>
-<p>In some cases, the charging circuit may detect an error condition
-and will flash the charging indicator red. After about 1 minute, the
-charger will attempt charging again. If the error condition persists,
-a support ticket should be created to address the problem.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">One notable charging error is caused by the <a class="reference internal" href="robot_hardware.html#power-disconnect"><span>Power Disconnect Switch</span></a> being switched off.
-When the power disconnect is switch off, it disconnects the battery which prevents the
-charger from working. When the charger detects this situation it will flash both the
-charge indicator red, and the power button at the same time.</p>
-</div>
-<p>The robot will typically need about 3.5 hours to charge batteries from empty to
-90% capacity. It will take an additional 3 hours to charge remaining 10% of
-battery capacity. While the robot does not need to get to 100% on every charge,
-it is strongly recommended that the robot be fully charged at least once a week
-to get the best possible life out of the batteries. Charging works whether
-the robot is on or off. It is perfectly acceptable to have robot move its arm,
-torso, and head while charging. However, you should not drive the
-robot while charging because it is easy to misjudge the cable length
-and damage the wiring or connector.</p>
-<p>There are also some important rules that should be followed to prevent damage to
-robot and charging supply.</p>
-<ol class="arabic simple">
-<li>When disconnecting the supply from robot, grab plug and pull out.
-Never pull on the cable to pull out the plug.
-Also, when moving power supply brick, do not use cable to pull it around.
-All copper wire has poor tensile strength and can break with too much abuse.</li>
-<li>Pull straight back when disconnecting the supply plug, do not pull out at an angle.
-The connector is not designed to support large sideways forces.
-It is easy to pull in the correct direction when grabbing the plug, but
-not when pulling on the cable. This is another reason that the plug should
-never be pulled out using the cable.</li>
-<li>Do not attempt to drive robot while plugged into charger.
-In our experience it is too easy to misjudge the cable length.
-The robot is heavy and the drive motors can produce high torques.
-The robot can easily rip out the connector and cord even while moving at slow speeds.
-Even when turning in place, its possible to pull on the plug if the robot
-happens to drive over the cord.</li>
-</ol>
-<p>If the supply wiring or connector is damaged, do not attempt use the damaged supply.
-Instead create a support ticket to get the damage part fixed or replaced.</p>
-<p>The robot uses large sealed lead-acid (SLA) batteries. These batteries should provide a many hours
-of robot run time. Like most chemical batteries technologies, the amount energy the
-batteries can provide will decrease as they age.
-Luckily, replacing the batteries is simple and relatively inexpensive.
-Even so, there are few things that can done to improve battery lifetime.</p>
-<ol class="arabic simple">
-<li>Keep batteries charged. Leaving SLA batteries in partially discharged state will
-age the batteries more quickly, reduce useful running time.</li>
-<li>Avoid deep discharge of batteries when not necessary.
-Battery will age less when discharged twice to 50% capacity than discharged
-once to 100% capacity once.</li>
-<li>Fully charge battery instead of just partially charging battery between
-uses.  While this is not always feasible, it will slow the rate at which
-individual battery cells get out of balance.</li>
-<li>When doing heavily cycling of batteries, leave the batteries charging for an extra long
-period of time, at least once a week.
-Even though the batteries may be fully charged, leaving
-the batteries on charger for longer period of time will help balance out
-differences in individual cell voltages that accumulate over time.
-This not as important when batteries are only discharged small amounts during each use.</li>
-<li>Keep robot cool.  Cool batteries age less than warm ones.</li>
-</ol>
-</div>
-<div class="section" id="updating-your-robot">
-<span id="updating"></span><h2>Updating Your Robot<a class="headerlink" href="#updating-your-robot" title="Permalink to this headline">¶</a></h2>
-<p>Your robot has been pre-configured with ROS Indigo and the appropriate
-APT repositories from which to fetch package updates.
-Upgrading to the latest packages is as easy as:</p>
+<div class="section" id="installing-fetch-auto-dock">
+<h2>Installing fetch_auto_dock<a class="headerlink" href="#installing-fetch-auto-dock" title="Permalink to this headline">¶</a></h2>
+<p>To install the package:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo apt-get update
-sudo apt-get install --only-upgrade ros-indigo-* f.*-system-config
-sudo service robot stop
-sudo service robot start
+sudo apt-get install ros-indigo-fetch-auto-dock
 </pre></div>
 </div>
+</div>
+<div class="section" id="running-the-docking-node">
+<h2>Running the Docking Node<a class="headerlink" href="#running-the-docking-node" title="Permalink to this headline">¶</a></h2>
+<p>To start the auto docking node in a demonstration mode:</p>
+<div class="highlight-python"><div class="highlight"><pre>roslaunch fetch_auto_dock auto_dock.launch
+</pre></div>
+</div>
+<p>This will bring up three ROS nodes. The first ROS node is the auto docking action
+server. This node can be asked to dock with a charging dock through a ROS action
+interface. A second and third nodes monitor the PS3 joystick and can trigger docking
+and undocking as described below:</p>
+<blockquote>
+<div><ul class="simple">
+<li>To dock your robot, point the robot at the charge dock and press the &#8220;circle&#8221;
+button on the PS3 controller. Docking works best when the robot is about 0.75-1.0
+meters away from the dock and pointed directly at it, however docking should work
+from a variety of angles.</li>
+<li>To undock your robot when it is on a charge dock, press the &#8220;square&#8221; button
+on the PS3 joystick and the robot will back off the dock and then turn in place
+so it is pointed away from the charge dock.</li>
+</ul>
+</div></blockquote>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Using &#8216;apt-get upgrade&#8217; and &#8216;apt-get dist-upgrade&#8217; could cause critical
-software, such as the kernel, to change. We can not guarantee your robot
-will function after making such a change. We recommend against using these commands unless you understand and accept the risks.</p>
+<p class="last">The docking controller does not have collision avoidance. Do not
+leave obstacles on the charge dock.</p>
 </div>
-<p>Each circuit board within the robot is equipped with a bootloader, allowing
-new and updated firmware to be installed. New releases of the <cite>fetch-drivers</cite>
-package may include updated firmware for your robot, which will automatically
-be installed when the drivers are next started (typically by the robot upstart
-service). When restarting the robot service, there may be a slight delay
-before the drivers are fully operational if a new firmware upgrade is included.</p>
 </div>
-<div class="section" id="re-setting-up-apt-get-sources">
-<h2>Re-Setting up apt-get Sources<a class="headerlink" href="#re-setting-up-apt-get-sources" title="Permalink to this headline">¶</a></h2>
-<p>If someone has changed or deleted the default apt-get sources then the
-following commands will create sources.list files so that the robot can see
-the public ros package server and the Fetch Robotics package server.</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/fetch-latest.list&#39;
+<div class="section" id="auto-docking-programmatically">
+<h2>Auto Docking Programmatically<a class="headerlink" href="#auto-docking-programmatically" title="Permalink to this headline">¶</a></h2>
+<p>The auto dock node exposes a ROS <a class="reference external" href="http://wiki.ros.org/actionlib/DetailedDescription#Action_Interface_.26_Transport_Layer">action interface</a>
+which can be used to dock the robot. This action interface is also used by the
+demonstration python script.</p>
+<p>This action is in the <cite>dock</cite> namespace and accepts a
+<a class="reference external" href="https://github.com/fetchrobotics/fetch_msgs/blob/master/fetch_auto_dock_msgs/action/Dock.action">fetch_auto_dock_msgs/Dock</a>
+action message.</p>
+<p>There are several fields in the goal:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">dock_pose</span></code> is a geometry_msgs/PoseStamped message which specifies where the
+dock center is located. This can be in any valid frame as the action server
+node will use TF to transform the pose into the odometry frame.</li>
+<li><code class="docutils literal"><span class="pre">use_move_base</span></code> is not currently implemented.</li>
+</ul>
+</div></blockquote>
+<p>The result includes a single boolean <code class="docutils literal"><span class="pre">docked</span></code> which tells whether the robot has
+actually docked and is charging.</p>
+<p>The following Python code will dock the robot with a dock that is 1.0 meters
+in front of it:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">import</span> <span class="nn">actionlib</span>
+<span class="kn">from</span> <span class="nn">fetch_auto_dock_msgs.msg</span> <span class="kn">import</span> <span class="n">DockAction</span><span class="p">,</span> <span class="n">DockGoal</span>
 
-&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
+<span class="c"># Create a ROS node</span>
+<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">&quot;dock_the_robot&quot;</span><span class="p">)</span>
+
+<span class="c"># Create an action client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">actionlib</span><span class="o">.</span><span class="n">SimpleActionClient</span><span class="p">(</span><span class="s">&quot;/dock&quot;</span><span class="p">,</span> <span class="n">DockAction</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">wait_for_server</span><span class="p">()</span>
+
+<span class="c"># Create and send a goal</span>
+<span class="n">goal</span> <span class="o">=</span> <span class="n">DockGoal</span><span class="p">()</span>
+<span class="n">goal</span><span class="o">.</span><span class="n">dock_pose</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s">&quot;base_link&quot;</span>
+<span class="n">goal</span><span class="o">.</span><span class="n">dock_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">goal</span><span class="o">.</span><span class="n">dock_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">client</span><span class="o">.</span><span class="n">send_goal</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="cleaning-your-robot">
-<h2>Cleaning Your Robot<a class="headerlink" href="#cleaning-your-robot" title="Permalink to this headline">¶</a></h2>
-<p>To clean fingerprints, dirt, and smudges from the skin of Fetch and
-Freight use a clean soft cloth and isopropyl alcohol or window cleaner
-(e.g. Windex). Make sure to wet the cloth with the isopropyl alcohol
-or window cleaner, and then gently clean the skins of the robot.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Do not spray or pour isopropyl alcohol or window cleaner directly
-on the skins of the robot, this may damage the skins or worse
-cause fluids to enter the robot.</p>
-</div>
-<p>To clean the sensor optics of Fetch and Freight use the lens cloth
-provided in the tool kit. Lens tissues or cotton swabs are also good
-options for cleaning the optics of the robot.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Do not use window cleaner, acetone, or abrasive cloths on the sensor
-lenses as this may cause damage to the lens.</p>
-</div>
+<p>The fetch_auto_dock node also provides an <code class="docutils literal"><span class="pre">undock</span></code> action interface which
+can be used to undock the robot from the charge dock. The goal to undock
+has a single field</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">rotate_in_place</span></code> if set to true, the robot will back off the dock and
+then rotate 180 degrees so it is facing off the dock. This can be very
+useful since navigation probably cannot get the robot off the dock when
+it is facing at the dock.</li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 
@@ -523,10 +455,10 @@ lenses as this may cause damage to the lens.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="visualization.html" class="btn btn-neutral float-right" title="Tutorial: Visualization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="calibration.html" class="btn btn-neutral float-right" title="Tutorial: Calibrating Fetch" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="computer.html" class="btn btn-neutral" title="Computer Overview and Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="perception.html" class="btn btn-neutral" title="Tutorial: Perception" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

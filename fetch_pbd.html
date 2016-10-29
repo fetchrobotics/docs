@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Care And Feeding &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  <title>Tutorial: Fetch Programming by Demonstration &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
   
 
   
@@ -33,8 +33,8 @@
 
   
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
-        <link rel="next" title="Tutorial: Visualization" href="visualization.html"/>
-        <link rel="prev" title="Computer Overview and Configuration" href="computer.html"/> 
+        <link rel="next" title="API Overview" href="api_overview.html"/>
+        <link rel="prev" title="Tutorial: Calibrating Fetch" href="calibration.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -75,7 +75,7 @@
         
           
           
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#before-you-start">Before you Start</a></li>
 </ul>
@@ -177,15 +177,15 @@
 <li class="toctree-l2"><a class="reference internal" href="computer.html#speakers-and-audio">Speakers and Audio</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Care And Feeding</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#charging">Charging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#updating-your-robot">Updating Your Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cleaning-your-robot">Cleaning Your Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
 </ul>
 </li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
@@ -249,13 +249,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fetch_pbd.html">Tutorial: Fetch Programming by Demonstration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#system-requirements">System Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#installing-from-source">Installing from Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#running">Running</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#using-the-gui">Using the GUI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#code-interface">Code Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#system-overview">System Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial: Fetch Programming by Demonstration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-from-source">Installing from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running">Running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-gui">Using the GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-interface">Code Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-overview">System Overview</a></li>
 </ul>
 </li>
 </ul>
@@ -332,11 +332,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Care And Feeding</li>
+    <li>Tutorial: Fetch Programming by Demonstration</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="https://github.com/fetchrobotics/docs/blob/master/source/care_and_feeding.rst" class="fa fa-github"> Edit on GitHub</a>
+            <a href="https://github.com/fetchrobotics/docs/blob/master/source/fetch_pbd.rst" class="fa fa-github"> Edit on GitHub</a>
           
         
       </li>
@@ -346,173 +346,97 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="care-and-feeding">
-<h1>Care And Feeding<a class="headerlink" href="#care-and-feeding" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="charging">
-<span id="id1"></span><h2>Charging<a class="headerlink" href="#charging" title="Permalink to this headline">¶</a></h2>
-<p>The robot can be charged by plugging the supply connector of the power
-brick into the front of the robot or by docking with the robot charge
-dock. When using the supply connector, make sure the &#8220;Fetch&#8221; logo is
-facing up, otherwise the connector will not properly mate:</p>
+  <div class="section" id="tutorial-fetch-programming-by-demonstration">
+<h1>Tutorial: Fetch Programming by Demonstration<a class="headerlink" href="#tutorial-fetch-programming-by-demonstration" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://github.com/fetchrobotics/fetch_pbd">fetch_pbd</a> package is based on PR2 Programming by Demonstration. This version is for Fetch. It will not work on Freight because Freight does not have an arm.</p>
+<p>The original <a class="reference external" href="https://github.com/PR2/pr2_pbd">PR2 Programming by Demonstration</a> was done by <a class="reference external" href="http://www.mayacakmak.com/">Maya Cakmak</a> and the <a class="reference external" href="https://hcrlab.cs.washington.edu">Human-Centered Robotics Lab</a> at the University of Washington.</p>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<p>This PbD is designed for Ubuntu 14.04 and ROS Indigo.</p>
+</div>
+<div class="section" id="installing-from-source">
+<h2>Installing from Source<a class="headerlink" href="#installing-from-source" title="Permalink to this headline">¶</a></h2>
+<p>Clone the repository and build on the robot:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ cd ~/catkin_ws/src
+&gt;$ git clone https://github.com/fetchrobotics/fetch_pbd.git
+&gt;$ cd ~/catkin_ws
+&gt;$ catkin_make
+</pre></div>
+</div>
+</div>
+<div class="section" id="running">
+<h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
+<p>Run these commands on a terminal on the Fetch:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ source ~/catkin_ws/devel/setup.bash
+&gt;$ roslaunch fetch_pbd_interaction pbd.launch
+</pre></div>
+</div>
+<p>You can run the backend without the &#8220;social gaze&#8221; head movements or without the sounds by passing arguments to the launch file:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ source ~/catkin_ws/devel/setup.bash
+&gt;$ roslaunch fetch_pbd_interaction pbd.launch social_gaze:=false play_sound:=false
+</pre></div>
+</div>
+<p>You can also pass arguments to the launch file to save your actions to a json file or load them from a json file.
+This behaviour is a bit complicated. It is recommended that you specify the full path to files or else it will look in your .ros folder.
+If you specify a from_file then actions will be loaded from that file. They will replace the ones in your session database.
+Whatever was in your session database will get stored in a timestamped file in your .ros folder (not overwritten).
+If you specify a to_file then whatever is in your current session file be saved to that file.</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ source ~/catkin_ws/devel/setup.bash
+&gt;$ roslaunch fetch_pbd_interaction pbd.launch from_file:=/full/path/from.json to_file:=/full/path/to.json
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-gui">
+<h2>Using the GUI<a class="headerlink" href="#using-the-gui" title="Permalink to this headline">¶</a></h2>
+<p>In your browser go to ROBOT_HOSTNAME:8080 in your browser to use the GUI. This can be used on mobile as well. The mobile version does not show the visualizer, but can be useful for saving/deleting</p>
+<p>The main page lists all the available actions.</p>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/charge_plug.png"><img alt="_images/charge_plug.png" src="_images/charge_plug.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/fetch_pbd_home_screen.png"><img alt="_images/fetch_pbd_home_screen.png" src="_images/fetch_pbd_home_screen.png" style="width: 100%;" /></a>
 </div>
-<p>The connector needs roughly 100 newtons (24 lbs) of force to plug in.
-If it seems the connector will not mate with this much force, check
-the plug and connector for damage or foreign objects.</p>
-<p>The charge indicator light on the <a class="reference internal" href="robot_hardware.html#access-panel"><span>Access Panel</span></a> indicates
-the status of the battery and charging:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="39%" />
-<col width="61%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Charge Indicator</th>
-<th class="head">Meaning</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Solid Green</td>
-<td>Robot is fully charged</td>
-</tr>
-<tr class="row-odd"><td>Blinking green</td>
-<td>Robot is charging</td>
-</tr>
-<tr class="row-even"><td>Solid Red</td>
-<td>Battery voltage is low</td>
-</tr>
-<tr class="row-odd"><td>Blinking red</td>
-<td>Charging error has occurred</td>
-</tr>
-</tbody>
-</table>
-<p>The charge indicator light will flash green when the robot is charging.
-When the robot is completely charged the indicator light will stay
-solid green.</p>
-<p>The charge indicator light will turn red when the battery voltage is low.
-When the charge indicator turns red, you should recharge the robot.
-If the battery voltage gets low enough, the robot will automatically
-turn off.</p>
-<p>In some cases, the charging circuit may detect an error condition
-and will flash the charging indicator red. After about 1 minute, the
-charger will attempt charging again. If the error condition persists,
-a support ticket should be created to address the problem.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">One notable charging error is caused by the <a class="reference internal" href="robot_hardware.html#power-disconnect"><span>Power Disconnect Switch</span></a> being switched off.
-When the power disconnect is switch off, it disconnects the battery which prevents the
-charger from working. When the charger detects this situation it will flash both the
-charge indicator red, and the power button at the same time.</p>
+<p>You can directly run/copy/delete actions from the main page. Or hit the &#8220;Edit&#8221; button to see more information on that action.</p>
+<p>On the &#8220;Current Action&#8221; screen, most of the buttons are pretty self-explanatory. You can execute the entire action using the &#8220;Run&#8221; button at the bottom of the screen. This will execute all of the primitives in the order they appear in the Primitive List. You can click on a specific primitive (either the marker or the list item), to highlight the primitive.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_pbd_select.png"><img alt="_images/fetch_pbd_select.png" src="_images/fetch_pbd_select.png" style="width: 100%;" /></a>
 </div>
-<p>The robot will typically need about 3.5 hours to charge batteries from empty to
-90% capacity. It will take an additional 3 hours to charge remaining 10% of
-battery capacity. While the robot does not need to get to 100% on every charge,
-it is strongly recommended that the robot be fully charged at least once a week
-to get the best possible life out of the batteries. Charging works whether
-the robot is on or off. It is perfectly acceptable to have robot move its arm,
-torso, and head while charging. However, you should not drive the
-robot while charging because it is easy to misjudge the cable length
-and damage the wiring or connector.</p>
-<p>There are also some important rules that should be followed to prevent damage to
-robot and charging supply.</p>
-<ol class="arabic simple">
-<li>When disconnecting the supply from robot, grab plug and pull out.
-Never pull on the cable to pull out the plug.
-Also, when moving power supply brick, do not use cable to pull it around.
-All copper wire has poor tensile strength and can break with too much abuse.</li>
-<li>Pull straight back when disconnecting the supply plug, do not pull out at an angle.
-The connector is not designed to support large sideways forces.
-It is easy to pull in the correct direction when grabbing the plug, but
-not when pulling on the cable. This is another reason that the plug should
-never be pulled out using the cable.</li>
-<li>Do not attempt to drive robot while plugged into charger.
-In our experience it is too easy to misjudge the cable length.
-The robot is heavy and the drive motors can produce high torques.
-The robot can easily rip out the connector and cord even while moving at slow speeds.
-Even when turning in place, its possible to pull on the plug if the robot
-happens to drive over the cord.</li>
-</ol>
-<p>If the supply wiring or connector is damaged, do not attempt use the damaged supply.
-Instead create a support ticket to get the damage part fixed or replaced.</p>
-<p>The robot uses large sealed lead-acid (SLA) batteries. These batteries should provide a many hours
-of robot run time. Like most chemical batteries technologies, the amount energy the
-batteries can provide will decrease as they age.
-Luckily, replacing the batteries is simple and relatively inexpensive.
-Even so, there are few things that can done to improve battery lifetime.</p>
-<ol class="arabic simple">
-<li>Keep batteries charged. Leaving SLA batteries in partially discharged state will
-age the batteries more quickly, reduce useful running time.</li>
-<li>Avoid deep discharge of batteries when not necessary.
-Battery will age less when discharged twice to 50% capacity than discharged
-once to 100% capacity once.</li>
-<li>Fully charge battery instead of just partially charging battery between
-uses.  While this is not always feasible, it will slow the rate at which
-individual battery cells get out of balance.</li>
-<li>When doing heavily cycling of batteries, leave the batteries charging for an extra long
-period of time, at least once a week.
-Even though the batteries may be fully charged, leaving
-the batteries on charger for longer period of time will help balance out
-differences in individual cell voltages that accumulate over time.
-This not as important when batteries are only discharged small amounts during each use.</li>
-<li>Keep robot cool.  Cool batteries age less than warm ones.</li>
-</ol>
+<p>You can show/hide the markers for each primitive by clicking the marker icon for the primitive in the Primitive List.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_pbd_hide_marker.png"><img alt="_images/fetch_pbd_hide_marker.png" src="_images/fetch_pbd_hide_marker.png" style="width: 100%;" /></a>
 </div>
-<div class="section" id="updating-your-robot">
-<span id="updating"></span><h2>Updating Your Robot<a class="headerlink" href="#updating-your-robot" title="Permalink to this headline">¶</a></h2>
-<p>Your robot has been pre-configured with ROS Indigo and the appropriate
-APT repositories from which to fetch package updates.
-Upgrading to the latest packages is as easy as:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get update
-sudo apt-get install --only-upgrade ros-indigo-* f.*-system-config
-sudo service robot stop
-sudo service robot start
-</pre></div>
+<p>You can change the order of the primitives by dragging them to a new position in the list.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_pbd_reorder.png"><img alt="_images/fetch_pbd_reorder.png" src="_images/fetch_pbd_reorder.png" style="width: 100%;" /></a>
 </div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Using &#8216;apt-get upgrade&#8217; and &#8216;apt-get dist-upgrade&#8217; could cause critical
-software, such as the kernel, to change. We can not guarantee your robot
-will function after making such a change. We recommend against using these commands unless you understand and accept the risks.</p>
+<p>You can edit the position and orientation of certain primitives by clicking the edit icon or by moving the interactive marker.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_pbd_edit.png"><img alt="_images/fetch_pbd_edit.png" src="_images/fetch_pbd_edit.png" style="width: 100%;" /></a>
 </div>
-<p>Each circuit board within the robot is equipped with a bootloader, allowing
-new and updated firmware to be installed. New releases of the <cite>fetch-drivers</cite>
-package may include updated firmware for your robot, which will automatically
-be installed when the drivers are next started (typically by the robot upstart
-service). When restarting the robot service, there may be a slight delay
-before the drivers are fully operational if a new firmware upgrade is included.</p>
+<p>You can change the frame that certain primitives are relative to by right-clicking the marker.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_pbd_change_frame.png"><img alt="_images/fetch_pbd_change_frame.png" src="_images/fetch_pbd_change_frame.png" style="width: 100%;" /></a>
 </div>
-<div class="section" id="re-setting-up-apt-get-sources">
-<h2>Re-Setting up apt-get Sources<a class="headerlink" href="#re-setting-up-apt-get-sources" title="Permalink to this headline">¶</a></h2>
-<p>If someone has changed or deleted the default apt-get sources then the
-following commands will create sources.list files so that the robot can see
-the public ros package server and the Fetch Robotics package server.</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/fetch-latest.list&#39;
-
-&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
+<p>You can also change the name of the action.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_pbd_rename.png"><img alt="_images/fetch_pbd_rename.png" src="_images/fetch_pbd_rename.png" style="width: 100%;" /></a>
+</div>
+</div>
+<div class="section" id="code-interface">
+<h2>Code Interface<a class="headerlink" href="#code-interface" title="Permalink to this headline">¶</a></h2>
+<p>You can also access the actions you&#8217;ve programmed through code. You still need to run pbd_backend.launch.</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ source ~/catkin_ws/devel/setup.bash
+&gt;$ rosrun fetch_pbd_interaction demo.py
 </pre></div>
 </div>
 </div>
-<div class="section" id="cleaning-your-robot">
-<h2>Cleaning Your Robot<a class="headerlink" href="#cleaning-your-robot" title="Permalink to this headline">¶</a></h2>
-<p>To clean fingerprints, dirt, and smudges from the skin of Fetch and
-Freight use a clean soft cloth and isopropyl alcohol or window cleaner
-(e.g. Windex). Make sure to wet the cloth with the isopropyl alcohol
-or window cleaner, and then gently clean the skins of the robot.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Do not spray or pour isopropyl alcohol or window cleaner directly
-on the skins of the robot, this may damage the skins or worse
-cause fluids to enter the robot.</p>
-</div>
-<p>To clean the sensor optics of Fetch and Freight use the lens cloth
-provided in the tool kit. Lens tissues or cotton swabs are also good
-options for cleaning the optics of the robot.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Do not use window cleaner, acetone, or abrasive cloths on the sensor
-lenses as this may cause damage to the lens.</p>
-</div>
+<div class="section" id="system-overview">
+<h2>System Overview<a class="headerlink" href="#system-overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>Interaction Node:</strong>
+The pbd_interaction_node.py handles the interaction between speech/GUI and the rest of the system. Changes happen through the update loop in interaction.py and also through the callbacks from speech/GUI commands. interaction.py also subscribes to updates from the pbd_world_node.py, which notifies it of changes in objects in the world. Through callbacks and the update loop, interaction.py hooks in to session.py. session.py handles creating actions and primitives and saving them to the database.</p>
+<p><strong>Arm Control Node:</strong>
+The pbd_arm_control_node.py is how the robot&#8217;s arm is controlled to execute actions/primitives. It provides a lower level service interface to move the arm. The interaction node interacts with this through the interface in robot.py.</p>
+<p><strong>World Node:</strong>
+The pbd_world_node.py handles the robot&#8217;s perception of the world. Other nodes ask the world node about the state of the world and can both send and subscribe to updates to the world. Its main function is to provide a list of objects currently in the scene.</p>
+<p><strong>Social Gaze Node:</strong>
+The social_gaze_server.py handles the movements of the robot&#8217;s head. This is also controlled through the robot.py interface. The sounds are also provided through this interface.</p>
 </div>
 </div>
 
@@ -523,10 +447,10 @@ lenses as this may cause damage to the lens.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="visualization.html" class="btn btn-neutral float-right" title="Tutorial: Visualization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="api_overview.html" class="btn btn-neutral float-right" title="API Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="computer.html" class="btn btn-neutral" title="Computer Overview and Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="calibration.html" class="btn btn-neutral" title="Tutorial: Calibrating Fetch" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
