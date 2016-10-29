@@ -28,6 +28,7 @@ Tutorials
    navigation
    manipulation
    perception
+   docking
    calibration
    fetch_pbd
    
