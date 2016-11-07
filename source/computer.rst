@@ -38,6 +38,19 @@ network interfaces are intended for users to connect to the robot,
 while the internal networks are used to send data between the
 internal components of the robot.
 
+External networking with the robot is typically done to provide
+an interface to various ROS capabilities. To ensure a working network setup
+between robot and PC, reference the following guide to the ROS_MASTER_URI
+and ROS_HOSTNAME environment variables:
+
+.. figure:: _static/fetch_ros_ntwk.jpg
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+For a more in-depth general overview of robot-to-PC networking, see also the
+`ROS Network Setup Tutorial <http://wiki.ros.org/ROS/NetworkSetup>`_.
+
 The majority of communication between components onboard Fetch and
 Freight happen via the internal Ethernet network. This network
 is located in the 10.42.42.0/24 subnet and connects the robot
