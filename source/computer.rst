@@ -48,6 +48,8 @@ and ROS_HOSTNAME environment variables:
    :align: center
    :figclass: align-centered
 
+Note that the ROS_HOSTNAME is unneeded in the case where the robot and
+computer hostnames are addressable on the local network.
 For a more in-depth general overview of robot-to-PC networking, see also the
 `ROS Network Setup Tutorial <http://wiki.ros.org/ROS/NetworkSetup>`_.
 
