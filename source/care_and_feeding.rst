@@ -151,7 +151,7 @@ the public ros package server and the Fetch Robotics package server.
 
 ::
 
-    >$ sudo sh -c 'echo "deb http://packages.fetchrobotics.com/ros/ubuntu trusty main" > /etc/apt/sources.list.d/fetch-latest.list'
+    >$ sudo sh -c 'echo "deb http://packages.fetchrobotics.com/fetch/ubuntu trusty main" > /etc/apt/sources.list.d/fetch-latest.list'
 
     >$ sudo sh -c 'echo "deb http://packages.fetchrobotics.com/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
 
