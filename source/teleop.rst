@@ -162,3 +162,18 @@ Finally, restart the drivers so that our changes take effect:
 ::
 
   >$ sudo service robot stop && sudo service robot start
+
+  
+Re-pairing Robot Joystick that Won't Connect
+--------------------------------------------
+
+If the bluetooth robot joystick will no longer connect to the robot, it
+can easily be re-paired to the robot by connecting it to the robot with a
+USB cable, and then running:
+
+::
+
+  >$ sudo sixpair
+
+This situation is most often caused by charging the robot joystick from
+the USB port of another computer.
