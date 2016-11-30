@@ -115,7 +115,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
 </ul>
@@ -208,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -272,6 +276,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#november-29-2016">November 29, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#may-28-2016">May 28, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#january-21-2016">January 21, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#november-23-2015">November 23, 2015</a></li>
@@ -354,6 +359,45 @@ have occured in an individual package, please see the CHANGELOG within
 the installed package.</p>
 <p>For information on updating your robot to the latest packages, see
 <a class="reference internal" href="care_and_feeding.html#updating"><span>Updating Your Robot</span></a>.</p>
+<div class="section" id="november-29-2016">
+<h2>November 29, 2016<a class="headerlink" href="#november-29-2016" title="Permalink to this headline">¶</a></h2>
+<p>This sync includes new upstream ROS packages. In addition it includes
+an updated version of sixad that fixes an issue with logs filling the
+disk. It is highly recommended that this is installed through the
+following commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get update
+sudo apt-get install sixad
+</pre></div>
+</div>
+<p>Updated drivers improve battery balancing, which should improve battery
+life. There are also a number of new features in this release:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The chrony time service is now installed by fetch-system-config.</li>
+<li>fetch_moveit_config now includes an IKFast solver.</li>
+<li>robot_controllers <a class="reference external" href="https://github.com/fetchrobotics/robot_controllers/pull/23">adds the ability to dynamically load controllers</a>.</li>
+<li>fetch_bringup includes a <a class="reference internal" href="teleop.html#software-runstop"><span>software runstop feature</span></a> that can turn your PS3 controller into a wireless runstop.</li>
+</ul>
+</div></blockquote>
+<p>Updated Fetch Packages:</p>
+<blockquote>
+<div><ul class="simple">
+<li>fetch-system-config: 0.8-4 -&gt; 0.8-8</li>
+<li>ros-indigo-fetch-bringup: 0.7.1-0 -&gt; 0.7.3-0</li>
+<li>ros-indigo-fetch-drivers: 0.7.11-0 -&gt; 0.7.15-0</li>
+<li>ros-indigo-fetch-depth-layer: 0.7.5-0 -&gt; 0.7.9-0</li>
+<li>ros-indigo-fetch-description: 0.7.5-0 -&gt; 0.7.9-0</li>
+<li>ros-indigo-fetch-maps: 0.7.5-0 -&gt; 0.7.9-0</li>
+<li>ros-indigo-fetch-moveit-config: 0.7.5-0 -&gt; 0.7.9-0</li>
+<li>ros-indigo-fetch-navigation: 0.7.5-0 -&gt; 0.7.9-0</li>
+<li>ros-indigo-fetch-teleop: 0.7.5-0 -&gt; 0.7.9-0</li>
+<li>ros-indigo-freight-bringup: 0.7.1-0 -&gt; 0.7.3-0</li>
+<li>ros-indigo-robot-controllers: 0.5.0-0 -&gt; 0.5.2-0</li>
+</ul>
+</div></blockquote>
+<p>A full list of new upstream packages can be found on
+<a class="reference external" href="http://discourse.ros.org/t/new-packages-for-indigo-2016-11-27/898">discourse.ros.org</a></p>
+</div>
 <div class="section" id="may-28-2016">
 <h2>May 28, 2016<a class="headerlink" href="#may-28-2016" title="Permalink to this headline">¶</a></h2>
 <p>This sync includes new upstream ROS packages. Notably this
@@ -381,8 +425,9 @@ are not in progress.</p>
 <li>ros-indigo-fetch-drivers: 0.7.4-0 -&gt; 0.7.11-0</li>
 <li>ros-indigo-fetch-depth-layer: 0.7.0-0 -&gt; 0.7.5-0</li>
 <li>ros-indigo-fetch-description: 0.7.0-0 -&gt; 0.7.5-0</li>
-<li>ros-indigo-fetch-gazebo: 0.7.0-0 -&gt; 0.7.5-0</li>
-<li>ros-indigo-fetch-gazebo-demo: 0.7.0-0 -&gt; 0.7.5-0</li>
+<li>ros-indigo-fetch-gazebo: 0.7.0-0 -&gt; 0.7.1-0</li>
+<li>ros-indigo-fetch-gazebo-demo: 0.7.0-0 -&gt; 0.7.1-0</li>
+<li>ros-indigo-fetch-maps: 0.7.0-0 -&gt; 0.7.5-0</li>
 <li>ros-indigo-fetch-moveit-config: 0.7.0-0 -&gt; 0.7.5-0</li>
 <li>ros-indigo-fetch-navigation: 0.7.0-0 -&gt; 0.7.5-0</li>
 <li>ros-indigo-fetch-teleop: 0.7.0-0 -&gt; 0.7.5-0</li>

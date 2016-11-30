@@ -9,8 +9,45 @@ the installed package.
 For information on updating your robot to the latest packages, see
 :ref:`updating`.
 
+November 29, 2016
+-----------------
+This sync includes new upstream ROS packages. In addition it includes
+an updated version of sixad that fixes an issue with logs filling the
+disk. It is highly recommended that this is installed through the
+following commands:
+
+::
+
+   sudo apt-get update
+   sudo apt-get install sixad
+
+Updated drivers improve battery balancing, which should improve battery
+life. There are also a number of new features in this release:
+
+ * The chrony time service is now installed by fetch-system-config.
+ * fetch_moveit_config now includes an IKFast solver.
+ * robot_controllers `adds the ability to dynamically load controllers <https://github.com/fetchrobotics/robot_controllers/pull/23>`__.
+ * fetch_bringup includes a :ref:`software runstop feature<software_runstop>` that can turn your PS3 controller into a wireless runstop.
+
+Updated Fetch Packages:
+
+ * fetch-system-config: 0.8-4 -> 0.8-8
+ * ros-indigo-fetch-bringup: 0.7.1-0 -> 0.7.3-0
+ * ros-indigo-fetch-drivers: 0.7.11-0 -> 0.7.15-0
+ * ros-indigo-fetch-depth-layer: 0.7.5-0 -> 0.7.9-0
+ * ros-indigo-fetch-description: 0.7.5-0 -> 0.7.9-0
+ * ros-indigo-fetch-maps: 0.7.5-0 -> 0.7.9-0
+ * ros-indigo-fetch-moveit-config: 0.7.5-0 -> 0.7.9-0
+ * ros-indigo-fetch-navigation: 0.7.5-0 -> 0.7.9-0
+ * ros-indigo-fetch-teleop: 0.7.5-0 -> 0.7.9-0
+ * ros-indigo-freight-bringup: 0.7.1-0 -> 0.7.3-0
+ * ros-indigo-robot-controllers: 0.5.0-0 -> 0.5.2-0
+
+A full list of new upstream packages can be found on
+`discourse.ros.org <http://discourse.ros.org/t/new-packages-for-indigo-2016-11-27/898>`__
+
 May 28, 2016
-----------------
+------------
 This sync includes new upstream ROS packages. Notably this
 release includes updates for a udev rule that maps the PS3
 controller to /dev/ps3joy, therefore it is important that
@@ -37,8 +74,9 @@ Updated Fetch Packages:
  * ros-indigo-fetch-drivers: 0.7.4-0 -> 0.7.11-0
  * ros-indigo-fetch-depth-layer: 0.7.0-0 -> 0.7.5-0
  * ros-indigo-fetch-description: 0.7.0-0 -> 0.7.5-0
- * ros-indigo-fetch-gazebo: 0.7.0-0 -> 0.7.5-0
- * ros-indigo-fetch-gazebo-demo: 0.7.0-0 -> 0.7.5-0
+ * ros-indigo-fetch-gazebo: 0.7.0-0 -> 0.7.1-0
+ * ros-indigo-fetch-gazebo-demo: 0.7.0-0 -> 0.7.1-0
+ * ros-indigo-fetch-maps: 0.7.0-0 -> 0.7.5-0
  * ros-indigo-fetch-moveit-config: 0.7.0-0 -> 0.7.5-0
  * ros-indigo-fetch-navigation: 0.7.0-0 -> 0.7.5-0
  * ros-indigo-fetch-teleop: 0.7.0-0 -> 0.7.5-0

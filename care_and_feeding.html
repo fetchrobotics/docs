@@ -115,7 +115,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
 </ul>
@@ -208,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -272,6 +276,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-29-2016">November 29, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-28-2016">May 28, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#january-21-2016">January 21, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-23-2015">November 23, 2015</a></li>
@@ -487,7 +492,7 @@ before the drivers are fully operational if a new firmware upgrade is included.<
 <p>If someone has changed or deleted the default apt-get sources then the
 following commands will create sources.list files so that the robot can see
 the public ros package server and the Fetch Robotics package server.</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/fetch-latest.list&#39;
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/fetch/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/fetch-latest.list&#39;
 
 &gt;$ sudo sh -c &#39;echo &quot;deb http://packages.fetchrobotics.com/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
 </pre></div>

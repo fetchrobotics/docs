@@ -115,7 +115,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
 </ul>
@@ -208,6 +211,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -272,6 +276,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-29-2016">November 29, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-28-2016">May 28, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#january-21-2016">January 21, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-23-2015">November 23, 2015</a></li>
@@ -468,7 +473,7 @@ package.</p>
 </div>
 </div>
 <div class="section" id="software-runstop">
-<h2>Software Runstop<a class="headerlink" href="#software-runstop" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>Software Runstop<a class="headerlink" href="#software-runstop" title="Permalink to this headline">¶</a></h2>
 <p>In addition to the runstop button on the side of the robot, similar software
 functionality is also available, allowing for button presses on the
 PS3 controller or a program to disable the breakers.
@@ -523,6 +528,17 @@ desired, the above section in robot.launch can be commented out or removed.</p>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="re-pairing-robot-joystick-that-won-t-connect">
+<h2>Re-pairing Robot Joystick that Won&#8217;t Connect<a class="headerlink" href="#re-pairing-robot-joystick-that-won-t-connect" title="Permalink to this headline">¶</a></h2>
+<p>If the bluetooth robot joystick will no longer connect to the robot, it
+can easily be re-paired to the robot by connecting it to the robot with a
+USB cable, and then running:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo sixpair
+</pre></div>
+</div>
+<p>This situation is most often caused by charging the robot joystick from
+the USB port of another computer.</p>
 </div>
 </div>
 
