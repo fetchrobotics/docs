@@ -9,6 +9,39 @@ the installed package.
 For information on updating your robot to the latest packages, see
 :ref:`updating`.
 
+December 18, 2017
+-----------------
+This sync includes new upstream ROS packages. Updated drivers improve
+battery balancing, which should improve battery life. There are also a number of new features in this release:
+
+ * fetch_moveit_config now includes an IKFast solver.
+ * fetch_moveit_config now includes apply_planning_scene plugin by default.
+ * fetch_teleop/bringup now includes teleop for the arm and cartesian controllers.
+ * fetch_bringup now includes a diagnostics aggregator.
+ * fetch/freight-system-config now preserves certain ethernet network configurations.
+
+Updated Fetch Packages:
+
+ * fetch-system-config: 0.8-8 -> 0.9-1
+ * freight-system-config: 0.8-8 -> 0.9-1
+ * ros-indigo-fetch-bringup: 0.7.3-0 -> 0.7.5-0
+ * ros-indigo-fetch-calibration: 0.7.9-0 -> 0.7.13-0
+ * ros-indigo-fetch-drivers: 0.7.15-0 -> 0.7.28-0
+ * ros-indigo-fetch-depth-layer: 0.7.9-0 -> 0.7.13-0
+ * ros-indigo-fetch-description: 0.7.9-0 -> 0.7.13-0
+ * ros-indigo-fetch-maps: 0.7.9-0 -> 0.7.13-0
+ * ros-indigo-fetch-moveit-config: 0.7.9-0 -> 0.7.13-0
+ * ros-indigo-fetch-navigation: 0.7.9-0 -> 0.7.13-0
+ * ros-indigo-fetch-teleop: 0.7.9-0 -> 0.7.13-0
+ * ros-indigo-freight-bringup: 0.7.3-0 -> 0.7.5-0
+ * ros-indigo-robot-controllers: 0.5.2-0 -> 0.5.3-0
+
+New Fetch Packages:
+ * ros-indigo-fetch-ikfast: 0.7.13-0
+
+A full list of new upstream packages can be found on
+`discourse.ros.org <https://discourse.ros.org/t/new-packages-for-indigo-2017-10-27/3030>`__
+
 November 29, 2016
 -----------------
 This sync includes new upstream ROS packages. In addition it includes
@@ -25,7 +58,6 @@ Updated drivers improve battery balancing, which should improve battery
 life. There are also a number of new features in this release:
 
  * The chrony time service is now installed by fetch-system-config.
- * fetch_moveit_config now includes an IKFast solver.
  * robot_controllers `adds the ability to dynamically load controllers <https://github.com/fetchrobotics/robot_controllers/pull/23>`__.
  * fetch_bringup includes a :ref:`software runstop feature<software_runstop>` that can turn your PS3 controller into a wireless runstop.
 
