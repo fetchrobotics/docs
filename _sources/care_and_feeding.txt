@@ -87,14 +87,23 @@ robot and charging supply.
 If the supply wiring or connector is damaged, do not attempt use the damaged supply.
 Instead create a support ticket to get the damage part fixed or replaced.
 
-The robot uses large sealed lead-acid (SLA) batteries. These batteries should provide a many hours
-of robot run time. Like most chemical batteries technologies, the amount energy the
-batteries can provide will decrease as they age.
+.. _batteries:
+
+Batteries
+--------
+
+The robot uses two large sealed lead-acid (SLA) 12V batteries. These batteries
+should provide a many hours of robot run time. Like most chemical batteries
+technologies, the amount energy the batteries can provide will decrease as they age.
 Luckily, replacing the batteries is simple and relatively inexpensive.
 Even so, there are few things that can done to improve battery lifetime.
 
 1. Keep batteries charged. Leaving SLA batteries in partially discharged state will
-   age the batteries more quickly, reduce useful running time.
+   age the batteries more quickly, reduce useful running time.  Therefore, if the robot
+   is not going to be used for a prolonged period, it should first be fully charged, and
+   can be safely left on the charger during this period.  Alternately, after charging,
+   you can remove the top covers on the base and disconnect the batteries before storing
+   the robot.
 
 2. Avoid deep discharge of batteries when not necessary.
    Battery will age less when discharged twice to 50% capacity than discharged

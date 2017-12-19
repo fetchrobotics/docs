@@ -182,6 +182,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#batteries">Batteries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
@@ -276,6 +277,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#december-18-2017">December 18, 2017</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#november-29-2016">November 29, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#may-28-2016">May 28, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#january-21-2016">January 21, 2016</a></li>
@@ -359,6 +361,47 @@ have occured in an individual package, please see the CHANGELOG within
 the installed package.</p>
 <p>For information on updating your robot to the latest packages, see
 <a class="reference internal" href="care_and_feeding.html#updating"><span>Updating Your Robot</span></a>.</p>
+<div class="section" id="december-18-2017">
+<h2>December 18, 2017<a class="headerlink" href="#december-18-2017" title="Permalink to this headline">¶</a></h2>
+<p>This sync includes new upstream ROS packages. Updated drivers improve
+battery balancing, which should improve battery life. There are also a number of new features in this release:</p>
+<blockquote>
+<div><ul class="simple">
+<li>fetch_moveit_config now includes an IKFast solver.</li>
+<li>fetch_moveit_config now includes apply_planning_scene plugin by default.</li>
+<li>fetch_teleop/bringup now includes teleop for the arm and cartesian controllers.</li>
+<li>fetch_bringup now includes a diagnostics aggregator.</li>
+<li>fetch/freight-system-config now preserves certain ethernet network configurations.</li>
+</ul>
+</div></blockquote>
+<p>Updated Fetch Packages:</p>
+<blockquote>
+<div><ul class="simple">
+<li>fetch-system-config: 0.8-8 -&gt; 0.9-1</li>
+<li>freight-system-config: 0.8-8 -&gt; 0.9-1</li>
+<li>ros-indigo-fetch-bringup: 0.7.3-0 -&gt; 0.7.5-0</li>
+<li>ros-indigo-fetch-calibration: 0.7.9-0 -&gt; 0.7.13-0</li>
+<li>ros-indigo-fetch-drivers: 0.7.15-0 -&gt; 0.7.28-0</li>
+<li>ros-indigo-fetch-depth-layer: 0.7.9-0 -&gt; 0.7.13-0</li>
+<li>ros-indigo-fetch-description: 0.7.9-0 -&gt; 0.7.13-0</li>
+<li>ros-indigo-fetch-maps: 0.7.9-0 -&gt; 0.7.13-0</li>
+<li>ros-indigo-fetch-moveit-config: 0.7.9-0 -&gt; 0.7.13-0</li>
+<li>ros-indigo-fetch-navigation: 0.7.9-0 -&gt; 0.7.13-0</li>
+<li>ros-indigo-fetch-teleop: 0.7.9-0 -&gt; 0.7.13-0</li>
+<li>ros-indigo-freight-bringup: 0.7.3-0 -&gt; 0.7.5-0</li>
+<li>ros-indigo-robot-controllers: 0.5.2-0 -&gt; 0.5.3-0</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>New Fetch Packages:</dt>
+<dd><ul class="first last simple">
+<li>ros-indigo-fetch-ikfast: 0.7.13-0</li>
+</ul>
+</dd>
+</dl>
+<p>A full list of new upstream packages can be found on
+<a class="reference external" href="https://discourse.ros.org/t/new-packages-for-indigo-2017-10-27/3030">discourse.ros.org</a></p>
+</div>
 <div class="section" id="november-29-2016">
 <h2>November 29, 2016<a class="headerlink" href="#november-29-2016" title="Permalink to this headline">¶</a></h2>
 <p>This sync includes new upstream ROS packages. In addition it includes
@@ -374,7 +417,6 @@ life. There are also a number of new features in this release:</p>
 <blockquote>
 <div><ul class="simple">
 <li>The chrony time service is now installed by fetch-system-config.</li>
-<li>fetch_moveit_config now includes an IKFast solver.</li>
 <li>robot_controllers <a class="reference external" href="https://github.com/fetchrobotics/robot_controllers/pull/23">adds the ability to dynamically load controllers</a>.</li>
 <li>fetch_bringup includes a <a class="reference internal" href="teleop.html#software-runstop"><span>software runstop feature</span></a> that can turn your PS3 controller into a wireless runstop.</li>
 </ul>
