@@ -23,7 +23,7 @@ git checkout gh-pages
 cp -r build/html/* .
 cp build/latex/FetchRobotics.pdf .
 rm -rf build
-git commit -a "new build"
+git commit -a -m "new build"
 git push origin gh-pages
 ```
 
