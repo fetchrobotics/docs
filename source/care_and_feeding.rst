@@ -93,7 +93,7 @@ Batteries
 --------
 
 The robot uses two large sealed lead-acid (SLA) 12V batteries. These batteries
-should provide a many hours of robot run time. Like most chemical batteries
+should provide many hours of robot run time. Like most chemical battery
 technologies, the amount energy the batteries can provide will decrease as they age.
 Luckily, replacing the batteries is simple and relatively inexpensive.
 Even so, there are few things that can done to improve battery lifetime.
@@ -122,6 +122,16 @@ Even so, there are few things that can done to improve battery lifetime.
 
 5. Keep robot cool.  Cool batteries age less than warm ones.
 
+In the case where your robots batteries have reached their end of life, you can contact
+Fetch Robotics Support to acquire replacements.  In the mean time, you can continue to use
+the arm, torso and head while the robot is connected a charger.
+
+.. warning::
+
+    The robot is not designed to be run without a battery, so end-of-life batteries should
+    be left in the robot. If the robot is operated with the batteries disconnected,
+    electrical components could potentially be damaged and need replacement.
+
 .. _updating:
 
 Updating Your Robot
@@ -142,7 +152,8 @@ Upgrading to the latest packages is as easy as:
 
     Using 'apt-get upgrade' and 'apt-get dist-upgrade' could cause critical
     software, such as the kernel, to change. We can not guarantee your robot
-    will function after making such a change. We recommend against using these commands unless you understand and accept the risks.
+    will function after making such a change. We recommend against using these
+    commands unless you understand and accept the risks.
 
 Each circuit board within the robot is equipped with a bootloader, allowing
 new and updated firmware to be installed. New releases of the `fetch-drivers`
@@ -187,4 +198,3 @@ options for cleaning the optics of the robot.
 
     Do not use window cleaner, acetone, or abrasive cloths on the sensor
     lenses as this may cause damage to the lens.
-
