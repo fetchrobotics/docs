@@ -170,7 +170,7 @@ sensors:
 4. Run torso calibration tool:
 
   * To run calibration : ``rosrun fetch_drivers torso_calibrate calibrate``
-  * To verify calibration : ``rosrun fetch_drivers torso_calibrate verify``
+  * **OR** to verify calibration : ``rosrun fetch_drivers torso_calibrate verify``
 
 6. Wait for torso to collect sensor data.  The torso will move upwards in small increments through the entire range of motion.  A clicking sound will be produced by the torso while moving, and is normal.
 
@@ -178,7 +178,7 @@ sensors:
    after it completes.  Cycling run-stop will cycle power to the torso controller board,
    and is required in some situations.
 
-8. On tool has completed, restart robot drivers with ``sudo service robot start``
+8. Once tool has completed, restart robot drivers with ``sudo service robot start``
 
 Verify Output
 ^^^^^^^^^^^^^
