@@ -4,6 +4,25 @@ Tutorial: Gazebo Simulation
 Fetch and Freight have simulated counterparts using the
 `Gazebo Simulator <http://gazebosim.org>`_.
 
+Launch right now on ROSDS
+-------------------------
+
+Launch the whole project on the
+`ROS Development Studio <http://www.theconstructsim.com/rds-ros-development-studio/>`_
+with a single click. The advantages include:
+
+ * You don't need to install anything
+ * Use any operating system to program Fetch robots with ROS
+ * Start testing and programming Fetch robots in 30 seconds!
+
+Press the button to start:
+
+.. figure:: _static/run_on_rosds.png
+   :width: 200px
+   :target: https:\/\/rds.theconstructsim.com\/tc_projects\/use_project_share_link\/9ecc6a66-d3de-42b5-ab12-c130e65a9edb
+
+To install in your own computer, you can go to the next section.
+
 Installation
 ------------
 
