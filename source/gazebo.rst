@@ -7,6 +7,11 @@ Fetch and Freight have simulated counterparts using the
 Launch right now on ROSDS
 -------------------------
 
+.. figure:: _static/rosds.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
 Launch the whole project on the
 `ROS Development Studio <http://www.theconstructsim.com/rds-ros-development-studio/>`_
 with a single click. The advantages include:
@@ -19,7 +24,7 @@ Press the button to start:
 
 .. figure:: _static/run_on_rosds.png
    :width: 200px
-   :target: https:\/\/rds.theconstructsim.com\/tc_projects\/use_project_share_link\/9ecc6a66-d3de-42b5-ab12-c130e65a9edb
+   :target: https:\/\/rds.theconstructsim.com\/tc_projects\/use_project_share_link\/4ba9621c-e546-4353-848e-dc7326c8e467
 
 To install in your own computer, you can go to the next section.
 
