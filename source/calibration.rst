@@ -99,8 +99,8 @@ make the changes take effect.
     camera.
 
 The robot is now ready to calibrate. The following command will move the arm
-through a series of poses and upon completion of the calibration will update
-the robot configuration in /etc/ros/indigo:
+through a series of poses (about 100 poses) and upon completion of the calibration will update
+the robot configuration in /etc/ros/indigo.  This typically takes about 10 minutes to complete:
 
 ::
 
