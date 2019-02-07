@@ -1,0 +1,196 @@
+ROS Melodic + Ubuntu 18.04
+==========================
+
+Upgrading Your Robot to ROS Melodic + Ubuntu 18.04
+--------------------------------------------------
+.. WARNING::
+   Read this document in full to ensure you understand the procedures.  It is
+   not straightforward to go back to ROS Indigo/Ubuntu 14.04 after doing this.
+   Ensure your colleagues are on board with doing this upgrade.
+
+This document is a procedure for replacing the contents of your robot's SSD
+with an Ubuntu 18.04 install and ROS Melodic.
+
+Before Upgrade
+++++++++++++++
+
+Back up files from the robot!  There are a few categories of files to back up:
+
+#. Calibration and other robot-specific files. By convention, these are
+   all in ``/etc/ros/[indigo|melodic]/``
+#. Files relating to your research work
+#. A record of what packages you installed for ROS Indigo
+#. Network hardware configuration (for troubleshooting)
+
+Below, we assume that after logging into the robot (e.g. via `ssh`) you back up
+files to a machine named HOST with username USER.
+
+For (1), we recommend doing::
+
+  tar -zcf fetch_robot_files.tar.gz /etc/ros/indigo/
+  scp fetch_robot_files.tar.gz USER@HOST:~/
+
+For (2), this may include workspaces, logs, and training data.
+
+For (3), you can easily record the list of packages you installed via::
+
+  dpkg -l | grep ros-indigo > installed_indigo_packages.txt
+
+As well, you might want to record what repositories are part of your workspaces.
+
+For (4), this file may be useful for reference::
+
+  scp /etc/udev/rules.d/70-persistent-net.rules USER@HOST:~/$(hostname)_udev_net_rules
+
+If you are using any additional hardware (sensors), be sure to record what network
+or other hardware configuration changes were made to get them working.
+
+
+18.04 Install and Installing ROS/Fetch Packages
++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. IMPORTANT::
+   Back up your files as described in the previous section
+
+#. **Runstop the robot**, to avoid unexpected movement of the robot.
+#. Download the latest 18.04 Ubuntu installer from http://releases.ubuntu.com/18.04/
+   (in these instructions we use the Desktop image, version 18.04.1). Install Ubuntu
+   18.04 on the robot.
+   For help booting from USB, see `Accessing Boot Menu on Fetch Robots`_.
+#. Install ROS Melodic by following the instructions `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.  
+   We start from the ROS-Base setup, via the ``ros-melodic-ros-base`` package.
+#. **NOTE**: at a later time, Fetch will host and recommend a mirror of ROS Melodic debians.
+#. Run the following to install Fetch research debians:
+
+   - General packages for Fetch robots::
+
+       sudo apt install ros-melodic-fetch-calibration ros-melodic-fetch-open-auto-dock \
+       ros-melodic-fetch-navigation ros-melodic-fetch-tools
+
+   - Then install packages specific to the robot type::
+
+       export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
+       # sudo apt install $ROBOTTYPE-melodic-config  # pending future availability
+       wget https://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+       sudo dpkg -i $ROBOTTYPE-melodic-config.deb
+
+#. From your non-robot computer, restore the contents of /etc/ros/indigo to /etc/ros/melodic on the robot::
+
+     scp fetch_robot_files.tar.gz fetch@fetchXXX:~/
+     ssh fetch@fetchXXX
+     sudo mkdir -p /etc/ros/melodic
+     tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
+
+#. Power cycle the robot::
+  
+  sudo /sbin/reboot
+
+
+Post-install Validation
++++++++++++++++++++++++
+This is a direct continuation of the previous section's procedure. It is assumed
+that your robot is still runstopped.
+
+Verify that things are working.  All of the following steps assume that you are
+``ssh``'d into the robot::
+
+        ssh fetch@fetchXXXX
+
+#. Verify that calibration is installed, e.g. a date should be output if you run the command below::
+
+        fetch@fetch3:~$ calibrate_robot --date
+        2018-11-26 14:48:04
+
+#. Verify that the robot can ping the mainboard and the laser::
+
+        ping 10.42.42.42  # mainboard
+        ping 10.42.42.10  # laser
+
+   If not, see `Ensuring robot's ethernet ports are configured correctly`_
+
+#. Verify that the Primesense camera is working (if working with a Fetch robot)::
+
+       rostopic list head_camera | wc -l
+
+   This should output 32, if everything is working fine.
+
+#. At this point, unrunstop the robot.
+
+#. The gripper should now have power, so we should be able to ping it::
+
+       ping 10.42.42.44  # gripper
+
+#. The arm's "gravity compensation" should now be working. You should be able to
+   freely move the arm by hand.
+
+#. Check whether your PS3 controller pairs and controls the robot.
+
+   **Important note**: for 18.04 the robots have switched from using sixad to using
+   PS3joy.  Some changes in behaviour you may see:
+
+   - The LEDs on the PS3 controller may continually blink, even though it is connected.
+   - Inputs may not be sent from the PS3 controller if the accelerometers in the
+     controller do not detect motion.
+
+#.  At this point the robot is probably working fine and is ready for use!
+
+Compatibility of Other Computers Used with the Robot
+----------------------------------------------------
+
+For working with a robot running ROS Melodic, we recommend using an 18.04 Ubuntu
+machine that also has ROS Melodic installed.
+
+- In order for the robot to appear correctly in RViz, you will want to:
+
+  - Ensure your computer is pointed at the packages.ros apt sources
+  - Install ``ros-melodic-fetch-description`` and ``ros-melodic-freight-description``
+    packages.  Addtionally you might want to install
+    `ros-melodic-fetch-tools <https://github.com/fetchrobotics/fetch_tools>`_.
+  - Ensure that these packages are included in your path (e.g.
+    ``rospack find fetch_description`` returns a path)
+
+Not Recommended/Supported: Upgrading from 14.04 to 18.04 (via 16.04)
+--------------------------------------------------------------------
+Fetch Robotics does not recommend this approach and *cannot* provide support for this.
+However, if you desire to try to upgrade, the following may be helpful:
+
+- Back up files as described above, or even the full disk if you like.
+- You cannot upgrade Ubuntu directly from 14.04 to 18.04. You must first
+  upgrade to 16.04 first. This can take a long time.
+- You should review the postinstall script for ``fetch-melodic-config``. It is not
+  targeted at upgrading a system, so additional tweaks may be required after
+  installing it.
+
+
+Appendices
+----------
+
+Ensuring robot's ethernet ports are configured correctly
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+The robot has two ethernet ports on its computer. You can find more information on this
+at `Computer Overview and Configuration <computer.rst>`_.
+
+The most likely problem you may encounter after getting 18.04 installed is if these two
+ports are "swapped".  You can fix this in software or in hardware:
+
+- Software: Edit ``/etc/udev/rules.d/70-persistent-net.rules`` and swap ``eth0``
+  and ``eth1``. Restart the robot for the change to take effect.
+- OR: Hardware: swap the two ethernet cables where they plug into the computer (less
+  optimal solution).
+
+
+Changes from 
+Manually creates udev rules and updates grub boot arguments to ensure
+consistent network device naming across different hardware. Uses
+netplan to set static IP for internal robot communications.
+
+
+Accessing Boot Menu on Fetch Robots
++++++++++++++++++++++++++++++++++++
+Fetch research robots may be using one of two BIOS flavors.  Older robots use
+an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).
+
+- If your robot shows the MSI splash screen at boot, press F11 to access the boot menu.
+- If your robot shows the black AMI splash screen at boot (this lasts for about 1 second),
+  press F7 to access the boot menu.

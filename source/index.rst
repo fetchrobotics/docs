@@ -13,6 +13,7 @@ Fetch & Freight Manual
    robot_hardware
    computer
    care_and_feeding
+   indigo_to_melodic
 
 Tutorials
 ---------

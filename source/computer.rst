@@ -48,12 +48,13 @@ same subnet.
 ====================== =============
 Device                 IP Address
 ====================== =============
+Computer eth1          10.42.42.1
 Laser range finder     10.42.42.10
 Mainboard              10.42.42.42
 Gripper                10.42.42.43
 ====================== =============
 
-There are two possible interfaces for connecting to the robot
+There are two possible interfaces for external connecting to the robot
 computer: the wireless interface and the wired interface. Most users
 will prefer to use the wireless interface, however the access panel
 also includes a Gigabit Ethernet interface for stationary tasks that
@@ -64,10 +65,45 @@ require higher bandwidth.
     Never drive the robot with an Ethernet cable attached to the access panel.
 
 Connecting the Robot to a Wireless Network
-------------------------------------------
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The easiest way to configure the wireless networking is to connect a monitor,
-keyboard, and mouse and use the Network Manager interface.
+keyboard, and mouse and use Ubuntu's Network Manager interface.
+
+Configuring the Robot to use a Static IP for Access Panel Ethernet
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For 14.04: Edit and uncomment the section for eth0 in ``/etc/network/interfaces``
+
+For 18.04: Edit and uncomment the section for eth0 in ``/etc/netplan/99-fetch``
+
+After making changes, restarting the robot will ensure changes for the ethernet
+port take effect.
+
+Troubleshooting ROS Interactions with Robot Across a Network
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+External networking with the robot is typically done to provide
+an interface to various ROS capabilities. To ensure a working network setup
+between robot and PC, reference the following guide to the ROS_MASTER_URI
+and ROS_HOSTNAME environment variables. A key recommendation is to use hostnames
+instead of IP addresses for ROS_MASTER_URI and ROS_HOSTNAME. This will minimize
+issues with e.g. DHCP not being present or unexpectedly changing network behavior.
+
+.. figure:: _static/fetch_ros_ntwk.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+Note that the ROS_HOSTNAME is unneeded in the case where the robot and
+computer hostnames are addressable on the local network. (E.g. via DNS
+or entries in the file ``/etc/hosts``)
+
+A symptom of an incomplete setup may be that some ROS commands work, while others
+do not. Commands (such as ``rostopic list``, ``rosservice list``) retrieve
+information through the connection they create,
+while other commands (``rostopic echo``, many components in ``rviz``) attempt
+to tell the robot a location to send info to via future connections.
+
+For a more in-depth general overview of robot-to-PC networking, see also the
+`ROS Network Setup Tutorial <http://wiki.ros.org/ROS/NetworkSetup>`_.
 
 Clock Synchronization
 ---------------------
