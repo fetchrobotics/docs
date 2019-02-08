@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
         <link rel="next" title="Tutorial: Perception" href="perception.html"/>
         <link rel="prev" title="Tutorial: Navigation" href="navigation.html"/> 
@@ -94,7 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What’s In Box</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
@@ -108,7 +111,7 @@
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch’s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#software-runstop">Software Runstop</a></li>
@@ -116,7 +119,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
@@ -201,6 +204,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#launch-it-on-rosds">Launch it on ROSDS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
 </ul>
 </li>
@@ -212,7 +216,7 @@
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -222,7 +226,7 @@
 <li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-waypoints">Sending Waypoints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial: Manipulation</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial: Manipulation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started-demo">Getting Started Demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-moveit-on-a-robot">Running MoveIt! on a Robot</a></li>
@@ -291,11 +295,11 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-cite-fetch-or-freight-in-an-academic-paper">How can I cite Fetch or Freight in an Academic Paper?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won’t my robot do anything at all (charge, move, etc…)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won’t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won’t my robot move when I use my PS3 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won’t gravity compensate, help?</a></li>
 </ul>
 </li>
 </ul>
@@ -361,7 +365,7 @@
 <p>The easiest way to run MoveIt! is to run the demo launch file,
 which does not require any simulator or robot and brings up a
 fully configured RVIZ instance:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ roslaunch fetch_moveit_config demo.launch
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ roslaunch fetch_moveit_config demo.launch
 </pre></div>
 </div>
 <p>Within this demo you can use the sliders of the joint state
@@ -371,58 +375,58 @@ to and from.</p>
 </div>
 <div class="section" id="running-the-pick-and-place-demo">
 <h2>Running the Pick and Place Demo<a class="headerlink" href="#running-the-pick-and-place-demo" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="gazebo.html#mm-demo"><span>Running the Mobile Manipulation Demo</span></a>.</p>
+<p>See <a class="reference internal" href="gazebo.html#mm-demo"><span class="std std-ref">Running the Mobile Manipulation Demo</span></a>.</p>
 </div>
 <div class="section" id="running-moveit-on-a-robot">
 <h2>Running MoveIt! on a Robot<a class="headerlink" href="#running-moveit-on-a-robot" title="Permalink to this headline">¶</a></h2>
 <p>To run MoveIt! on a real or simulated robot, launch the
-move_group.launch file from the <code class="docutils literal"><span class="pre">fetch_moveit_config</span></code> package:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ roslaunch fetch_moveit_config move_group.launch
+move_group.launch file from the <code class="docutils literal notranslate"><span class="pre">fetch_moveit_config</span></code> package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ roslaunch fetch_moveit_config move_group.launch
 </pre></div>
 </div>
 <p>Once launched you can send commands to move the arm using
-the <a class="reference external" href="http://docs.ros.org/indigo/api/moveit_ros_visualization/html/doc/tutorial.html">MoveIt! Rviz Plugin</a> or use the programming interface, <code class="docutils literal"><span class="pre">move_group_interface</span></code>, in either <a class="reference external" href="http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/src/doc/move_group_interface_tutorial.html">C++</a> or <a class="reference external" href="http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/scripts/doc/move_group_python_interface_tutorial.html">Python</a>.</p>
+the <a class="reference external" href="http://docs.ros.org/indigo/api/moveit_ros_visualization/html/doc/tutorial.html">MoveIt! Rviz Plugin</a> or use the programming interface, <code class="docutils literal notranslate"><span class="pre">move_group_interface</span></code>, in either <a class="reference external" href="http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/src/doc/move_group_interface_tutorial.html">C++</a> or <a class="reference external" href="http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/scripts/doc/move_group_python_interface_tutorial.html">Python</a>.</p>
 </div>
 <div class="section" id="simple-moveit-disco-example">
 <h2>Simple MoveIt! Disco Example<a class="headerlink" href="#simple-moveit-disco-example" title="Permalink to this headline">¶</a></h2>
 <p>This python script will run the robot through a simple disco dance motion.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
-<span class="c"># simple_disco.py: Move the fetch arm through a simple disco motion</span>
+<span class="c1"># simple_disco.py: Move the fetch arm through a simple disco motion</span>
 <span class="kn">import</span> <span class="nn">rospy</span>
-<span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">MoveItErrorCodes</span>
-<span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="n">MoveGroupInterface</span><span class="p">,</span> <span class="n">PlanningSceneInterface</span>
+<span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="k">import</span> <span class="n">MoveItErrorCodes</span>
+<span class="kn">from</span> <span class="nn">moveit_python</span> <span class="k">import</span> <span class="n">MoveGroupInterface</span><span class="p">,</span> <span class="n">PlanningSceneInterface</span>
 
-<span class="c"># Note: fetch_moveit_config move_group.launch must be running</span>
-<span class="c"># Safety!: Do NOT run this script near people or objects.</span>
-<span class="c"># Safety!: There is NO perception.</span>
-<span class="c">#          The ONLY objects the collision detection software is aware</span>
-<span class="c">#          of are itself &amp; the floor.</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">&quot;simple_disco&quot;</span><span class="p">)</span>
+<span class="c1"># Note: fetch_moveit_config move_group.launch must be running</span>
+<span class="c1"># Safety!: Do NOT run this script near people or objects.</span>
+<span class="c1"># Safety!: There is NO perception.</span>
+<span class="c1">#          The ONLY objects the collision detection software is aware</span>
+<span class="c1">#          of are itself &amp; the floor.</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&quot;simple_disco&quot;</span><span class="p">)</span>
 
-    <span class="c"># Create move group interface for a fetch robot</span>
-    <span class="n">move_group</span> <span class="o">=</span> <span class="n">MoveGroupInterface</span><span class="p">(</span><span class="s">&quot;arm_with_torso&quot;</span><span class="p">,</span> <span class="s">&quot;base_link&quot;</span><span class="p">)</span>
+    <span class="c1"># Create move group interface for a fetch robot</span>
+    <span class="n">move_group</span> <span class="o">=</span> <span class="n">MoveGroupInterface</span><span class="p">(</span><span class="s2">&quot;arm_with_torso&quot;</span><span class="p">,</span> <span class="s2">&quot;base_link&quot;</span><span class="p">)</span>
 
-    <span class="c"># Define ground plane</span>
-    <span class="c"># This creates objects in the planning scene that mimic the ground</span>
-    <span class="c"># If these were not in place gripper could hit the ground</span>
-    <span class="n">planning_scene</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">&quot;base_link&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_front_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_back_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_right_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_left_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_front_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_back_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_left_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_right_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="c1"># Define ground plane</span>
+    <span class="c1"># This creates objects in the planning scene that mimic the ground</span>
+    <span class="c1"># If these were not in place gripper could hit the ground</span>
+    <span class="n">planning_scene</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s2">&quot;base_link&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_front_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_back_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_right_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_left_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_front_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_back_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_left_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_right_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
 
-    <span class="c"># TF joint names</span>
-    <span class="n">joint_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;torso_lift_joint&quot;</span><span class="p">,</span> <span class="s">&quot;shoulder_pan_joint&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;shoulder_lift_joint&quot;</span><span class="p">,</span> <span class="s">&quot;upperarm_roll_joint&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;elbow_flex_joint&quot;</span><span class="p">,</span> <span class="s">&quot;forearm_roll_joint&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;wrist_flex_joint&quot;</span><span class="p">,</span> <span class="s">&quot;wrist_roll_joint&quot;</span><span class="p">]</span>
-    <span class="c"># Lists of joint angles in the same order as in joint_names</span>
+    <span class="c1"># TF joint names</span>
+    <span class="n">joint_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;torso_lift_joint&quot;</span><span class="p">,</span> <span class="s2">&quot;shoulder_pan_joint&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;shoulder_lift_joint&quot;</span><span class="p">,</span> <span class="s2">&quot;upperarm_roll_joint&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;elbow_flex_joint&quot;</span><span class="p">,</span> <span class="s2">&quot;forearm_roll_joint&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;wrist_flex_joint&quot;</span><span class="p">,</span> <span class="s2">&quot;wrist_roll_joint&quot;</span><span class="p">]</span>
+    <span class="c1"># Lists of joint angles in the same order as in joint_names</span>
     <span class="n">disco_poses</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span>
                    <span class="p">[</span><span class="mf">0.133</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
                    <span class="p">[</span><span class="mf">0.266</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
@@ -435,105 +439,105 @@ the <a class="reference external" href="http://docs.ros.org/indigo/api/moveit_ro
         <span class="k">if</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
             <span class="k">break</span>
 
-        <span class="c"># Plans the joints in joint_names to angles in pose</span>
-        <span class="n">move_group</span><span class="o">.</span><span class="n">moveToJointPosition</span><span class="p">(</span><span class="n">joint_names</span><span class="p">,</span> <span class="n">pose</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="c1"># Plans the joints in joint_names to angles in pose</span>
+        <span class="n">move_group</span><span class="o">.</span><span class="n">moveToJointPosition</span><span class="p">(</span><span class="n">joint_names</span><span class="p">,</span> <span class="n">pose</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-        <span class="c"># Since we passed in wait=False above we need to wait here</span>
+        <span class="c1"># Since we passed in wait=False above we need to wait here</span>
         <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">wait_for_result</span><span class="p">()</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
-            <span class="c"># Checking the MoveItErrorCode</span>
+            <span class="c1"># Checking the MoveItErrorCode</span>
             <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">error_code</span><span class="o">.</span><span class="n">val</span> <span class="o">==</span> <span class="n">MoveItErrorCodes</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">:</span>
-                <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s">&quot;Disco!&quot;</span><span class="p">)</span>
+                <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Disco!&quot;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="c"># If you get to this point please search for:</span>
-                <span class="c"># moveit_msgs/MoveItErrorCodes.msg</span>
-                <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s">&quot;Arm goal in state: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span>
+                <span class="c1"># If you get to this point please search for:</span>
+                <span class="c1"># moveit_msgs/MoveItErrorCodes.msg</span>
+                <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s2">&quot;Arm goal in state: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
                              <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">get_state</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s">&quot;MoveIt! failure no result returned.&quot;</span><span class="p">)</span>
+            <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s2">&quot;MoveIt! failure no result returned.&quot;</span><span class="p">)</span>
 
-    <span class="c"># This stops all arm movement goals</span>
-    <span class="c"># It should be called when a program is exiting so movement stops</span>
+    <span class="c1"># This stops all arm movement goals</span>
+    <span class="c1"># It should be called when a program is exiting so movement stops</span>
     <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">cancel_all_goals</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="simple-moveit-wave-example">
 <h2>Simple MoveIt! Wave Example<a class="headerlink" href="#simple-moveit-wave-example" title="Permalink to this headline">¶</a></h2>
-<p>This python script will cause the robot to do a simple &#8220;wave-like&#8221; motion
+<p>This python script will cause the robot to do a simple “wave-like” motion
 until the script is stopped with ctrl-c</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
-<span class="c"># wave.py: &quot;Wave&quot; the fetch gripper</span>
+<span class="c1"># wave.py: &quot;Wave&quot; the fetch gripper</span>
 <span class="kn">import</span> <span class="nn">rospy</span>
-<span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">MoveItErrorCodes</span>
-<span class="kn">from</span> <span class="nn">moveit_python</span> <span class="kn">import</span> <span class="n">MoveGroupInterface</span><span class="p">,</span> <span class="n">PlanningSceneInterface</span>
-<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">PoseStamped</span><span class="p">,</span> <span class="n">Pose</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span> <span class="n">Quaternion</span>
+<span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="k">import</span> <span class="n">MoveItErrorCodes</span>
+<span class="kn">from</span> <span class="nn">moveit_python</span> <span class="k">import</span> <span class="n">MoveGroupInterface</span><span class="p">,</span> <span class="n">PlanningSceneInterface</span>
+<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="k">import</span> <span class="n">PoseStamped</span><span class="p">,</span> <span class="n">Pose</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span> <span class="n">Quaternion</span>
 
-<span class="c"># Note: fetch_moveit_config move_group.launch must be running</span>
-<span class="c"># Safety!: Do NOT run this script near people or objects.</span>
-<span class="c"># Safety!: There is NO perception.</span>
-<span class="c">#          The ONLY objects the collision detection software is aware</span>
-<span class="c">#          of are itself &amp; the floor.</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">&quot;hi&quot;</span><span class="p">)</span>
+<span class="c1"># Note: fetch_moveit_config move_group.launch must be running</span>
+<span class="c1"># Safety!: Do NOT run this script near people or objects.</span>
+<span class="c1"># Safety!: There is NO perception.</span>
+<span class="c1">#          The ONLY objects the collision detection software is aware</span>
+<span class="c1">#          of are itself &amp; the floor.</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">)</span>
 
-    <span class="c"># Create move group interface for a fetch robot</span>
-    <span class="n">move_group</span> <span class="o">=</span> <span class="n">MoveGroupInterface</span><span class="p">(</span><span class="s">&quot;arm_with_torso&quot;</span><span class="p">,</span> <span class="s">&quot;base_link&quot;</span><span class="p">)</span>
+    <span class="c1"># Create move group interface for a fetch robot</span>
+    <span class="n">move_group</span> <span class="o">=</span> <span class="n">MoveGroupInterface</span><span class="p">(</span><span class="s2">&quot;arm_with_torso&quot;</span><span class="p">,</span> <span class="s2">&quot;base_link&quot;</span><span class="p">)</span>
 
-    <span class="c"># Define ground plane</span>
-    <span class="c"># This creates objects in the planning scene that mimic the ground</span>
-    <span class="c"># If these were not in place gripper could hit the ground</span>
-    <span class="n">planning_scene</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s">&quot;base_link&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_front_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_back_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_right_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s">&quot;my_left_ground&quot;</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_front_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_back_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_left_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s">&quot;my_right_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="c1"># Define ground plane</span>
+    <span class="c1"># This creates objects in the planning scene that mimic the ground</span>
+    <span class="c1"># If these were not in place gripper could hit the ground</span>
+    <span class="n">planning_scene</span> <span class="o">=</span> <span class="n">PlanningSceneInterface</span><span class="p">(</span><span class="s2">&quot;base_link&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_front_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_back_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_right_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">removeCollisionObject</span><span class="p">(</span><span class="s2">&quot;my_left_ground&quot;</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_front_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_back_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_left_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">planning_scene</span><span class="o">.</span><span class="n">addCube</span><span class="p">(</span><span class="s2">&quot;my_right_ground&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
 
-    <span class="c"># This is the wrist link not the gripper itself</span>
-    <span class="n">gripper_frame</span> <span class="o">=</span> <span class="s">&#39;wrist_roll_link&#39;</span>
-    <span class="c"># Position and rotation of two &quot;wave end poses&quot;</span>
+    <span class="c1"># This is the wrist link not the gripper itself</span>
+    <span class="n">gripper_frame</span> <span class="o">=</span> <span class="s1">&#39;wrist_roll_link&#39;</span>
+    <span class="c1"># Position and rotation of two &quot;wave end poses&quot;</span>
     <span class="n">gripper_poses</span> <span class="o">=</span> <span class="p">[</span><span class="n">Pose</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mf">0.042</span><span class="p">,</span> <span class="mf">0.384</span><span class="p">,</span> <span class="mf">1.826</span><span class="p">),</span>
                           <span class="n">Quaternion</span><span class="p">(</span><span class="mf">0.173</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.693</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.242</span><span class="p">,</span> <span class="mf">0.657</span><span class="p">)),</span>
                      <span class="n">Pose</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mf">0.047</span><span class="p">,</span> <span class="mf">0.545</span><span class="p">,</span> <span class="mf">1.822</span><span class="p">),</span>
                           <span class="n">Quaternion</span><span class="p">(</span><span class="o">-</span><span class="mf">0.274</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.701</span><span class="p">,</span> <span class="mf">0.173</span><span class="p">,</span> <span class="mf">0.635</span><span class="p">))]</span>
 
-    <span class="c"># Construct a &quot;pose_stamped&quot; message as required by moveToPose</span>
+    <span class="c1"># Construct a &quot;pose_stamped&quot; message as required by moveToPose</span>
     <span class="n">gripper_pose_stamped</span> <span class="o">=</span> <span class="n">PoseStamped</span><span class="p">()</span>
-    <span class="n">gripper_pose_stamped</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s">&#39;base_link&#39;</span>
+    <span class="n">gripper_pose_stamped</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s1">&#39;base_link&#39;</span>
 
     <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
         <span class="k">for</span> <span class="n">pose</span> <span class="ow">in</span> <span class="n">gripper_poses</span><span class="p">:</span>
-            <span class="c"># Finish building the Pose_stamped message</span>
-            <span class="c"># If the message stamp is not current it could be ignored</span>
+            <span class="c1"># Finish building the Pose_stamped message</span>
+            <span class="c1"># If the message stamp is not current it could be ignored</span>
             <span class="n">gripper_pose_stamped</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">stamp</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-            <span class="c"># Set the message pose</span>
+            <span class="c1"># Set the message pose</span>
             <span class="n">gripper_pose_stamped</span><span class="o">.</span><span class="n">pose</span> <span class="o">=</span> <span class="n">pose</span>
 
-            <span class="c"># Move gripper frame to the pose specified</span>
+            <span class="c1"># Move gripper frame to the pose specified</span>
             <span class="n">move_group</span><span class="o">.</span><span class="n">moveToPose</span><span class="p">(</span><span class="n">gripper_pose_stamped</span><span class="p">,</span> <span class="n">gripper_frame</span><span class="p">)</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
 
             <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
-                <span class="c"># Checking the MoveItErrorCode</span>
+                <span class="c1"># Checking the MoveItErrorCode</span>
                 <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">error_code</span><span class="o">.</span><span class="n">val</span> <span class="o">==</span> <span class="n">MoveItErrorCodes</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">:</span>
-                    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s">&quot;Hello there!&quot;</span><span class="p">)</span>
+                    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Hello there!&quot;</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
-                    <span class="c"># If you get to this point please search for:</span>
-                    <span class="c"># moveit_msgs/MoveItErrorCodes.msg</span>
-                    <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s">&quot;Arm goal in state: </span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span>
+                    <span class="c1"># If you get to this point please search for:</span>
+                    <span class="c1"># moveit_msgs/MoveItErrorCodes.msg</span>
+                    <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s2">&quot;Arm goal in state: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
                                  <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">get_state</span><span class="p">())</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s">&quot;MoveIt! failure no result returned.&quot;</span><span class="p">)</span>
+                <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s2">&quot;MoveIt! failure no result returned.&quot;</span><span class="p">)</span>
 
-    <span class="c"># This stops all arm movement goals</span>
-    <span class="c"># It should be called when a program is exiting so movement stops</span>
+    <span class="c1"># This stops all arm movement goals</span>
+    <span class="c1"># It should be called when a program is exiting so movement stops</span>
     <span class="n">move_group</span><span class="o">.</span><span class="n">get_move_action</span><span class="p">()</span><span class="o">.</span><span class="n">cancel_all_goals</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -593,6 +597,7 @@ until the script is stopped with ctrl-c</p>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 

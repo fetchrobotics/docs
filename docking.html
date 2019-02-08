@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
         <link rel="next" title="Tutorial: Calibrating Fetch" href="calibration.html"/>
         <link rel="prev" title="Tutorial: Perception" href="perception.html"/> 
@@ -94,7 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What’s In Box</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
@@ -108,7 +111,7 @@
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch’s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#software-runstop">Software Runstop</a></li>
@@ -116,7 +119,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
@@ -201,6 +204,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#launch-it-on-rosds">Launch it on ROSDS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
 </ul>
 </li>
@@ -212,7 +216,7 @@
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -236,7 +240,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial: Auto Docking</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial: Auto Docking</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installing-fetch-auto-dock">Installing fetch_auto_dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-the-docking-node">Running the Docking Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#auto-docking-programmatically">Auto Docking Programmatically</a></li>
@@ -291,11 +295,11 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-cite-fetch-or-freight-in-an-academic-paper">How can I cite Fetch or Freight in an Academic Paper?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won’t my robot do anything at all (charge, move, etc…)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won’t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won’t my robot move when I use my PS3 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won’t gravity compensate, help?</a></li>
 </ul>
 </li>
 </ul>
@@ -368,15 +372,15 @@ on either side of the dock.</p>
 <div class="section" id="installing-fetch-auto-dock">
 <h2>Installing fetch_auto_dock<a class="headerlink" href="#installing-fetch-auto-dock" title="Permalink to this headline">¶</a></h2>
 <p>To install the package:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get update
-sudo apt-get install ros-indigo-fetch-auto-dock
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">indigo</span><span class="o">-</span><span class="n">fetch</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="n">dock</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="running-the-docking-node">
 <h2>Running the Docking Node<a class="headerlink" href="#running-the-docking-node" title="Permalink to this headline">¶</a></h2>
 <p>To start the auto docking node in a demonstration mode:</p>
-<div class="highlight-python"><div class="highlight"><pre>roslaunch fetch_auto_dock auto_dock.launch
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">fetch_auto_dock</span> <span class="n">auto_dock</span><span class="o">.</span><span class="n">launch</span>
 </pre></div>
 </div>
 <p>This will bring up three ROS nodes. The first ROS node is the auto docking action
@@ -385,11 +389,11 @@ interface. A second and third nodes monitor the PS3 joystick and can trigger doc
 and undocking as described below:</p>
 <blockquote>
 <div><ul class="simple">
-<li>To dock your robot, point the robot at the charge dock and press the &#8220;circle&#8221;
+<li>To dock your robot, point the robot at the charge dock and press the “circle”
 button on the PS3 controller. Docking works best when the robot is about 0.75-1.0
 meters away from the dock and pointed directly at it, however docking should work
 from a variety of angles.</li>
-<li>To undock your robot when it is on a charge dock, press the &#8220;square&#8221; button
+<li>To undock your robot when it is on a charge dock, press the “square” button
 on the PS3 joystick and the robot will back off the dock and then turn in place
 so it is pointed away from the charge dock.</li>
 </ul>
@@ -411,42 +415,42 @@ action message.</p>
 <p>There are several fields in the goal:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">dock_pose</span></code> is a geometry_msgs/PoseStamped message which specifies where the
+<li><code class="docutils literal notranslate"><span class="pre">dock_pose</span></code> is a geometry_msgs/PoseStamped message which specifies where the
 dock center is located. This can be in any valid frame as the action server
 node will use TF to transform the pose into the odometry frame.</li>
-<li><code class="docutils literal"><span class="pre">use_move_base</span></code> is not currently implemented.</li>
+<li><code class="docutils literal notranslate"><span class="pre">use_move_base</span></code> is not currently implemented.</li>
 </ul>
 </div></blockquote>
-<p>The result includes a single boolean <code class="docutils literal"><span class="pre">docked</span></code> which tells whether the robot has
+<p>The result includes a single boolean <code class="docutils literal notranslate"><span class="pre">docked</span></code> which tells whether the robot has
 actually docked and is charging.</p>
 <p>The following Python code will dock the robot with a dock that is 1.0 meters
 in front of it:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">rospy</span>
 <span class="kn">import</span> <span class="nn">actionlib</span>
-<span class="kn">from</span> <span class="nn">fetch_auto_dock_msgs.msg</span> <span class="kn">import</span> <span class="n">DockAction</span><span class="p">,</span> <span class="n">DockGoal</span>
+<span class="kn">from</span> <span class="nn">fetch_auto_dock_msgs.msg</span> <span class="k">import</span> <span class="n">DockAction</span><span class="p">,</span> <span class="n">DockGoal</span>
 
-<span class="c"># Create a ROS node</span>
-<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s">&quot;dock_the_robot&quot;</span><span class="p">)</span>
+<span class="c1"># Create a ROS node</span>
+<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&quot;dock_the_robot&quot;</span><span class="p">)</span>
 
-<span class="c"># Create an action client</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">actionlib</span><span class="o">.</span><span class="n">SimpleActionClient</span><span class="p">(</span><span class="s">&quot;/dock&quot;</span><span class="p">,</span> <span class="n">DockAction</span><span class="p">)</span>
+<span class="c1"># Create an action client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">actionlib</span><span class="o">.</span><span class="n">SimpleActionClient</span><span class="p">(</span><span class="s2">&quot;/dock&quot;</span><span class="p">,</span> <span class="n">DockAction</span><span class="p">)</span>
 <span class="n">client</span><span class="o">.</span><span class="n">wait_for_server</span><span class="p">()</span>
 
-<span class="c"># Create and send a goal</span>
+<span class="c1"># Create and send a goal</span>
 <span class="n">goal</span> <span class="o">=</span> <span class="n">DockGoal</span><span class="p">()</span>
-<span class="n">goal</span><span class="o">.</span><span class="n">dock_pose</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s">&quot;base_link&quot;</span>
+<span class="n">goal</span><span class="o">.</span><span class="n">dock_pose</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="s2">&quot;base_link&quot;</span>
 <span class="n">goal</span><span class="o">.</span><span class="n">dock_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">goal</span><span class="o">.</span><span class="n">dock_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">client</span><span class="o">.</span><span class="n">send_goal</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The fetch_auto_dock node also provides an <code class="docutils literal"><span class="pre">undock</span></code> action interface which
+<p>The fetch_auto_dock node also provides an <code class="docutils literal notranslate"><span class="pre">undock</span></code> action interface which
 can be used to undock the robot from the charge dock. The goal to undock
 has a single field</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">rotate_in_place</span></code> if set to true, the robot will back off the dock and
+<li><code class="docutils literal notranslate"><span class="pre">rotate_in_place</span></code> if set to true, the robot will back off the dock and
 then rotate 180 degrees so it is facing off the dock. This can be very
 useful since navigation probably cannot get the robot off the dock when
 it is facing at the dock.</li>
@@ -504,6 +508,7 @@ it is facing at the dock.</li>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 

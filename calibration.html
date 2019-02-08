@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
         <link rel="next" title="Tutorial: Fetch Programming by Demonstration" href="fetch_pbd.html"/>
         <link rel="prev" title="Tutorial: Auto Docking" href="docking.html"/> 
@@ -94,7 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What’s In Box</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
@@ -108,7 +111,7 @@
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch’s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#software-runstop">Software Runstop</a></li>
@@ -116,7 +119,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
@@ -201,6 +204,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#launch-it-on-rosds">Launch it on ROSDS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
 </ul>
 </li>
@@ -212,7 +216,7 @@
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -242,7 +246,7 @@
 <li class="toctree-l2"><a class="reference internal" href="docking.html#auto-docking-programmatically">Auto Docking Programmatically</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial: Calibrating Fetch</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial: Calibrating Fetch</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#understanding-calibration">Understanding Calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calibrate-robot-tool">Calibrate Robot Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-calibration">Running Calibration</a></li>
@@ -291,11 +295,11 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-cite-fetch-or-freight-in-an-academic-paper">How can I cite Fetch or Freight in an Academic Paper?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won’t my robot do anything at all (charge, move, etc…)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won’t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won’t my robot move when I use my PS3 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won’t gravity compensate, help?</a></li>
 </ul>
 </li>
 </ul>
@@ -375,7 +379,7 @@ pose seen by the camera.</li>
 <li>Updating the URDF and robot launch files with newly determined offsets.</li>
 </ul>
 </div></blockquote>
-<p>The <a class="reference internal" href="computer.html#upstart-services"><span>Upstart Services</span></a> that start the robot will use the launch
+<p>The <a class="reference internal" href="computer.html#upstart-services"><span class="std std-ref">Upstart Services</span></a> that start the robot will use the launch
 file in <cite>/etc/ros/indigo/robot.launch</cite>. Therefore, the last step in calibration
 is to update that launch file and restart the drivers. Currently, the
 following aspects are updated:</p>
@@ -396,7 +400,7 @@ are calibrated. Their updated values are stored in robot.launch.</li>
 which fully automates tasks related to calibration. Once you have sourced
 the ROS setup.bash, running <cite>calibrate_robot</cite> without any arguments will
 show the list of valid arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ calibrate_robot
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ calibrate_robot
 usage: calibrate_robot [-h] [--arm] [--base] [--install] [--reset] [--restore]
                        [--date] [--directory DIRECTORY]
 
@@ -415,10 +419,10 @@ optional arguments:
                         Directory to load calibration from or backup to
 </pre></div>
 </div>
-<p>A useful command to note is the <cite>&#8211;date</cite> option, which will return the date
-that the current calibration was generated (or &#8216;uncalibrated&#8217; if the robot
+<p>A useful command to note is the <cite>–date</cite> option, which will return the date
+that the current calibration was generated (or ‘uncalibrated’ if the robot
 has not yet been calibrated):</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ calibrate_robot --date
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ calibrate_robot --date
 2015-06-06 23:20:18
 </pre></div>
 </div>
@@ -433,7 +437,7 @@ of free space all around it.</p>
 </div>
 <p>The first step to calibrate the robot is to reset the calibration to factory
 defaults:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ calibrate_robot --reset
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ calibrate_robot --reset
 </pre></div>
 </div>
 <p>This command might ask for your password, as it requires sudo to update the
@@ -448,17 +452,17 @@ of calibration may adversely affect the auto_exposure settings of the
 camera.</p>
 </div>
 <p>The robot is now ready to calibrate. The following command will move the arm
-through a series of poses and upon completion of the calibration will update
-the robot configuration in /etc/ros/indigo:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ calibrate_robot --arm --install
+through a series of poses (about 100 poses) and upon completion of the calibration will update
+the robot configuration in /etc/ros/indigo.  This typically takes about 10 minutes to complete:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ calibrate_robot --arm --install
 </pre></div>
 </div>
 <p>Finally, after the new calibration has been installed into /etc/ros/indigo,
 you can view the calibration by opening RVIZ and seeing that the robot model
 overlaps with the point cloud from the head camera. If for some reason, the
-calibration is not good, you can restart from the <cite>&#8211;reset</cite> command or roll
+calibration is not good, you can restart from the <cite>–reset</cite> command or roll
 back to the previous calibration with:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;$ calibrate_robot --restore
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ calibrate_robot --restore
 </pre></div>
 </div>
 </div>
@@ -471,7 +475,7 @@ will retain millimeter precision as long torso remains powered.</p>
 <p>To work properly, the two torso sensors must be calibrated together.
 If the sensors are not properly calibrated, the calculation of the initial torso position
 could be incorrect in some situations. This problem is more likely to occur if the torso is
-first powered when in the &#8220;up&#8221; position.
+first powered when in the “up” position.
 A bad torso position should be easy to detect when using RVIZ since the torso position
 shown in RVIZ will always be more than +/-10cm different than the true torso position.</p>
 <p>The torso sensors are calibrated in production, so they will not usually need
@@ -502,13 +506,13 @@ sensors:</p>
 <ol class="arabic simple">
 <li>Move torso to lowest position, and tuck the arm.</li>
 <li>Place a protective barrier between the arm and top base cover.</li>
-<li>Disable robot drivers by running : <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">stop</span></code></li>
+<li>Disable robot drivers by running : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">stop</span></code></li>
 <li>Run torso calibration tool:</li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li>To run calibration : <code class="docutils literal"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">torso_calibrate</span> <span class="pre">calibrate</span></code></li>
-<li>To verify calibration : <code class="docutils literal"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">torso_calibrate</span> <span class="pre">verify</span></code></li>
+<li>To run calibration : <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">torso_calibrate</span> <span class="pre">calibrate</span></code></li>
+<li><strong>OR</strong> to verify calibration : <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">torso_calibrate</span> <span class="pre">verify</span></code></li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="6">
@@ -516,7 +520,7 @@ sensors:</p>
 <li>Cycle Run-stop (optional).  Sometimes tool will request that run-stop be cycled
 after it completes.  Cycling run-stop will cycle power to the torso controller board,
 and is required in some situations.</li>
-<li>On tool has completed, restart robot drivers with <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">start</span></code></li>
+<li>Once tool has completed, restart robot drivers with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">start</span></code></li>
 </ol>
 </div>
 <div class="section" id="verify-output">
@@ -539,11 +543,11 @@ The accuracy of the torso position measurement is unrelated to this value.</p>
 <h3>Calibrate Output<a class="headerlink" href="#calibrate-output" title="Permalink to this headline">¶</a></h3>
 <p>Once the tool has completed the calibration procedure it will check the expected results of calibration.
 If everything checks out, the tool will output something similar to:</p>
-<div class="highlight-python"><div class="highlight"><pre>VERIFY PASSED : max sensor error of 0.0116824 is within acceptable limit
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERIFY</span> <span class="n">PASSED</span> <span class="p">:</span> <span class="nb">max</span> <span class="n">sensor</span> <span class="n">error</span> <span class="n">of</span> <span class="mf">0.0116824</span> <span class="ow">is</span> <span class="n">within</span> <span class="n">acceptable</span> <span class="n">limit</span>
 </pre></div>
 </div>
 <p>If there was a problem calculating good calibration parameters, the output might look like:</p>
-<div class="highlight-python"><div class="highlight"><pre>VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERIFY</span> <span class="n">FAILED</span> <span class="p">:</span> <span class="nb">max</span> <span class="n">sensor</span> <span class="n">error</span> <span class="n">of</span> <span class="mf">0.0501323</span> <span class="ow">is</span> <span class="n">larger</span> <span class="n">than</span> <span class="n">acceptable</span> <span class="n">limit</span> <span class="n">of</span> <span class="mf">0.04</span>
 </pre></div>
 </div>
 <p>In case of failure, the torso sensor may be malfunctioning or damaged and a support ticket should be created.</p>
@@ -600,6 +604,7 @@ If everything checks out, the tool will output something similar to:</p>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 
