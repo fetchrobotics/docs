@@ -20,6 +20,7 @@ Back up files from the robot!  There are a few categories of files to back up:
    all in ``/etc/ros/[indigo|melodic]/``
 #. Files relating to your research work
 #. A record of what packages you installed for ROS Indigo
+#. Udev rules created for additional hardware (e.g. sensors) added to your robot
 #. Network hardware configuration (for troubleshooting)
 
 Below, we assume that after logging into the robot (e.g. via `ssh`) you back up
@@ -38,7 +39,10 @@ For (3), you can easily record the list of packages you installed via::
 
 As well, you might want to record what repositories are part of your workspaces.
 
-For (4), this file may be useful for reference::
+For (4), such files are likely located in ``/etc/udev/rules.d/`, and should be saved.
+
+For (5), this file may be useful for reference if the install process doesn't
+automatically set up networking on your robot correctly::
 
   scp /etc/udev/rules.d/70-persistent-net.rules USER@HOST:~/$(hostname)_udev_net_rules
 
