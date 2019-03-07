@@ -63,7 +63,7 @@ or other hardware configuration changes were made to get them working.
 
 #. **Runstop the robot**, to avoid unexpected movement of the robot.
 #. **Install Ubuntu 18.04 on the robot.** Download the latest 18.04 Ubuntu installer from http://releases.ubuntu.com/18.04/
-   (in these instructions we use the Desktop image, version 18.04.1).
+   (in these instructions we use the Desktop image, version 18.04.2).
    For help booting from USB, see `Accessing Boot Menu on Fetch Robots`_.
 
   #. We recommend keeping the same hostname for the robot, e.g. `fetch4`
@@ -76,13 +76,19 @@ or other hardware configuration changes were made to get them working.
     to enable SSH into your robot: ``sudo apt install openssh-server net-tools``.
     You might also want to install your favorite commandline text editor.
 
-#. Update your Ubuntu install: ``sudo apt update && sudo apt dist-upgrade -y``
-#. Install ROS Melodic by following the instructions `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
-   You will want to do steps 1.1 through 1.5. The system-config debian installed later in
-   these upgrade instructions will do the equivalent of step 1.6 for the `fetch` user on
-   the robot. We use the *ROS-Base* setup, via the ``ros-melodic-ros-base`` package.
+#. **Update your Ubuntu install:** ``sudo apt update && sudo apt dist-upgrade -y``
+#. **Install ROS Melodic** by following the instructions `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
+   You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:
+  - You use the **ROS-Base** setup, via the ``ros-melodic-ros-base`` package.
+  - You're using bash, so step 1.6 for the fetch user is::
+
+        echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+        source ~/.bashrc
+
+    You can also make this apply for all new users: ``sudo su -c 'echo "source /opt/ros/melodic/setup.bash" >> /etc/bash.bashrc'``
+
 #. **NOTE**: at a later time, Fetch may host and recommend its own mirror of ROS Melodic debians.
-#. Run the following to install Fetch research debians:
+#. Run the following to **install Fetch research debians**:
 
    - General packages for Fetch robots::
 
@@ -96,14 +102,7 @@ or other hardware configuration changes were made to get them working.
        wget https://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
        sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
 
-#. From your non-robot computer, restore the contents of /etc/ros/indigo to /etc/ros/melodic on the robot::
-
-        scp fetch_robot_files.tar.gz fetch@fetchXXX:~/
-        ssh fetch@fetchXXX
-        sudo mkdir -p /etc/ros/melodic
-        tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
-
-#. Power cycle the robot::
+#. **Power cycle the robot**::
 
         sudo /sbin/reboot
 
@@ -158,7 +157,22 @@ Verify that things are working.  All of the following steps assume that you are
 
    We are hoping to determine fixes for these in the near future.
 
-#. At this point the robot is probably working fine and is ready for use!
+#. At this point the robot is probably working fine and is ready for use! (Unless you
+   additional customizations to restore; see next step)
+
+#. If applicable, from your non-robot computer, restore the contents of
+   ``/etc/ros/indigo`` to ``/etc/ros/melodic`` on the robot::
+
+        scp fetch_robot_files.tar.gz fetch@fetchXXX:~/
+        ssh fetch@fetchXXX
+        sudo mkdir -p /etc/ros/melodic
+        tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
+
+   As well, you can restore any other saved files to the robot.
+
+   This is the point at which some things may not work fully, e.g. if packages
+   used in ROS Indigo need updates/replacements for ROS Melodic.
+
 
 Compatibility of Other Computers Used with the Robot
 ----------------------------------------------------
@@ -206,7 +220,8 @@ The robot has two ethernet ports on its computer. You can find more information 
 at `Computer Overview and Configuration <computer.rst>`_.
 
 The most likely problem you may encounter after getting 18.04 installed is if these two
-ports are "swapped".  You can fix this in software or in hardware:
+ports are "swapped".  This will cause the robot computer to be unable to talk to the
+rest of its hardware. You can fix this in software or in hardware:
 
 - Software: Edit ``/etc/udev/rules.d/70-persistent-net.rules`` and swap ``eth0``
   and ``eth1``. Restart the robot for the change to take effect.
@@ -215,6 +230,10 @@ ports are "swapped".  You can fix this in software or in hardware:
   a gray cable (internal communications) and a blue cable (external).
   Typically, the blue goes to the top ethernet port, and the grey goes to the bottom.
 
+Another issue you may encounter with 18.04 is if you are using the ethernet on the
+side access panel with a DHCP setup. In some setups, the ethernet port may fail to
+be assigned an IP automatically. We recommend consulting IT for help with this, if
+needed.
 
 Accessing Boot Menu on Fetch Robots
 +++++++++++++++++++++++++++++++++++
