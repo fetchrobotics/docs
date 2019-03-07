@@ -1,6 +1,11 @@
 ROS Melodic + Ubuntu 18.04
 ==========================
 
+Fetch Robotics has recently started supporting ROS Melodic and Ubuntu 18.04 on
+Fetch and Freight robots.  Other than the process of upgrading a robot, there
+should be minimal effect on using your robot.  If you observe an issue, please
+let us know via a support ticket.
+
 Upgrading Your Robot to ROS Melodic + Ubuntu 18.04
 --------------------------------------------------
 .. WARNING::
@@ -39,7 +44,7 @@ For (3), you can easily record the list of packages you installed via::
 
 As well, you might want to record what repositories are part of your workspaces.
 
-For (4), such files are likely located in ``/etc/udev/rules.d/`, and should be saved.
+For (4), such files are likely located in ``/etc/udev/rules.d/``, and should be saved.
 
 For (5), this file may be useful for reference if the install process doesn't
 automatically set up networking on your robot correctly::
@@ -68,13 +73,15 @@ or other hardware configuration changes were made to get them working.
   - After install, you may need to unblock `apt`. Do this by clicking the App Store
     icon on the sidebar, which should trigger an update prompt you can close: |AppStore|
   - You'll probably want to install a few convenience packages such as openssh-server
-    to enable SSH into your robot: ``sudo apt install openssh-server``.  You might also want
-    to install your favorite commandline text editor
+    to enable SSH into your robot: ``sudo apt install openssh-server net-tools``.
+    You might also want to install your favorite commandline text editor.
 
-#. Update your Ubuntu install: ``sudo apt dist-upgrade -y``
+#. Update your Ubuntu install: ``sudo apt update && sudo apt dist-upgrade -y``
 #. Install ROS Melodic by following the instructions `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
-   We start from the *ROS-Base* setup, via the ``ros-melodic-ros-base`` package.
-#. **NOTE**: at a later time, Fetch will host and recommend a mirror of ROS Melodic debians.
+   You will want to do steps 1.1 through 1.5. The system-config debian installed later in
+   these upgrade instructions will do the equivalent of step 1.6 for the `fetch` user on
+   the robot. We use the *ROS-Base* setup, via the ``ros-melodic-ros-base`` package.
+#. **NOTE**: at a later time, Fetch may host and recommend its own mirror of ROS Melodic debians.
 #. Run the following to install Fetch research debians:
 
    - General packages for Fetch robots::
@@ -91,14 +98,14 @@ or other hardware configuration changes were made to get them working.
 
 #. From your non-robot computer, restore the contents of /etc/ros/indigo to /etc/ros/melodic on the robot::
 
-     scp fetch_robot_files.tar.gz fetch@fetchXXX:~/
-     ssh fetch@fetchXXX
-     sudo mkdir -p /etc/ros/melodic
-     tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
+        scp fetch_robot_files.tar.gz fetch@fetchXXX:~/
+        ssh fetch@fetchXXX
+        sudo mkdir -p /etc/ros/melodic
+        tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
 
 #. Power cycle the robot::
 
-  sudo /sbin/reboot
+        sudo /sbin/reboot
 
 .. |AppStore| image:: _static/app_store.jpg
 
@@ -146,9 +153,12 @@ Verify that things are working.  All of the following steps assume that you are
 
    - The LEDs on the PS3 controller may continually blink, even though it is connected.
    - Inputs may not be sent from the PS3 controller if the accelerometers in the
-     controller do not detect motion.
+     controller do not detect motion. This can result in jerky motion when using
+     the controller.
 
-#.  At this point the robot is probably working fine and is ready for use!
+   We are hoping to determine fixes for these in the near future.
+
+#. At this point the robot is probably working fine and is ready for use!
 
 Compatibility of Other Computers Used with the Robot
 ----------------------------------------------------
@@ -164,6 +174,8 @@ machine that also has ROS Melodic installed.
     `ros-melodic-fetch-tools <https://github.com/fetchrobotics/fetch_tools>`_.
   - Ensure that these packages are included in your path (e.g.
     ``rospack find fetch_description`` returns a path)
+  - Common gotcha on a new setup: If the robot model doesn't appear at first, you
+    may want to change the "Fixed frame" from e.g. 'map' to 'odom'.
 
 Not Recommended/Supported: Upgrading from 14.04 to 18.04 (via 16.04)
 --------------------------------------------------------------------
@@ -184,7 +196,7 @@ Appendices
 Disk filling issue
 ++++++++++++++++++
 Some robots may encounter an issue where Gnome3 fills the disk by spamming /var/log/syslog.
-This issue has a fix that is not available by default yet, but can be manually done:
+This issue has a fix that is not available via `apt` yet, but can be manually done:
 https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1772677/comments/63
 
 Ensuring robot's ethernet ports are configured correctly
@@ -206,9 +218,14 @@ ports are "swapped".  You can fix this in software or in hardware:
 
 Accessing Boot Menu on Fetch Robots
 +++++++++++++++++++++++++++++++++++
-Fetch research robots may be using one of two BIOS flavors.  Older robots use
-an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).
+You may need to access the boot menu in order to boot from a USB flash
+drive and install Ubuntu 18.04.  Due to different computer motherboards used in the
+past, Fetch research robots may be using one of two BIOS flavors.  Older robots
+use an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).
 
+These different BIOS types activate the boot media selection menu with different keys:
 - If your robot shows the MSI splash screen at boot, press F11 to access the boot menu.
 - If your robot shows the black AMI splash screen at boot (this lasts for about 1 second),
   press F7 to access the boot menu.
+
+If you fail to get into the boot menu, you can restart the computer and try again.
