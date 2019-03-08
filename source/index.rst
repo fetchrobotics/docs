@@ -15,6 +15,7 @@ This manual can also be downloaded as a `PDF <http://docs.fetchrobotics.com/Fetc
    robot_hardware
    computer
    care_and_feeding
+   indigo_to_melodic
 
 Tutorials
 ---------
