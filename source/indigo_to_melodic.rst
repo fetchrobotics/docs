@@ -36,7 +36,8 @@ For (1), we recommend doing::
   tar -zcf fetch_robot_files.tar.gz /etc/ros/indigo/
   scp fetch_robot_files.tar.gz USER@HOST:~/
 
-For (2), this may include workspaces, logs, and training data.
+For (2), this may include workspaces, logs, and training data.  You might even
+want to back up the entirety of ``/opt/ros/indigo`` if you are unsure.
 
 For (3), you can easily record the list of packages you installed via::
 
@@ -140,12 +141,16 @@ Verify that things are working.  All of the following steps assume that you are
 
 #. The gripper should now have power, so we should be able to ping it::
 
-       ping 10.42.42.44  # gripper
+       ping 10.42.42.43  # gripper
 
 #. The arm's "gravity compensation" should now be working. You should be able to
    freely move the arm by hand.
 
 #. Check whether your PS3 controller pairs and controls the robot.
+
+   **Important note**: The PS3 controller currently won't work with ROS by default.
+   To fix this, run ``sudo ln -s /dev/input/js0 /dev/ps3joy``. We hope to fix this
+   by fixing the corresponding udev rules eventually.
 
    **Important note**: for 18.04 the robots have switched from using sixad to using
    PS3joy.  Some changes in behaviour you may see:
@@ -158,7 +163,7 @@ Verify that things are working.  All of the following steps assume that you are
    We are hoping to determine fixes for these in the near future.
 
 #. At this point the robot is probably working fine and is ready for use! (Unless you
-   additional customizations to restore; see next step)
+   have additional customizations to restore; see next step)
 
 #. If applicable, from your non-robot computer, restore the contents of
    ``/etc/ros/indigo`` to ``/etc/ros/melodic`` on the robot::

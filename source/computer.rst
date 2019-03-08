@@ -109,8 +109,8 @@ Clock Synchronization
 ---------------------
 
 It is recommended to install the chrony NTP client on both robots and desktops
-in order to keep their time synchronized. By default, robots do not ship with
-chrony installed. To install chrony on Ubuntu:
+in order to keep their time synchronized. By default, robots do ship with chrony
+installed, but did not initially. To install chrony in Ubuntu on an older robot:
 
 ::
 
