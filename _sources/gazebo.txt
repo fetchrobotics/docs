@@ -2,7 +2,14 @@ Tutorial: Gazebo Simulation
 ===========================
 
 Fetch and Freight have simulated counterparts using the
-`Gazebo Simulator <http://gazebosim.org>`_.
+`Gazebo Simulator <http://gazebosim.org>`_ which you can install locally on
+your system.
+
+The Construct Sim provides a way to simulate a Fetch in Gazebo via
+*their cloud service* using a single
+`ROSJect link <https://rds.theconstructsim.com/tc_projects/
+use_project_share_link/4ba9621c-e546-4353-848e-dc7326c8e467>`_ in case you
+want to avoid the installation process.
 
 Installation
 ------------
@@ -108,6 +115,29 @@ This will start:
    the navigation stack will be once again called to navigate into the room
    with the countertop where the robot will place the cube on the other
    table.
+
+Launch it on ROSDS
+-------------------------
+
+.. figure:: _static/rosds.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+
+As mentioned beforehand, you can run the whole simulation on the
+`ROS Development Studio <http://www.theconstructsim.com/rds-ros-development-studio/>`_,
+by The Construct, with a single click. The advantages include:
+
+ * No installation required
+ * Any operating system can be used to program Fetch robots with ROS
+ * You can start testing and programming Fetch robots in 30 seconds!
+
+In case you want to try it, you can just press the **Run on ROSDS** button
+to start:
+
+.. figure:: _static/run_on_rosds.png
+   :width: 200px
+   :target: https:\/\/rds.theconstructsim.com\/tc_projects\/use_project_share_link\/4ba9621c-e546-4353-848e-dc7326c8e467
 
 Simulation vs. Real Robots
 --------------------------

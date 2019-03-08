@@ -178,3 +178,25 @@ USB cable, and then running:
 
 This situation is most often caused by charging the robot joystick from
 the USB port of another computer.
+
+Using Deadzone Parameter to Correct Drift
+-----------------------------------------
+
+Some controllers have poorly-zeroed joysticks, meaning that they send a nonzero
+value when the joystick is untouched and ought to send a zero value. This will be
+apparent if you press the deadman button on the controller, and the robot slowly
+moves without any input to the joysticks.
+
+This behavior can be compensated for by using a rosparameter: **joy/deadzone**
+(`ROS docs <http://wiki.ros.org/joy#Parameters>`_), which defines the amount by
+which the joystick has to move before it is considered to be off-center, specified
+relative to an axis normalized between -1 and 1.
+
+Add/set the parameter in ``/etc/ros/DISTRO/robot.launch``::
+
+  <!-- Teleop -->
+    <include file="$(find fetch_bringup)/launch/include/teleop.launch.xml"/>
+    <param name="joy/deadzone" value="0.1"/>
+
+You can inspect the output of ``rostopic echo /joy`` with the controller
+connected to choose an appropriate value for your controller.

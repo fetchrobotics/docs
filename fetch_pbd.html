@@ -32,9 +32,6 @@
   
 
   
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
         <link rel="next" title="API Overview" href="api_overview.html"/>
         <link rel="prev" title="Tutorial: Calibrating Fetch" href="calibration.html"/> 
@@ -97,7 +94,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What’s In Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
@@ -111,7 +108,7 @@
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch’s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#software-runstop">Software Runstop</a></li>
@@ -119,7 +116,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-deadzone-parameter-to-correct-drift">Using Deadzone Parameter to Correct Drift</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
@@ -175,8 +173,12 @@
 <li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Overview and Configuration</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="computer.html#default-user-account">Default User Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="computer.html#creating-user-accounts">Creating User Accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#networking">Networking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#connecting-the-robot-to-a-wireless-network">Connecting the Robot to a Wireless Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#networking">Networking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="computer.html#connecting-the-robot-to-a-wireless-network">Connecting the Robot to a Wireless Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="computer.html#configuring-the-robot-to-use-a-static-ip-for-access-panel-ethernet">Configuring the Robot to use a Static IP for Access Panel Ethernet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="computer.html#troubleshooting-ros-interactions-with-robot-across-a-network">Troubleshooting ROS Interactions with Robot Across a Network</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="computer.html#clock-synchronization">Clock Synchronization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="computer.html#upstart-services">Upstart Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="computer.html#log-files">Log Files</a></li>
@@ -189,6 +191,23 @@
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="indigo_to_melodic.html">ROS Melodic + Ubuntu 18.04</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#upgrading-your-robot-to-ros-melodic-ubuntu-18-04">Upgrading Your Robot to ROS Melodic + Ubuntu 18.04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#before-upgrade">Before Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#install-and-installing-ros-fetch-packages">18.04 Install and Installing ROS/Fetch Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#post-install-validation">Post-install Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#compatibility-of-other-computers-used-with-the-robot">Compatibility of Other Computers Used with the Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#not-recommended-supported-upgrading-from-14-04-to-18-04-via-16-04">Not Recommended/Supported: Upgrading from 14.04 to 18.04 (via 16.04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#appendices">Appendices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#disk-filling-issue">Disk filling issue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot&#8217;s ethernet ports are configured correctly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -216,7 +235,8 @@
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#using-deadzone-parameter-to-correct-drift">Using Deadzone Parameter to Correct Drift</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
@@ -295,11 +315,11 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-cite-fetch-or-freight-in-an-academic-paper">How can I cite Fetch or Freight in an Academic Paper?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won’t my robot do anything at all (charge, move, etc…)?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won’t my robot turn on when I push the power button?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won’t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won’t gravity compensate, help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
 </ul>
 </li>
 </ul>
@@ -368,7 +388,7 @@
 <div class="section" id="installing-from-source">
 <h2>Installing from Source<a class="headerlink" href="#installing-from-source" title="Permalink to this headline">¶</a></h2>
 <p>Clone the repository and build on the robot:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ cd ~/catkin_ws/src
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ cd ~/catkin_ws/src
 &gt;$ git clone https://github.com/fetchrobotics/fetch_pbd.git
 &gt;$ cd ~/catkin_ws
 &gt;$ catkin_make
@@ -378,12 +398,12 @@
 <div class="section" id="running">
 <h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
 <p>Run these commands on a terminal on the Fetch:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
 &gt;$ roslaunch fetch_pbd_interaction pbd.launch
 </pre></div>
 </div>
-<p>You can run the backend without the “social gaze” head movements or without the sounds by passing arguments to the launch file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
+<p>You can run the backend without the &#8220;social gaze&#8221; head movements or without the sounds by passing arguments to the launch file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
 &gt;$ roslaunch fetch_pbd_interaction pbd.launch social_gaze:=false play_sound:=false
 </pre></div>
 </div>
@@ -392,7 +412,7 @@ This behaviour is a bit complicated. It is recommended that you specify the full
 If you specify a from_file then actions will be loaded from that file. They will replace the ones in your session database.
 Whatever was in your session database will get stored in a timestamped file in your .ros folder (not overwritten).
 If you specify a to_file then whatever is in your current session file be saved to that file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
 &gt;$ roslaunch fetch_pbd_interaction pbd.launch from_file:=/full/path/from.json to_file:=/full/path/to.json
 </pre></div>
 </div>
@@ -404,8 +424,8 @@ If you specify a to_file then whatever is in your current session file be saved 
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="_images/fetch_pbd_home_screen.png"><img alt="_images/fetch_pbd_home_screen.png" src="_images/fetch_pbd_home_screen.png" style="width: 100%;" /></a>
 </div>
-<p>You can directly run/copy/delete actions from the main page. Or hit the “Edit” button to see more information on that action.</p>
-<p>On the “Current Action” screen, most of the buttons are pretty self-explanatory. You can execute the entire action using the “Run” button at the bottom of the screen. This will execute all of the primitives in the order they appear in the Primitive List. You can click on a specific primitive (either the marker or the list item), to highlight the primitive.</p>
+<p>You can directly run/copy/delete actions from the main page. Or hit the &#8220;Edit&#8221; button to see more information on that action.</p>
+<p>On the &#8220;Current Action&#8221; screen, most of the buttons are pretty self-explanatory. You can execute the entire action using the &#8220;Run&#8221; button at the bottom of the screen. This will execute all of the primitives in the order they appear in the Primitive List. You can click on a specific primitive (either the marker or the list item), to highlight the primitive.</p>
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="_images/fetch_pbd_select.png"><img alt="_images/fetch_pbd_select.png" src="_images/fetch_pbd_select.png" style="width: 100%;" /></a>
 </div>
@@ -432,8 +452,8 @@ If you specify a to_file then whatever is in your current session file be saved 
 </div>
 <div class="section" id="code-interface">
 <h2>Code Interface<a class="headerlink" href="#code-interface" title="Permalink to this headline">¶</a></h2>
-<p>You can also access the actions you’ve programmed through code. You still need to run pbd_backend.launch.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
+<p>You can also access the actions you&#8217;ve programmed through code. You still need to run pbd_backend.launch.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ source ~/catkin_ws/devel/setup.bash
 &gt;$ rosrun fetch_pbd_interaction demo.py
 </pre></div>
 </div>
@@ -443,11 +463,11 @@ If you specify a to_file then whatever is in your current session file be saved 
 <p><strong>Interaction Node:</strong>
 The pbd_interaction_node.py handles the interaction between speech/GUI and the rest of the system. Changes happen through the update loop in interaction.py and also through the callbacks from speech/GUI commands. interaction.py also subscribes to updates from the pbd_world_node.py, which notifies it of changes in objects in the world. Through callbacks and the update loop, interaction.py hooks in to session.py. session.py handles creating actions and primitives and saving them to the database.</p>
 <p><strong>Arm Control Node:</strong>
-The pbd_arm_control_node.py is how the robot’s arm is controlled to execute actions/primitives. It provides a lower level service interface to move the arm. The interaction node interacts with this through the interface in robot.py.</p>
+The pbd_arm_control_node.py is how the robot&#8217;s arm is controlled to execute actions/primitives. It provides a lower level service interface to move the arm. The interaction node interacts with this through the interface in robot.py.</p>
 <p><strong>World Node:</strong>
-The pbd_world_node.py handles the robot’s perception of the world. Other nodes ask the world node about the state of the world and can both send and subscribe to updates to the world. Its main function is to provide a list of objects currently in the scene.</p>
+The pbd_world_node.py handles the robot&#8217;s perception of the world. Other nodes ask the world node about the state of the world and can both send and subscribe to updates to the world. Its main function is to provide a list of objects currently in the scene.</p>
 <p><strong>Social Gaze Node:</strong>
-The social_gaze_server.py handles the movements of the robot’s head. This is also controlled through the robot.py interface. The sounds are also provided through this interface.</p>
+The social_gaze_server.py handles the movements of the robot&#8217;s head. This is also controlled through the robot.py interface. The sounds are also provided through this interface.</p>
 </div>
 </div>
 
@@ -500,7 +520,6 @@ The social_gaze_server.py handles the movements of the robot’s head. This is a
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 
