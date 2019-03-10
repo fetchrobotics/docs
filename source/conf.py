@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Fetch & Freight Research Edition'
-copyright = u'2014-2016, Fetch Robotics Inc'
+copyright = u'2014-2019, Fetch Robotics Inc'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
