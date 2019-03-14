@@ -8,7 +8,7 @@ let us know via a support ticket.
 
 .. WARNING::
    Gazebo9 and the Fetch have some bugs which we are currently working to fix.
-   If you use Gazebo, please check the status of this `issue on GitHub<https://github.com/fetchrobotics/fetch_gazebo/issues/37>`_.
+   If you use Gazebo, please check the status of this `issue on GitHub <https://github.com/fetchrobotics/fetch_gazebo/issues/37>`_.
 
 Upgrading Your Robot to ROS Melodic + Ubuntu 18.04
 --------------------------------------------------
