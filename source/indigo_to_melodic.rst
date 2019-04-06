@@ -176,6 +176,9 @@ Verify that things are working.  All of the following steps assume that you are
         ssh fetch@fetchXXX
         sudo mkdir -p /etc/ros/melodic
         tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
+        
+   **Important**: You should modify ``/etc/ros/melodic/robot.launch`` to replace any
+   instances of ``indigo`` with ``melodic``
 
    As well, you can restore any other saved files to the robot.
 
