@@ -6,6 +6,10 @@ Fetch and Freight robots.  Other than the process of upgrading a robot, there
 should be minimal effect on using your robot.  If you observe an issue, please
 let us know via a support ticket.
 
+.. WARNING::
+   Gazebo9 and the Fetch have some bugs which we are currently working to fix.
+   If you use Gazebo, please check the status of this `issue on GitHub <https://github.com/fetchrobotics/fetch_gazebo/issues/37>`_.
+
 Upgrading Your Robot to ROS Melodic + Ubuntu 18.04
 --------------------------------------------------
 .. WARNING::
@@ -172,6 +176,9 @@ Verify that things are working.  All of the following steps assume that you are
         ssh fetch@fetchXXX
         sudo mkdir -p /etc/ros/melodic
         tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
+        
+   **Important**: You should modify ``/etc/ros/melodic/robot.launch`` to replace any
+   instances of ``indigo`` with ``melodic``
 
    As well, you can restore any other saved files to the robot.
 

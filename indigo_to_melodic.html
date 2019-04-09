@@ -383,6 +383,11 @@
 Fetch and Freight robots.  Other than the process of upgrading a robot, there
 should be minimal effect on using your robot.  If you observe an issue, please
 let us know via a support ticket.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Gazebo9 and the Fetch have some bugs which we are currently working to fix.
+If you use Gazebo, please check the status of this <a class="reference external" href="https://github.com/fetchrobotics/fetch_gazebo/issues/37">issue on GitHub</a>.</p>
+</div>
 <div class="section" id="upgrading-your-robot-to-ros-melodic-ubuntu-18-04">
 <h2>Upgrading Your Robot to ROS Melodic + Ubuntu 18.04<a class="headerlink" href="#upgrading-your-robot-to-ros-melodic-ubuntu-18-04" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
@@ -563,6 +568,8 @@ have additional customizations to restore; see next step)</p>
 <span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="o">~/</span><span class="n">fetch_robot_files</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">melodic</span><span class="o">/</span>
 </pre></div>
 </div>
+<p><strong>Important</strong>: You should modify <code class="docutils literal"><span class="pre">/etc/ros/melodic/robot.launch</span></code> to replace any
+instances of <code class="docutils literal"><span class="pre">indigo</span></code> with <code class="docutils literal"><span class="pre">melodic</span></code></p>
 <p>As well, you can restore any other saved files to the robot.</p>
 <p>This is the point at which some things may not work fully, e.g. if packages
 used in ROS Indigo need updates/replacements for ROS Melodic.</p>
@@ -664,7 +671,7 @@ use an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2016, Fetch Robotics Inc.
+        &copy; Copyright 2014-2019, Fetch Robotics Inc.
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
