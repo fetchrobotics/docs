@@ -490,7 +490,7 @@ You will want to do steps 1.1 through 1.6. In writing/testing these instructions
 <li><p class="first">Then install packages specific to the robot type:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>export ROBOTTYPE=$(hostname | awk -F&#39;[0-9]&#39; &#39;{print $1}&#39;)
 # sudo apt install $ROBOTTYPE-melodic-config  # pending future availability
-wget https://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
 sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
 </pre></div>
 </div>
