@@ -84,6 +84,7 @@ or other hardware configuration changes were made to get them working.
 #. **Update your Ubuntu install:** ``sudo apt update && sudo apt dist-upgrade -y``
 #. **Install ROS Melodic** by following the instructions `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
    You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:
+
   - You use the **ROS-Base** setup, via the ``ros-melodic-ros-base`` package.
   - You're using bash, so step 1.6 for the fetch user is::
 
@@ -104,8 +105,11 @@ or other hardware configuration changes were made to get them working.
 
        export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
        # sudo apt install $ROBOTTYPE-melodic-config  # pending future availability
-       wget https://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+       wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
        sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
+
+     If you get an error regarding `chrony`, do `sudo apt install chrony`, and then try the
+     melodic-config debian install again.
 
 #. **Power cycle the robot**::
 
@@ -122,6 +126,27 @@ Verify that things are working.  All of the following steps assume that you are
 ``ssh``'d into the robot::
 
         ssh fetch@fetchXXXX
+
+#. If your robot has not been upgraded in a while, it is likely that it will need to
+   automatically upgrade the firmware on its boards. This can take several minutes
+   to complete after you have rebooted the robot. You can monitor this by doing::
+
+        sudo tail -f /var/log/ros/robot.log
+
+   You may see messages like the following::
+
+        [ WARN] [1554930321.086981030]: Updating wrist_roll_mcb from -1 to 101
+        [ INFO] [1554930321.087023328]: Updating board 44
+        [ WARN] [1554930321.094045845]: updating firmware loader for board 0x11
+        [ WARN] [1554930323.609072063]: updating firmware loader for board 0x11
+        [ WARN] [1554930323.614075007]: Unexpected response for board 17 :  recv_len=20 board_id=17 table_
+        addr=16 data_len=16
+        [ WARN] [1554930323.614149147]: Unexpected response for board 38 :  recv_len=20 board_id=38 table_
+        addr=16 data_len=16
+
+   If you see the second sort of message, the likely fix is to power cycle the robot again
+   via ``rosrun fetch_drivers charger_power reboot``.
+
 
 #. Verify that calibration is installed, e.g. a date should be output if you run the command below::
 
@@ -146,6 +171,10 @@ Verify that things are working.  All of the following steps assume that you are
 #. The gripper should now have power, so we should be able to ping it::
 
        ping 10.42.42.43  # gripper
+
+   If the gripper does not respond, please contact support. We are aware of an issue
+   affecting some robots, and are gathering information to identify the cause and
+   best solution.
 
 #. The arm's "gravity compensation" should now be working. You should be able to
    freely move the arm by hand.
