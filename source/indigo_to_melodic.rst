@@ -82,6 +82,7 @@ or other hardware configuration changes were made to get them working.
     You might also want to install your favorite commandline text editor.
 
 #. **Update your Ubuntu install:** ``sudo apt update && sudo apt dist-upgrade -y``
+#. To make the robot work correctly when a monitor is not attached, run: ``sudo systemctl set-default multi-user.target``
 #. **Install ROS Melodic** by following the instructions `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
    You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:
 
