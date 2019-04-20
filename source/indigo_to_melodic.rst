@@ -1,6 +1,11 @@
 ROS Melodic + Ubuntu 18.04
 ==========================
 
+.. WARNING::
+   As of 4-19-2019, some issues are still being worked out with some installs. You
+   should ensure that your research needs will allow for a possible prolonged
+   troubleshooting phase with your robot(s).
+
 Fetch Robotics has recently started supporting ROS Melodic and Ubuntu 18.04 on
 Fetch and Freight robots.  Other than the process of upgrading a robot, there
 should be minimal effect on using your robot.  If you observe an issue, please
@@ -82,15 +87,20 @@ or other hardware configuration changes were made to get them working.
     You might also want to install your favorite commandline text editor.
 
 #. **Update your Ubuntu install:** ``sudo apt update && sudo apt dist-upgrade -y``
-#. **Install ROS Melodic** by following the instructions `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
+#. To make the robot works correctly when a monitor is not attached, run:
+   ``sudo systemctl set-default multi-user.target``
+#. **Install ROS Melodic** by following the instructions
+   `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
    You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:
+
   - You use the **ROS-Base** setup, via the ``ros-melodic-ros-base`` package.
   - You're using bash, so step 1.6 for the fetch user is::
 
         echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
         source ~/.bashrc
 
-    You can also make this apply for all new users: ``sudo su -c 'echo "source /opt/ros/melodic/setup.bash" >> /etc/bash.bashrc'``
+    You can also make this apply for all new users:
+    ``sudo su -c 'echo "source /opt/ros/melodic/setup.bash" >> /etc/bash.bashrc'``
 
 #. **NOTE**: at a later time, Fetch may host and recommend its own mirror of ROS Melodic debians.
 #. Run the following to **install Fetch research debians**:
@@ -104,8 +114,11 @@ or other hardware configuration changes were made to get them working.
 
        export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
        # sudo apt install $ROBOTTYPE-melodic-config  # pending future availability
-       wget https://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+       wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
        sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
+
+     If you get an error regarding `chrony`, do `sudo apt install chrony`, and then try the
+     melodic-config debian install again.
 
 #. **Power cycle the robot**::
 
@@ -122,6 +135,27 @@ Verify that things are working.  All of the following steps assume that you are
 ``ssh``'d into the robot::
 
         ssh fetch@fetchXXXX
+
+#. If your robot has not been upgraded in a while, it is likely that it will need to
+   automatically upgrade the firmware on its boards. This can take several minutes
+   to complete after you have rebooted the robot. You can monitor this by doing::
+
+        sudo tail -f /var/log/ros/robot.log
+
+   You may see messages like the following::
+
+        [ WARN] [1554930321.086981030]: Updating wrist_roll_mcb from -1 to 101
+        [ INFO] [1554930321.087023328]: Updating board 44
+        [ WARN] [1554930321.094045845]: updating firmware loader for board 0x11
+        [ WARN] [1554930323.609072063]: updating firmware loader for board 0x11
+        [ WARN] [1554930323.614075007]: Unexpected response for board 17 :  recv_len=20 board_id=17 table_
+        addr=16 data_len=16
+        [ WARN] [1554930323.614149147]: Unexpected response for board 38 :  recv_len=20 board_id=38 table_
+        addr=16 data_len=16
+
+   If you see the second sort of message, the likely fix is to power cycle the robot again
+   via ``rosrun fetch_drivers charger_power reboot``.
+
 
 #. Verify that calibration is installed, e.g. a date should be output if you run the command below::
 
@@ -147,6 +181,10 @@ Verify that things are working.  All of the following steps assume that you are
 
        ping 10.42.42.43  # gripper
 
+   If the gripper does not respond, please contact support. We are aware of an issue
+   affecting some robots, and are gathering information to identify the cause and
+   best solution.
+
 #. The arm's "gravity compensation" should now be working. You should be able to
    freely move the arm by hand.
 
@@ -156,8 +194,17 @@ Verify that things are working.  All of the following steps assume that you are
    To fix this, run ``sudo ln -s /dev/input/js0 /dev/ps3joy``. We hope to fix this
    by fixing the corresponding udev rules eventually.
 
+   - If you then verify that the /joy topic is publishing, you may need to do
+     ``sudo service robot stop && sudo service robot start`` before the robot
+     responds to teleop.
+   - The previously described fix of creating /dev/ps3joy may reset on power-cycle.
+     A more permanent hack is described
+     `in this comment <https://github.com/fetchrobotics/docs/issues/66#issuecomment-485049854>`_.
+
    **Important note**: for 18.04 the robots have switched from using sixad to using
-   PS3joy.  Some changes in behaviour you may see:
+   PS3joy.  While you do not need to re-pair the controller to the computer, note that
+   the utility for doing so is now located at ``/opt/ros/melodic/lib/ps3joy/sixad``.
+   Some other changes in behaviour you may see:
 
    - The LEDs on the PS3 controller may continually blink, even though it is connected.
    - Inputs may not be sent from the PS3 controller if the accelerometers in the
@@ -176,7 +223,7 @@ Verify that things are working.  All of the following steps assume that you are
         ssh fetch@fetchXXX
         sudo mkdir -p /etc/ros/melodic
         tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
-        
+
    **Important**: You should modify ``/etc/ros/melodic/robot.launch`` to replace any
    instances of ``indigo`` with ``melodic``
 
