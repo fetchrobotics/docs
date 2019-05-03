@@ -161,7 +161,7 @@ Torso Calibration Procedure
 Follow these steps in order to verify or calibrate the torso position
 sensors:
 
-1. Move torso to lowest position, and tuck the arm.
+1. Move torso to lowest position, and tuck the arm : ``rosrun fetch_teleop tuck_arm.py``
 
 2. Place a protective barrier between the arm and top base cover.
 
