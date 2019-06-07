@@ -108,9 +108,9 @@ use when installing fasteners.
 =========== ============ ========================= 
 Location    Fastener     Max Torque 
 =========== ============ ========================= 
-Base        M5*           8.5Nm
-Head        M4           4.2Nm
-Gripper     M3           0.7Nm (into the standoff)
+Base        M5*          3.6Nm
+Head        M4           3.0Nm
+Gripper     M3           0.50Nm (into the standoff)
 =========== ============ ========================= 
 
 .. note::
