@@ -10,18 +10,12 @@ Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot
 base, torso, head and gripper.
 
-.. note:: If you are using the older PS3 controller a different
-   version of this tutorial can be found `here <teleopPS3.rst>`_.
-
-.. note:: To switch your robot to use a PS4 controller instead of
-   a PS3 controller, see the instructions `here <ps4.rst>`_.
-
-.. figure:: _static/ps4_numbered.png
+.. figure:: _static/joystick_numbered.png
    :width: 100%
    :align: center
    :figclass: align-centered
 
-.. figure:: _static/ps4_numbered2.png
+.. figure:: _static/joystick_numbered2.png
    :width: 100%
    :align: center
    :figclass: align-centered
@@ -110,7 +104,7 @@ Software Runstop
 
 In addition to the runstop button on the side of the robot, similar software
 functionality is also available, allowing for button presses on the
-PS4 controller or a program to disable the breakers.
+PS3 controller or a program to disable the breakers.
 This functionality is available in release 0.7.3 of the
 fetch_bringup package. The teleop portion is disabled by default.
 
@@ -157,7 +151,7 @@ you will want to simply copy the block the below.
 
 ::
 
-  <!-- Software Runstop -->                                                     
+  <!-- Software Runstop -->
   <include file="$(find fetch_bringup)/launch/include/runstop.launch.xml">
     <arg name="flags" value="-a -b -g -t" />
   </include>
@@ -175,15 +169,23 @@ Finally, restart the drivers so that our changes take effect:
 
   >$ sudo service robot stop && sudo service robot start
 
-  
+
 Re-pairing Robot Joystick that Won't Connect
 --------------------------------------------
 
-For a Bluetooth PS4 controller, the controller can be re-paired through the
-Ubuntu Bluetooth settings.  To put the controller in pairing mode, press and
-hold the Share button, and then press and hold the center PS4 button for a
-second and then release it, and then release the share button.  The LED on
-the controller should start flashing twice, once per second.
+If the Bluetooth robot joystick is a PS3 controller and will no longer
+connect to the robot, it can easily be re-paired to the robot by connecting
+it to the robot with a USB cable, and then running:
+
+::
+
+  # 14.04 with PS3 controller
+  >$ sudo sixpair
+  # 18.04 with PS3 controller; Note: the controller LEDs will continually flash even when connected
+  >$ sudo /opt/ros/melodic/lib/ps3joy/sixpair
+
+This situation is most often caused by charging the robot joystick from
+the USB port of another computer.
 
 Using Deadzone Parameter to Correct Drift
 -----------------------------------------
@@ -198,7 +200,7 @@ This behavior can be compensated for by using a rosparameter: **joy/deadzone**
 which the joystick has to move before it is considered to be off-center, specified
 relative to an axis normalized between -1 and 1.
 
-Add/set the parameter in ``/etc/ros/melodic/robot.launch``::
+Add/set the parameter in ``/etc/ros/DISTRO/robot.launch``::
 
   <!-- Teleop -->
     <include file="$(find fetch_bringup)/launch/include/teleop.launch.xml"/>
