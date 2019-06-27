@@ -2,7 +2,7 @@ ROS Melodic + Ubuntu 18.04
 ==========================
 
 .. WARNING::
-   As of 4-19-2019, some issues are still being worked out with some installs. You
+   As of 7-19-2019, some issues are still being worked out with some installs. You
    should ensure that your research needs will allow for a possible prolonged
    troubleshooting phase with your robot(s).
 
@@ -11,8 +11,17 @@ Fetch and Freight robots.  Other than the process of upgrading a robot, there
 should be minimal effect on using your robot.  If you observe an issue, please
 let us know via a support ticket.
 
+Known issues
+============
+
 .. WARNING::
-   Gazebo9 and the Fetch have some bugs which we are currently working to fix.
+   The PS3 controller does not work as well on 18.04 as it did on 14.04. To achieve
+   smooth control, the input from the controller will need to be continually varied.
+   This can be done by continually moving or shaking the controller.  Alternately,
+   you can `switch to using a PS4 controller <ps4.rst>`_.
+
+.. WARNING::
+   Gazebo9 and the Fetch have some bugs which we are currently aware of.
    If you use Gazebo, please check the status of this `issue on GitHub <https://github.com/fetchrobotics/fetch_gazebo/issues/37>`_.
 
 Upgrading Your Robot to ROS Melodic + Ubuntu 18.04
@@ -37,7 +46,7 @@ Back up files from the robot!  There are a few categories of files to back up:
 #. Udev rules created for additional hardware (e.g. sensors) added to your robot
 #. Network hardware configuration (for troubleshooting)
 
-Below, we assume that after logging into the robot (e.g. via `ssh`) you back up
+Below, we assume that after logging into the robot (e.g. via ``ssh``) you back up
 files to a machine named HOST with username USER.
 
 For (1), we recommend doing::
@@ -64,9 +73,57 @@ automatically set up networking on your robot correctly::
 If you are using any additional hardware (sensors), be sure to record what network
 or other hardware configuration changes were made to get them working.
 
+AUTOMATED INSTALLER: 18.04 and ROS Melodic Install
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
-18.04 Install and Installing ROS/Fetch Packages
-+++++++++++++++++++++++++++++++++++++++++++++++
+.. IMPORTANT::
+   Back up your files as described in the previous section
+
+#. **Runstop the robot**, to avoid unexpected movement of the robot.
+#. Create the installer USB flash drive on a separate computer:
+  #. In a web browser, navigate to http://packages.fetchrobotics.com/images/ and click and
+     download the latest fetch_ubuntu_*.iso
+  #. Plug the flash drive into your computer.
+  #. In a terminal, run ``sudo usb-creator-gtk``. This will open a utility for putting the
+     install image onto the flash drive.  Select the fetch_ubuntu.iso file (you may have to
+     browse via “Other”.  Verify the correct disk is selected in the second listbox, and then
+     click "Make Startup Disk".
+     (If usb-creator-gtk fails to work, you probably will need to format the disk using, e.g.,
+     gParted.  After formatting the USB drive, retry usb-creator-gtk)
+
+#. Install OS:
+  #. Plug in the USB flash drive to the robot, as well as a monitor, keyboard and mouse.
+  #. Turn the robot on with the power button, and press either F7 or F11 several times to get
+     to the boot device selection window shown in the next step. If you fail to get to a
+     screen like the below, restart the robot and try again:
+  #. The name of the correct option in the boot menu varies based on the flash drive you used.
+     Typically, it will be similar to "UEFI (FAT) FlashDrive Name". See the following images
+     for what to expect and select:
+
+.. |Boot selection| image:: _static/boot_selection.jpg
+
+.. |Installer selection| image:: _static/install_selection.jpg
+
+.. |Continue Install| image:: _static/install_continue.jpg
+
+.. |Initial post-install prompt| image:: _static/install_prompt.jpg
+
+  #. If the robot is not connected to the internet via an ethernet cable, you will next be
+     prompted to connect to a wifi network in order to install needed packages.  Otherwise,
+     you will be prompted whether to *also* connect to a wifi network.
+  #. Next you will be prompted to give the robot's name.  A name other than fetchXX or freightXX
+     will result in a non-robot install of Ubuntu 18.04 (with ROS also installed). We recommend
+     keeping the same hostname for the robot, e.g. `fetch4`
+  #. The `fetch` user will be automatically created, with password 'robotics'.
+  #. Wait for the install to complete.  The post-install script will restart fairly quickly,
+     and then resume running/installing after the reboot.  It will then reboot a second time
+     at which point, the desktop should be blank, and the install is complete.
+
+If the installer appears to get stuck, please send a picture of the screen to Support.
+
+
+MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. IMPORTANT::
    Back up your files as described in the previous section
@@ -203,7 +260,7 @@ Verify that things are working.  All of the following steps assume that you are
 
    **Important note**: for 18.04 the robots have switched from using sixad to using
    PS3joy.  While you do not need to re-pair the controller to the computer, note that
-   the utility for doing so is now located at ``/opt/ros/melodic/lib/ps3joy/sixad``.
+   the utility for doing so is now located at ``/opt/ros/melodic/lib/ps3joy/sixpair``.
    Some other changes in behaviour you may see:
 
    - The LEDs on the PS3 controller may continually blink, even though it is connected.
@@ -302,6 +359,7 @@ past, Fetch research robots may be using one of two BIOS flavors.  Older robots
 use an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).
 
 These different BIOS types activate the boot media selection menu with different keys:
+
 - If your robot shows the MSI splash screen at boot, press F11 to access the boot menu.
 - If your robot shows the black AMI splash screen at boot (this lasts for about 1 second),
   press F7 to access the boot menu.
