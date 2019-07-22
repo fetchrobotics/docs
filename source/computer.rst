@@ -71,9 +71,9 @@ keyboard, and mouse and use Ubuntu's Network Manager interface.
 
 Configuring the Robot to use a Static IP for Access Panel Ethernet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For 14.04: Edit and uncomment the section for eth0 in ``/etc/network/interfaces``
-
 For 18.04: Edit and uncomment the section for eth0 in ``/etc/netplan/99-fetch``
+
+For 14.04: Edit and uncomment the section for eth0 in ``/etc/network/interfaces``
 
 After making changes, restarting the robot will ensure changes for the ethernet
 port take effect.
@@ -114,27 +114,27 @@ installed, but did not initially. To install chrony in Ubuntu on an older robot:
 
 ::
 
-    > sudo apt-get update
-    > sudo apt-get install chrony
+    > sudo apt update
+    > sudo apt install chrony
 
 .. _upstart_services:
 
 Upstart Services
 ----------------
 
-Fetch and Freight use upstart to start and manage various services on the robot.
-The following upstart services start when the robot is booted:
+Fetch and Freight use systemd to start and manage various services on the robot.
+The following systemd services (aka 'units') start when the robot is booted:
 
 =========== ===========================================
 Name        Description
 =========== ===========================================
 roscore     starts a roscore
 robot       starts robot drivers, requires roscore
-sixad       driver for robot joystick over bluetooth
-soundplay   starts the sound_play node for audio in ROS
+ps3joy      driver for PS3 robot joystick over bluetooth
+ps4joy      driver for PS4 robot joystick over bluetooth
 =========== ===========================================
 
-Upstart service can be restart with the `service` command. For instance, to
+Services can be restart with the ``service`` command. For instance, to
 restart the robot drivers:
 
 ::
@@ -143,7 +143,7 @@ restart the robot drivers:
     >sudo service robot start
 
 Since the roscore runs independently of the drivers, the drivers can be
-restarted without having to restart remote instances of RVIZ or similar ROS
+restarted without having to restart remote instances of RViz or similar ROS
 tools. Note that this also means the parameter server will not be reset
 when restarting the drivers, and so a roscore restart may be required
 if the parameter server has been corrupted by a user script.
@@ -151,12 +151,11 @@ if the parameter server has been corrupted by a user script.
 Log Files
 ---------
 
-A number of log files are created on the robot. Log files related to upstart
-services can be found in the /var/log/upstart folder, the name of the log
-will be service.log.
-
-ROS logs for the robot and roscore upstart services will be created in the
-/var/log/ros folder.
+ROS logs are created in the /var/log/ros folder.  The ``robot`` service's logs
+are also sent to /var/log/ros/robot.log.  This log file is a common place to
+check for information on errors, if the robot is not working.  The other
+systemd services' outputs are less often used, but can be viewed using
+e.g. ``journalctl -u roscore``.
 
 Speakers and Audio
 ------------------

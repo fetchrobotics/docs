@@ -137,14 +137,14 @@ the arm, torso and head while the robot is connected a charger.
 Updating Your Robot
 -------------------
 
-Your robot has been pre-configured with ROS Indigo and the appropriate
+Your robot has been pre-configured with ROS Melodic and the appropriate
 APT repositories from which to fetch package updates.
 Upgrading to the latest packages is as easy as:
 
 ::
 
-   sudo apt-get update
-   sudo apt-get install --only-upgrade ros-indigo-* f.*-system-config
+   sudo apt update
+   sudo apt install --only-upgrade ros-melodic-* f.*-system-config
    sudo service robot stop
    sudo service robot start
 
@@ -154,6 +154,13 @@ Upgrading to the latest packages is as easy as:
     software, such as the kernel, to change. We can not guarantee your robot
     will function after making such a change. We recommend against using these
     commands unless you understand and accept the risks.
+
+.. note::
+
+    If your robot is running Ubuntu 14.04 with ROS Indigo, the above commands
+    will need to be slightly modified (i.e. ros-indigo instead of ros-melodic).
+    You can upgrade your robot to the currently supported version by following
+    the `OS upgrade procedure <indigo_to_melodic.rst>`_.
 
 Each circuit board within the robot is equipped with a bootloader, allowing
 new and updated firmware to be installed. New releases of the `fetch-drivers`

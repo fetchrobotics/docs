@@ -21,13 +21,13 @@ How do I create a good support ticket?
 
 ::
 
-   sudo apt-get update && sudo apt-get install ros-indigo-fetch-tools
+   sudo apt update && sudo apt install ros-melodic-fetch-tools
    declare -x ROS_MASTER_URI="http://*RobotHostNameGoesHere*:11311"
    fetch debug-snapshot
 
 .. note::
 
-   You will need ros-indigo-fetch-tools version 0.1.2 or greater to use the debug-snapshot command
+   You will need ros-melodic-fetch-tools version 0.1.2 or greater to use the debug-snapshot command
 
 
 * Create a new support ticket and attach the zip file that was created
@@ -60,8 +60,8 @@ Why won't my robot turn on when I push the power button?
 * If this did not solve your problem please contact Fetch Support
 
 
-Why won't my robot move when I use my PS3 joystick?
-------------------------------------------------------
+Why won't my robot move when I use my PS3/PS4 joystick?
+-------------------------------------------------------
 
 * If ring around the on button (#5 in figure below) is not illuminated please press the power button to turn on your robot (give it some time to boot and then try again)
 
@@ -70,7 +70,10 @@ Why won't my robot move when I use my PS3 joystick?
    :align: center
    :figclass: align-centered
 
-* If there are no red lights illuminated on the front of the ps3 controller then press the round button in the center of the controller to turn on the controller (when it is ready to use it will vibrate) (Red lights will be in one of the 4 holes to the left of the charging port in the following picture.)
+* PS4 controller: If the LED on the front of the controller is not solid blue, then the controller
+  is not connected. Press the middle PS4 button to connect.
+
+* PS3 controller: If there are no red lights illuminated on the front of the PS3 controller then press the round button in the center of the controller to turn on the controller (when it is ready to use it will vibrate) (Red lights will be in one of the 4 holes to the left of the charging port in the following picture.)
 
 .. figure:: _static/joystick_numbered2.png
    :width: 50%
