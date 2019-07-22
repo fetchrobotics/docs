@@ -22,13 +22,13 @@ hand-eye coordination of the robot is well calibrated. Calibration involves:
  * Updating the URDF and robot launch files with newly determined offsets.
 
 The :ref:`upstart_services` that start the robot will use the launch
-file in `/etc/ros/indigo/robot.launch`. Therefore, the last step in calibration
+file in `/etc/ros/melodic/robot.launch`. Therefore, the last step in calibration
 is to update that launch file and restart the drivers. Currently, the
 following aspects are updated:
 
- * The URDF file is copied to /etc/ros/indigo, and the name of the file is put
+ * The URDF file is copied to /etc/ros/melodic, and the name of the file is put
    into robot.launch. The calibration offsets are updated in the URDF file.
- * The camera calibration YAML files are copied to /etc/ros/indigo, and the
+ * The camera calibration YAML files are copied to /etc/ros/melodic, and the
    name of the files are put into robot.launch.
  * The head_camera driver has two parameters, z_offset_mm and z_scale which
    are calibrated. Their updated values are stored in robot.launch.
@@ -100,13 +100,13 @@ make the changes take effect.
 
 The robot is now ready to calibrate. The following command will move the arm
 through a series of poses (about 100 poses) and upon completion of the calibration will update
-the robot configuration in /etc/ros/indigo.  This typically takes about 10 minutes to complete:
+the robot configuration in /etc/ros/melodic.  This typically takes about 10 minutes to complete:
 
 ::
 
     >$ calibrate_robot --arm --install
 
-Finally, after the new calibration has been installed into /etc/ros/indigo,
+Finally, after the new calibration has been installed into /etc/ros/melodic,
 you can view the calibration by opening RVIZ and seeing that the robot model
 overlaps with the point cloud from the head camera. If for some reason, the
 calibration is not good, you can restart from the `--reset` command or roll
