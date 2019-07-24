@@ -21,12 +21,12 @@ Upgrade your Fetch robot's packages
 -----------------------------------
 Run the following to upgrade packages that are relevant::
 
-   sudo apt-get update
-   sudo apt-get install --only-upgrade ros-indigo-*
+  sudo apt update
+  sudo apt install --only-upgrade ros-melodic-*
 
-   export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
-   wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
-   sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
+  export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
+  wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+  sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
 
 
 Disable the PS3's ps3joy driver/service
