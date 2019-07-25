@@ -103,20 +103,22 @@ Mount Points
 Fetch and Freight both have mount points on top of the robot
 base. Fetch also has mount points on the head and gripper. The table
 below lists the fasteners that should be used and the max torques to
-use when installing fasteners.
+use when installing fasteners. The spacing of the square grid of mount
+points is also included.
 
-=========== ============ ========================= 
-Location    Fastener     Max Torque 
-=========== ============ ========================= 
-Base        M5*          3.6Nm
-Head        M4           3.0Nm
-Gripper     M3           0.50Nm (into the standoff)
-=========== ============ ========================= 
+=========== ============ ========================== =============
+Location    Fastener     Max Torque                 Grid Spacing
+=========== ============ ========================== =============
+Base        M5*          3.6Nm                      50mm
+Head        M4           3.0Nm                      25mm
+Gripper     M3           0.50Nm (into the standoff) 50mm
+=========== ============ ========================== =============
 
 .. note::
-   When mounting additional items on top of the base, a 4mm maximum
+   When mounting additional items on top of the base, a 6mm maximum
    thread engagement into the mounting holes must be maintained.
    Exceeding this maximum may cause the top plate of the base to deflect.
+   On older robots, this depth may be limited to 4mm.
 
 Gripper Modularity Interface
 ++++++++++++++++++++++++++++
