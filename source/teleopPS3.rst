@@ -131,7 +131,7 @@ Enable Teleop Software Runstop
    In order to edit the robot.launch file, you will
    need to use a terminal editor (such as nano or vim), or use the -X flag
    with SSH to use a graphical editor (such as gedit). Additionally, the editor
-   must be launched with `sudo`. Instructions below use nano.
+   must be launched with ``sudo``. Instructions below use nano.
 
 To enable the software runstop, first SSH into the robot, and then
 modify the robot drivers launch file to use it.
