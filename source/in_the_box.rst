@@ -156,7 +156,8 @@ deadman will stop the tucking action.
 Driving Fetch and Freight with a Joystick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. include:: teleop.rst
-    :start-after: embed-pt
+   :start-after: embed-teleop-start
+   :end-before: embed-teleop-end
 
 Visualizing Data
 ~~~~~~~~~~~~~~~~

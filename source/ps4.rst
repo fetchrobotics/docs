@@ -90,9 +90,9 @@ Enable the ds4drv driver/service for the PS4 controller
 
 Next we enable the new service (created by the updated install of fetch-melodic-config)::
 
-  sudo systemctl daemon-reload && sudo systemctl enable ps4joy
+  sudo systemctl daemon-reload && sudo systemctl enable ps4joy && sudo service ps4joy start
 
-This is a custom service that launches `ds4drv <https://github.com/chrippa/ds4drv>`_.
+This is a custom service that launches `ds4drv <https://github.com/chrippa/ds4drv>`__.
 
 Set the robot to use the PS4 controller
 ---------------------------------------

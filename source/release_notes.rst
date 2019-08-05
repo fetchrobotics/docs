@@ -17,7 +17,7 @@ August 9, 2019
 This release adds support for Fetch and Freight using ROS Melodic on Ubuntu 18.04.
 ROS Indigo and Ubuntu 14.04 are EOL. Robots using Indigo should continue to work,
 but will not receive further updates. To upgrade your robot, see
-`<indigo_to_melodic.rst>`__.
+:doc:`these instructions <indigo_to_melodic>`.
 
  * The default ROS Melodic Fetch and Freight configurations can be easily set up
    using the new automated installer (this is a clean install, not an in-place upgrade).

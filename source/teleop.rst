@@ -3,18 +3,23 @@ Tutorial: Robot Teleop
 
 Using the Robot Joystick
 ------------------------
-.. embed-pt
+.. embed-teleop-start
 
 Each Fetch and Freight ship with a robot joystick.
 Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot
 base, torso, head and gripper.
 
+.. warning:: Fetch robots use wireless controllers. As with any wireless
+   technology, maximum range between controller and robot can vary
+   depending on environment. You should experiment with your robot to
+   understand the distance limit at which you can safely control your robot.
+
 .. note:: If you are using the older PS3 controller a different
-   version of this tutorial can be found `here <teleopPS3.rst>`_.
+   version of this tutorial can be found :doc:`here </teleopPS3>`.
 
 .. note:: To switch your robot to use a PS4 controller instead of
-   a PS3 controller, see the instructions `here <ps4.rst>`_.
+   a PS3 controller, see the instructions :doc:`here </ps4>`.
 
 .. figure:: _static/ps4_numbered.png
    :width: 100%
@@ -105,6 +110,8 @@ package.
 
 .. _software_runstop:
 
+.. embed-teleop-end
+
 Software Runstop
 ----------------
 
@@ -137,7 +144,7 @@ Enable Teleop Software Runstop
    In order to edit the robot.launch file, you will
    need to use a terminal editor (such as nano or vim), or use the -X flag
    with SSH to use a graphical editor (such as gedit). Additionally, the editor
-   must be launched with `sudo`. Instructions below use nano.
+   must be launched with ``sudo``. Instructions below use nano.
 
 To enable the software runstop, first SSH into the robot, and then
 modify the robot drivers launch file to use it.
@@ -157,7 +164,7 @@ you will want to simply copy the block the below.
 
 ::
 
-  <!-- Software Runstop -->                                                     
+  <!-- Software Runstop -->
   <include file="$(find fetch_bringup)/launch/include/runstop.launch.xml">
     <arg name="flags" value="-a -b -g -t" />
   </include>
@@ -175,7 +182,7 @@ Finally, restart the drivers so that our changes take effect:
 
   >$ sudo service robot stop && sudo service robot start
 
-  
+
 Re-pairing Robot Joystick that Won't Connect
 --------------------------------------------
 
@@ -194,7 +201,7 @@ apparent if you press the deadman button on the controller, and the robot slowly
 moves without any input to the joysticks.
 
 This behavior can be compensated for by using a rosparameter: **joy/deadzone**
-(`ROS docs <http://wiki.ros.org/joy#Parameters>`_), which defines the amount by
+(`ROS docs <http://wiki.ros.org/joy#Parameters>`__), which defines the amount by
 which the joystick has to move before it is considered to be off-center, specified
 relative to an axis normalized between -1 and 1.
 

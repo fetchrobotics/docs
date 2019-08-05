@@ -18,7 +18,7 @@ Known issues
    The PS3 controller does not work as well on 18.04 as it did on 14.04. To achieve
    smooth control, the input from the controller will need to be continually varied.
    This can be done by continually moving or shaking the controller.  Alternately,
-   you can `switch to using a PS4 controller <ps4.rst>`_.
+   you can :doc:`switch to using a PS4 controller </ps4>`.
 
 .. WARNING::
    Gazebo9 and the Fetch have some bugs which we are currently aware of.
@@ -32,18 +32,19 @@ Upgrading Your Robot to ROS Melodic + Ubuntu 18.04
    Ensure your colleagues are on board with doing this upgrade.
 
 This document is a procedure for **replacing the contents** of your robot's SSD
-with an Ubuntu 18.04 install and ROS Melodic.
+with an Ubuntu 18.04 install and ROS Melodic.  All files will be erased!
 
 Before Upgrade
 ++++++++++++++
 
-Back up files from the robot!  There are a few categories of files to back up:
+Back up files from the robot!  All files will be erased, so make sure to save
+files specific to your research work. There are a few categories of files to back up:
 
 #. Calibration and other robot-specific files. By convention, these are
    all in ``/etc/ros/[indigo|melodic]/``
 #. Files relating to your research work
 #. A record of what packages you installed for ROS Indigo
-#. Udev rules created for additional hardware (e.g. sensors) added to your robot
+#. Udev rules created for additional hardware (e.g. sensors) added to your robot (not common)
 #. Network hardware configuration (for troubleshooting)
 
 Below, we assume that after logging into the robot (e.g. via ``ssh``) you back up
@@ -139,6 +140,8 @@ You can alternately do a manual install, which is outlined in the next section.
    #. After the install completes, continue to the Post-install Validation section below.
 
 If the installer appears to get stuck, please send a picture of the screen to Support.
+If it is stuck in one of the initial steps before you get to the language selection
+screen, you can try re-running the install, or if that fails, recreating the flash drive.
 
 .. |Boot selection| image:: _static/boot_selection.png
 .. |Installer selection| image:: _static/install_selection.png
@@ -171,7 +174,7 @@ MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages
 
 #. **Update your Ubuntu install:** ``sudo apt update && sudo apt dist-upgrade -y``
 #. **Install ROS Melodic** by following the instructions
-   `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
+   `on the ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`__.
    You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:
 
    - You use the **ROS-Base** setup, via the ``ros-melodic-ros-base`` package.
@@ -242,7 +245,7 @@ Verify that things are working.  All of the following steps assume that you are
         ping 10.42.42.42  # mainboard
         ping 10.42.42.10  # laser
 
-   If not, see `Ensuring robot's ethernet ports are configured correctly`_
+   If not, see `Ensuring robot's ethernet ports are configured correctly`_.
 
 #. Verify that the Primesense camera is working (if working with a Fetch robot)::
 
@@ -299,7 +302,7 @@ Verify that things are working.  All of the following steps assume that you are
      acquire one from e.g. Amazon. Note that third party PS4 controllers may not work.
 
      #. Pair the controller via the Bluetooth settings in Ubuntu. For more detail,
-        see `here <ps4.rst>`_.
+        see :doc:`here </ps4>`.
      #. Disconnect the controller by holding the middle button for 10 seconds.
      #. Connect the controller by pressing the middle button and then waiting until the LED
         is blue and not flashing.
@@ -357,7 +360,7 @@ machine that also has ROS Melodic installed.
   - Ensure your computer is pointed at the packages.ros apt sources
   - Install ``ros-melodic-fetch-description`` and ``ros-melodic-freight-description``
     packages.  Addtionally you might want to install
-    `ros-melodic-fetch-tools <https://github.com/fetchrobotics/fetch_tools>`_.
+    `ros-melodic-fetch-tools <https://github.com/fetchrobotics/fetch_tools>`__.
   - Ensure that these packages are included in your path (e.g.
     ``rospack find fetch_description`` returns a path)
   - Common gotcha on a new setup: If the robot model doesn't appear in RViz at
@@ -379,33 +382,19 @@ However, if you desire to try to upgrade, the following may be helpful:
 Appendices
 ----------
 
-Disk filling issue
-++++++++++++++++++
-Some robots may encounter an issue where Gnome3 fills the disk by spamming /var/log/syslog.
-This issue has a fix that is not available via `apt` yet, but can be manually done:
-https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1772677/comments/63
+Subsequent upgrade notes
+++++++++++++++++++++++++
+When doing an upgrade of the robot, always follow the steps at
+:doc:`Updating Your Robot <care_and_feeding.html#updating-your-robot>`.
 
-Ensuring robot's ethernet ports are configured correctly
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Particularly if you upgraded to 18.04 prior to August 2019, when doing an upgrade
+of packages via ``sudo apt-get upgrade``, you may be prompted regarding changed files:
 
-The robot has two ethernet ports on its computer. You can find more information on this
-at `Computer Overview and Configuration <computer.rst>`_.
+- /etc/default/grub
+- /etc/udev/rules.d/99-ps3joy.rules
+- /etc/udev/rules.d/99-ds4drv.rules
 
-The most likely problem you may encounter after getting 18.04 installed is if these two
-ports are "swapped".  This will cause the robot computer to be unable to talk to the
-rest of its hardware. You can fix this in software or in hardware:
-
-- Software: Edit ``/etc/udev/rules.d/70-persistent-net.rules`` and swap ``eth0``
-  and ``eth1``. Restart the robot for the change to take effect.
-- OR: Hardware: swap the two ethernet cables where they plug into the computer.
-  This shouldn't be needed, but in case you do, you should expect to find
-  a gray cable (internal communications) and a blue cable (external).
-  Typically, the blue goes to the top ethernet port, and the grey goes to the bottom.
-
-Another issue you may encounter with 18.04 is if you are using the ethernet on the
-side access panel with a DHCP setup. In some setups, the ethernet port may fail to
-be assigned an IP automatically. We recommend consulting IT for help with this, if
-needed.
+It is fine to select "install the package maintainer's version."
 
 Accessing Boot Menu on Fetch Robots
 +++++++++++++++++++++++++++++++++++
@@ -421,3 +410,40 @@ These different BIOS types activate the boot media selection menu with different
   press F7 to access the boot menu.
 
 If you fail to get into the boot menu, you can restart the computer and try again.
+
+Disk filling issue
+++++++++++++++++++
+Some robots may encounter an issue where Gnome3 fills the disk by spamming /var/log/syslog.
+This issue has a fix that is not available via `apt` yet, but can be manually done:
+`see comments here <https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1772677/comments/63>`_.
+
+Ensuring robot's ethernet ports are configured correctly
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+If you previously did the upgrade to Ubuntu 18.04 prior to August 2019, you should make
+the following fix to the ethernet IP specifications to avoid issues with internet
+access/routing:
+
+1. Edit ``/etc/netplan/99-fetch-ethernet.yaml`` and remove any lines referencing
+   ``gateway4``.
+2. Run ``sudo netplan apply``
+3. Power cycle the robot (only needed if you're actively having issues).
+
+The robot has two ethernet ports on its computer. You can find more information on this
+at :doc:`Computer Overview and Configuration </computer>`.
+
+A problem you may encounter after getting 18.04 installed is if these two
+ports are "swapped".  This will cause the robot computer to be unable to talk to the
+rest of its hardware. You can fix this in software or in hardware:
+
+- Software: Edit ``/etc/udev/rules.d/70-persistent-net.rules`` and swap ``eth0``
+  and ``eth1``. Restart the robot for the change to take effect.
+- OR: Hardware: swap the two ethernet cables where they plug into the computer.
+  This shouldn't be needed, but in case you do, you should expect to find
+  a gray cable (internal communications) and a blue cable (external).
+  Typically, the blue goes to the top ethernet port, and the grey goes to the bottom.
+
+Another issue you may encounter with 18.04 is if you are using the ethernet on the
+side access panel with a DHCP setup. In some setups, the ethernet port may fail to
+be assigned an IP automatically. We recommend consulting IT for help with this, if
+needed.

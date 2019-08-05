@@ -160,7 +160,7 @@ Upgrading to the latest packages is as easy as:
     If your robot is running Ubuntu 14.04 with ROS Indigo, the above commands
     will need to be slightly modified (i.e. ros-indigo instead of ros-melodic).
     You can upgrade your robot to the currently supported version by following
-    the `OS upgrade procedure <indigo_to_melodic.rst>`_.
+    the :doc:`OS upgrade procedure <indigo_to_melodic>`.
 
 Each circuit board within the robot is equipped with a bootloader, allowing
 new and updated firmware to be installed. New releases of the `fetch-drivers`
@@ -174,14 +174,14 @@ Re-Setting up apt Sources
 
 If someone has changed or deleted the default apt sources then the
 following commands will create sources.list files so that the robot can see
-the public ros package server and the Fetch Robotics package server.
+the public ROS package server.
 
 ::
     >$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu bionic main" > /etc/apt/sources.list.d/ros-latest.list'
 
 Additionally, it is possible that the apt key has changed for the ROS
 package server.  The instructions for the correct key can be found
-`here <http://wiki.ros.org/melodic/Installation/Ubuntu#Installation.2BAC8-Ubuntu.2BAC8-Sources.Set_up_your_keys>`_.
+`here <http://wiki.ros.org/melodic/Installation/Ubuntu#Installation.2BAC8-Ubuntu.2BAC8-Sources.Set_up_your_keys>`__.
 
 
 Cleaning Your Robot
