@@ -180,27 +180,10 @@ sensors:
 
 8. Once tool has completed, restart robot drivers with ``sudo service robot start``
 
-Verify Output
-^^^^^^^^^^^^^
-Verification will produce output stating whether sensors are well calibrated.
-If the sensor calibration is good the tool will output something similar to:
-
-  VERIFY PASSED : max sensor error of 0.0109411 is within acceptable limit
-
-Otherwise it will produce output like:
-
-  VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04
-
-When verification fails, run calibration produce.
-
-.. note::
-  The value for max sensor error is the mismatch between the two torso sensors.
-  The accuracy of the torso position measurement is unrelated to this value.
-
-Calibrate Output
-^^^^^^^^^^^^^^^^
+Calibration Output
+^^^^^^^^^^^^^^^^^^
 Once the tool has completed the calibration procedure it will check the expected results of calibration.
-If everything checks out, the tool will output something similar to::
+If everything checks out, the ``torso_calibrate calibrate`` will output something similar to::
 
   VERIFY PASSED : max sensor error of 0.0116824 is within acceptable limit
 
@@ -209,3 +192,21 @@ If there was a problem calculating good calibration parameters, the output might
   VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04
 
 In case of failure, the torso sensor may be malfunctioning or damaged and a support ticket should be created.
+
+.. note::
+  The value for max sensor error is the mismatch between the two torso sensors.
+  The accuracy of the torso position measurement is unrelated to this value.
+
+Output When Verifying New Torso Calibration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``torso_calibrate verify`` will produce output stating whether sensors are well
+calibrated. If the sensor calibration is good, then this command will
+output something similar to::
+
+  VERIFY PASSED : max sensor error of 0.0109411 is within acceptable limit
+
+Otherwise it will produce output like::
+
+  VERIFY FAILED : max sensor error of 0.0501323 is larger than acceptable limit of 0.04
+
+When verification fails, run calibration produce.
