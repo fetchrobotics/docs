@@ -137,23 +137,30 @@ the arm, torso and head while the robot is connected a charger.
 Updating Your Robot
 -------------------
 
-Your robot has been pre-configured with ROS Indigo and the appropriate
+Your robot has been pre-configured with ROS Melodic and the appropriate
 APT repositories from which to fetch package updates.
 Upgrading to the latest packages is as easy as:
 
 ::
 
-   sudo apt-get update
-   sudo apt-get install --only-upgrade ros-indigo-* f.*-system-config
+   sudo apt update
+   sudo apt install --only-upgrade ros-melodic-* f.*-system-config
    sudo service robot stop
    sudo service robot start
 
 .. warning::
 
-    Using 'apt-get upgrade' and 'apt-get dist-upgrade' could cause critical
+    Using 'apt upgrade' and 'apt dist-upgrade' could cause critical
     software, such as the kernel, to change. We can not guarantee your robot
     will function after making such a change. We recommend against using these
     commands unless you understand and accept the risks.
+
+.. note::
+
+    If your robot is running Ubuntu 14.04 with ROS Indigo, the above commands
+    will need to be slightly modified (i.e. ros-indigo instead of ros-melodic).
+    You can upgrade your robot to the currently supported version by following
+    the :doc:`OS upgrade procedure <indigo_to_melodic>`.
 
 Each circuit board within the robot is equipped with a bootloader, allowing
 new and updated firmware to be installed. New releases of the `fetch-drivers`
@@ -162,18 +169,19 @@ be installed when the drivers are next started (typically by the robot upstart
 service). When restarting the robot service, there may be a slight delay
 before the drivers are fully operational if a new firmware upgrade is included.
 
-Re-Setting up apt-get Sources
+Re-Setting up apt Sources
 -----------------------------
 
-If someone has changed or deleted the default apt-get sources then the
+If someone has changed or deleted the default apt sources then the
 following commands will create sources.list files so that the robot can see
-the public ros package server and the Fetch Robotics package server.
+the public ROS package server.
 
 ::
+    >$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu bionic main" > /etc/apt/sources.list.d/ros-latest.list'
 
-    >$ sudo sh -c 'echo "deb http://packages.fetchrobotics.com/fetch/ubuntu trusty main" > /etc/apt/sources.list.d/fetch-latest.list'
-
-    >$ sudo sh -c 'echo "deb http://packages.fetchrobotics.com/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+Additionally, it is possible that the apt key has changed for the ROS
+package server.  The instructions for the correct key can be found
+`here <http://wiki.ros.org/melodic/Installation/Ubuntu#Installation.2BAC8-Ubuntu.2BAC8-Sources.Set_up_your_keys>`__.
 
 
 Cleaning Your Robot

@@ -155,7 +155,6 @@ and base. If the motors are commanded to perform beyond their limits they will
 shut down for safety. To reset them you will either need to toggle the e-stop or
 use the following service calls:
 
-
  * $ rosservice call /arm_breaker false && rosservice call /arm_breaker true
  * $ rosservice call /base_breaker false && rosservice call /base_breaker true
  * $ rosservice call /gripper_breaker false && rosservice call /gripper_breaker true

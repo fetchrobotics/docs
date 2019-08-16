@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Switching your robot to using a PS4 controller &mdash; Fetch &amp; Freight Research Edition Melodic documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Fetch &amp; Freight Research Edition Melodic documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home">
+        
+
+          Fetch & Freight <br/> Research Edition
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#before-you-start">Before you Start</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#safety-overview">Safety Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-features">Design Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#general-usage-guidelines">General Usage Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#warning-labels">Warning Labels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#pinch-point">Pinch Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#electrical-shock">Electrical Shock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#laser-beam">Laser Beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#read-the-manual">Read The Manual</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#fetch-and-freight">Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#toolkit">Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#robot-power-supply">Robot Power Supply</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#running-fetch-and-freight">Running Fetch and Freight</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#turning-on-fetch-and-freight">Turning on Fetch and Freight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#logging-in">Logging In</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#connecting-a-monitor-optional">Connecting a Monitor (Optional)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#creating-user-accounts">Creating User Accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#putting-fetch-and-freight-away">Putting Fetch and Freight Away</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="robot_hardware.html">Robot Hardware Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanism-terminology">Mechanism Terminology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#link">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#frame">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#joint">Joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#fetch-home-pose">Fetch Home Pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#coordinate-system">Coordinate System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#naming-conventions">Naming Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanical-overview">Mechanical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#environmental">Environmental</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#drive-surface">Drive Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#incline-surface">Incline Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#water">Water</a></li>
+<li class="toctree-l4"><a class="reference internal" href="robot_hardware.html#temperature-and-humidity">Temperature and Humidity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#forces-and-torques">Forces and Torques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#joint-limits-and-types">Joint Limits and Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#mount-points">Mount Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#gripper-modularity-interface">Gripper Modularity Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#electrical-overview">Electrical Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#breakers">Breakers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#power-disconnect-switch">Power Disconnect Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#runstop">Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#access-panel">Access Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#motion-control">Motion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#sensor-overview">Sensor Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#base-laser">Base Laser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#imu">IMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#head-camera">Head Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#gripper-sensors">Gripper Sensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Overview and Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#default-user-account">Default User Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#creating-user-accounts">Creating User Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#networking">Networking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="computer.html#connecting-the-robot-to-a-wireless-network">Connecting the Robot to a Wireless Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="computer.html#configuring-the-robot-to-use-a-static-ip-for-access-panel-ethernet">Configuring the Robot to use a Static IP for Access Panel Ethernet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="computer.html#troubleshooting-ros-interactions-with-robot-across-a-network">Troubleshooting ROS Interactions with Robot Across a Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#clock-synchronization">Clock Synchronization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#upstart-services">Upstart Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#log-files">Log Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#speakers-and-audio">Speakers and Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#batteries">Batteries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-sources">Re-Setting up apt Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="indigo_to_melodic.html">ROS Melodic + Ubuntu 18.04</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#known-issues">Known issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#upgrading-your-robot-to-ros-melodic-ubuntu-18-04">Upgrading Your Robot to ROS Melodic + Ubuntu 18.04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#before-upgrade">Before Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#automated-installer-18-04-and-ros-melodic-install">AUTOMATED INSTALLER: 18.04 and ROS Melodic Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#manual-approach-18-04-install-and-installing-ros-fetch-packages">MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#post-install-validation">Post-install Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#compatibility-of-other-computers-used-with-the-robot">Compatibility of Other Computers Used with the Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#not-supported-upgrading-from-14-04-to-18-04-via-16-04">Not Supported: Upgrading from 14.04 to 18.04 (via 16.04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#appendices">Appendices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#subsequent-upgrade-notes">Subsequent upgrade notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#disk-filling-issue">Disk filling issue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot&#8217;s ethernet ports are configured correctly</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gazebo.html">Tutorial: Gazebo Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#starting-the-simulator">Starting the Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#launch-it-on-rosds">Launch it on ROSDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#id1">Software Runstop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="teleop.html#using-software-runstop">Using Software Runstop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#using-deadzone-parameter-to-correct-drift">Using Deadzone Parameter to Correct Drift</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-in-gazebo-simulation">Running Navigation in Gazebo Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-on-a-real-robot">Running Navigation on a Real Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building A Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-waypoints">Sending Waypoints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Tutorial: Manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started-demo">Getting Started Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit-on-a-robot">Running MoveIt! on a Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#simple-moveit-disco-example">Simple MoveIt! Disco Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#simple-moveit-wave-example">Simple MoveIt! Wave Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#more-information-and-tutorials-on-moveit">More information and Tutorials on MoveIt!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Tutorial: Perception</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#head-camera-topics">Head Camera Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docking.html">Tutorial: Auto Docking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docking.html#installing-fetch-auto-dock">Installing fetch_auto_dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docking.html#running-the-docking-node">Running the Docking Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docking.html#auto-docking-programmatically">Auto Docking Programmatically</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#understanding-calibration">Understanding Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrate-robot-tool">Calibrate Robot Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrating-fetch-torso">Calibrating Fetch Torso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#torso-calibration-procedure">Torso Calibration Procedure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#calibration-output">Calibration Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#output-when-verifying-new-torso-calibration">Output When Verifying New Torso Calibration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fetch_pbd.html">Tutorial: Fetch Programming by Demonstration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#installing-from-source">Installing from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#running">Running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#using-the-gui">Using the GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#code-interface">Code Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fetch_pbd.html#system-overview">System Overview</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#arm-and-torso">Arm and Torso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#base-interface">Base Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-interface">Head Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#gripper-interface">Gripper Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-camera-interface">Head Camera Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#laser-interface">Laser Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#imu-interface">IMU Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_overview.html#resetting-breakers">Resetting Breakers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#august-9-2019">August 9, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-4-2019">April 4, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#december-18-2017">December 18, 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-29-2016">November 29, 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-28-2016">May 28, 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#january-21-2016">January 21, 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-23-2015">November 23, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-12-2015">November 12, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#august-5-2015">August 5, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#july-9-2015">July 9, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#june-8-2015">June 8, 2015</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-cite-fetch-or-freight-in-an-academic-paper">How can I cite Fetch or Freight in an Academic Paper?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-ps4-joystick">Why won&#8217;t my robot move when I use my PS3/PS4 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notices.html">Notices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#fcc-notice">FCC Notice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#copyright-notices-for-open-source-software">Copyright Notices for Open Source Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notices.html#trademarks">Trademarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Fetch & Freight Research Edition</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+
+        <div class="header-override">
+          <p>
+            <a href="http://www.fetchrobotics.com/research">Fetch & Freight</a><br/>
+            <a href="http://www.fetchrobotics.com/blog">Blog</a>
+          </p>
+          <a href="http://www.fetchrobotics.com"><img src="_static/logo.png"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Switching your robot to using a PS4 controller</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/fetchrobotics/docs/blob/master/source/ps4.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="switching-your-robot-to-using-a-ps4-controller">
+<h1>Switching your robot to using a PS4 controller<a class="headerlink" href="#switching-your-robot-to-using-a-ps4-controller" title="Permalink to this headline">¶</a></h1>
+<p>This procedure guides you in updating your robot to be controlled
+with a PS4 controller.</p>
+<p><em>Who is this guide intended for?:</em></p>
+<ul class="simple">
+<li>Customers who received a PS3 controller with their robot, and would like to instead use
+a PS4 controller with their robot.</li>
+</ul>
+<p><em>What requirements are there for using a PS4 controller?:</em></p>
+<ul class="simple">
+<li>Your robot needs to be running Ubuntu 18.04 + ROS Melodic</li>
+<li>You will need a PS4 controller (also called <em>DualShock 4 Wireless Controller
+for PlayStation 4</em>).</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Third party controllers may not work. Only Sony PS4 controllers have been tested.</p>
+</div>
+<div class="section" id="upgrade-your-fetch-robot-s-packages">
+<h2>Upgrade your Fetch robot&#8217;s packages<a class="headerlink" href="#upgrade-your-fetch-robot-s-packages" title="Permalink to this headline">¶</a></h2>
+<p>Run the following to upgrade packages that are relevant:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>sudo apt update
+sudo apt install --only-upgrade ros-melodic-*
+
+export ROBOTTYPE=$(hostname | awk -F&#39;[0-9]&#39; &#39;{print $1}&#39;)
+wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
+</pre></div>
+</div>
+</div>
+<div class="section" id="disable-the-ps3-s-ps3joy-driver-service">
+<h2>Disable the PS3&#8217;s ps3joy driver/service<a class="headerlink" href="#disable-the-ps3-s-ps3joy-driver-service" title="Permalink to this headline">¶</a></h2>
+<p>The following commands will disable the ps3joy systemd service:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">ps3joy</span> <span class="n">stop</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">disable</span> <span class="n">ps3joy</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="restart-bluetooth-and-pair-ps4-controller">
+<h2>Restart Bluetooth and Pair PS4 Controller<a class="headerlink" href="#restart-bluetooth-and-pair-ps4-controller" title="Permalink to this headline">¶</a></h2>
+<p>Since ps3joy disables the default Bluetooth service, the following is needed to start
+it again:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">bluetooth</span> <span class="n">restart</span>
+</pre></div>
+</div>
+<p>Next, a monitor needs to be hooked up to the robot, in order to go through the Bluetooth
+pairing process.</p>
+<p>To pair with the controller, open the wifi menu in the top right, expand the Bluetooth
+section, and click the Bluetooth settings, indicated below:</p>
+<div class="align-centered figure align-center">
+<img alt="_images/ps4_bluetooth_menu.png" src="_images/ps4_bluetooth_menu.png" />
+</div>
+<p>To put the controller in pairing mode, press and hold the Share button, and then press
+and hold the center PS4 button for a second and then release it, and then release the
+share button.  The LED on the controller should start flashing twice, once per second.</p>
+<p>If the LED is flashing once per second, you may need to retry the above after turning off the
+controller.  You can turn off the controller by holding the center button for 10s.</p>
+<p>Once the controller is in pairing mode, it should show up in the list of devices, like
+below.  You may have to scroll to the bottom of the list.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/ps4_pairing_before.png"><img alt="_images/ps4_pairing_before.png" src="_images/ps4_pairing_before.png" style="width: 100%;" /></a>
+</div>
+<p>Once you click the Wireless Controller entry, it should show up as connected at the top
+of the list.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/ps4_pairing_after.png"><img alt="_images/ps4_pairing_after.png" src="_images/ps4_pairing_after.png" style="width: 100%;" /></a>
+</div>
+<p>When the controller is connected, its LED will be solid blue.</p>
+<p>Next, disconnect the controller.
+To disconnect the controller, you can hold the central button for 10 seconds.
+To re-connect the controller, just pressing the center button is required.  Sometimes
+it may take a couple tries.</p>
+</div>
+<div class="section" id="enable-the-ds4drv-driver-service-for-the-ps4-controller">
+<h2>Enable the ds4drv driver/service for the PS4 controller<a class="headerlink" href="#enable-the-ds4drv-driver-service-for-the-ps4-controller" title="Permalink to this headline">¶</a></h2>
+<p>Next we enable the new service (created by the updated install of fetch-melodic-config):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">daemon</span><span class="o">-</span><span class="n">reload</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">ps4joy</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">service</span> <span class="n">ps4joy</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>This is a custom service that launches <a class="reference external" href="https://github.com/chrippa/ds4drv">ds4drv</a>.</p>
+</div>
+<div class="section" id="set-the-robot-to-use-the-ps4-controller">
+<h2>Set the robot to use the PS4 controller<a class="headerlink" href="#set-the-robot-to-use-the-ps4-controller" title="Permalink to this headline">¶</a></h2>
+<p>To enable the PS4 controller inputs to move the robot, a param needs to be set in
+/etc/ros/melodic/robot.launch.</p>
+<p>If your robot is using a robot.launch file that you restored after installing ROS Melodic, you
+may need to make the following modification to your robot.launch file to add the ps4 param:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">&lt;</span><span class="n">include</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;$(find freight_bringup)/launch/include/teleop.launch.xml&quot;</span> <span class="o">/&gt;</span>
+<span class="o">+</span> <span class="o">&lt;</span><span class="n">include</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;$(find freight_bringup)/launch/include/teleop.launch.xml&quot;</span><span class="o">&gt;</span>
+<span class="o">+</span>   <span class="o">&lt;</span><span class="n">arg</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ps4&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;true&quot;</span> <span class="o">/&gt;</span>
+<span class="o">+</span> <span class="o">&lt;/</span><span class="n">include</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Additionally, if you previously modified robot.launch to add the following arg, <strong>you should remove this arg</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">arg</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;joy_device&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;/dev/input/js0&quot;</span> <span class="o">/&gt;</span>  <span class="c1"># Remove this line if it exists!</span>
+</pre></div>
+</div>
+<p>By default, with the latest update, the above parameter is not needed. It now defaults to
+/dev/fetch_joy, which will get created by UDEV rules for both PS3 and PS4 controllers.</p>
+<p>Finally, with the arm safely resting so that it won&#8217;t fall, restart roscore.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">roscore</span> <span class="n">restart</span>
+</pre></div>
+</div>
+<p>The controller should now move the robot.</p>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<p>If you run into issues, check the following when the controller is connected:</p>
+<ul class="simple">
+<li>Does <code class="docutils literal"><span class="pre">jstest</span> <span class="pre">/dev/ps4joy</span></code> reflect movement of the PS4 controller when it is connected?</li>
+<li>What nodes are listed when you do <code class="docutils literal"><span class="pre">rosnode</span> <span class="pre">list</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">joy</span></code>? We expect, joy_node and joy_remap.</li>
+<li>Is the topic <code class="docutils literal"><span class="pre">/joy</span></code> publishing? (<code class="docutils literal"><span class="pre">rostopic</span> <span class="pre">hz</span> <span class="pre">/joy</span></code>)</li>
+</ul>
+</div>
+<div class="section" id="reverting-back-to-using-ps3-controller">
+<h1>Reverting back to using PS3 controller<a class="headerlink" href="#reverting-back-to-using-ps3-controller" title="Permalink to this headline">¶</a></h1>
+<p>While not recommended, in case you encounter issues and need to switch back, the below
+outlines the steps to revert the procedures above:</p>
+<ol class="arabic simple">
+<li>Change the ps4 arg value to false in /etc/ros/melodic/robot.launch</li>
+<li><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">ps4joy</span> <span class="pre">stop</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">disable</span> <span class="pre">ps4joy</span></code></li>
+<li><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">enable</span> <span class="pre">ps3joy</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">ps3joy</span> <span class="pre">start</span></code></li>
+<li>With the arm safely resting so that it does not fall, <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">roscore</span> <span class="pre">restart</span></code></li>
+<li>Connect your PS3 controller.</li>
+</ol>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2019, Fetch Robotics Inc.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'Melodic',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

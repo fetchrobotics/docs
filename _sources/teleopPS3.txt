@@ -3,30 +3,19 @@ Tutorial: Robot Teleop
 
 Using the Robot Joystick
 ------------------------
-.. embed-teleop-start
+.. embed-pt
 
 Each Fetch and Freight ship with a robot joystick.
 Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot
 base, torso, head and gripper.
 
-.. warning:: Fetch robots use wireless controllers. As with any wireless
-   technology, maximum range between controller and robot can vary
-   depending on environment. You should experiment with your robot to
-   understand the distance limit at which you can safely control your robot.
-
-.. note:: If you are using the older PS3 controller a different
-   version of this tutorial can be found :doc:`here </teleopPS3>`.
-
-.. note:: To switch your robot to use a PS4 controller instead of
-   a PS3 controller, see the instructions :doc:`here </ps4>`.
-
-.. figure:: _static/ps4_numbered.png
+.. figure:: _static/joystick_numbered.png
    :width: 100%
    :align: center
    :figclass: align-centered
 
-.. figure:: _static/ps4_numbered2.png
+.. figure:: _static/joystick_numbered2.png
    :width: 100%
    :align: center
    :figclass: align-centered
@@ -110,14 +99,12 @@ package.
 
 .. _software_runstop:
 
-.. embed-teleop-end
-
 Software Runstop
 ----------------
 
 In addition to the runstop button on the side of the robot, similar software
 functionality is also available, allowing for button presses on the
-PS4 controller or a program to disable the breakers.
+PS3 controller or a program to disable the breakers.
 This functionality is available in release 0.7.3 of the
 fetch_bringup package. The teleop portion is disabled by default.
 
@@ -186,11 +173,19 @@ Finally, restart the drivers so that our changes take effect:
 Re-pairing Robot Joystick that Won't Connect
 --------------------------------------------
 
-For a Bluetooth PS4 controller, the controller can be re-paired through the
-Ubuntu Bluetooth settings.  To put the controller in pairing mode, press and
-hold the Share button, and then press and hold the center PS4 button for a
-second and then release it, and then release the share button.  The LED on
-the controller should start flashing twice, once per second.
+If the Bluetooth robot joystick is a PS3 controller and will no longer
+connect to the robot, it can easily be re-paired to the robot by connecting
+it to the robot with a USB cable, and then running:
+
+::
+
+  # 14.04 with PS3 controller
+  >$ sudo sixpair
+  # 18.04 with PS3 controller; Note: the controller LEDs will continually flash even when connected
+  >$ sudo /opt/ros/melodic/lib/ps3joy/sixpair
+
+This situation is most often caused by charging the robot joystick from
+the USB port of another computer.
 
 Using Deadzone Parameter to Correct Drift
 -----------------------------------------
@@ -201,11 +196,11 @@ apparent if you press the deadman button on the controller, and the robot slowly
 moves without any input to the joysticks.
 
 This behavior can be compensated for by using a rosparameter: **joy/deadzone**
-(`ROS docs <http://wiki.ros.org/joy#Parameters>`__), which defines the amount by
+(`ROS docs <http://wiki.ros.org/joy#Parameters>`_), which defines the amount by
 which the joystick has to move before it is considered to be off-center, specified
 relative to an axis normalized between -1 and 1.
 
-Add/set the parameter in ``/etc/ros/melodic/robot.launch``::
+Add/set the parameter in ``/etc/ros/DISTRO/robot.launch``::
 
   <!-- Teleop -->
     <include file="$(find fetch_bringup)/launch/include/teleop.launch.xml"/>
