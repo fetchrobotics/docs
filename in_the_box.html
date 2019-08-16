@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  <title>Getting Started &mdash; Fetch &amp; Freight Research Edition Melodic documentation</title>
   
 
   
@@ -32,10 +32,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
+    <link rel="top" title="Fetch &amp; Freight Research Edition Melodic documentation" href="index.html"/>
         <link rel="next" title="Robot Hardware Overview" href="robot_hardware.html"/>
         <link rel="prev" title="Safety" href="safety.html"/> 
 
@@ -97,7 +94,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#what-s-in-box">What’s In Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-s-in-box">What&#8217;s In Box</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fetch-and-freight">Fetch and Freight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#toolkit">Toolkit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#robot-power-supply">Robot Power Supply</a></li>
@@ -111,16 +108,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#creating-user-accounts">Creating User Accounts</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#tucking-fetch-s-arm">Tucking Fetch’s Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#software-runstop">Software Runstop</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#using-software-runstop">Using Software Runstop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#using-deadzone-parameter-to-correct-drift">Using Deadzone Parameter to Correct Drift</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#visualizing-data">Visualizing Data</a><ul>
@@ -192,23 +182,26 @@
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#batteries">Batteries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-sources">Re-Setting up apt Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="indigo_to_melodic.html">ROS Melodic + Ubuntu 18.04</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#known-issues">Known issues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#upgrading-your-robot-to-ros-melodic-ubuntu-18-04">Upgrading Your Robot to ROS Melodic + Ubuntu 18.04</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#before-upgrade">Before Upgrade</a></li>
-<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#install-and-installing-ros-fetch-packages">18.04 Install and Installing ROS/Fetch Packages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#post-install-validation">Post-install Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#automated-installer-18-04-and-ros-melodic-install">AUTOMATED INSTALLER: 18.04 and ROS Melodic Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#manual-approach-18-04-install-and-installing-ros-fetch-packages">MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#post-install-validation">Post-install Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#compatibility-of-other-computers-used-with-the-robot">Compatibility of Other Computers Used with the Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#not-recommended-supported-upgrading-from-14-04-to-18-04-via-16-04">Not Recommended/Supported: Upgrading from 14.04 to 18.04 (via 16.04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#not-supported-upgrading-from-14-04-to-18-04-via-16-04">Not Supported: Upgrading from 14.04 to 18.04 (via 16.04)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo_to_melodic.html#appendices">Appendices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#disk-filling-issue">Disk filling issue</a></li>
-<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot’s ethernet ports are configured correctly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#subsequent-upgrade-notes">Subsequent upgrade notes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#disk-filling-issue">Disk filling issue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo_to_melodic.html#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot&#8217;s ethernet ports are configured correctly</a></li>
 </ul>
 </li>
 </ul>
@@ -233,12 +226,12 @@
 <li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#software-runstop">Software Runstop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#id1">Software Runstop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#using-software-runstop">Using Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won’t Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html#using-deadzone-parameter-to-correct-drift">Using Deadzone Parameter to Correct Drift</a></li>
 </ul>
 </li>
@@ -275,8 +268,8 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrating-fetch-torso">Calibrating Fetch Torso</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calibration.html#torso-calibration-procedure">Torso Calibration Procedure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calibration.html#verify-output">Verify Output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calibration.html#calibrate-output">Calibrate Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#calibration-output">Calibration Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#output-when-verifying-new-torso-calibration">Output When Verifying New Torso Calibration</a></li>
 </ul>
 </li>
 </ul>
@@ -304,6 +297,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#august-9-2019">August 9, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-4-2019">April 4, 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#december-18-2017">December 18, 2017</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-29-2016">November 29, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-28-2016">May 28, 2016</a></li>
@@ -318,11 +313,11 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-cite-fetch-or-freight-in-an-academic-paper">How can I cite Fetch or Freight in an Academic Paper?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won’t my robot do anything at all (charge, move, etc…)?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won’t my robot turn on when I push the power button?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won’t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-ps4-joystick">Why won&#8217;t my robot move when I use my PS3/PS4 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won’t gravity compensate, help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
 </ul>
 </li>
 </ul>
@@ -383,7 +378,7 @@
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-s-in-box">
-<h2>What’s In Box<a class="headerlink" href="#what-s-in-box" title="Permalink to this headline">¶</a></h2>
+<h2>What&#8217;s In Box<a class="headerlink" href="#what-s-in-box" title="Permalink to this headline">¶</a></h2>
 <p>The Fetch and Freight Research Edition robots each ship in reusable ATA
 cases. Inside each case you will find the robot, toolkit, and power
 supply for charging the robot.</p>
@@ -508,15 +503,15 @@ power switch on the access panel until it lights up.</p>
 <div class="section" id="logging-in">
 <h3>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h3>
 <p>Once the robot is turned on and the robot is on the network, ssh
-into the computer of the robot using the default <code class="docutils literal notranslate"><span class="pre">fetch</span></code> user
+into the computer of the robot using the default <code class="docutils literal"><span class="pre">fetch</span></code> user
 account:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ ssh fetch@&lt;robot_name_or_ip&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ ssh fetch@&lt;robot_name_or_ip&gt;
 </pre></div>
 </div>
 <p>robot_name_or_ip will be either an IPv4 network address, or a network name, depending
 on the configuration of your local network. If your computer
 and network is setup for multicast DNS (mDNS) then you may be able to use
-<code class="docutils literal notranslate"><span class="pre">fetchXYZ.local</span></code> as the network name where XYZ will be the serial number
+<code class="docutils literal"><span class="pre">fetchXYZ.local</span></code> as the network name where XYZ will be the serial number
 of your robot (remove any leading zeros from the serial number).</p>
 </div>
 <div class="section" id="connecting-a-monitor-optional">
@@ -529,7 +524,7 @@ in the upper right hand corner of the screen. Once it is set it should remain
 connected through all reboots.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Monitor cables that conform to HDMI specifications will fit the robot’s
+<p class="last">Monitor cables that conform to HDMI specifications will fit the robot&#8217;s
 monitor port. But some cheaper cables have overmolding that is too large
 given the spec and may not seat properly. Please ensure the HDMI cable you
 are using is the correct size.</p>
@@ -552,14 +547,14 @@ setting up the robot.</p>
 <p>It is recommended that each user create their own account on the robot, especially
 when developing from source. To create an account on the robot, ssh into the
 robot as the <cite>fetch</cite> user, and run the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ sudo adduser USERNAME
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ sudo adduser USERNAME
 &gt;$ sudo usermod -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare USERNAME
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="tucking-fetch-s-arm">
-<h3>Tucking Fetch’s Arm<a class="headerlink" href="#tucking-fetch-s-arm" title="Permalink to this headline">¶</a></h3>
+<h3>Tucking Fetch&#8217;s Arm<a class="headerlink" href="#tucking-fetch-s-arm" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The tuck arm server is a new feature released in
@@ -580,11 +575,28 @@ deadman will stop the tucking action.</p>
 Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot
 base, torso, head and gripper.</p>
-<div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/joystick_numbered.png"><img alt="_images/joystick_numbered.png" src="_images/joystick_numbered.png" style="width: 100%;" /></a>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Fetch robots use wireless controllers. As with any wireless
+technology, maximum range between controller and robot can vary
+depending on environment. You should experiment with your robot to
+understand the distance limit at which you can safely control your robot.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are using the older PS3 controller a different
+version of this tutorial can be found <a class="reference internal" href="teleopPS3.html"><span class="doc">here</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To switch your robot to use a PS4 controller instead of
+a PS3 controller, see the instructions <a class="reference internal" href="ps4.html"><span class="doc">here</span></a>.</p>
 </div>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/joystick_numbered2.png"><img alt="_images/joystick_numbered2.png" src="_images/joystick_numbered2.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/ps4_numbered.png"><img alt="_images/ps4_numbered.png" src="_images/ps4_numbered.png" style="width: 100%;" /></a>
+</div>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/ps4_numbered2.png"><img alt="_images/ps4_numbered2.png" src="_images/ps4_numbered2.png" style="width: 100%;" /></a>
 </div>
 <table border="1" class="docutils">
 <colgroup>
@@ -625,13 +637,13 @@ base, torso, head and gripper.</p>
 <td>Head control deadman</td>
 </tr>
 <tr class="row-odd"><td>9</td>
-<td>Not used</td>
+<td>Linear arm (&#8220;tooltip&#8221;) control</td>
 </tr>
 <tr class="row-even"><td>10</td>
 <td>Primary deadman</td>
 </tr>
 <tr class="row-odd"><td>11</td>
-<td>Not used</td>
+<td>Angular arm (&#8220;tooltip&#8221;) control</td>
 </tr>
 <tr class="row-even"><td>12</td>
 <td>Torso up</td>
@@ -670,6 +682,11 @@ the X (14).</p>
 <p>To close the gripper, hold the primary deadman and press the close
 button (3). To open, hold the primary deadman and press the open
 button (0).</p>
+<p>The Fetch arm/gripper can be teleoped by combining several inputs:</p>
+<ul class="simple">
+<li>Linear motion of the end effector: Primary deadman + Button 9 + joystick input</li>
+<li>Angular motion of the end effector: Primary deadman + Button 11 + joystick input</li>
+</ul>
 <p>Some controllers, such as the arm and head controllers, will attempt to
 hold position indefinitely. Sometimes this is not desired. Holding button (4)
 for 1 second will stop all controllers except the base controller and
@@ -679,110 +696,23 @@ the arm gravity compensation.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">You will need a computer with ROS installed to properly
-communicate with the robot. Please consult the <a class="reference external" href="http://wiki.ros.org/indigo/Installation">ROS Wiki</a>
+communicate with the robot. Please consult the <a class="reference external" href="http://wiki.ros.org/melodic/Installation">ROS Wiki</a>
 for more information. We strongly suggest an Ubuntu machine
-with ROS Indigo installed.</p>
+with ROS Melodic installed.</p>
 </div>
 <p>To teleoperate the robot base in simulation, we recommend
-using the <code class="docutils literal notranslate"><span class="pre">teleop_twist_keyboard.py</span></code> script from
+using the <code class="docutils literal"><span class="pre">teleop_twist_keyboard.py</span></code> script from
 <a class="reference external" href="http://wiki.ros.org/teleop_twist_keyboard">teleop_twist_keyboard</a>
 package.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 </pre></div>
 </div>
-</div>
-<div class="section" id="software-runstop">
-<span id="id1"></span><h4>Software Runstop<a class="headerlink" href="#software-runstop" title="Permalink to this headline">¶</a></h4>
-<p>In addition to the runstop button on the side of the robot, similar software
-functionality is also available, allowing for button presses on the
-PS3 controller or a program to disable the breakers.
-This functionality is available in release 0.7.3 of the
-fetch_bringup package. The teleop portion is disabled by default.</p>
-</div>
-</div>
-<div class="section" id="using-software-runstop">
-<h3>Using Software Runstop<a class="headerlink" href="#using-software-runstop" title="Permalink to this headline">¶</a></h3>
-<p>To activate the software runstop, publish True to the /enable_software_runstop
-topic.</p>
-<p>Alternately, with the teleop runstop enabled, pressing both of the right
-trigger buttons (buttons 9 and 11) will activate the software runstop.
-The software_runstop.py script in fetch_bringup can be modified to change
-the button(s) for the software runstop.</p>
-<p>Once activated, the software runstop can be deactivated by (1) toggling the
-hardware runstop, or (2) disabling the software runstop by passing False to
-the /enable_software_runstop topic.</p>
-</div>
-<div class="section" id="enable-teleop-software-runstop">
-<h3>Enable Teleop Software Runstop<a class="headerlink" href="#enable-teleop-software-runstop" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">In order to edit the robot.launch file, you will
-need to use a terminal editor (such as nano or vim), or use the -X flag
-with SSH to use a graphical editor (such as gedit). Additionally, the editor
-must be launched with <cite>sudo</cite>. Instructions below use nano.</p>
-</div>
-<p>To enable the software runstop, first SSH into the robot, and then
-modify the robot drivers launch file to use it.</p>
-<p>We need to modify the robot.launch file to pass the correct arg to the
-software runstop script:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ sudo nano /etc/ros/indigo/robot.launch
-</pre></div>
-</div>
-<p>In this file there should be a Software Runstop entry near the end. By default
-this entry contains an args line, with a value of “-a -b -g”. To add teleop
-control, add the “-t” flag as well. This section will then look like the below.
-If your robot is an older one and does not have a Software Runstop entry,
-you will want to simply copy the block the below.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- Software Runstop --&gt;
-&lt;include file=&quot;$(find fetch_bringup)/launch/include/runstop.launch.xml&quot;&gt;
-  &lt;arg name=&quot;flags&quot; value=&quot;-a -b -g -t&quot; /&gt;
-&lt;/include&gt;
-</pre></div>
-</div>
-<p>Note that the -a, -b, -g flags correspond to letting the software runstop
-control the <a class="reference internal" href="robot_hardware.html#breakers"><span class="std std-ref">arm, base and gripper breakers</span></a>,
-respectively.</p>
-<p>Additionally, if completely disabling the software runstop functionality is
-desired, the above section in robot.launch can be commented out or removed.</p>
-<p>Finally, restart the drivers so that our changes take effect:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ sudo service robot stop &amp;&amp; sudo service robot start
-</pre></div>
-</div>
-<div class="section" id="re-pairing-robot-joystick-that-won-t-connect">
-<h4>Re-pairing Robot Joystick that Won’t Connect<a class="headerlink" href="#re-pairing-robot-joystick-that-won-t-connect" title="Permalink to this headline">¶</a></h4>
-<p>If the bluetooth robot joystick will no longer connect to the robot, it
-can easily be re-paired to the robot by connecting it to the robot with a
-USB cable, and then running:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ sudo sixpair
-</pre></div>
-</div>
-<p>This situation is most often caused by charging the robot joystick from
-the USB port of another computer.</p>
-</div>
-<div class="section" id="using-deadzone-parameter-to-correct-drift">
-<h4>Using Deadzone Parameter to Correct Drift<a class="headerlink" href="#using-deadzone-parameter-to-correct-drift" title="Permalink to this headline">¶</a></h4>
-<p>Some controllers have poorly-zeroed joysticks, meaning that they send a nonzero
-value when the joystick is untouched and ought to send a zero value. This will be
-apparent if you press the deadman button on the controller, and the robot slowly
-moves without any input to the joysticks.</p>
-<p>This behavior can be compensated for by using a rosparameter: <strong>joy/deadzone</strong>
-(<a class="reference external" href="http://wiki.ros.org/joy#Parameters">ROS docs</a>), which defines the amount by
-which the joystick has to move before it is considered to be off-center, specified
-relative to an axis normalized between -1 and 1.</p>
-<p>Add/set the parameter in <code class="docutils literal notranslate"><span class="pre">/etc/ros/DISTRO/robot.launch</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- Teleop --&gt;
-  &lt;include file=&quot;$(find fetch_bringup)/launch/include/teleop.launch.xml&quot;/&gt;
-  &lt;param name=&quot;joy/deadzone&quot; value=&quot;0.1&quot;/&gt;
-</pre></div>
-</div>
-<p>You can inspect the output of <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">echo</span> <span class="pre">/joy</span></code> with the controller
-connected to choose an appropriate value for your controller.</p>
-</div>
+<span class="target" id="software-runstop"></span></div>
 </div>
 <div class="section" id="visualizing-data">
 <h3>Visualizing Data<a class="headerlink" href="#visualizing-data" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rosrun rviz rviz
 </pre></div>
 </div>
@@ -792,14 +722,14 @@ connected to choose an appropriate value for your controller.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">You will need a computer with ROS installed to properly
-communicate with the robot. Please consult the <a class="reference external" href="http://wiki.ros.org/indigo/Installation">ROS Wiki</a>
+communicate with the robot. Please consult the <a class="reference external" href="http://wiki.ros.org/melodic/Installation">ROS Wiki</a>
 for more information. We strongly suggest an Ubuntu machine
-with ROS Indigo installed.</p>
+with ROS Melodic installed.</p>
 </div>
 <p>You can now <a class="reference external" href="http://gazebosim.org/tutorials?tut=drcsim_visualization&amp;cat=drcsim#VisualizingtheRobotmodel">manually set up your RVIZ visualization</a>
 or re-run RVIZ with a configuration file using the command line.
-The default <code class="docutils literal notranslate"><span class="pre">.rviz</span></code> configuration file for Fetch can be loaded using:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ roscd fetch_navigation/config
+The default <code class="docutils literal"><span class="pre">.rviz</span></code> configuration file for Fetch can be loaded using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ roscd fetch_navigation/config
 &gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rviz -d navigation.rviz
 </pre></div>
@@ -811,9 +741,9 @@ The default <code class="docutils literal notranslate"><span class="pre">.rviz</
 <h4>Using the Runtime Monitor<a class="headerlink" href="#using-the-runtime-monitor" title="Permalink to this headline">¶</a></h4>
 <p>Fetch and Freight publish ROS diagnostics messages. These are human-readable
 messages that inform users of the robot system state. The <cite>runtime_monitor</cite>,
-part of <code class="docutils literal notranslate"><span class="pre">rqt_robot_plugins</span></code> can be used to view diagnostics from your
+part of <code class="docutils literal"><span class="pre">rqt_robot_plugins</span></code> can be used to view diagnostics from your
 desktop computer:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
+<div class="highlight-default"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rosrun rqt_runtime_monitor rqt_runtime_monitor
 </pre></div>
 </div>
@@ -824,7 +754,7 @@ desktop computer:</p>
 as well as one entry per breaker. Each of these entries will be classified
 as either stale, an error, a warning, or OK. In the above image,
 the supply_breaker is disabled because the robot is not plugged in
-– this is only a warning, and not actually an issue.</p>
+&#8211; this is only a warning, and not actually an issue.</p>
 <p>Common errors that can be detected are overly hot motors or breakers,
 breakers that have tripped. When the runstop on Fetch is pressed, a number
 of breakers become disabled and the motor controller boards are turned
@@ -888,7 +818,7 @@ then power will be disconnected.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'Indigo',
+            VERSION:'Melodic',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -897,7 +827,6 @@ then power will be disconnected.</p>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 

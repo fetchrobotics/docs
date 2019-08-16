@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ROS Melodic + Ubuntu 18.04 &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  <title>ROS Melodic + Ubuntu 18.04 &mdash; Fetch &amp; Freight Research Edition Melodic documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
 
   
-    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
+    <link rel="top" title="Fetch &amp; Freight Research Edition Melodic documentation" href="index.html"/>
         <link rel="next" title="Tutorial: Visualization" href="visualization.html"/>
         <link rel="prev" title="Care And Feeding" href="care_and_feeding.html"/> 
 
@@ -111,13 +111,6 @@
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#tucking-fetch-s-arm">Tucking Fetch&#8217;s Arm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#driving-fetch-and-freight-with-a-joystick">Driving Fetch and Freight with a Joystick</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="in_the_box.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
-<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#software-runstop">Software Runstop</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#using-software-runstop">Using Software Runstop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="in_the_box.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#re-pairing-robot-joystick-that-won-t-connect">Re-pairing Robot Joystick that Won&#8217;t Connect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="in_the_box.html#using-deadzone-parameter-to-correct-drift">Using Deadzone Parameter to Correct Drift</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="in_the_box.html#visualizing-data">Visualizing Data</a><ul>
@@ -189,23 +182,26 @@
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#batteries">Batteries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-sources">Re-Setting up apt Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ROS Melodic + Ubuntu 18.04</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#known-issues">Known issues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#upgrading-your-robot-to-ros-melodic-ubuntu-18-04">Upgrading Your Robot to ROS Melodic + Ubuntu 18.04</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#before-upgrade">Before Upgrade</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-and-installing-ros-fetch-packages">18.04 Install and Installing ROS/Fetch Packages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#post-install-validation">Post-install Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automated-installer-18-04-and-ros-melodic-install">AUTOMATED INSTALLER: 18.04 and ROS Melodic Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-approach-18-04-install-and-installing-ros-fetch-packages">MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#post-install-validation">Post-install Validation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#compatibility-of-other-computers-used-with-the-robot">Compatibility of Other Computers Used with the Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#not-recommended-supported-upgrading-from-14-04-to-18-04-via-16-04">Not Recommended/Supported: Upgrading from 14.04 to 18.04 (via 16.04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#not-supported-upgrading-from-14-04-to-18-04-via-16-04">Not Supported: Upgrading from 14.04 to 18.04 (via 16.04)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#appendices">Appendices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subsequent-upgrade-notes">Subsequent upgrade notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#disk-filling-issue">Disk filling issue</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot&#8217;s ethernet ports are configured correctly</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a></li>
 </ul>
 </li>
 </ul>
@@ -230,7 +226,7 @@
 <li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#software-runstop">Software Runstop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html#id1">Software Runstop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#using-software-runstop">Using Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="teleop.html#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
@@ -272,8 +268,8 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrating-fetch-torso">Calibrating Fetch Torso</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calibration.html#torso-calibration-procedure">Torso Calibration Procedure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calibration.html#verify-output">Verify Output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calibration.html#calibrate-output">Calibrate Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#calibration-output">Calibration Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calibration.html#output-when-verifying-new-torso-calibration">Output When Verifying New Torso Calibration</a></li>
 </ul>
 </li>
 </ul>
@@ -301,6 +297,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#august-9-2019">August 9, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html#april-4-2019">April 4, 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#december-18-2017">December 18, 2017</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#november-29-2016">November 29, 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release_notes.html#may-28-2016">May 28, 2016</a></li>
@@ -317,7 +315,7 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-do-anything-at-all-charge-move-etc">Why won&#8217;t my robot do anything at all (charge, move, etc...)?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-turn-on-when-i-push-the-power-button">Why won&#8217;t my robot turn on when I push the power button?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-joystick">Why won&#8217;t my robot move when I use my PS3 joystick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-ps4-joystick">Why won&#8217;t my robot move when I use my PS3/PS4 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won&#8217;t gravity compensate, help?</a></li>
 </ul>
@@ -381,17 +379,28 @@
 <h1>ROS Melodic + Ubuntu 18.04<a class="headerlink" href="#ros-melodic-ubuntu-18-04" title="Permalink to this headline">¶</a></h1>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">As of 5-30-2019, some issues may still exist. Reach out to support if you
-encounter upgrade issues with your robot(s).</p>
+<p class="last">Rarely, issues may occur with some installs. You should ensure that
+your research schedule/needs will allow for a possible prolonged
+troubleshooting phase with your robot(s).</p>
 </div>
 <p>Fetch Robotics has recently started supporting ROS Melodic and Ubuntu 18.04 on
 Fetch and Freight robots.  Other than the process of upgrading a robot, there
 should be minimal effect on using your robot.  If you observe an issue, please
 let us know via a support ticket.</p>
+<div class="section" id="known-issues">
+<h2>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Gazebo9 and the Fetch have some bugs which we are currently working to fix.
+<p class="last">The PS3 controller does not work as well on 18.04 as it did on 14.04. To achieve
+smooth control, the input from the controller will need to be continually varied.
+This can be done by continually moving or shaking the controller.  Alternately,
+you can <a class="reference internal" href="ps4.html"><span class="doc">switch to using a PS4 controller</span></a>.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Gazebo9 and the Fetch have some bugs which we are currently aware of.
 If you use Gazebo, please check the status of this <a class="reference external" href="https://github.com/fetchrobotics/fetch_gazebo/issues/37">issue on GitHub</a>.</p>
+</div>
 </div>
 <div class="section" id="upgrading-your-robot-to-ros-melodic-ubuntu-18-04">
 <h2>Upgrading Your Robot to ROS Melodic + Ubuntu 18.04<a class="headerlink" href="#upgrading-your-robot-to-ros-melodic-ubuntu-18-04" title="Permalink to this headline">¶</a></h2>
@@ -401,20 +410,21 @@ If you use Gazebo, please check the status of this <a class="reference external"
 not straightforward to go back to ROS Indigo/Ubuntu 14.04 after doing this.
 Ensure your colleagues are on board with doing this upgrade.</p>
 </div>
-<p>This document is a procedure for replacing the contents of your robot&#8217;s SSD
-with an Ubuntu 18.04 install and ROS Melodic.</p>
+<p>This document is a procedure for <strong>replacing the contents</strong> of your robot&#8217;s SSD
+with an Ubuntu 18.04 install and ROS Melodic.  All files will be erased!</p>
 <div class="section" id="before-upgrade">
 <h3>Before Upgrade<a class="headerlink" href="#before-upgrade" title="Permalink to this headline">¶</a></h3>
-<p>Back up files from the robot!  There are a few categories of files to back up:</p>
+<p>Back up files from the robot!  All files will be erased, so make sure to save
+files specific to your research work. There are a few categories of files to back up:</p>
 <ol class="arabic simple">
 <li>Calibration and other robot-specific files. By convention, these are
 all in <code class="docutils literal"><span class="pre">/etc/ros/[indigo|melodic]/</span></code></li>
 <li>Files relating to your research work</li>
 <li>A record of what packages you installed for ROS Indigo</li>
-<li>Udev rules created for additional hardware (e.g. sensors) added to your robot</li>
+<li>Udev rules created for additional hardware (e.g. sensors) added to your robot (not common)</li>
 <li>Network hardware configuration (for troubleshooting)</li>
 </ol>
-<p>Below, we assume that after logging into the robot (e.g. via <cite>ssh</cite>) you back up
+<p>Below, we assume that after logging into the robot (e.g. via <code class="docutils literal"><span class="pre">ssh</span></code>) you back up
 files to a machine named HOST with username USER.</p>
 <p>For (1), we recommend doing:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zcf</span> <span class="n">fetch_robot_files</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">indigo</span><span class="o">/</span>
@@ -437,20 +447,99 @@ automatically set up networking on your robot correctly:</p>
 <p>If you are using any additional hardware (sensors), be sure to record what network
 or other hardware configuration changes were made to get them working.</p>
 </div>
-<div class="section" id="install-and-installing-ros-fetch-packages">
-<h3>18.04 Install and Installing ROS/Fetch Packages<a class="headerlink" href="#install-and-installing-ros-fetch-packages" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="automated-installer-18-04-and-ros-melodic-install">
+<h3>AUTOMATED INSTALLER: 18.04 and ROS Melodic Install<a class="headerlink" href="#automated-installer-18-04-and-ros-melodic-install" title="Permalink to this headline">¶</a></h3>
+<p>This section guides you through using a custom automated installer that
+will set up Ubuntu with ROS packages and Fetch customizations for robots.
+You can alternately do a manual install, which is outlined in the next section.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">Back up your files as described in the previous section</p>
 </div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">This automated installer will not work for setting up a dual booting robot.
+For this, we recommend following the manual procedure instead, below.</p>
+</div>
+<ol class="arabic">
+<li><p class="first"><strong>Runstop the robot</strong>, to avoid unexpected movement of the robot.</p>
+</li>
+<li><p class="first"><strong>Create the installer USB flash drive</strong> using a separate computer:</p>
 <ol class="arabic simple">
-<li><strong>Runstop the robot</strong>, to avoid unexpected movement of the robot.</li>
-<li><strong>Install Ubuntu 18.04 on the robot.</strong> Download the latest 18.04 Ubuntu installer from <a class="reference external" href="http://releases.ubuntu.com/18.04/">http://releases.ubuntu.com/18.04/</a>
-(in these instructions we use the Desktop image, version 18.04.2).
-For help booting from USB, see <a class="reference internal" href="#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a>.</li>
+<li>In a web browser, navigate to <a class="reference external" href="http://packages.fetchrobotics.com/images/">http://packages.fetchrobotics.com/images/</a> and click and
+download the latest fetch_ubuntu_*.iso</li>
+<li>Plug the flash drive into your computer.</li>
+<li>In a terminal, run <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">usb-creator-gtk</span></code>. This will open a utility for putting the
+install image onto the flash drive.  Select the fetch_ubuntu.iso file (you may have to
+browse via “Other”.  Verify the correct disk is selected in the second listbox, and then
+click &#8220;Make Startup Disk&#8221;.
+(If usb-creator-gtk fails to work, you probably will need to format the disk using, e.g.,
+gParted.  After formatting the USB drive, retry usb-creator-gtk)</li>
 </ol>
-<blockquote>
-<div><ol class="arabic simple">
+</li>
+<li><p class="first"><strong>Install OS with ROS, etc. included</strong>:</p>
+<ol class="arabic">
+<li><p class="first">Plug in the USB flash drive to the robot, as well as a monitor, keyboard and mouse.</p>
+</li>
+<li><p class="first">Turn the robot on with the power button, and press either F7 or F11 several times to get
+to the boot device selection window shown in the next step. If you fail to get to a
+screen like the below, restart the robot and try again:</p>
+</li>
+<li><p class="first">The name of the correct option in the boot menu varies based on the flash drive you used.
+Typically, it will be similar to &#8220;UEFI (FAT) FlashDrive Name&#8221;. See the following images
+for what to expect and select:</p>
+<p><img alt="Boot selection" src="_images/boot_selection.png" /></p>
+<p><a class="reference internal" href="_images/install_selection.png"><img alt="Installer selection" src="_images/install_selection.png" style="width: 500px;" /></a></p>
+<p><a class="reference internal" href="_images/install_continue.png"><img alt="Continue Install" src="_images/install_continue.png" style="width: 500px;" /></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We have only tested English language installs</p>
+</div>
+</li>
+<li><p class="first">Once the install gets to the following screen, the post-install script will walk you
+through the rest of the install.</p>
+<p><a class="reference internal" href="_images/install_prompt.png"><img alt="Initial post-install prompt" src="_images/install_prompt.png" style="width: 500px;" /></a></p>
+</li>
+<li><p class="first">If the robot is not connected to the internet via an ethernet cable, you will next be
+prompted to connect to a wifi network in order to install needed packages.  Otherwise,
+you will be prompted whether to <em>also</em> connect to a wifi network.</p>
+</li>
+<li><p class="first">Next you will be prompted to give the robot&#8217;s name.  A name other than fetchXX or freightXX
+will result in a non-robot install of Ubuntu 18.04 (with ROS also installed). We recommend
+keeping the same hostname for the robot, e.g. <cite>fetch1104</cite></p>
+</li>
+<li><p class="first">Once the terminal window changes from blue to white, user input is no longer needed and
+you can leave the install to run (15+ minutes, depending on internet speed).</p>
+</li>
+<li><p class="first">The <cite>fetch</cite> user will be automatically created, with password &#8216;robotics&#8217;.</p>
+</li>
+<li><p class="first">Wait for the install to complete.  The post-install script will restart fairly quickly,
+and then resume running/installing after the reboot.  It will then reboot a second time,
+at which point you should see a grey Fetch Robotics desktop background, and the install
+is complete.</p>
+</li>
+<li><p class="first">After the install completes, continue to the Post-install Validation section below.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>If the installer appears to get stuck, please send a picture of the screen to Support.
+If it is stuck in one of the initial steps before you get to the language selection
+screen, you can try re-running the install, or if that fails, recreating the flash drive.</p>
+</div>
+<div class="section" id="manual-approach-18-04-install-and-installing-ros-fetch-packages">
+<h3>MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages<a class="headerlink" href="#manual-approach-18-04-install-and-installing-ros-fetch-packages" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Back up your files as described in the previous section</p>
+</div>
+<ol class="arabic">
+<li><p class="first"><strong>Runstop the robot</strong>, to avoid unexpected movement of the robot.</p>
+</li>
+<li><p class="first"><strong>Install Ubuntu 18.04 on the robot.</strong> Download the latest 18.04 Ubuntu installer from <a class="reference external" href="http://releases.ubuntu.com/18.04/">http://releases.ubuntu.com/18.04/</a>
+(in these instructions we use the Desktop image, version 18.04.2).
+For help booting from USB, see <a class="reference internal" href="#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a>.</p>
+<ol class="arabic simple">
 <li>We recommend keeping the same hostname for the robot, e.g. <cite>fetch4</cite></li>
 <li>You can create the <cite>fetch</cite> user, or let it be automatically created later.
 (The typical password for the <cite>fetch</cite> user is &#8216;robotics&#8217;.)</li>
@@ -462,20 +551,16 @@ icon on the sidebar, which should trigger an update prompt you can close: <img a
 to enable SSH into your robot: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">openssh-server</span> <span class="pre">net-tools</span></code>.
 You might also want to install your favorite commandline text editor.</li>
 </ul>
-</div></blockquote>
-<ol class="arabic simple">
-<li><strong>Update your Ubuntu install:</strong> <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">dist-upgrade</span> <span class="pre">-y</span></code></li>
-<li>To make the robot works correctly when a monitor is not attached, run:
-<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">set-default</span> <span class="pre">multi-user.target</span></code></li>
-<li><strong>Install ROS Melodic</strong> by following the instructions
+</li>
+<li><p class="first"><strong>Update your Ubuntu install:</strong> <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">dist-upgrade</span> <span class="pre">-y</span></code></p>
+</li>
+<li><p class="first"><strong>Install ROS Melodic</strong> by following the instructions
 <a class="reference external" href="http://wiki.ros.org/melodic/Installation/Ubuntu">on the ROS Wiki</a>.
-You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:</li>
-</ol>
-<blockquote>
-<div><ul>
+You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:</p>
+<ul>
 <li><p class="first">You use the <strong>ROS-Base</strong> setup, via the <code class="docutils literal"><span class="pre">ros-melodic-ros-base</span></code> package.</p>
 </li>
-<li><p class="first">You&#8217;re using bash, so step 1.6 for the fetch user is:</p>
+<li><p class="first">You are using bash, so step 1.6 for the fetch user is:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;source /opt/ros/melodic/setup.bash&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
 <span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
 </pre></div>
@@ -484,8 +569,7 @@ You will want to do steps 1.1 through 1.6. In writing/testing these instructions
 <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">su</span> <span class="pre">-c</span> <span class="pre">'echo</span> <span class="pre">&quot;source</span> <span class="pre">/opt/ros/melodic/setup.bash&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">/etc/bash.bashrc'</span></code></p>
 </li>
 </ul>
-</div></blockquote>
-<ol class="arabic">
+</li>
 <li><p class="first"><strong>NOTE</strong>: at a later time, Fetch may host and recommend its own mirror of ROS Melodic debians.</p>
 </li>
 <li><p class="first">Run the following to <strong>install Fetch research debians</strong>:</p>
@@ -515,10 +599,11 @@ melodic-config debian install again.</p>
 </li>
 </ol>
 </div>
+</div>
 <div class="section" id="post-install-validation">
-<h3>Post-install Validation<a class="headerlink" href="#post-install-validation" title="Permalink to this headline">¶</a></h3>
-<p>This is a direct continuation of the previous section&#8217;s procedure. It is assumed
-that your robot is still runstopped.</p>
+<h2>Post-install Validation<a class="headerlink" href="#post-install-validation" title="Permalink to this headline">¶</a></h2>
+<p>This is a direct continuation of either of the previous sections&#8217; procedure.
+It is assumed that your robot is still runstopped.</p>
 <p>Verify that things are working.  All of the following steps assume that you are
 <code class="docutils literal"><span class="pre">ssh</span></code>&#8216;d into the robot:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">fetch</span><span class="nd">@fetchXXXX</span>
@@ -528,7 +613,7 @@ that your robot is still runstopped.</p>
 <li><p class="first">If your robot has not been upgraded in a while, it is likely that it will need to
 automatically upgrade the firmware on its boards. This can take several minutes
 to complete after you have rebooted the robot. You can monitor this by doing:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">robot</span><span class="o">.</span><span class="n">log</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">robot</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 </div>
 <p>You may see messages like the following:</p>
@@ -545,18 +630,12 @@ to complete after you have rebooted the robot. You can monitor this by doing:</p
 <p>If you see the second sort of message, the likely fix is to power cycle the robot again
 via <code class="docutils literal"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">charger_power</span> <span class="pre">reboot</span></code>.</p>
 </li>
-<li><p class="first">Verify that calibration is installed, e.g. a date should be output if you run the command below:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>fetch@fetch3:~$ calibrate_robot --date
-2018-11-26 14:48:04
-</pre></div>
-</div>
-</li>
 <li><p class="first">Verify that the robot can ping the mainboard and the laser:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">10.42</span><span class="o">.</span><span class="mf">42.42</span>  <span class="c1"># mainboard</span>
 <span class="n">ping</span> <span class="mf">10.42</span><span class="o">.</span><span class="mf">42.10</span>  <span class="c1"># laser</span>
 </pre></div>
 </div>
-<p>If not, see <a class="reference internal" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot&#8217;s ethernet ports are configured correctly</a></p>
+<p>If not, see <a class="reference internal" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot&#8217;s ethernet ports are configured correctly</a>.</p>
 </li>
 <li><p class="first">Verify that the Primesense camera is working (if working with a Fetch robot):</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rostopic</span> <span class="nb">list</span> <span class="n">head_camera</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
@@ -577,33 +656,6 @@ best solution.</p>
 <li><p class="first">The arm&#8217;s &#8220;gravity compensation&#8221; should now be working. You should be able to
 freely move the arm by hand.</p>
 </li>
-<li><p class="first">Check whether your PS3 controller pairs and controls the robot.</p>
-<p><strong>Important note</strong>: The PS3 controller currently won&#8217;t work with ROS by default.
-To fix this, run <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/dev/input/js0</span> <span class="pre">/dev/ps3joy</span></code>. We hope to fix this
-by fixing the corresponding udev rules eventually.</p>
-<ul class="simple">
-<li>If you then verify that the /joy topic is publishing, you may need to do
-<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">stop</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">robot</span> <span class="pre">start</span></code> before the robot
-responds to teleop.</li>
-<li>The previously described fix of creating /dev/ps3joy may reset on power-cycle.
-A more permanent hack is described
-<a class="reference external" href="https://github.com/fetchrobotics/docs/issues/66#issuecomment-485049854">in this comment</a>.</li>
-</ul>
-<p><strong>Important note</strong>: for 18.04 the robots have switched from using sixad to using
-PS3joy.  While you do not need to re-pair the controller to the computer, note that
-the utility for doing so is now located at <code class="docutils literal"><span class="pre">/opt/ros/melodic/lib/ps3joy/sixad</span></code>.
-Some other changes in behaviour you may see:</p>
-<ul class="simple">
-<li>The LEDs on the PS3 controller may continually blink, even though it is connected.</li>
-<li>Inputs may not be sent from the PS3 controller if the accelerometers in the
-controller do not detect motion. This can result in jerky motion when using
-the controller.</li>
-</ul>
-<p>We are hoping to determine fixes for these in the near future.</p>
-</li>
-<li><p class="first">At this point the robot is probably working fine and is ready for use! (Unless you
-have additional customizations to restore; see next step)</p>
-</li>
 <li><p class="first">If applicable, from your non-robot computer, restore the contents of
 <code class="docutils literal"><span class="pre">/etc/ros/indigo</span></code> to <code class="docutils literal"><span class="pre">/etc/ros/melodic</span></code> on the robot:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">scp</span> <span class="n">fetch_robot_files</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="n">fetch</span><span class="nd">@fetchXXX</span><span class="p">:</span><span class="o">~/</span>
@@ -617,9 +669,92 @@ instances of <code class="docutils literal"><span class="pre">indigo</span></cod
 <p>As well, you can restore any other saved files to the robot.</p>
 <p>This is the point at which some things may not work fully, e.g. if packages
 used in ROS Indigo need updates/replacements for ROS Melodic.</p>
+<ol class="arabic">
+<li><p class="first">Verify that calibration is installed: a date should be output if you run
+the following command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>fetch@fetch3:~$ calibrate_robot --date
+2018-11-26 14:48:04
+</pre></div>
+</div>
+</li>
+<li><p class="first">To restart the drivers so that your restored files are used, with the arm
+safely resting so that it won&#8217;t fall, restart roscore:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">roscore</span> <span class="n">restart</span>
+</pre></div>
+</div>
 </li>
 </ol>
+</li>
+<li><p class="first">Set up your teleop controller. By default, a fresh install will not have the service
+for either controller active, and the user will need to enable the appropriate
+service. (Note, only one or the other can be set up at a time.)</p>
+<ul>
+<li><p class="first"><strong>PS4</strong>: The PS4 controller is newly supported on our robots with 18.04. The PS4
+controller works better than the PS3 controller and is recommended. You can
+acquire one from e.g. Amazon. Note that third party PS4 controllers may not work.</p>
+<ol class="arabic">
+<li><p class="first">Pair the controller via the Bluetooth settings in Ubuntu. For more detail,
+see <a class="reference internal" href="ps4.html"><span class="doc">here</span></a>.</p>
+</li>
+<li><p class="first">Disconnect the controller by holding the middle button for 10 seconds.</p>
+</li>
+<li><p class="first">Connect the controller by pressing the middle button and then waiting until the LED
+is blue and not flashing.</p>
+</li>
+<li><p class="first">You can verify that the controller is connected properly by watching the output
+of <code class="docutils literal"><span class="pre">jstest</span> <span class="pre">/dev/ps4joy</span></code> and pressing buttons on the controller.</p>
+</li>
+<li><p class="first"><strong>If</strong> you did keep your old /etc/ros/indigo/robot.launch and are switching to a PS4
+controller, you will need to:</p>
+<ol class="arabic">
+<li><p class="first">Find and modify/add the following lines in <code class="docutils literal"><span class="pre">/etc/ros/melodic/robot.launch</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">&lt;</span><span class="n">include</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;$(find freight_bringup)/launch/include/teleop.launch.xml&quot;</span> <span class="o">/&gt;</span>
+<span class="o">+</span> <span class="o">&lt;</span><span class="n">include</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;$(find freight_bringup)/launch/include/teleop.launch.xml&quot;</span><span class="o">&gt;</span>
+<span class="o">+</span>   <span class="o">&lt;</span><span class="n">arg</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ps4&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;true&quot;</span> <span class="o">/&gt;</span>
+<span class="o">+</span> <span class="o">&lt;/</span><span class="n">include</span><span class="o">&gt;</span>
+</pre></div>
 </div>
+</li>
+<li><p class="first">Then, with the arm safely resting so that it won&#8217;t fall, restart roscore:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">roscore</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p class="first">Monitoring <code class="docutils literal"><span class="pre">/joy</span></code> topic should similarly reflect inputs on the controller.</p>
+</li>
+<li><p class="first">The controller should work to teleop the robot.</p>
+</li>
+</ol>
+</li>
+<li><p class="first"><strong>PS3</strong>: Check whether your PS3 controller pairs and controls the robot:</p>
+<ol class="arabic simple">
+<li>You do not need to re-pair the controller, generally, it should still connect.</li>
+<li>Connect the controller by pressing the center button. Note: LEDs will continually flash
+even when the connection is successful.</li>
+<li>You can verify that the controller is connected properly by watching the output
+of <code class="docutils literal"><span class="pre">jstest</span> <span class="pre">/dev/ps3joy</span></code> and pressing buttons on the controller.</li>
+<li>Monitoring <code class="docutils literal"><span class="pre">/joy</span></code> topic should now reflect inputs on the controller.</li>
+<li>The controller should work to teleop the robot.</li>
+</ol>
+<p><strong>Important note</strong>: for 18.04 the robots have switched from using sixad to using
+PS3joy.  While you do not need to re-pair the controller to the computer, note that
+the utility for doing so is now located at <code class="docutils literal"><span class="pre">/opt/ros/melodic/lib/ps3joy/sixpair</span></code>.
+Some other changes in behaviour you may see:</p>
+<ul class="simple">
+<li>Inputs may are sent from the PS3 controller once per second, unless motion is detected
+via the accelerometer/gyro in the PS3 controller. This can result in jerky motion
+when using the controller.</li>
+<li>The LEDs on the PS3 controller will continually blink, even though it is connected.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">At this point the robot is probably working fine and is ready for use! (Unless you
+have additional customizations to restore)</p>
+</li>
+</ol>
 </div>
 <div class="section" id="compatibility-of-other-computers-used-with-the-robot">
 <h2>Compatibility of Other Computers Used with the Robot<a class="headerlink" href="#compatibility-of-other-computers-used-with-the-robot" title="Permalink to this headline">¶</a></h2>
@@ -633,20 +768,20 @@ packages.  Addtionally you might want to install
 <a class="reference external" href="https://github.com/fetchrobotics/fetch_tools">ros-melodic-fetch-tools</a>.</li>
 <li>Ensure that these packages are included in your path (e.g.
 <code class="docutils literal"><span class="pre">rospack</span> <span class="pre">find</span> <span class="pre">fetch_description</span></code> returns a path)</li>
-<li>Common gotcha on a new setup: If the robot model doesn&#8217;t appear at first, you
-may want to change the &#8220;Fixed frame&#8221; from e.g. &#8216;map&#8217; to &#8216;odom&#8217;.</li>
+<li>Common gotcha on a new setup: If the robot model doesn&#8217;t appear in RViz at
+first, you may need to change the &#8220;Fixed frame&#8221; from e.g. &#8216;map&#8217; to &#8216;odom&#8217;.</li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="not-recommended-supported-upgrading-from-14-04-to-18-04-via-16-04">
-<h2>Not Recommended/Supported: Upgrading from 14.04 to 18.04 (via 16.04)<a class="headerlink" href="#not-recommended-supported-upgrading-from-14-04-to-18-04-via-16-04" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="not-supported-upgrading-from-14-04-to-18-04-via-16-04">
+<h2>Not Supported: Upgrading from 14.04 to 18.04 (via 16.04)<a class="headerlink" href="#not-supported-upgrading-from-14-04-to-18-04-via-16-04" title="Permalink to this headline">¶</a></h2>
 <p>Fetch Robotics does not recommend this approach and <em>cannot</em> provide support for this.
 However, if you desire to try to upgrade, the following may be helpful:</p>
 <ul class="simple">
 <li>Back up files as described above, or even the full disk if you like.</li>
 <li>You cannot upgrade Ubuntu directly from 14.04 to 18.04. You must first
-upgrade to 16.04 first. This can take a long time.</li>
+upgrade to 16.04, then upgrade to 18.04. This can take a long time.</li>
 <li>You should review the postinstall script for <code class="docutils literal"><span class="pre">fetch-melodic-config</span></code>. It is not
 targeted at upgrading a system, so additional tweaks may be required after
 installing it.</li>
@@ -654,17 +789,53 @@ installing it.</li>
 </div>
 <div class="section" id="appendices">
 <h2>Appendices<a class="headerlink" href="#appendices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="subsequent-upgrade-notes">
+<h3>Subsequent upgrade notes<a class="headerlink" href="#subsequent-upgrade-notes" title="Permalink to this headline">¶</a></h3>
+<p>When doing an upgrade of the robot, always follow the steps at
+<span class="xref doc">Updating Your Robot</span>.</p>
+<p>Particularly if you upgraded to 18.04 prior to August 2019, when doing an upgrade
+of packages via <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">upgrade</span></code>, you may be prompted regarding changed files:</p>
+<ul class="simple">
+<li>/etc/default/grub</li>
+<li>/etc/udev/rules.d/99-ps3joy.rules</li>
+<li>/etc/udev/rules.d/99-ds4drv.rules</li>
+</ul>
+<p>It is fine to select &#8220;install the package maintainer&#8217;s version.&#8221;</p>
+</div>
+<div class="section" id="accessing-boot-menu-on-fetch-robots">
+<h3>Accessing Boot Menu on Fetch Robots<a class="headerlink" href="#accessing-boot-menu-on-fetch-robots" title="Permalink to this headline">¶</a></h3>
+<p>You may need to access the boot menu in order to boot from a USB flash
+drive and install Ubuntu 18.04.  Due to different computer motherboards used in the
+past, Fetch research robots may be using one of two BIOS flavors.  Older robots
+use an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).</p>
+<p>These different BIOS types activate the boot media selection menu with different keys:</p>
+<ul class="simple">
+<li>If your robot shows the MSI splash screen at boot, press F11 to access the boot menu.</li>
+<li>If your robot shows the black AMI splash screen at boot (this lasts for about 1 second),
+press F7 to access the boot menu.</li>
+</ul>
+<p>If you fail to get into the boot menu, you can restart the computer and try again.</p>
+</div>
 <div class="section" id="disk-filling-issue">
 <h3>Disk filling issue<a class="headerlink" href="#disk-filling-issue" title="Permalink to this headline">¶</a></h3>
 <p>Some robots may encounter an issue where Gnome3 fills the disk by spamming /var/log/syslog.
 This issue has a fix that is not available via <cite>apt</cite> yet, but can be manually done:
-<a class="reference external" href="https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1772677/comments/63">https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1772677/comments/63</a></p>
+<a class="reference external" href="https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1772677/comments/63">see comments here</a>.</p>
 </div>
 <div class="section" id="ensuring-robot-s-ethernet-ports-are-configured-correctly">
 <h3>Ensuring robot&#8217;s ethernet ports are configured correctly<a class="headerlink" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly" title="Permalink to this headline">¶</a></h3>
+<p>If you previously did the upgrade to Ubuntu 18.04 prior to August 2019, you should make
+the following fix to the ethernet IP specifications to avoid issues with internet
+access/routing:</p>
+<ol class="arabic simple">
+<li>Edit <code class="docutils literal"><span class="pre">/etc/netplan/99-fetch-ethernet.yaml</span></code> and remove any lines referencing
+<code class="docutils literal"><span class="pre">gateway4</span></code>.</li>
+<li>Run <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">netplan</span> <span class="pre">apply</span></code></li>
+<li>Power cycle the robot (only needed if you&#8217;re actively having issues).</li>
+</ol>
 <p>The robot has two ethernet ports on its computer. You can find more information on this
-at <a class="reference external" href="computer.rst">Computer Overview and Configuration</a>.</p>
-<p>The most likely problem you may encounter after getting 18.04 installed is if these two
+at <a class="reference internal" href="computer.html"><span class="doc">Computer Overview and Configuration</span></a>.</p>
+<p>A problem you may encounter after getting 18.04 installed is if these two
 ports are &#8220;swapped&#8221;.  This will cause the robot computer to be unable to talk to the
 rest of its hardware. You can fix this in software or in hardware:</p>
 <ul class="simple">
@@ -679,19 +850,6 @@ Typically, the blue goes to the top ethernet port, and the grey goes to the bott
 side access panel with a DHCP setup. In some setups, the ethernet port may fail to
 be assigned an IP automatically. We recommend consulting IT for help with this, if
 needed.</p>
-</div>
-<div class="section" id="accessing-boot-menu-on-fetch-robots">
-<h3>Accessing Boot Menu on Fetch Robots<a class="headerlink" href="#accessing-boot-menu-on-fetch-robots" title="Permalink to this headline">¶</a></h3>
-<p>You may need to access the boot menu in order to boot from a USB flash
-drive and install Ubuntu 18.04.  Due to different computer motherboards used in the
-past, Fetch research robots may be using one of two BIOS flavors.  Older robots
-use an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).</p>
-<p>These different BIOS types activate the boot media selection menu with different keys:
-- If your robot shows the MSI splash screen at boot, press F11 to access the boot menu.
-- If your robot shows the black AMI splash screen at boot (this lasts for about 1 second),</p>
-<blockquote>
-<div>press F7 to access the boot menu.</div></blockquote>
-<p>If you fail to get into the boot menu, you can restart the computer and try again.</p>
 </div>
 </div>
 </div>
@@ -736,7 +894,7 @@ use an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'Indigo',
+            VERSION:'Melodic',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
