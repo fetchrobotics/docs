@@ -143,10 +143,12 @@ Upgrading to the latest packages is as easy as:
 
 ::
 
-   sudo apt update
-   sudo apt install --only-upgrade ros-melodic-* f.*-system-config
-   sudo service robot stop
-   sudo service robot start
+  sudo apt update
+  sudo apt install --only-upgrade ros-melodic-*
+
+  export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
+  wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+  sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
 
 .. warning::
 
