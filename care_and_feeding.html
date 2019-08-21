@@ -508,10 +508,12 @@ electrical components could potentially be damaged and need replacement.</p>
 <p>Your robot has been pre-configured with ROS Melodic and the appropriate
 APT repositories from which to fetch package updates.
 Upgrading to the latest packages is as easy as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">--</span><span class="n">only</span><span class="o">-</span><span class="n">upgrade</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-*</span> <span class="n">f</span><span class="o">.*-</span><span class="n">system</span><span class="o">-</span><span class="n">config</span>
-<span class="n">sudo</span> <span class="n">service</span> <span class="n">robot</span> <span class="n">stop</span>
-<span class="n">sudo</span> <span class="n">service</span> <span class="n">robot</span> <span class="n">start</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span>sudo apt update
+sudo apt install --only-upgrade ros-melodic-*
+
+export ROBOTTYPE=$(hostname | awk -F&#39;[0-9]&#39; &#39;{print $1}&#39;)
+wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
+sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
 </pre></div>
 </div>
 <div class="admonition warning">
