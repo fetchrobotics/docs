@@ -12,6 +12,28 @@ For information on updating your robot to the latest packages, see
 
 Note: For ROS Indigo, packages are hosted at http://packages.fetchrobotics.com.
 
+September 10, 2019
+--------------
+This release adds a few fixes for Fetch and Freight with ROS Melodic.
+
+* ROS Melodic robots now start a `soundplay <http://wiki.ros.org/sound_play>`__
+  node on startup. This feature was initially omitted from Melodic/18.04 support.
+* The frame_id field in the /imu topic now publishes correctly.
+* The robot drivers were updated to align with the power_msgs packages. The
+  /battery_state topic now works correctly.
+
+Key Updated Fetch Packages:
+ * fetch-melodic-config: 0.2-0ubuntu1 -> 0.2-0ubuntu2
+ * freight-melodic-config: 0.2-0ubuntu1 -> 0.2-0ubuntu2
+ * ros-melodic-power-msgs: 0.3.0-0 -> 0.4.0-1
+ * ros-melodic-fetch-bringup: 0.8.7-1 -> 0.8.8-1
+ * ros-melodic-fetch-drivers: 0.8.7-1 -> 0.8.8-1
+ * ros-melodic-freight-bringup: 0.8.7-1 -> 0.8.8-1
+
+A full list of updated/new Fetch packages can be found at
+`discourse.ros.org <https://discourse.ros.org/t/new-packagesg-for-melodic-2019-09-10/10615>`__.
+
+
 August 9, 2019
 --------------
 This release adds support for Fetch and Freight using ROS Melodic on Ubuntu 18.04.
@@ -19,14 +41,14 @@ ROS Indigo and Ubuntu 14.04 are EOL. Robots using Indigo should continue to work
 but will not receive further updates. To upgrade your robot, see
 :doc:`these instructions <indigo_to_melodic>`.
 
- * The default ROS Melodic Fetch and Freight configurations can be easily set up
-   using the new automated installer (this is a clean install, not an in-place upgrade).
-   To upgrade your robot, see :doc:`these instructions <indigo_to_melodic>`.
- * fetch_teleop/bringup now includes PS4 controller support. See :doc:`how to switch <ps4>`.
+* The default ROS Melodic Fetch and Freight configurations can be easily set up
+  using the new automated installer (this is a clean install, not an in-place upgrade).
+  To upgrade your robot, see :doc:`these instructions <indigo_to_melodic>`.
+* fetch_teleop/bringup now includes PS4 controller support. See :doc:`how to switch <ps4>`.
 
 New Fetch Packages:
- * fetch-melodic-config: 0.2-0 (replaces fetch-system-config)
- * freight-melodic-config: 0.2-0 (replaces freight-system-config)
+ * fetch-melodic-config: 0.2-0ubuntu1 (replaces fetch-system-config)
+ * freight-melodic-config: 0.2-0ubuntu1 (replaces freight-system-config)
 
 Updated Fetch Packages:
  * ros-melodic-fetch-bringup: 0.8.6-0 -> 0.8.7-1
@@ -77,7 +99,6 @@ battery balancing, which should improve battery life. There are also a number of
  * fetch/freight-system-config now preserves certain ethernet network configurations.
 
 Updated Fetch Packages:
-
  * fetch-system-config: 0.8-8 -> 0.9-1
  * freight-system-config: 0.8-8 -> 0.9-1
  * ros-indigo-fetch-bringup: 0.7.3-0 -> 0.7.5-0
