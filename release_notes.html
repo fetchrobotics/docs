@@ -297,6 +297,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#september-10-2019">September 10, 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#august-9-2019">August 9, 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#april-4-2019">April 4, 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#december-18-2017">December 18, 2017</a></li>
@@ -385,25 +386,48 @@ the installed package.</p>
 <p>For information on updating your robot to the latest packages, see
 <a class="reference internal" href="care_and_feeding.html#updating"><span class="std std-ref">Updating Your Robot</span></a>.</p>
 <p>Note: For ROS Indigo, packages are hosted at <a class="reference external" href="http://packages.fetchrobotics.com">http://packages.fetchrobotics.com</a>.</p>
+<div class="section" id="september-10-2019">
+<h2>September 10, 2019<a class="headerlink" href="#september-10-2019" title="Permalink to this headline">¶</a></h2>
+<p>This release adds a few fixes for Fetch and Freight with ROS Melodic.</p>
+<ul class="simple">
+<li>ROS Melodic robots now start a <a class="reference external" href="http://wiki.ros.org/sound_play">soundplay</a>
+node on startup. This feature was initially omitted from Melodic/18.04 support.</li>
+<li>The frame_id field in the /imu topic now publishes correctly.</li>
+<li>The robot drivers were updated to align with the power_msgs packages. The
+/battery_state topic now works correctly.</li>
+</ul>
+<dl class="docutils">
+<dt>Key Updated Fetch Packages:</dt>
+<dd><ul class="first last simple">
+<li>fetch-melodic-config: 0.2-0ubuntu1 -&gt; 0.2-0ubuntu2</li>
+<li>freight-melodic-config: 0.2-0ubuntu1 -&gt; 0.2-0ubuntu2</li>
+<li>ros-melodic-power-msgs: 0.3.0-0 -&gt; 0.4.0-1</li>
+<li>ros-melodic-fetch-bringup: 0.8.7-1 -&gt; 0.8.8-1</li>
+<li>ros-melodic-fetch-drivers: 0.8.7-1 -&gt; 0.8.8-1</li>
+<li>ros-melodic-freight-bringup: 0.8.7-1 -&gt; 0.8.8-1</li>
+</ul>
+</dd>
+</dl>
+<p>A full list of updated/new Fetch packages can be found at
+<a class="reference external" href="https://discourse.ros.org/t/new-packagesg-for-melodic-2019-09-10/10615">discourse.ros.org</a>.</p>
+</div>
 <div class="section" id="august-9-2019">
 <h2>August 9, 2019<a class="headerlink" href="#august-9-2019" title="Permalink to this headline">¶</a></h2>
 <p>This release adds support for Fetch and Freight using ROS Melodic on Ubuntu 18.04.
 ROS Indigo and Ubuntu 14.04 are EOL. Robots using Indigo should continue to work,
 but will not receive further updates. To upgrade your robot, see
 <a class="reference internal" href="indigo_to_melodic.html"><span class="doc">these instructions</span></a>.</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li>The default ROS Melodic Fetch and Freight configurations can be easily set up
 using the new automated installer (this is a clean install, not an in-place upgrade).
 To upgrade your robot, see <a class="reference internal" href="indigo_to_melodic.html"><span class="doc">these instructions</span></a>.</li>
 <li>fetch_teleop/bringup now includes PS4 controller support. See <a class="reference internal" href="ps4.html"><span class="doc">how to switch</span></a>.</li>
 </ul>
-</div></blockquote>
 <dl class="docutils">
 <dt>New Fetch Packages:</dt>
 <dd><ul class="first last simple">
-<li>fetch-melodic-config: 0.2-0 (replaces fetch-system-config)</li>
-<li>freight-melodic-config: 0.2-0 (replaces freight-system-config)</li>
+<li>fetch-melodic-config: 0.2-0ubuntu1 (replaces fetch-system-config)</li>
+<li>freight-melodic-config: 0.2-0ubuntu1 (replaces freight-system-config)</li>
 </ul>
 </dd>
 <dt>Updated Fetch Packages:</dt>
@@ -463,9 +487,9 @@ battery balancing, which should improve battery life. There are also a number of
 <li>fetch/freight-system-config now preserves certain ethernet network configurations.</li>
 </ul>
 </div></blockquote>
-<p>Updated Fetch Packages:</p>
-<blockquote>
-<div><ul class="simple">
+<dl class="docutils">
+<dt>Updated Fetch Packages:</dt>
+<dd><ul class="first last simple">
 <li>fetch-system-config: 0.8-8 -&gt; 0.9-1</li>
 <li>freight-system-config: 0.8-8 -&gt; 0.9-1</li>
 <li>ros-indigo-fetch-bringup: 0.7.3-0 -&gt; 0.7.5-0</li>
@@ -480,8 +504,7 @@ battery balancing, which should improve battery life. There are also a number of
 <li>ros-indigo-freight-bringup: 0.7.3-0 -&gt; 0.7.5-0</li>
 <li>ros-indigo-robot-controllers: 0.5.2-0 -&gt; 0.5.3-0</li>
 </ul>
-</div></blockquote>
-<dl class="docutils">
+</dd>
 <dt>New Fetch Packages:</dt>
 <dd><ul class="first last simple">
 <li>ros-indigo-fetch-ikfast-plugin: 0.7.13-0</li>
