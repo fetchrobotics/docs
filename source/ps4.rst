@@ -4,6 +4,10 @@ Switching your robot to using a PS4 controller
 This procedure guides you in updating your robot to be controlled
 with a PS4 controller.
 
+If you are just trying to re-pair you PS4 controller, you can skip to the
+`Restart Bluetooth and Pair PS4 Controller`_ section, and also skip the
+sections that follow it.
+
 *Who is this guide intended for?:*
 
 - Customers who received a PS3 controller with their robot, and would like to instead use
