@@ -38,7 +38,7 @@ Button # Function (details below)
  1       Control robot turning
  2       Control forward/backward driving
  3       Close gripper
- 4       Disable motor position holding
+ 4       `Disable motor position holding <https://github.com/fetchrobotics/fetch_robots/blob/melodic-devel/fetch_bringup/scripts/controller_reset.py>`_
  5       Not used
  6       Arm tuck
  7       Not used
