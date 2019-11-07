@@ -73,6 +73,8 @@ Why won't my robot move when I use my PS3/PS4 joystick?
 * PS4 controller: If the LED on the front of the controller is not solid blue, then the controller
   is not connected. Press the middle PS4 button to connect.
 
+  * If the PS4 controller won't connect, you can try re-pairing it. :doc:`See these instructions </ps4>`.
+
 * PS3 controller: If there are no red lights illuminated on the front of the PS3 controller then press the round button in the center of the controller to turn on the controller (when it is ready to use it will vibrate) (Red lights will be in one of the 4 holes to the left of the charging port in the following picture.)
 
 .. figure:: _static/joystick_numbered2.png
