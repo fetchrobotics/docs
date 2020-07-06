@@ -272,7 +272,7 @@ Verify that things are working.  All of the following steps assume that you are
         scp fetch_robot_files.tar.gz fetch@fetchXXX:~/
         ssh fetch@fetchXXX
         sudo mkdir -p /etc/ros/melodic
-        tar -xzf ~/fetch_robot_files.tar.gz /etc/ros/melodic/
+        tar -xzf ~/fetch_robot_files.tar.gz -C /etc/ros/melodic/
 
    **Important**: You should modify ``/etc/ros/melodic/robot.launch`` to replace any
    instances of ``indigo`` with ``melodic``
