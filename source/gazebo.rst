@@ -16,13 +16,14 @@ Installation
 
 Before installing the simulation environment, make sure your desktop
 is setup with a standard installation of
-`ROS Indigo on Ubuntu 14.04 <http://wiki.ros.org/indigo/Installation/Ubuntu>`_.
+`ROS Indigo on Ubuntu 14.04 <http://wiki.ros.org/indigo/Installation/Ubuntu>`_ or
+`ROS Melodic on Ubuntu 18.04 <http://wiki.ros.org/melodic/Installation/Ubuntu>`_.
 Once your APT repositories are configured, you can install the simulator:
 
 ::
 
     >$ sudo apt-get update
-    >$ sudo apt-get install ros-indigo-fetch-gazebo-demo
+    >$ sudo apt-get install ros-$ROS_DISTRO-fetch-gazebo-demo
 
 .. warning::
 
