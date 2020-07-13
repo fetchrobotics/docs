@@ -158,3 +158,6 @@ use the following service calls:
  * $ rosservice call /arm_breaker false && rosservice call /arm_breaker true
  * $ rosservice call /base_breaker false && rosservice call /base_breaker true
  * $ rosservice call /gripper_breaker false && rosservice call /gripper_breaker true
+
+To query the current state of the breakers, you can inspect the output of the command
+``rosrun fetch_drivers read_board 0``.

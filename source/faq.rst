@@ -13,28 +13,6 @@ We recommend citing our `workshop paper on Fetch & Freight <http://docs.fetchrob
    Workshop on Autonomous Mobile Service Robots, held at the
    2016 International Joint Conference on Artificial Intelligence, NYC, July 2016
 
-How do I create a good support ticket?
---------------------------------------
-* Go to the `Fetch Support Website <http://support.fetchrobotics.com:8080/>`_ and log in using your username and password
-
-* Make sure the robot is not runstopped and then run the following commands on your local computer (Not the robot!)
-
-::
-
-   sudo apt update && sudo apt install ros-melodic-fetch-tools
-   declare -x ROS_MASTER_URI="http://*RobotHostNameGoesHere*:11311"
-   fetch debug-snapshot
-
-.. note::
-
-   You will need ros-melodic-fetch-tools version 0.1.2 or greater to use the debug-snapshot command
-
-
-* Create a new support ticket and attach the zip file that was created
-
-* Clearly state problem you are having in the ticket so we can better serve you
-
-
 Why won't my robot do anything at all (charge, move, etc...)?
 -------------------------------------------------------------
 * Verify the red "breaker switch" on the back of the robot below the air vents is in the "ON" position

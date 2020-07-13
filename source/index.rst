@@ -42,6 +42,7 @@ Other
    api_overview
    release_notes
    faq
+   support
 
 Legal
 -------
