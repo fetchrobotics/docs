@@ -24,8 +24,8 @@ robot as the `fetch` user, and run the following commands:
 
 ::
 
-    >$ sudo adduser USERNAME
-    >$ sudo usermod -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare USERNAME
+    > sudo adduser USERNAME
+    > sudo usermod -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare USERNAME
 
 .. embed-user-accounts-end
 
@@ -134,15 +134,15 @@ ps3joy      driver for PS3 robot joystick over bluetooth
 ps4joy      driver for PS4 robot joystick over bluetooth
 =========== ===========================================
 
-Services can be restart with the ``service`` command. For instance, to
+Services can be restarted with the ``service`` command. For instance, to
 restart the robot drivers:
 
 ::
 
-    >sudo service robot stop
-    >sudo service robot start
+    > sudo service robot stop
+    > sudo service robot start
 
-Since the roscore runs independently of the drivers, the drivers can be
+Since roscore runs independently of the drivers, the drivers can be
 restarted without having to restart remote instances of RViz or similar ROS
 tools. Note that this also means the parameter server will not be reset
 when restarting the drivers, and so a roscore restart may be required
@@ -177,4 +177,4 @@ and follow the on-screen instructions:
 
 ::
 
-    >$ sudo su ros -c "alsamixer -c 1"
+    > sudo su ros -c "alsamixer -c 1"

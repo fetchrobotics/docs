@@ -25,6 +25,9 @@ Once your APT repositories are configured, you can install the simulator:
     >$ sudo apt-get update
     >$ sudo apt-get install ros-$ROS_DISTRO-fetch-gazebo-demo
 
+Starting the Simulator
+----------------------
+
 .. warning::
 
     Never run the simulator on the robot. Simulation requires that
@@ -32,9 +35,6 @@ Once your APT repositories are configured, you can install the simulator:
     the robot drivers to stop working correctly. In addition, be sure
     to never start the simulator in a terminal that has the ROS_MASTER_URI
     set to your robot for the same reasons.
-
-Starting the Simulator
-----------------------
 
 The ``fetch_gazebo`` and ``fetch_gazebo_demo`` packages provide the Gazebo
 environment for Fetch. ``fetch_gazebo`` includes several launch files:
