@@ -35,7 +35,8 @@ You can also attach the debug-snapshot zip file to help debugging via the proces
 ::
 
    sudo apt update && sudo apt install ros-melodic-fetch-tools
-   declare -x ROS_MASTER_URI="http://*RobotHostNameGoesHere*:11311"
+   export ROS_MASTER_URI="http://*RobotHostNameGoesHere*:11311"
+   rostopic list | grep wc -l  # Verify communication with the robot's ROS master
    fetch debug-snapshot
 
 * Create a new support ticket and attach the zip file that was created
