@@ -1,6 +1,8 @@
 Fetch & Freight Research Edition Documentation
 ==============================================
 
+Note: This branch is for the ROS Melodic docs.  See other releases' docs in other branches.
+
 This is the source for the Fetch & Freight Research Edition Documentation,
 which is  hosted at http://docs.fetchrobotics.com
 
