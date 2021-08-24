@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-The following release notes detail the updates to ROS Melodic packages
+The following release notes detail the updates to ROS packages
 maintained by Fetch Robotics and available at http://packages.ros.org.
 For more details on the changes that
 have occured in an individual package, please see the CHANGELOG within
@@ -10,10 +10,27 @@ the installed package.
 For information on updating your robot to the latest packages, see
 :ref:`updating`.
 
+Note: Both ROS Noetic and ROS Melodic packages are available at http://packages.ros.org.
+However, new releases are usually only done for the latest release.
+
 Note: For ROS Indigo, packages are hosted at http://packages.fetchrobotics.com.
 
+August 25, 2021
+-------------
+This release adds support for Fetch and Freight using ROS Noetic on Ubuntu 20.04.
+ROS Melodic and Ubuntu 18.04 are still supported, though releases will be
+infrequent.
+ROS Indigo and Ubuntu 14.04 are EOL. Robots using Indigo should continue to work,
+but will not receive further updates. To upgrade your robot, see
+:doc:`these instructions <upgrade_to_noetic>`.
+
+Known issues:
+* The robot drivers (`robot` systemd job) may crash if the charge dock auto-docking
+  code is run multiple times.  Workaround: `sudo service robot restart`.
+* Fetch Gazebo packages are not released yet. These can be built and run from source.
+
 September 10, 2019
---------------
+------------------
 This release adds a few fixes for Fetch and Freight with ROS Melodic.
 
 * ROS Melodic robots now start a `soundplay <http://wiki.ros.org/sound_play>`__

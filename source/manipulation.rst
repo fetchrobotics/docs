@@ -1,12 +1,12 @@
 Tutorial: Manipulation
 ======================
 
-Once you have Fetch running, you can start moving the arm with MoveIt!
+Once you have Fetch running, you can start moving the arm with MoveIt.
 
 Getting Started Demo
 --------------------
 
-The easiest way to run MoveIt! is to run the demo launch file,
+The easiest way to run MoveIt is to run the demo launch file,
 which does not require any simulator or robot and brings up a
 fully configured RVIZ instance:
 
@@ -24,10 +24,10 @@ Running the Pick and Place Demo
 
 See :ref:`mm_demo`.
 
-Running MoveIt! on a Robot
+Running MoveIt on a Robot
 -----------------------------
 
-To run MoveIt! on a real or simulated robot, launch the
+To run MoveIt on a real or simulated robot, launch the
 move_group.launch file from the ``fetch_moveit_config`` package:
 
 ::
@@ -35,9 +35,9 @@ move_group.launch file from the ``fetch_moveit_config`` package:
   >$ roslaunch fetch_moveit_config move_group.launch
 
 Once launched you can send commands to move the arm using
-the `MoveIt! Rviz Plugin <http://docs.ros.org/indigo/api/moveit_ros_visualization/html/doc/tutorial.html>`_ or use the programming interface, ``move_group_interface``, in either `C++ <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/src/doc/move_group_interface_tutorial.html>`_ or `Python <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/scripts/doc/move_group_python_interface_tutorial.html>`_.
+the `MoveIt Rviz Plugin <http://docs.ros.org/indigo/api/moveit_ros_visualization/html/doc/tutorial.html>`_ or use the programming interface, ``move_group_interface``, in either `C++ <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/src/doc/move_group_interface_tutorial.html>`_ or `Python <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/scripts/doc/move_group_python_interface_tutorial.html>`_.
 
-Simple MoveIt! Disco Example
+Simple MoveIt Disco Example
 ----------------------------
 
 This python script will run the robot through a simple disco dance motion.
@@ -110,14 +110,14 @@ This python script will run the robot through a simple disco dance motion.
                   rospy.logerr("Arm goal in state: %s",
                                move_group.get_move_action().get_state())
           else:
-              rospy.logerr("MoveIt! failure no result returned.")
+              rospy.logerr("MoveIt failure no result returned.")
 
       # This stops all arm movement goals
       # It should be called when a program is exiting so movement stops
       move_group.get_move_action().cancel_all_goals()
 
 
-Simple MoveIt! Wave Example
+Simple MoveIt Wave Example
 ---------------------------
 
 This python script will cause the robot to do a simple "wave-like" motion
@@ -191,7 +191,7 @@ until the script is stopped with ctrl-c
                       rospy.logerr("Arm goal in state: %s",
                                    move_group.get_move_action().get_state())
               else:
-                  rospy.logerr("MoveIt! failure no result returned.")
+                  rospy.logerr("MoveIt failure no result returned.")
 
       # This stops all arm movement goals
       # It should be called when a program is exiting so movement stops
@@ -199,7 +199,7 @@ until the script is stopped with ctrl-c
 
 
 
-More information and Tutorials on MoveIt!
+More information and Tutorials on MoveIt
 -----------------------------------------
 
 `General information <http://moveit.ros.org/>`_, `Documentation <http://moveit.ros.org/documentation/>`_ and `Tutorials <http://moveit.ros.org/documentation/tutorials/>`_ available at moveit.ros.org

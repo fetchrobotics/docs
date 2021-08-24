@@ -85,7 +85,7 @@ Running the Mobile Manipulation Demo
 ------------------------------------
 
 There is a fully integrated demo showing navigation, perception
-and MoveIt! working together on the robot in simulation. To run the
+and MoveIt working together on the robot in simulation. To run the
 demo, start Gazebo simulator with the playground:
 
 ::

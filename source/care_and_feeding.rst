@@ -137,18 +137,18 @@ the arm, torso and head while the robot is connected a charger.
 Updating Your Robot
 -------------------
 
-Your robot has been pre-configured with ROS Melodic and the appropriate
+Your robot has been pre-configured with ROS Noetic and the appropriate
 APT repositories from which to fetch package updates.
 Upgrading to the latest packages is as easy as:
 
 ::
 
   sudo apt update
-  sudo apt install --only-upgrade ros-melodic-*
+  sudo apt install --only-upgrade ros-noetic-*
 
   export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
-  wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
-  sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
+  wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-noetic-config.deb
+  sudo apt install ./$ROBOTTYPE-noetic-config.deb -y
 
 .. warning::
 
@@ -160,9 +160,16 @@ Upgrading to the latest packages is as easy as:
 .. note::
 
     If your robot is running Ubuntu 14.04 with ROS Indigo, the above commands
-    will need to be slightly modified (i.e. ros-indigo instead of ros-melodic).
+    will need to be slightly modified (i.e. ros-indigo instead of ros-noetic).
     You can upgrade your robot to the currently supported version by following
-    the :doc:`OS upgrade procedure <indigo_to_melodic>`.
+    the :doc:`OS upgrade procedure <upgrade_to_noetic>`.
+
+.. note::
+
+    If your robot is running Ubuntu 18.04 with ROS Melodic, the above commands
+    will need to be slightly modified (i.e. ros-melodic instead of ros-noetic).
+    You can upgrade your robot to the currently supported version by following
+    the :doc:`OS upgrade procedure <upgrade_to_noetic>`.
 
 Each circuit board within the robot is equipped with a bootloader, allowing
 new and updated firmware to be installed. New releases of the `fetch-drivers`
@@ -183,7 +190,7 @@ the public ROS package server.
 
 Additionally, it is possible that the apt key has changed for the ROS
 package server.  The instructions for the correct key can be found
-`here <http://wiki.ros.org/melodic/Installation/Ubuntu#Installation.2BAC8-Ubuntu.2BAC8-Sources.Set_up_your_keys>`__.
+`here <http://wiki.ros.org/noetic/Installation/Ubuntu#Installation.2FUbuntu.2FSources.Set_up_your_keys>`__.
 
 
 Cleaning Your Robot

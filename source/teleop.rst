@@ -38,7 +38,7 @@ Button # Function (details below)
  1       Control robot turning
  2       Control forward/backward driving
  3       Close gripper
- 4       `Disable motor position holding <https://github.com/fetchrobotics/fetch_robots/blob/melodic-devel/fetch_bringup/scripts/controller_reset.py>`_
+ 4       `Disable motor position holding <https://github.com/fetchrobotics/fetch_robots/blob/ros1/fetch_bringup/scripts/controller_reset.py>`_
  5       Not used
  6       Arm tuck
  7       Not used
@@ -94,9 +94,9 @@ Moving the Base with your Keyboard
 .. note::
 
    You will need a computer with ROS installed to properly
-   communicate with the robot. Please consult the `ROS Wiki <http://wiki.ros.org/melodic/Installation>`_
-   for more information. We strongly suggest an Ubuntu machine
-   with ROS Melodic installed.
+   communicate with the robot. Please consult the `ROS Wiki <http://wiki.ros.org/noetic/Installation>`_
+   for more information. We strongly suggest an Ubuntu 20.04 machine
+   with ROS Noetic installed.
 
 To teleoperate the robot base in simulation, we recommend
 using the ``teleop_twist_keyboard.py`` script from
@@ -154,7 +154,7 @@ software runstop script:
 
 ::
 
-  >$ sudo nano /etc/ros/melodic/robot.launch
+  >$ sudo nano /etc/ros/noetic/robot.launch
 
 In this file there should be a Software Runstop entry near the end. By default
 this entry contains an args line, with a value of "-a -b -g". To add teleop
@@ -192,6 +192,12 @@ hold the Share button, and then press and hold the center PS4 button for a
 second and then release it, and then release the share button.  The LED on
 the controller should start flashing twice, once per second.
 
+.. note:: Connecting the PS4 controller to the robot via USB appears to cause
+connecting to no longer work. This issue may also arise any time the PS4
+controller is plugged in to e.g. an Ubuntu computer.  We recommend instead to
+charge the controller directly with a USB-AC power adapter. **To resolve this**,
+"forget" the device in the Bluetooth settings, and then re-pair the controller.
+
 Using Deadzone Parameter to Correct Drift
 -----------------------------------------
 
@@ -205,7 +211,7 @@ This behavior can be compensated for by using a rosparameter: **joy/deadzone**
 which the joystick has to move before it is considered to be off-center, specified
 relative to an axis normalized between -1 and 1.
 
-Add/set the parameter in ``/etc/ros/melodic/robot.launch``::
+Add/set the parameter in ``/etc/ros/noetic/robot.launch``::
 
   <!-- Teleop -->
     <include file="$(find fetch_bringup)/launch/include/teleop.launch.xml"/>

@@ -21,9 +21,9 @@ Visualizing with RVIZ
 .. note::
 
    You will need a computer with ROS installed to properly
-   communicate with the robot. Please consult the `ROS Wiki <http://wiki.ros.org/melodic/Installation>`_
+   communicate with the robot. Please consult the `ROS Wiki <http://wiki.ros.org/noetic/Installation>`_
    for more information. We strongly suggest an Ubuntu machine
-   with ROS Melodic installed.
+   with ROS Noetic installed.
 
 You can now `manually set up your RVIZ visualization
 <http://gazebosim.org/tutorials?tut=drcsim_visualization&cat=drcsim#VisualizingtheRobotmodel>`_
