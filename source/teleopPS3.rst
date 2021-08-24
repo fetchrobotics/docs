@@ -5,6 +5,10 @@ Using the Robot Joystick
 ------------------------
 .. embed-pt
 
+.. note:: The PS3 controller is only supported with Fetch and Freight
+   if they are running Ubuntu 14.04 or 18.04. Ubuntu 20.04 support is
+   not implemented.
+
 Each Fetch and Freight ship with a robot joystick.
 Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot

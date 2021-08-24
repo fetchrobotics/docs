@@ -15,7 +15,7 @@ sections that follow it.
 
 *What requirements are there for using a PS4 controller?:*
 
-- Your robot needs to be running Ubuntu 18.04 + ROS Melodic
+- Your robot needs to be running Ubuntu 20.04 + ROS Noetic (or Ubuntu 18.04 + ROS Melodic)
 - You will need a PS4 controller (also called *DualShock 4 Wireless Controller
   for PlayStation 4*).
 
@@ -26,11 +26,11 @@ Upgrade your Fetch robot's packages
 Run the following to upgrade packages that are relevant::
 
   sudo apt update
-  sudo apt install --only-upgrade ros-melodic-*
+  sudo apt install --only-upgrade ros-noetic-*
 
   export ROBOTTYPE=$(hostname | awk -F'[0-9]' '{print $1}')
-  wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-melodic-config.deb
-  sudo apt install ./$ROBOTTYPE-melodic-config.deb -y
+  wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-noetic-config.deb
+  sudo apt install ./$ROBOTTYPE-noetic-config.deb -y
 
 
 Disable the PS3's ps3joy driver/service
@@ -92,7 +92,7 @@ it may take a couple tries.
 Enable the ds4drv driver/service for the PS4 controller
 -------------------------------------------------------
 
-Next we enable the new service (created by the updated install of fetch-melodic-config)::
+Next we enable the new service (created by the updated install of fetch-noetic-config)::
 
   sudo systemctl daemon-reload && sudo systemctl enable ps4joy && sudo service ps4joy start
 
@@ -102,9 +102,9 @@ Set the robot to use the PS4 controller
 ---------------------------------------
 
 To enable the PS4 controller inputs to move the robot, a param needs to be set in
-/etc/ros/melodic/robot.launch.
+/etc/ros/noetic/robot.launch.
 
-If your robot is using a robot.launch file that you restored after installing ROS Melodic, you
+If your robot is using a robot.launch file that you restored after installing ROS Noetic, you
 may need to make the following modification to your robot.launch file to add the ps4 param::
 
   - <include file="$(find freight_bringup)/launch/include/teleop.launch.xml" />
@@ -140,7 +140,7 @@ Reverting back to using PS3 controller
 While not recommended, in case you encounter issues and need to switch back, the below
 outlines the steps to revert the procedures above:
 
-1. Change the ps4 arg value to false in /etc/ros/melodic/robot.launch
+1. Change the ps4 arg value to false in /etc/ros/noetic/robot.launch
 2. ``sudo service ps4joy stop && sudo systemctl disable ps4joy``
 3. ``sudo systemctl enable ps3joy && sudo service ps3joy start``
 4. With the arm safely resting so that it does not fall, ``sudo service roscore restart``

@@ -32,7 +32,7 @@ Only one controller is allowed to control a joint at a time.
 .. warning::
 
     Fetch is tuned to work with smooth paths. The tuning performs best when paths are
-    properly smoothed and timed, such as those generated from MoveIt! Fetch has a number
+    properly smoothed and timed, such as those generated from MoveIt Fetch has a number
     of mechanisms in place to prevent damage from improper trajectories. Improperly
     constructed paths may cause motor or breaker shutdown.
 

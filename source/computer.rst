@@ -71,6 +71,12 @@ keyboard, and mouse and use Ubuntu's Network Manager interface.
 
 Configuring the Robot to use a Static IP for Access Panel Ethernet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By default, robots are shipped with the Access Panel's ethernet set to be
+assigned an IP address by whatever it is connected to.  You can change it
+to use a static IP address, if desired. By convention, if we're assigning
+a robot a static IP for this port, we typically give it IP 172.42.42.1, but
+you can select whatever IP you desire.  To configure a static IP:
+
 For 18.04: Edit and uncomment the section for eth0 in ``/etc/netplan/99-fetch``
 
 For 14.04: Edit and uncomment the section for eth0 in ``/etc/network/interfaces``
