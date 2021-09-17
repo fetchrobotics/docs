@@ -5,27 +5,34 @@ Fetch Robotics has released a ROS package for automatically docking your robot
 with a Fetch charging dock. This package uses the scanning laser range finder
 to detect the profile of the charge dock and steers the robot onto the dock.
 Since the profile of the charge dock must be clearly visible, it is important
-that there is separation between docks and any sort of laser-height obstacle
+that there is separation between docks and there are not any laser-height obstacles
 on either side of the dock.
-
-.. warning::
-
-    Charge dock installation must follow the specifications!
-
-Installing fetch_auto_dock
---------------------------
-
-To install the package:
-
-::
-
-    sudo apt-get update
-    sudo apt-get install ros-indigo-fetch-auto-dock
 
 Running the Docking Node
 -------------------------
 
-To start the auto docking node in a demonstration mode:
+But default, the auto docking node is launched at robot startup (via
+`/etc/ros/noetic/robot.launch`)
+
+A PS4 controller can be used to initiate docking and undocking as described below:
+
+ * To dock your robot, point the robot at the charge dock and press the "circle"
+   button on the PS4 controller. Docking works best when the robot is about 0.75-1.0
+   meters away from the dock and pointed directly at it, however docking should work
+   from a variety of angles.
+ * To undock your robot when it is on a charge dock, press the "square" button
+   on the PS4 joystick and the robot will back off the dock and then turn in place
+   so it is pointed away from the charge dock.
+
+.. warning::
+
+    The docking controller does not have collision avoidance. Do not
+    leave obstacles on the charge dock.
+
+
+Manually Running the Auto Docking Nodes
+---------------------------------------
+To manually start the auto docking node:
 
 ::
 
@@ -33,21 +40,8 @@ To start the auto docking node in a demonstration mode:
 
 This will bring up three ROS nodes. The first ROS node is the auto docking action
 server. This node can be asked to dock with a charging dock through a ROS action
-interface. A second and third nodes monitor the PS3 joystick and can trigger docking
-and undocking as described below:
-
- * To dock your robot, point the robot at the charge dock and press the "circle"
-   button on the PS3 controller. Docking works best when the robot is about 0.75-1.0
-   meters away from the dock and pointed directly at it, however docking should work
-   from a variety of angles.
- * To undock your robot when it is on a charge dock, press the "square" button
-   on the PS3 joystick and the robot will back off the dock and then turn in place
-   so it is pointed away from the charge dock.
-
-.. warning::
-
-    The docking controller does not have collision avoidance. Do not
-    leave obstacles on the charge dock.
+interface. A second and third nodes monitor the PS4 joystick in order to trigger
+docking/undocking.
 
 Auto Docking Programmatically
 -----------------------------
