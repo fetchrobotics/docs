@@ -151,19 +151,19 @@ Resetting Breakers
 ------------------
 
 There are 3 breakers governing power on the fetch. One each for the arm, gripper
-and base. If the motors are commanded to perform beyond their limits they will
+and base. The aux1 and aux2 breakers power the arm and gripper, respectively.
+On the freight research base, aux1_breaker is connected to the aux power connector on
+the robot's top right. On newer freight research bases with a second aux power
+connector on the robot's top left, this power is controlled by the aux2 breaker.
+(Note: previously with ROS Indigo, aux1 and aux2 breakers were named 'arm' and 'gripper')
+
+To query the current state of the breakers, you can inspect the output of the command
+``rosrun fetch_drivers read_board 0``.
+
+If the motors are commanded to perform beyond their limits they will
 shut down for safety. To reset them you will either need to toggle the e-stop or
 use the following service calls:
 
  * $ rosservice call /base_breaker false && rosservice call /base_breaker true
  * $ rosservice call /aux1_breaker false && rosservice call /aux1_breaker true
  * $ rosservice call /aux2_breaker false && rosservice call /aux2_breaker true
-
-The aux1 and aux2 breakers power the arm and gripper, respectively.
-On the freight research base, aux1_breaker is connected to the aux power connector on the robot's top right.
-On newer freight research bases with a second aux power connector on the robot's top left, this power
-is controlled by the aux2 breaker.
-(Note: previously with ROS Indigo, aux1 and aux2 breakers were named 'arm' and 'gripper')
-
-To query the current state of the breakers, you can inspect the output of the command
-``rosrun fetch_drivers read_board 0``.

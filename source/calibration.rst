@@ -5,8 +5,8 @@ Calibrating your Fetch Research Edition Robot is essential to getting
 the best performance. Fetch Robotics recommends re-calibrating the robot
 after every shipping or travel excursion your robot undertakes.
 
-.. note:: No calibration procedures are needed or exist for the Freight Research Edition Robot.
-This page is only applicable to the Fetch.
+.. note:: No calibration procedures are needed or exist for the Freight
+   Research Edition Robot.  This page is only applicable to the Fetch.
 
 Understanding Calibration
 -------------------------

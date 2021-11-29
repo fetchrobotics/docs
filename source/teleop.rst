@@ -193,10 +193,10 @@ second and then release it, and then release the share button.  The LED on
 the controller should start flashing twice, once per second.
 
 .. note:: Connecting the PS4 controller to the robot via USB appears to cause
-connecting to no longer work. This issue may also arise any time the PS4
-controller is plugged in to e.g. an Ubuntu computer.  We recommend instead to
-charge the controller directly with a USB-AC power adapter. **To resolve this**,
-"forget" the device in the Bluetooth settings, and then re-pair the controller.
+   connecting to no longer work. This issue may also arise any time the PS4
+   controller is plugged in to e.g. an Ubuntu computer.  We recommend instead to
+   charge the controller directly with a USB-AC power adapter. **To resolve this**,
+   "forget" the device in the Bluetooth settings, and then re-pair the controller.
 
 Using Deadzone Parameter to Correct Drift
 -----------------------------------------

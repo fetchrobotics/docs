@@ -66,7 +66,7 @@ When a breaker is disabled or tripped, power will no longer flow to the connecte
 devices. In the case of MCBs, this means that they will not be able to communicate
 with the mainboard.
 
-.. figure:: _static/power_distribution.png 
+.. figure:: _static/power_distribution.png
    :width: 80%
    :align: center
    :figclass: align-centered
@@ -110,9 +110,9 @@ computer. In addition, Fetch has an extra USB port on the head.
    :figclass: align-centered
 
 ====== =========================
-Item # Item Name                
+Item # Item Name
 ====== =========================
- 1     HD Video Port       
+ 1     HD Video Port
  2     USB Port 1
  3     USB Port 2
  4     Ethernet Port
@@ -129,3 +129,24 @@ To turn the robot off, press and hold the illuminated power button on
 the access panel until it starts blinking. The button will continue
 blinking until the computer has successfully shut down, and then power
 will be disconnected.
+
+Freight Extensibility Interfaces
+++++++++++++++++++++++++++++++++
+
+.. figure:: _static/f100-connector-faceplates.png
+   :width: 60%
+   :align: center
+   :figclass: align-centered
+
+In addition to the Access Panel, the Freight robot has one or two Extensibility
+Interfaces on the top for power and communications to custom payloads.
+
+Since late 2021, Freight now has two sets of interfaces, and now exposes all of:
+power, ethernet, USB and aux runstop. (RS-485 is also available however is not
+presently supported software-wise for custom hardware attachments.)
+
+Details on both versions are available in PDF form:
+`Freight100 Extensibility Interface <http://docs.fetchrobotics.com/Freight100_extensibility_interface.pdf>`_
+
+Power can be controlled by enabling/disabling the associated breakers as
+described in :ref:`resetting_breakers`.

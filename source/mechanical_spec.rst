@@ -37,14 +37,14 @@ Water
    and any other liquid. Water contact can cause damage to the electrical
    circuitry and the mechanism.
 
-Temperature and Humidity 
+Temperature and Humidity
 ''''''''''''''''''''''''
  - Fetch and Freight are designed to run in environments between 15C and 35C.
  - Keep Fetch and Freight away from open flames and other heat sources.
    Never use Fetch or Freight around stoves or ovens.
 
-Forces and Torques 
-++++++++++++++++++ 
+Forces and Torques
+++++++++++++++++++
 
 Joint position, velocity, and force limits are implemented in the
 Fetch and Freight URDF file as well as in firmware. Firmware implements
