@@ -183,8 +183,7 @@ the public ROS package server.
 
 Additionally, it is possible that the apt key has changed for the ROS
 package server.  The instructions for the correct key can be found
-`here <http://wiki.ros.org/melodic/Installation/Ubuntu#Installation.2BAC8-Ubuntu.2BAC8-Sources.Set_up_your_keys>`__.
-
+`here <https://wiki.ros.org/melodic/Installation/Ubuntu#Installation.2FUbuntu.2FSources.Set_up_your_keys>`__.`
 
 Cleaning Your Robot
 -------------------

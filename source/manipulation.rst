@@ -25,7 +25,7 @@ Running the Pick and Place Demo
 See :ref:`mm_demo`.
 
 Running MoveIt! on a Robot
------------------------------
+--------------------------
 
 To run MoveIt! on a real or simulated robot, launch the
 move_group.launch file from the ``fetch_moveit_config`` package:
@@ -35,7 +35,10 @@ move_group.launch file from the ``fetch_moveit_config`` package:
   >$ roslaunch fetch_moveit_config move_group.launch
 
 Once launched you can send commands to move the arm using
-the `MoveIt! Rviz Plugin <http://docs.ros.org/indigo/api/moveit_ros_visualization/html/doc/tutorial.html>`_ or use the programming interface, ``move_group_interface``, in either `C++ <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/src/doc/move_group_interface_tutorial.html>`_ or `Python <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/scripts/doc/move_group_python_interface_tutorial.html>`_.
+`MoveIt in RViz <https://ros-planning.github.io/moveit_tutorials/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html>`_
+or use the programming interface, ``move_group_interface``, in either
+`C++ <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/src/doc/move_group_interface_tutorial.html>`_
+or `Python <http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/scripts/doc/move_group_python_interface_tutorial.html>`_.
 
 Simple MoveIt! Disco Example
 ----------------------------
@@ -202,5 +205,6 @@ until the script is stopped with ctrl-c
 More information and Tutorials on MoveIt!
 -----------------------------------------
 
-`General information <http://moveit.ros.org/>`_, `Documentation <http://moveit.ros.org/documentation/>`_ and `Tutorials <http://moveit.ros.org/documentation/tutorials/>`_ available at moveit.ros.org
+`General information <https://moveit.ros.org/>`_ and `Tutorials <http://docs.ros.org/en/melodic/api/moveit_tutorials/html/index.html>`_ available at moveit.ros.org.
+
 

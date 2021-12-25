@@ -13,7 +13,7 @@ For information on updating your robot to the latest packages, see
 Note: For ROS Indigo, packages are hosted at http://packages.fetchrobotics.com.
 
 September 10, 2019
---------------
+------------------
 This release adds a few fixes for Fetch and Freight with ROS Melodic.
 
 * ROS Melodic robots now start a `soundplay <http://wiki.ros.org/sound_play>`__
