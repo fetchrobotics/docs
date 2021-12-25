@@ -385,7 +385,7 @@ Appendices
 Subsequent upgrade notes
 ++++++++++++++++++++++++
 When doing an upgrade of the robot, always follow the steps at
-:doc:`Updating Your Robot <care_and_feeding.html#updating-your-robot>`.
+`Updating Your Robot <http://docs.fetchrobotics.com/care_and_feeding.html#updating-your-robot>`__.
 
 Particularly if you upgraded to 18.04 prior to August 2019, when doing an upgrade
 of packages via ``sudo apt-get upgrade``, you may be prompted regarding changed files:

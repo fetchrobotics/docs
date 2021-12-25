@@ -108,9 +108,9 @@ package.
   >$ export ROS_MASTER_URI=http://<robot_name_or_ip>:11311
   >$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
-.. _software_runstop:
-
 .. embed-teleop-end
+
+.. _software_runstop:
 
 Software Runstop
 ----------------
