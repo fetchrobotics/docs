@@ -154,6 +154,7 @@
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#power-disconnect-switch">Power Disconnect Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#runstop">Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#access-panel">Access Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#freight-extensibility-interfaces">Freight Extensibility Interfaces</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#motion-control">Motion Control</a></li>
@@ -229,7 +230,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial: Robot Teleop</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#using-the-robot-joystick">Using the Robot Joystick</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Software Runstop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#software-runstop">Software Runstop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#using-software-runstop">Using Software Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#enable-teleop-software-runstop">Enable Teleop Software Runstop</a></li>
 </ul>
@@ -321,6 +322,16 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-ps4-joystick">Why won’t my robot move when I use my PS3/PS4 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won’t gravity compensate, help?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Issues and Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="support.html#when-you-encounter-an-issue">When you encounter an issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#reporting-software-bugs">Reporting software bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#contacting-fetch-support">Contacting Fetch Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="support.html#reaching-fetch-support">Reaching Fetch Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="support.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -520,9 +531,9 @@ package.</p>
 &gt;$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 </pre></div>
 </div>
-<span class="target" id="software-runstop"></span></div>
-<div class="section" id="id1">
-<h2>Software Runstop<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="software-runstop">
+<span id="id1"></span><h2>Software Runstop<a class="headerlink" href="#software-runstop" title="Permalink to this headline">¶</a></h2>
 <p>In addition to the runstop button on the side of the robot, similar software
 functionality is also available, allowing for button presses on the
 PS4 controller or a program to disable the breakers.
@@ -585,6 +596,14 @@ Ubuntu Bluetooth settings.  To put the controller in pairing mode, press and
 hold the Share button, and then press and hold the center PS4 button for a
 second and then release it, and then release the share button.  The LED on
 the controller should start flashing twice, once per second.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Connecting the PS4 controller to the robot via USB appears to cause
+connecting to no longer work. This issue may also arise any time the PS4
+controller is plugged in to e.g. an Ubuntu computer.  We recommend instead to
+charge the controller directly with a USB-AC power adapter. <strong>To resolve this</strong>,
+“forget” the device in the Bluetooth settings, and then re-pair the controller.</p>
+</div>
 </div>
 <div class="section" id="using-deadzone-parameter-to-correct-drift">
 <h2>Using Deadzone Parameter to Correct Drift<a class="headerlink" href="#using-deadzone-parameter-to-correct-drift" title="Permalink to this headline">¶</a></h2>
@@ -658,10 +677,10 @@ so that it won’t fall, restart roscore.:</p>
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="_static/documentation_options.js"></script>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 

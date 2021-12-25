@@ -154,6 +154,7 @@
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#power-disconnect-switch">Power Disconnect Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#runstop">Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#access-panel">Access Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#freight-extensibility-interfaces">Freight Extensibility Interfaces</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#motion-control">Motion Control</a></li>
@@ -418,7 +419,8 @@ You can also attach the debug-snapshot zip file to help debugging via the proces
 <li><p>Make sure the robot is not runstopped and then run the following commands on your local computer (Not the robot!)</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">fetch</span><span class="o">-</span><span class="n">tools</span>
-<span class="n">declare</span> <span class="o">-</span><span class="n">x</span> <span class="n">ROS_MASTER_URI</span><span class="o">=</span><span class="s2">&quot;http://*RobotHostNameGoesHere*:11311&quot;</span>
+<span class="n">export</span> <span class="n">ROS_MASTER_URI</span><span class="o">=</span><span class="s2">&quot;http://*RobotHostNameGoesHere*:11311&quot;</span>
+<span class="n">rostopic</span> <span class="nb">list</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>  <span class="c1"># Verify communication with the robot&#39;s ROS master</span>
 <span class="n">fetch</span> <span class="n">debug</span><span class="o">-</span><span class="n">snapshot</span>
 </pre></div>
 </div>
@@ -476,10 +478,10 @@ You can also attach the debug-snapshot zip file to help debugging via the proces
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="_static/documentation_options.js"></script>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 

@@ -154,6 +154,7 @@
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#power-disconnect-switch">Power Disconnect Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#runstop">Runstop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#access-panel">Access Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_hardware.html#freight-extensibility-interfaces">Freight Extensibility Interfaces</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#motion-control">Motion Control</a></li>
@@ -321,6 +322,16 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-won-t-my-robot-move-when-i-use-my-ps3-ps4-joystick">Why won’t my robot move when I use my PS3/PS4 joystick?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#the-robot-will-not-move-and-or-slows-down-near-obstacles-why">The robot will not move and/or slows down near obstacles, why?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#i-just-sent-a-trajectory-command-to-the-arm-and-now-it-won-t-gravity-compensate-help">I just sent a trajectory command to the arm and now it won’t gravity compensate, help?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Issues and Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="support.html#when-you-encounter-an-issue">When you encounter an issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#reporting-software-bugs">Reporting software bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#contacting-fetch-support">Contacting Fetch Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="support.html#reaching-fetch-support">Reaching Fetch Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="support.html#how-do-i-create-a-good-support-ticket">How do I create a good support ticket?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -621,8 +632,8 @@ to complete after you have rebooted the robot. You can monitor this by doing:</p
 via <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">charger_power</span> <span class="pre">reboot</span></code>.</p>
 </li>
 <li><p>Verify that the robot can ping the mainboard and the laser:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">10.42</span><span class="o">.</span><span class="mf">42.42</span>  <span class="c1"># mainboard</span>
-<span class="n">ping</span> <span class="mf">10.42</span><span class="o">.</span><span class="mf">42.10</span>  <span class="c1"># laser</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">10.42.42.42</span>  <span class="c1"># mainboard</span>
+<span class="n">ping</span> <span class="mf">10.42.42.10</span>  <span class="c1"># laser</span>
 </pre></div>
 </div>
 <p>If not, see <a class="reference internal" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot’s ethernet ports are configured correctly</a>.</p>
@@ -635,7 +646,7 @@ via <code class="docutils literal notranslate"><span class="pre">rosrun</span> <
 </li>
 <li><p>At this point, release the robot’s runstop button.</p></li>
 <li><p>The gripper should now have power, so we should be able to ping it:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">10.42</span><span class="o">.</span><span class="mf">42.43</span>  <span class="c1"># gripper</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">10.42.42.43</span>  <span class="c1"># gripper</span>
 </pre></div>
 </div>
 <p>If the gripper does not respond, please contact support. We are aware of an issue
@@ -774,7 +785,7 @@ installing it.</p></li>
 <div class="section" id="subsequent-upgrade-notes">
 <h3>Subsequent upgrade notes<a class="headerlink" href="#subsequent-upgrade-notes" title="Permalink to this headline">¶</a></h3>
 <p>When doing an upgrade of the robot, always follow the steps at
-<span class="xref std std-doc">Updating Your Robot</span>.</p>
+<a class="reference external" href="http://docs.fetchrobotics.com/care_and_feeding.html#updating-your-robot">Updating Your Robot</a>.</p>
 <p>Particularly if you upgraded to 18.04 prior to August 2019, when doing an upgrade
 of packages via <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">upgrade</span></code>, you may be prompted regarding changed files:</p>
 <ul class="simple">
@@ -882,10 +893,10 @@ needed.</p>
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="_static/documentation_options.js"></script>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 
