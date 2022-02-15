@@ -146,7 +146,7 @@ power, ethernet, USB and aux runstop. (RS-485 is also available however is not
 presently supported software-wise for custom hardware attachments.)
 
 Details on both versions are available in PDF form:
-`Freight100 Extensibility Interface <http://docs.fetchrobotics.com/Freight100_extensibility_interface.pdf>`_
+`Freight100 Extensibility Interface <http://docs.fetchrobotics.com/_static/Freight100_extensibility_interface.pdf>`_
 
 Power can be controlled by enabling/disabling the associated breakers as
 described in :ref:`resetting_breakers`.
