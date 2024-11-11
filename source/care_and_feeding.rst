@@ -20,8 +20,9 @@ The connector needs roughly 100 newtons (24 lbs) of force to plug in.
 If it seems the connector will not mate with this much force, check
 the plug and connector for damage or foreign objects.
 
-The charge indicator light on the :ref:`access_panel` indicates
-the status of the battery and charging:
+The charge indicator light on the :ref:`access_panel` indicates the status of
+the battery and charging (more information is specified below in the
+Troubleshooting section):
 
 ================= =================
 Charge Indicator  Meaning
@@ -214,3 +215,38 @@ options for cleaning the optics of the robot.
 
     Do not use window cleaner, acetone, or abrasive cloths on the sensor
     lenses as this may cause damage to the lens.
+
+Troubleshooting
+---------------
+
+A common category of questions about the robot is issues with charging and/or
+the robot not powering on.
+
+The robot has a charge LED (green and red), and a white ring LED on the power
+button.
+
+If you observe the red LED flashing in a repeating cycle, you will see for
+example, short, short, short, short, long, short, long, long, pause.  This
+corresponds with the binary value 00001011, and is one of the errors listed
+below:
+
+================== =================
+Charge LED Pattern Meaning
+================== =================
+00000111 (6)       Charger Voltage High
+00001011 (11)      Battery Breaker Error
+00001100 (12)      Charger Overtemp
+00010001 (17)      Battery Overtemp
+00010110 (22)      Battery Voltage High
+00010111 (23)      Battery Voltage Low
+================== =================
+
+Error code 11 is the most common, and due to the red breaker switch on the back
+of the robot being in the wrong position (or, less common, an issue with this
+component).  In this state, the power button LED will also be flashing.
+
+If you are having issues with the robot suddenly stopping moving, this can be
+due to an automatic fault state triggering.  There are various causes, and some
+of these will automatically reset (i.e. the robot will resume working).
+
+Some information about these can sometimes be seen in json fault logs on the robot, in /var/log/ros/logpro/.
