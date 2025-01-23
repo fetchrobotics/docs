@@ -238,12 +238,21 @@ Charge LED Pattern Meaning
 00001100 (12)      Charger Overtemp
 00010001 (17)      Battery Overtemp
 00010110 (22)      Battery Voltage High
-00010111 (23)      Battery Voltage Low
+00010111 (23)      Battery Voltage Low (*)
+00100001 (33)      Top Battery Disconnected
+00100001 (34)      Bottom Battery Disconnected
+00100001 (35)      Both Batteries Disconnected
 ================== =================
 
 Error code 11 is the most common, and due to the red breaker switch on the back
 of the robot being in the wrong position (or, less common, an issue with this
 component).  In this state, the power button LED will also be flashing.
+
+Most robots have firmware where error code 23 is actually multiple possible
+causes. Check the red breaker switch (as with 11 above), and check that the 4 pin
+connector of the battery harness going to the mainboard on the front of the robot
+has battery voltage between pins 1 and 2, and pins 3 and 4.  It is possible for a
+fuse on the battery harness to be blown in rare cases, causing this.
 
 If you are having issues with the robot suddenly stopping moving, this can be
 due to an automatic fault state triggering.  There are various causes, and some
