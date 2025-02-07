@@ -230,19 +230,19 @@ example, short, short, short, short, long, short, long, long, pause.  This
 corresponds with the binary value 00001011, and is one of the errors listed
 below:
 
-================== =================
-Charge LED Pattern Meaning
-================== =================
-00000111 (6)       Charger Voltage High
-00001011 (11)      Battery Breaker Error
-00001100 (12)      Charger Overtemp
-00010001 (17)      Battery Overtemp
-00010110 (22)      Battery Voltage High
-00010111 (23)      Battery Voltage Low (*)
-00100001 (33)      Top Battery Disconnected
-00100001 (34)      Bottom Battery Disconnected
-00100001 (35)      Both Batteries Disconnected
-================== =================
+======================= =================
+Red LED Pattern/Code    Meaning
+======================= =================
+00000111 (6)            Charger Voltage High
+00001011 (11)           Battery Breaker Error
+00001100 (12)           Charger Overtemp
+00010001 (17)           Battery Overtemp
+00010110 (22)           Battery Voltage High
+00010111 (23)           Battery Voltage Low (*)
+00100001 (33)           Top Battery Disconnected
+00100010 (34)           Bottom Battery Disconnected
+00100011 (35)           Both Batteries Disconnected
+======================= =================
 
 Error code 11 is the most common, and due to the red breaker switch on the back
 of the robot being in the wrong position (or, less common, an issue with this
