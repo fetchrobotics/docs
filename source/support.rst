@@ -17,12 +17,7 @@ Contacting Fetch Support
 
 Reaching Fetch Support
 ~~~~~~~~~~~~~~~~~~~~~~
-When purchasing robots, customers will have accounts created on the
-`Fetch Support Website <http://support.fetchrobotics.com:8080/>`_.
-Logging in and creating a ticket here is the preferred method for support requests.
-
-If you did not receive this login information, or need to requesting additional
-research support logins, please reach out to your sales contact for more information.
+An email can be sent to researchsupport@zebra.com
 
 How do I create a good support ticket?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -27,7 +27,7 @@ Upgrading Your Robot to ROS Noetic + Ubuntu 20.04
 
 .. WARNING::
    Read this document in full to ensure you understand the procedures.  It is
-   not straightforward to go back to ROS Melodic/Ubuntu 18.04, or 
+   not straightforward to go back to ROS Melodic/Ubuntu 18.04, or
    ROS Indigo/Ubuntu 14.04 after doing this.
    Ensure your colleagues are on board with doing this upgrade.
 
@@ -394,3 +394,27 @@ If you fail to get into the boot menu, you can restart the computer and try agai
 To get into the Ubuntu Grub menu, immediately after selecting your boot entry above,
 try tapping the shift, tab and escape keys. This should only be needed if you are
 trying to boot a previous Ubuntu kernel.
+
+Ensuring robot's ethernet ports are configured correctly
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+If for some reason ethernet ports aren't configured correctly, check the following setup:
+
+1. Inspect the output of ``ip address``
+1. Edit ``/etc/netplan/99-fetch-ethernet.yaml`` and make changes if needed
+2. Power cycle the robot (only needed if you're actively having issues).
+
+The robot has two ethernet ports on its computer. You can find more information on this
+at :doc:`Computer Overview and Configuration </computer>`.
+
+A problem you may encounter is if these two ports are "swapped".  This will
+cause the robot computer to be unable to talk to the rest of its hardware. You
+can fix this in software or in hardware:
+
+- Software: Edit or create ``/etc/udev/rules.d/70-persistent-net.rules`` and
+  swap ``eth0`` and ``eth1``. This maps specific mac addressess to specific
+  ethernet ports.  Restart the robot for the change to take effect.
+- OR: Hardware: swap the two ethernet cables where they plug into the computer.
+  This shouldn't be needed, but in case you do, you should expect to find
+  a gray cable (internal communications) and a blue cable (external).
+  Typically, the blue goes to the top ethernet port, and the grey goes to the bottom.
