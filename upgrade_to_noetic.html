@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROS Noetic + Ubuntu 20.04 &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
+      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+
+  
+  
+        <script src="_static/documentation_options.js?v=88552153"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial: Visualization" href="visualization.html" />
+    <link rel="prev" title="Care And Feeding" href="care_and_feeding.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Fetch & Freight Research Edition
+          </a>
+              <div class="version">
+                Noetic
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_hardware.html">Robot Hardware Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Overview and Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ROS Noetic + Ubuntu 20.04</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#known-issues">Known issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upgrading-your-robot-to-ros-noetic-ubuntu-20-04">Upgrading Your Robot to ROS Noetic + Ubuntu 20.04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#before-upgrade">Before Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automated-installer-20-04-and-ros-noetic-install">AUTOMATED INSTALLER: 20.04 and ROS Noetic Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-approach-20-04-install-and-installing-ros-fetch-packages">MANUAL APPROACH: 20.04 Install and Installing ROS/Fetch Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#post-install-validation">Post-install Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compatibility-of-other-computers-used-with-the-robot">Compatibility of Other Computers Used with the Robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#not-supported-upgrading-from-14-04-to-20-04-via-16-04">Not Supported: Upgrading from 14.04 to 20.04 (via 16.04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#appendices">Appendices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subsequent-upgrade-notes">Subsequent upgrade notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot’s ethernet ports are configured correctly</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gazebo.html">Tutorial: Gazebo Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Tutorial: Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Tutorial: Perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docking.html">Tutorial: Auto Docking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fetch_pbd.html">Tutorial: Fetch Programming by Demonstration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Issues and Support</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notices.html">Notices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fetch & Freight Research Edition</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ROS Noetic + Ubuntu 20.04</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/fetchrobotics/docs/blob/master/source/upgrade_to_noetic.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros-noetic-ubuntu-20-04">
+<h1>ROS Noetic + Ubuntu 20.04<a class="headerlink" href="#ros-noetic-ubuntu-20-04" title="Link to this heading">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Rarely, issues may occur with some installs. You should ensure that
+your research schedule/needs will allow for a possible prolonged
+troubleshooting phase with your robot(s).</p>
+</div>
+<p>Fetch Robotics has recently started supporting ROS Noetic and Ubuntu 20.04 on
+Fetch and Freight robots.  Other than the process of upgrading a robot, there
+should be minimal effect on using your robot.  If you observe an issue, please
+let us know via a support ticket.</p>
+<section id="known-issues">
+<h2>Known issues<a class="headerlink" href="#known-issues" title="Link to this heading">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The PS3 controller support was removed with the 20.04 release.
+You can <a class="reference internal" href="ps4.html"><span class="doc">switch to using a PS4 controller</span></a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Gazebo11 and the Fetch have some bugs which we are currently aware of.
+If you use Gazebo, please check the status of this <a class="reference external" href="https://github.com/fetchrobotics/fetch_gazebo/issues/37">issue on GitHub</a>.</p>
+</div>
+</section>
+<section id="upgrading-your-robot-to-ros-noetic-ubuntu-20-04">
+<h2>Upgrading Your Robot to ROS Noetic + Ubuntu 20.04<a class="headerlink" href="#upgrading-your-robot-to-ros-noetic-ubuntu-20-04" title="Link to this heading">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Read this document in full to ensure you understand the procedures.  It is
+not straightforward to go back to ROS Melodic/Ubuntu 18.04, or
+ROS Indigo/Ubuntu 14.04 after doing this.
+Ensure your colleagues are on board with doing this upgrade.</p>
+</div>
+<p>This document is a procedure for <strong>replacing the contents</strong> of your robot’s SSD
+with an Ubuntu 20.04 install and ROS Noetic.  All files will be erased except
+those you back up!</p>
+<p>You can also use this process to re-image your robot, if needed.</p>
+<section id="before-upgrade">
+<h3>Before Upgrade<a class="headerlink" href="#before-upgrade" title="Link to this heading">¶</a></h3>
+<p>Back up files from the robot!  All files will be erased during the install, so make
+sure to save files specific to your research work. There are a few categories of
+files to back up:</p>
+<ol class="arabic simple">
+<li><p>Calibration and other robot-specific files. By convention, these are
+all in <code class="docutils literal notranslate"><span class="pre">/etc/ros/[indigo|melodic|noetic]/</span></code></p></li>
+<li><p>Files relating to your research work</p></li>
+<li><p>A record of what packages you installed for ROS Indigo</p></li>
+<li><p>Udev rules created for additional hardware (e.g. sensors) added to your robot (not common)</p></li>
+<li><p>Network hardware configuration (for troubleshooting)</p></li>
+</ol>
+<p>Below, we assume that after logging into the robot (e.g. via <code class="docutils literal notranslate"><span class="pre">ssh</span></code>) you back up
+files to a machine named HOST with username USER.</p>
+<p>For (1), we recommend doing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zcf</span> <span class="n">fetch_robot_files</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">melodic</span><span class="o">/</span>
+<span class="n">scp</span> <span class="n">fetch_robot_files</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="n">USER</span><span class="nd">@HOST</span><span class="p">:</span><span class="o">~/</span>
+</pre></div>
+</div>
+<p>For (2), this may include workspaces, logs, and training data.  You might even
+want to back up the entirety of <code class="docutils literal notranslate"><span class="pre">/opt/ros/melodic</span></code> if you are unsure.</p>
+<p>For (3), you can easily record the list of packages you installed via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span> <span class="o">&gt;</span> <span class="n">installed_melodic_packages</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>As well, you might want to record what repositories are part of your workspaces.</p>
+<p>For (4), such files are likely located in <code class="docutils literal notranslate"><span class="pre">/etc/udev/rules.d/</span></code>, and should be saved.</p>
+<p>For (5), this file may be useful for reference if the install process doesn’t
+automatically set up networking on your robot correctly:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>scp /etc/udev/rules.d/70-persistent-net.rules USER@HOST:~/$(hostname)_udev_net_rules
+</pre></div>
+</div>
+<p>If you are using any additional hardware (sensors), be sure to record what network
+or other hardware configuration changes were made to get them working.</p>
+</section>
+<section id="automated-installer-20-04-and-ros-noetic-install">
+<h3>AUTOMATED INSTALLER: 20.04 and ROS Noetic Install<a class="headerlink" href="#automated-installer-20-04-and-ros-noetic-install" title="Link to this heading">¶</a></h3>
+<p>This section guides you through using a custom automated installer that
+will set up Ubuntu with ROS packages and Fetch customizations for robots.
+You can alternately do a manual install, which is outlined in the next section.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Back up your files as described in the previous section</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This automated installer will not work for setting up a dual booting robot.
+For this, we recommend following the manual procedure instead, below.</p>
+</div>
+<ol class="arabic">
+<li><p><strong>Runstop the robot</strong>, to avoid unexpected movement of the robot.</p></li>
+<li><p><strong>Create the installer USB flash drive</strong> using a separate computer:</p>
+<ol class="arabic simple">
+<li><p>In a web browser, navigate to <a class="reference external" href="http://packages.fetchrobotics.com/images/">http://packages.fetchrobotics.com/images/</a> and click and
+download the latest fetch_ubuntu_*.iso</p></li>
+<li><p>Plug the flash drive into your computer.</p></li>
+<li><p>In a terminal, run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">usb-creator-gtk</span></code>. This will open a utility for putting the
+install image onto the flash drive.  Select the fetch_ubuntu.iso file (you may have to
+browse via “Other”.  Verify the correct disk is selected in the second listbox, and then
+click “Make Startup Disk”.
+(If usb-creator-gtk fails to work, you probably will need to format the disk using, e.g.,
+gParted.  After formatting the USB drive, retry usb-creator-gtk)</p></li>
+</ol>
+</li>
+<li><p><strong>Install OS with ROS, etc. included</strong>:</p>
+<ol class="arabic">
+<li><p>Plug in the USB flash drive to the robot, as well as a monitor, keyboard and mouse.</p></li>
+<li><p>Turn the robot on with the power button, and press either F7 or F11 several times to get
+to the boot device selection window shown in the next step. If you fail to get to a
+screen like the below, restart the robot and try again:</p></li>
+<li><p>The name of the correct option in the boot menu varies based on the flash drive you used.
+Typically, it will be similar to “UEFI (FAT) FlashDrive Name”. See the following images
+for what to expect and select:</p>
+<p><img alt="Boot selection" src="_images/boot_selection.png" /></p>
+<p><a class="reference internal" href="_images/install_selection.png"><img alt="Installer selection" src="_images/install_selection.png" style="width: 500px;" /></a></p>
+<p><a class="reference internal" href="_images/install_continue.png"><img alt="Continue Install" src="_images/install_continue.png" style="width: 500px;" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have only tested English language installs</p>
+</div>
+</li>
+<li><p>Once the install gets to the following screen, the post-install script will walk you
+through the rest of the install.</p>
+<p><a class="reference internal" href="_images/install_prompt.png"><img alt="Initial post-install prompt" src="_images/install_prompt.png" style="width: 500px;" /></a></p>
+</li>
+<li><p>If the robot is not connected to the internet via an ethernet cable, you will next be
+prompted to connect to a wifi network in order to install needed packages.  Otherwise,
+you will be prompted whether to <em>also</em> connect to a wifi network.</p></li>
+<li><p>Next you will be prompted to give the robot’s name.  A name other than fetchXX or freightXX
+will result in a non-robot install of Ubuntu 20.04 (with ROS also installed). We recommend
+keeping the same hostname for the robot, e.g. <cite>fetch1104</cite></p></li>
+<li><p>Once the terminal window changes from blue to white, user input is no longer needed and
+you can leave the install to run (15+ minutes, depending on internet speed).</p></li>
+<li><p>The <cite>fetch</cite> user will be automatically created, with password ‘robotics’.</p></li>
+<li><p>Wait for the install to complete.  The post-install script will restart fairly quickly,
+and then resume running/installing after the reboot.  It will then reboot a second time,
+at which point you should see a grey Fetch Robotics desktop background, and the install
+is complete.</p></li>
+<li><p>After the install completes, continue to the Post-install Validation section below.</p></li>
+</ol>
+</li>
+</ol>
+<p>If the installer appears to get stuck, please send a picture of the screen to Support.
+If it is stuck in one of the initial steps before you get to the language selection
+screen, you can try re-running the install, or if that fails, recreating the flash drive.</p>
+</section>
+<section id="manual-approach-20-04-install-and-installing-ros-fetch-packages">
+<h3>MANUAL APPROACH: 20.04 Install and Installing ROS/Fetch Packages<a class="headerlink" href="#manual-approach-20-04-install-and-installing-ros-fetch-packages" title="Link to this heading">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Back up your files as described in the previous section</p>
+</div>
+<ol class="arabic">
+<li><p><strong>Runstop the robot</strong>, to avoid unexpected movement of the robot.</p></li>
+<li><p><strong>Install Ubuntu 20.04 on the robot.</strong> Download the latest 20.04 Ubuntu installer from <a class="reference external" href="http://releases.ubuntu.com/20.04/">http://releases.ubuntu.com/20.04/</a>
+(in these instructions we use the Desktop image, version 20.04.2).
+For help booting from USB, see <a class="reference internal" href="#accessing-boot-menu-on-fetch-robots">Accessing Boot Menu on Fetch Robots</a>.</p>
+<ol class="arabic simple">
+<li><p>We recommend keeping the same hostname for the robot, e.g. <cite>fetch4</cite></p></li>
+<li><p>You can create the <cite>fetch</cite> user, or let it be automatically created later.
+(The typical password for the <cite>fetch</cite> user is ‘robotics’.)</p></li>
+</ol>
+<ul class="simple">
+<li><p>After install, you may need to unblock <cite>apt</cite>. Do this by clicking the App Store
+icon on the sidebar, which should trigger an update prompt you can close: <img alt="AppStore" src="_images/app_store.jpg" /></p></li>
+<li><p>You’ll probably want to install a few convenience packages such as openssh-server
+to enable SSH into your robot: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">openssh-server</span> <span class="pre">net-tools</span></code>.
+You might also want to install your favorite commandline text editor.</p></li>
+</ul>
+</li>
+<li><p><strong>Update your Ubuntu install:</strong> <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">dist-upgrade</span> <span class="pre">-y</span></code></p></li>
+<li><p><strong>Install ROS Noetic</strong> by following the instructions
+<a class="reference external" href="http://wiki.ros.org/noetic/Installation/Ubuntu">on the ROS Wiki</a>.
+You will want to do steps 1.1 through 1.6. In writing/testing these instructions, we assume:</p>
+<ul>
+<li><p>You use the <strong>ROS-Base</strong> setup, via the <code class="docutils literal notranslate"><span class="pre">ros-noetic-ros-base</span></code> package.</p></li>
+<li><p>You are using bash, so step 1.6 for the fetch user is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;source /opt/ros/noetic/setup.bash&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>You can also make this apply for all new users:
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">su</span> <span class="pre">-c</span> <span class="pre">'echo</span> <span class="pre">&quot;source</span> <span class="pre">/opt/ros/noetic/setup.bash&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">/etc/bash.bashrc'</span></code></p>
+</li>
+</ul>
+</li>
+<li><p><strong>NOTE</strong>: at a later time, Fetch may host and recommend its own mirror of ROS Noetic debians.</p></li>
+<li><p>Run the following to <strong>install Fetch research debians</strong>:</p>
+<ul>
+<li><p>General packages for Fetch robots:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">fetch</span><span class="o">-</span><span class="n">calibration</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">fetch</span><span class="o">-</span><span class="nb">open</span><span class="o">-</span><span class="n">auto</span><span class="o">-</span><span class="n">dock</span> \
+<span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">fetch</span><span class="o">-</span><span class="n">navigation</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">fetch</span><span class="o">-</span><span class="n">tools</span> <span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
+</li>
+<li><p>Then install packages specific to the robot type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export ROBOTTYPE=$(hostname | awk -F&#39;[0-9]&#39; &#39;{print $1}&#39;)
+# sudo apt install $ROBOTTYPE-noetic-config  # pending future availability
+wget http://packages.fetchrobotics.com/binaries/$ROBOTTYPE-noetic-config.deb
+sudo apt install ./$ROBOTTYPE-noetic-config.deb -y
+</pre></div>
+</div>
+<p>If you get an error regarding <cite>chrony</cite>, do <cite>sudo apt install chrony</cite>, and then try the
+noetic-config debian install again.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Power cycle the robot</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">reboot</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="post-install-validation">
+<h2>Post-install Validation<a class="headerlink" href="#post-install-validation" title="Link to this heading">¶</a></h2>
+<p>This is a direct continuation of either of the previous sections’ procedure.
+It is assumed that your robot is still runstopped.</p>
+<p>Verify that things are working.  All of the following steps assume that you are
+<code class="docutils literal notranslate"><span class="pre">ssh</span></code>’d into the robot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">fetch</span><span class="nd">@fetchXXXX</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>If your robot has not been upgraded in a while, it is likely that it will need to
+automatically upgrade the firmware on its boards. This can take several minutes
+to complete after you have rebooted the robot. You can monitor this by doing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">robot</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<p>You may see messages like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">WARN</span><span class="p">]</span> <span class="p">[</span><span class="mf">1554930321.086981030</span><span class="p">]:</span> <span class="n">Updating</span> <span class="n">wrist_roll_mcb</span> <span class="kn">from</span> <span class="o">-</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">101</span>
+<span class="p">[</span> <span class="n">INFO</span><span class="p">]</span> <span class="p">[</span><span class="mf">1554930321.087023328</span><span class="p">]:</span> <span class="n">Updating</span> <span class="n">board</span> <span class="mi">44</span>
+<span class="p">[</span> <span class="n">WARN</span><span class="p">]</span> <span class="p">[</span><span class="mf">1554930321.094045845</span><span class="p">]:</span> <span class="n">updating</span> <span class="n">firmware</span> <span class="n">loader</span> <span class="k">for</span> <span class="n">board</span> <span class="mh">0x11</span>
+<span class="p">[</span> <span class="n">WARN</span><span class="p">]</span> <span class="p">[</span><span class="mf">1554930323.609072063</span><span class="p">]:</span> <span class="n">updating</span> <span class="n">firmware</span> <span class="n">loader</span> <span class="k">for</span> <span class="n">board</span> <span class="mh">0x11</span>
+<span class="p">[</span> <span class="n">WARN</span><span class="p">]</span> <span class="p">[</span><span class="mf">1554930323.614075007</span><span class="p">]:</span> <span class="n">Unexpected</span> <span class="n">response</span> <span class="k">for</span> <span class="n">board</span> <span class="mi">17</span> <span class="p">:</span>  <span class="n">recv_len</span><span class="o">=</span><span class="mi">20</span> <span class="n">board_id</span><span class="o">=</span><span class="mi">17</span> <span class="n">table_</span>
+<span class="n">addr</span><span class="o">=</span><span class="mi">16</span> <span class="n">data_len</span><span class="o">=</span><span class="mi">16</span>
+<span class="p">[</span> <span class="n">WARN</span><span class="p">]</span> <span class="p">[</span><span class="mf">1554930323.614149147</span><span class="p">]:</span> <span class="n">Unexpected</span> <span class="n">response</span> <span class="k">for</span> <span class="n">board</span> <span class="mi">38</span> <span class="p">:</span>  <span class="n">recv_len</span><span class="o">=</span><span class="mi">20</span> <span class="n">board_id</span><span class="o">=</span><span class="mi">38</span> <span class="n">table_</span>
+<span class="n">addr</span><span class="o">=</span><span class="mi">16</span> <span class="n">data_len</span><span class="o">=</span><span class="mi">16</span>
+</pre></div>
+</div>
+<p>If you see the second sort of message, the likely fix is to power cycle the robot again
+via <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">fetch_drivers</span> <span class="pre">charger_power</span> <span class="pre">reboot</span></code>.</p>
+</li>
+<li><p>Verify that the robot can ping the mainboard and the laser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">10.42.42.42</span>  <span class="c1"># mainboard</span>
+<span class="n">ping</span> <span class="mf">10.42.42.10</span>  <span class="c1"># laser</span>
+</pre></div>
+</div>
+<p>If not, see <a class="reference internal" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly">Ensuring robot’s ethernet ports are configured correctly</a>.</p>
+</li>
+<li><p>Verify that the Primesense camera is working (if working with a Fetch robot):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rostopic</span> <span class="nb">list</span> <span class="n">head_camera</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+<p>This should output 32, if everything is working fine.</p>
+</li>
+<li><p>At this point, release the robot’s runstop button.</p></li>
+<li><p>The gripper should now have power, so we should be able to ping it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ping</span> <span class="mf">10.42.42.43</span>  <span class="c1"># gripper</span>
+</pre></div>
+</div>
+<p>If the gripper does not respond, please contact support. We are aware of an issue
+affecting some robots, and are gathering information to identify the cause and
+best solution.</p>
+</li>
+<li><p>The arm’s “gravity compensation” should now be working. You should be able to
+freely move the arm by hand.</p></li>
+<li><p>If applicable, from your non-robot computer, restore the contents of
+<code class="docutils literal notranslate"><span class="pre">/etc/ros/melodic</span></code> to <code class="docutils literal notranslate"><span class="pre">/etc/ros/noetic</span></code> on the robot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scp</span> <span class="n">fetch_robot_files</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="n">fetch</span><span class="nd">@fetchXXX</span><span class="p">:</span><span class="o">~/</span>
+<span class="n">ssh</span> <span class="n">fetch</span><span class="nd">@fetchXXX</span>
+<span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">noetic</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="o">~/</span><span class="n">fetch_robot_files</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">noetic</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Important</strong>: You should modify <code class="docutils literal notranslate"><span class="pre">/etc/ros/noetic/robot.launch</span></code> to replace any
+instances of <code class="docutils literal notranslate"><span class="pre">melodic</span></code> with <code class="docutils literal notranslate"><span class="pre">noetic</span></code></p>
+<p>As well, you can restore any other saved files to the robot.</p>
+<p>This is the point at which some things may not work fully, e.g. if packages
+used in ROS Indigo need updates/replacements for ROS Noetic.</p>
+<ol class="arabic">
+<li><p>Verify that calibration is installed: a date should be output if you run
+the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fetch@fetch3:~$ calibrate_robot --date
+2018-11-26 14:48:04
+</pre></div>
+</div>
+</li>
+<li><p>To restart the drivers so that your restored files are used, with the arm
+safely resting so that it won’t fall, restart roscore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">roscore</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Set up your teleop controller. By default, a fresh install will not have the service
+for either controller active, and the user will need to enable the appropriate
+service. (Note, only one or the other can be set up at a time.)</p>
+<ul>
+<li><p><strong>PS4</strong>: The PS4 controller is newly supported on our robots with 18.04. The PS4
+controller works better than the PS3 controller and is recommended. You can
+acquire one from e.g. Amazon. Note that third party PS4 controllers may not work.</p>
+<ol class="arabic">
+<li><p>Pair the controller via the Bluetooth settings in Ubuntu. For more detail,
+see <a class="reference internal" href="ps4.html"><span class="doc">here</span></a>.</p></li>
+<li><p>Disconnect the controller by holding the middle button for 10 seconds.</p></li>
+<li><p>Connect the controller by pressing the middle button and then waiting until the LED
+is blue and not flashing.</p></li>
+<li><p>You can verify that the controller is connected properly by watching the output
+of <code class="docutils literal notranslate"><span class="pre">jstest</span> <span class="pre">/dev/ps4joy</span></code> and pressing buttons on the controller.</p></li>
+<li><p><strong>If</strong> you did keep your old /etc/ros/melodic/robot.launch and are switching to a PS4
+controller, you will need to:</p>
+<ol class="arabic">
+<li><p>Find and modify/add the following lines in <code class="docutils literal notranslate"><span class="pre">/etc/ros/noetic/robot.launch</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">&lt;</span><span class="n">include</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;$(find freight_bringup)/launch/include/teleop.launch.xml&quot;</span> <span class="o">/&gt;</span>
+<span class="o">+</span> <span class="o">&lt;</span><span class="n">include</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;$(find freight_bringup)/launch/include/teleop.launch.xml&quot;</span><span class="o">&gt;</span>
+<span class="o">+</span>   <span class="o">&lt;</span><span class="n">arg</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ps4&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;true&quot;</span> <span class="o">/&gt;</span>
+<span class="o">+</span> <span class="o">&lt;/</span><span class="n">include</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Then, with the arm safely resting so that it won’t fall, restart roscore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">roscore</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Monitoring <code class="docutils literal notranslate"><span class="pre">/joy</span></code> topic should similarly reflect inputs on the controller.</p></li>
+<li><p>The controller should work to teleop the robot.</p></li>
+</ol>
+</li>
+<li><p><strong>PS3</strong>: No longer supported. You can acquire a PS4 controller instead.</p></li>
+</ul>
+</li>
+<li><p>At this point the robot is probably working fine and is ready for use! (Unless you
+have additional customizations to restore)</p></li>
+</ol>
+</section>
+<section id="compatibility-of-other-computers-used-with-the-robot">
+<h2>Compatibility of Other Computers Used with the Robot<a class="headerlink" href="#compatibility-of-other-computers-used-with-the-robot" title="Link to this heading">¶</a></h2>
+<p>For working with a robot running ROS Noetic, we recommend using an 20.04 Ubuntu
+machine that also has ROS Noetic installed.</p>
+<ul class="simple">
+<li><p>In order for the robot to appear correctly in RViz, you will want to:</p>
+<ul>
+<li><p>Ensure your computer is pointed at the packages.ros apt sources</p></li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">ros-noetic-fetch-description</span></code> and <code class="docutils literal notranslate"><span class="pre">ros-noetic-freight-description</span></code>
+packages.  Addtionally you might want to install
+<a class="reference external" href="https://github.com/fetchrobotics/fetch_tools">ros-noetic-fetch-tools</a>.</p></li>
+<li><p>Ensure that these packages are included in your path (e.g.
+<code class="docutils literal notranslate"><span class="pre">rospack</span> <span class="pre">find</span> <span class="pre">fetch_description</span></code> returns a path)</p></li>
+<li><p>Common gotcha on a new setup: If the robot model doesn’t appear in RViz at
+first, you may need to change the “Fixed frame” from e.g. ‘map’ to ‘odom’.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="not-supported-upgrading-from-14-04-to-20-04-via-16-04">
+<h2>Not Supported: Upgrading from 14.04 to 20.04 (via 16.04)<a class="headerlink" href="#not-supported-upgrading-from-14-04-to-20-04-via-16-04" title="Link to this heading">¶</a></h2>
+<p>It is theoretically possible to upgrade from 14.04 to 20.04. Fetch Robotics has not tried this.
+Fetch Robotics does not recommend this approach and <em>cannot</em> provide support for this.
+However, if you desire to try to upgrade, the following may be helpful:</p>
+<ul class="simple">
+<li><p>Back up files as described above, or even the full disk if you like.</p></li>
+<li><p>You cannot upgrade Ubuntu directly from 14.04 to 20.04. You must first
+upgrade to 16.04, then upgrade to 20.04. This can take a long time.</p></li>
+<li><p>You should review the postinstall script for <code class="docutils literal notranslate"><span class="pre">fetch-noetic-config</span></code>. It is not
+targeted at upgrading a system, so additional tweaks may be required after
+installing it.</p></li>
+</ul>
+</section>
+<section id="appendices">
+<h2>Appendices<a class="headerlink" href="#appendices" title="Link to this heading">¶</a></h2>
+<section id="subsequent-upgrade-notes">
+<h3>Subsequent upgrade notes<a class="headerlink" href="#subsequent-upgrade-notes" title="Link to this heading">¶</a></h3>
+<p>When doing an upgrade of the apt packages for your robot, always follow the steps at
+<span class="xref std std-doc">Updating Your Robot</span>.</p>
+</section>
+<section id="accessing-boot-menu-on-fetch-robots">
+<h3>Accessing Boot Menu on Fetch Robots<a class="headerlink" href="#accessing-boot-menu-on-fetch-robots" title="Link to this heading">¶</a></h3>
+<p>You may need to access the boot menu in order to boot from a USB flash
+drive and install Ubuntu 18.04.  Due to different computer motherboards used in the
+past, Fetch research robots may be using one of two BIOS flavors.  Older robots
+use an MSI branded BIOS.  Newer robots use American Megatrends Inc. (AMI).</p>
+<p>These different BIOS types activate the boot media selection menu with different keys:</p>
+<ul class="simple">
+<li><p>If your robot shows the MSI splash screen at boot, press F11 to access the boot menu.</p></li>
+<li><p>If your robot shows the black AMI splash screen at boot (this lasts for about 1 second),
+press F7 to access the boot menu.</p></li>
+</ul>
+<p>If you fail to get into the boot menu, you can restart the computer and try again.</p>
+<p>To get into the Ubuntu Grub menu, immediately after selecting your boot entry above,
+try tapping the shift, tab and escape keys. This should only be needed if you are
+trying to boot a previous Ubuntu kernel.</p>
+</section>
+<section id="ensuring-robot-s-ethernet-ports-are-configured-correctly">
+<h3>Ensuring robot’s ethernet ports are configured correctly<a class="headerlink" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly" title="Link to this heading">¶</a></h3>
+<p>If for some reason ethernet ports aren’t configured correctly, check the following setup:</p>
+<p>1. Inspect the output of <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">address</span></code>
+1. Edit <code class="docutils literal notranslate"><span class="pre">/etc/netplan/99-fetch-ethernet.yaml</span></code> and make changes if needed
+2. Power cycle the robot (only needed if you’re actively having issues).</p>
+<p>The robot has two ethernet ports on its computer. You can find more information on this
+at <a class="reference internal" href="computer.html"><span class="doc">Computer Overview and Configuration</span></a>.</p>
+<p>A problem you may encounter is if these two ports are “swapped”.  This will
+cause the robot computer to be unable to talk to the rest of its hardware. You
+can fix this in software or in hardware:</p>
+<ul class="simple">
+<li><p>Software: Edit or create <code class="docutils literal notranslate"><span class="pre">/etc/udev/rules.d/70-persistent-net.rules</span></code> and
+swap <code class="docutils literal notranslate"><span class="pre">eth0</span></code> and <code class="docutils literal notranslate"><span class="pre">eth1</span></code>. This maps specific mac addressess to specific
+ethernet ports.  Restart the robot for the change to take effect.</p></li>
+<li><p>OR: Hardware: swap the two ethernet cables where they plug into the computer.
+This shouldn’t be needed, but in case you do, you should expect to find
+a gray cable (internal communications) and a blue cable (external).
+Typically, the blue goes to the top ethernet port, and the grey goes to the bottom.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="care_and_feeding.html" class="btn btn-neutral float-left" title="Care And Feeding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="visualization.html" class="btn btn-neutral float-right" title="Tutorial: Visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2014-2021, Fetch Robotics Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
