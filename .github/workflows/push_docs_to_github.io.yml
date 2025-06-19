@@ -30,7 +30,7 @@ jobs:
               latexmk \
               texlive-latex-recommended \
               texlive-latex-extra \
-              texgyre \
+              tex-gyre \
               fonts-texgyre \
               fonts-texgyre-math
           # `python3-sphinx` pulls in docutils, jinja2, pygments, babel, etc.
