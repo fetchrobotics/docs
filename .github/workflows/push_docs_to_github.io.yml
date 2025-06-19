@@ -1,0 +1,49 @@
+name: Build & Deploy Docs (github.io)
+# Written by GPT
+
+on:
+  # Re-publish the site when we trigger the job from the Actions tab.
+  workflow_dispatch: {}
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+
+    # Needed so we can push to gh-pages
+    permissions:
+      contents: write
+
+    steps:
+      # 1 — Source code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0      # so we can create/update gh-pages
+
+      # 2 — System packages only: Python-Sphinx + minimal TeX
+      - name: Install Debian Sphinx and TeX tool-chain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+              python3-sphinx \
+              python3-sphinx-rtd-theme \
+              latexmk \
+              texlive-latex-recommended \
+              texlive-latex-extra
+          # `python3-sphinx` pulls in docutils, jinja2, pygments, babel, etc.
+
+      # 3 — Build HTML & PDF (commands straight from the README)
+      - name: Build HTML and PDF
+        run: |
+          make html
+          make latexpdf
+          # publish the PDF with the site
+          cp build/latex/*.pdf build/html/
+
+      # 4 — Deploy to gh-pages
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: build/html
