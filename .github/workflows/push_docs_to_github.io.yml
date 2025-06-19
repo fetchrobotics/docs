@@ -29,10 +29,12 @@ jobs:
               python3-sphinx-rtd-theme \
               latexmk \
               texlive-latex-recommended \
-              texlive-latex-extra
+              texlive-latex-extra \
+              fonts-texgyre \
+              fonts-texgyre-math
           # `python3-sphinx` pulls in docutils, jinja2, pygments, babel, etc.
 
-      # 3 — Build HTML & PDF (commands straight from the README)
+      # 3 — Build HTML & PDF
       - name: Build HTML and PDF
         run: |
           make html
@@ -42,7 +44,8 @@ jobs:
 
       # 4 — Deploy to gh-pages
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+        # @v4 :
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
