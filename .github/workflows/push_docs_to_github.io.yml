@@ -45,7 +45,7 @@ jobs:
 
       # 4 — Deploy to gh-pages
       - name: Deploy to gh-pages
-        # @v4 :
+        # using @v4 hash:
         uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
