@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Getting Started &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -116,7 +120,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Getting Started</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/in_the_box.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/in_the_box.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -125,21 +129,21 @@
            <div itemprop="articleBody">
              
   <section id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
 <section id="what-s-in-box">
-<h2>What’s In Box<a class="headerlink" href="#what-s-in-box" title="Link to this heading">¶</a></h2>
+<h2>What’s In Box<a class="headerlink" href="#what-s-in-box" title="Link to this heading"></a></h2>
 <p>The Fetch and Freight Research Edition robots each ship in reusable ATA
 cases. Inside each case you will find the robot, toolkit, and power
 supply for charging the robot.</p>
 <section id="fetch-and-freight">
-<h3>Fetch and Freight<a class="headerlink" href="#fetch-and-freight" title="Link to this heading">¶</a></h3>
+<h3>Fetch and Freight<a class="headerlink" href="#fetch-and-freight" title="Link to this heading"></a></h3>
 <p>Please watch the video below for unpacking Fetch or Freight. The
 video covers unpacking the robot, connecting the batteries, turning on
 the robot, and driving the robot via the provided joystick.</p>
 <iframe src="https://player.vimeo.com/video/131612734" width="700" height="393"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 </iframe></section>
 <section id="toolkit">
-<h3>Toolkit<a class="headerlink" href="#toolkit" title="Link to this heading">¶</a></h3>
+<h3>Toolkit<a class="headerlink" href="#toolkit" title="Link to this heading"></a></h3>
 <p>The toolkit contains the tools, accessories, and fasteners needed to
 use the Fetch and Freight. The picture below shows packaged toolkit.</p>
 <figure class="align-centered align-center">
@@ -217,7 +221,7 @@ use the Fetch and Freight. The picture below shows packaged toolkit.</p>
 </table>
 </section>
 <section id="robot-power-supply">
-<h3>Robot Power Supply<a class="headerlink" href="#robot-power-supply" title="Link to this heading">¶</a></h3>
+<h3>Robot Power Supply<a class="headerlink" href="#robot-power-supply" title="Link to this heading"></a></h3>
 <p>The robot power supply is shown below in the packaging:</p>
 <figure class="align-centered align-center">
 <a class="reference internal image-reference" href="_images/charger.JPG"><img alt="_images/charger.JPG" src="_images/charger.JPG" style="width: 100%;" /></a>
@@ -236,15 +240,15 @@ injury to the robot or user.</p>
 </section>
 </section>
 <section id="running-fetch-and-freight">
-<h2>Running Fetch and Freight<a class="headerlink" href="#running-fetch-and-freight" title="Link to this heading">¶</a></h2>
+<h2>Running Fetch and Freight<a class="headerlink" href="#running-fetch-and-freight" title="Link to this heading"></a></h2>
 <section id="turning-on-fetch-and-freight">
-<h3>Turning on Fetch and Freight<a class="headerlink" href="#turning-on-fetch-and-freight" title="Link to this heading">¶</a></h3>
+<h3>Turning on Fetch and Freight<a class="headerlink" href="#turning-on-fetch-and-freight" title="Link to this heading"></a></h3>
 <p>To turn on the robot, set the <a class="reference internal" href="robot_hardware.html#power-disconnect"><span class="std std-ref">Power Disconnect Switch</span></a> (the red one
 on the lower back of the robot) to the ON position and then press the
 power switch on the access panel until it lights up.</p>
 </section>
 <section id="logging-in">
-<h3>Logging In<a class="headerlink" href="#logging-in" title="Link to this heading">¶</a></h3>
+<h3>Logging In<a class="headerlink" href="#logging-in" title="Link to this heading"></a></h3>
 <p>Once the robot is turned on and the robot is on the network, ssh
 into the computer of the robot using the default <code class="docutils literal notranslate"><span class="pre">fetch</span></code> user
 account:</p>
@@ -258,7 +262,7 @@ and network is setup for multicast DNS (mDNS) then you may be able to use
 of your robot (remove any leading zeros from the serial number).</p>
 </section>
 <section id="connecting-a-monitor-optional">
-<h3>Connecting a Monitor (Optional)<a class="headerlink" href="#connecting-a-monitor-optional" title="Link to this heading">¶</a></h3>
+<h3>Connecting a Monitor (Optional)<a class="headerlink" href="#connecting-a-monitor-optional" title="Link to this heading"></a></h3>
 <p>If you are unable to access the robot through ssh due to your network settings
 you will need to connect an HDMI monitor, USB keyboard and USB mouse to the
 side panel ports. Then use them to select your network from the networking
@@ -280,13 +284,13 @@ to connect the robot to your network.</p>
 </div>
 <p>Once connected then create your user account as shown below.</p>
 <section id="default-user-account">
-<h4>Default User Account<a class="headerlink" href="#default-user-account" title="Link to this heading">¶</a></h4>
+<h4>Default User Account<a class="headerlink" href="#default-user-account" title="Link to this heading"></a></h4>
 <p>Each robot ships with a default user account, with username <cite>fetch</cite> and
 password <cite>robotics</cite>. It is recommended to change the password when
 setting up the robot.</p>
 </section>
 <section id="creating-user-accounts">
-<h4>Creating User Accounts<a class="headerlink" href="#creating-user-accounts" title="Link to this heading">¶</a></h4>
+<h4>Creating User Accounts<a class="headerlink" href="#creating-user-accounts" title="Link to this heading"></a></h4>
 <p>It is recommended that each user create their own account on the robot, especially
 when developing from source. To create an account on the robot, ssh into the
 robot as the <cite>fetch</cite> user, and run the following commands:</p>
@@ -297,7 +301,7 @@ robot as the <cite>fetch</cite> user, and run the following commands:</p>
 </section>
 </section>
 <section id="tucking-fetch-s-arm">
-<h3>Tucking Fetch’s Arm<a class="headerlink" href="#tucking-fetch-s-arm" title="Link to this heading">¶</a></h3>
+<h3>Tucking Fetch’s Arm<a class="headerlink" href="#tucking-fetch-s-arm" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The tuck arm server is a new feature released in
@@ -313,7 +317,7 @@ While the arm is tucking, you will have to hold the deadman. Releasing the
 deadman will stop the tucking action.</p>
 </section>
 <section id="driving-fetch-and-freight-with-a-joystick">
-<h3>Driving Fetch and Freight with a Joystick<a class="headerlink" href="#driving-fetch-and-freight-with-a-joystick" title="Link to this heading">¶</a></h3>
+<h3>Driving Fetch and Freight with a Joystick<a class="headerlink" href="#driving-fetch-and-freight-with-a-joystick" title="Link to this heading"></a></h3>
 <p>Each Fetch and Freight ship with a robot joystick.
 Whenever the robot drivers are running, so is joystick teleop.
 The joystick is capable of controlling the movement of the robot
@@ -431,7 +435,7 @@ hold position indefinitely. Sometimes this is not desired. Holding button (4)
 for 1 second will stop all controllers except the base controller and
 the arm gravity compensation.</p>
 <section id="moving-the-base-with-your-keyboard">
-<h4>Moving the Base with your Keyboard<a class="headerlink" href="#moving-the-base-with-your-keyboard" title="Link to this heading">¶</a></h4>
+<h4>Moving the Base with your Keyboard<a class="headerlink" href="#moving-the-base-with-your-keyboard" title="Link to this heading"></a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You will need a computer with ROS installed to properly
@@ -450,7 +454,7 @@ package.</p>
 </section>
 </section>
 <section id="visualizing-data">
-<h3>Visualizing Data<a class="headerlink" href="#visualizing-data" title="Link to this heading">¶</a></h3>
+<h3>Visualizing Data<a class="headerlink" href="#visualizing-data" title="Link to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rosrun rviz rviz
 </pre></div>
@@ -477,7 +481,7 @@ The default <code class="docutils literal notranslate"><span class="pre">.rviz</
 <a class="reference internal image-reference" href="_images/rviz_navigation.png"><img alt="_images/rviz_navigation.png" src="_images/rviz_navigation.png" style="width: 100%;" /></a>
 </figure>
 <section id="using-the-runtime-monitor">
-<h4>Using the Runtime Monitor<a class="headerlink" href="#using-the-runtime-monitor" title="Link to this heading">¶</a></h4>
+<h4>Using the Runtime Monitor<a class="headerlink" href="#using-the-runtime-monitor" title="Link to this heading"></a></h4>
 <p>Fetch and Freight publish ROS diagnostics messages. These are human-readable
 messages that inform users of the robot system state. The <cite>runtime_monitor</cite>,
 part of <code class="docutils literal notranslate"><span class="pre">rqt_robot_plugins</span></code> can be used to view diagnostics from your
@@ -505,7 +509,7 @@ Fetch might look like:</p>
 </section>
 </section>
 <section id="putting-fetch-and-freight-away">
-<h3>Putting Fetch and Freight Away<a class="headerlink" href="#putting-fetch-and-freight-away" title="Link to this heading">¶</a></h3>
+<h3>Putting Fetch and Freight Away<a class="headerlink" href="#putting-fetch-and-freight-away" title="Link to this heading"></a></h3>
 <p>Before turning the robot off, it is recommended that you tuck the arm.
 When power is shut off, the arm will want to slowly fall and will be
 more difficult to backdrive when in the off configuration.</p>

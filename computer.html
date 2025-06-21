@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computer Overview and Configuration &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -102,7 +106,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Computer Overview and Configuration</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/computer.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/computer.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -111,19 +115,19 @@
            <div itemprop="articleBody">
              
   <section id="computer-overview-and-configuration">
-<h1>Computer Overview and Configuration<a class="headerlink" href="#computer-overview-and-configuration" title="Link to this heading">¶</a></h1>
+<h1>Computer Overview and Configuration<a class="headerlink" href="#computer-overview-and-configuration" title="Link to this heading"></a></h1>
 <p>Both Fetch and Freight have an internal computer which runs a
 Long Term Support (LTS) release of Ubuntu and an LTS release of
 ROS. These releases are intended to give long-term stability to
 the system.</p>
 <section id="default-user-account">
-<h2>Default User Account<a class="headerlink" href="#default-user-account" title="Link to this heading">¶</a></h2>
+<h2>Default User Account<a class="headerlink" href="#default-user-account" title="Link to this heading"></a></h2>
 <p>Each robot ships with a default user account, with username <cite>fetch</cite> and
 password <cite>robotics</cite>. It is recommended to change the password when
 setting up the robot.</p>
 </section>
 <section id="creating-user-accounts">
-<h2>Creating User Accounts<a class="headerlink" href="#creating-user-accounts" title="Link to this heading">¶</a></h2>
+<h2>Creating User Accounts<a class="headerlink" href="#creating-user-accounts" title="Link to this heading"></a></h2>
 <p>It is recommended that each user create their own account on the robot, especially
 when developing from source. To create an account on the robot, ssh into the
 robot as the <cite>fetch</cite> user, and run the following commands:</p>
@@ -133,7 +137,7 @@ robot as the <cite>fetch</cite> user, and run the following commands:</p>
 </div>
 </section>
 <section id="networking">
-<h2>Networking<a class="headerlink" href="#networking" title="Link to this heading">¶</a></h2>
+<h2>Networking<a class="headerlink" href="#networking" title="Link to this heading"></a></h2>
 <p>The robot has both internal and external Ethernet-based networks,
 as well as an external wireless network interface. The external
 network interfaces are intended for users to connect to the robot,
@@ -176,12 +180,12 @@ require higher bandwidth.</p>
 <p>Never drive the robot with an Ethernet cable attached to the access panel.</p>
 </div>
 <section id="connecting-the-robot-to-a-wireless-network">
-<h3>Connecting the Robot to a Wireless Network<a class="headerlink" href="#connecting-the-robot-to-a-wireless-network" title="Link to this heading">¶</a></h3>
+<h3>Connecting the Robot to a Wireless Network<a class="headerlink" href="#connecting-the-robot-to-a-wireless-network" title="Link to this heading"></a></h3>
 <p>The easiest way to configure the wireless networking is to connect a monitor,
 keyboard, and mouse and use Ubuntu’s Network Manager interface.</p>
 </section>
 <section id="configuring-the-robot-to-use-a-static-ip-for-access-panel-ethernet">
-<h3>Configuring the Robot to use a Static IP for Access Panel Ethernet<a class="headerlink" href="#configuring-the-robot-to-use-a-static-ip-for-access-panel-ethernet" title="Link to this heading">¶</a></h3>
+<h3>Configuring the Robot to use a Static IP for Access Panel Ethernet<a class="headerlink" href="#configuring-the-robot-to-use-a-static-ip-for-access-panel-ethernet" title="Link to this heading"></a></h3>
 <p>By default, robots are shipped with the Access Panel’s ethernet set to be
 assigned an IP address by whatever it is connected to.  You can change it
 to use a static IP address, if desired. By convention, if we’re assigning
@@ -193,7 +197,7 @@ you can select whatever IP you desire.  To configure a static IP:</p>
 port take effect.</p>
 </section>
 <section id="troubleshooting-ros-interactions-with-robot-across-a-network">
-<h3>Troubleshooting ROS Interactions with Robot Across a Network<a class="headerlink" href="#troubleshooting-ros-interactions-with-robot-across-a-network" title="Link to this heading">¶</a></h3>
+<h3>Troubleshooting ROS Interactions with Robot Across a Network<a class="headerlink" href="#troubleshooting-ros-interactions-with-robot-across-a-network" title="Link to this heading"></a></h3>
 <p>External networking with the robot is typically done to provide
 an interface to various ROS capabilities. To ensure a working network setup
 between robot and PC, reference the following guide to the ROS_MASTER_URI
@@ -216,7 +220,7 @@ to tell the robot a location to send info to via future connections.</p>
 </section>
 </section>
 <section id="clock-synchronization">
-<h2>Clock Synchronization<a class="headerlink" href="#clock-synchronization" title="Link to this heading">¶</a></h2>
+<h2>Clock Synchronization<a class="headerlink" href="#clock-synchronization" title="Link to this heading"></a></h2>
 <p>It is recommended to install the chrony NTP client on both robots and desktops
 in order to keep their time synchronized. By default, robots do ship with chrony
 installed, but did not initially. To install chrony in Ubuntu on an older robot:</p>
@@ -226,7 +230,7 @@ installed, but did not initially. To install chrony in Ubuntu on an older robot:
 </div>
 </section>
 <section id="upstart-services">
-<span id="id1"></span><h2>Upstart Services<a class="headerlink" href="#upstart-services" title="Link to this heading">¶</a></h2>
+<span id="id1"></span><h2>Upstart Services<a class="headerlink" href="#upstart-services" title="Link to this heading"></a></h2>
 <p>Fetch and Freight use systemd to start and manage various services on the robot.
 The following systemd services (aka ‘units’) start when the robot is booted:</p>
 <table class="docutils align-default">
@@ -263,7 +267,7 @@ when restarting the drivers, and so a roscore restart may be required
 if the parameter server has been corrupted by a user script.</p>
 </section>
 <section id="log-files">
-<h2>Log Files<a class="headerlink" href="#log-files" title="Link to this heading">¶</a></h2>
+<h2>Log Files<a class="headerlink" href="#log-files" title="Link to this heading"></a></h2>
 <p>ROS logs are created in the /var/log/ros folder.  The <code class="docutils literal notranslate"><span class="pre">robot</span></code> service’s logs
 are also sent to /var/log/ros/robot.log.  This log file is a common place to
 check for information on errors, if the robot is not working.  The other
@@ -271,7 +275,7 @@ systemd services’ outputs are less often used, but can be viewed using
 e.g. <code class="docutils literal notranslate"><span class="pre">journalctl</span> <span class="pre">-u</span> <span class="pre">roscore</span></code>.</p>
 </section>
 <section id="speakers-and-audio">
-<h2>Speakers and Audio<a class="headerlink" href="#speakers-and-audio" title="Link to this heading">¶</a></h2>
+<h2>Speakers and Audio<a class="headerlink" href="#speakers-and-audio" title="Link to this heading"></a></h2>
 <p>The mainboard of Fetch and Freight contains a USB audio device.
 While the device enumerates as a standard Linux audio device, we recommend
 using the <a class="reference external" href="http://wiki.ros.org/sound_play">sound_play ROS package</a> to

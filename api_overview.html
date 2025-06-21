@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>API Overview &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -98,7 +102,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">API Overview</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/api_overview.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/api_overview.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -107,7 +111,7 @@
            <div itemprop="articleBody">
              
   <section id="api-overview">
-<h1>API Overview<a class="headerlink" href="#api-overview" title="Link to this heading">¶</a></h1>
+<h1>API Overview<a class="headerlink" href="#api-overview" title="Link to this heading"></a></h1>
 <p>Fetch Robotics is committed to providing an exceptional out-of-the-box
 experience for new robot owners. One of the ways in which we create a great
 experience is by using standard ROS interfaces. This means that code you
@@ -120,7 +124,7 @@ to REP-compatible interfaces, we have adopted a number of the community-accepted
 standard interfaces, such as those provided by the
 <a class="reference external" href="http://wiki.ros.org/control_msgs">control_msgs</a> package.</p>
 <section id="arm-and-torso">
-<span id="arm-api"></span><h2>Arm and Torso<a class="headerlink" href="#arm-and-torso" title="Link to this heading">¶</a></h2>
+<span id="arm-api"></span><h2>Arm and Torso<a class="headerlink" href="#arm-and-torso" title="Link to this heading"></a></h2>
 <p>The arm and torso of the robot are controlled by
 <a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/FollowJointTrajectory.html">control_msgs/FollowJointTrajectory</a>
 actions. This <a class="reference external" href="http://wiki.ros.org/actionlib/DetailedDescription#Action_Interface_.26_Transport_Layer">action interface</a> is the output of packages such as MoveIt, and allows
@@ -144,7 +148,7 @@ constructed paths may cause motor or breaker shutdown.</p>
 compensation controller.</p>
 </section>
 <section id="base-interface">
-<span id="base-api"></span><h2>Base Interface<a class="headerlink" href="#base-interface" title="Link to this heading">¶</a></h2>
+<span id="base-api"></span><h2>Base Interface<a class="headerlink" href="#base-interface" title="Link to this heading"></a></h2>
 <p>Support for mobile bases is quite standard and robust in ROS, however it is one
 of the older interfaces. As such, it is one of the few interfaces which is not
 action-based.</p>
@@ -169,7 +173,7 @@ obstacles. This will not entirely stop the robot if it is about to hit something
 but will prevent full speed collisions.</p>
 </section>
 <section id="head-interface">
-<span id="head-api"></span><h2>Head Interface<a class="headerlink" href="#head-interface" title="Link to this heading">¶</a></h2>
+<span id="head-api"></span><h2>Head Interface<a class="headerlink" href="#head-interface" title="Link to this heading"></a></h2>
 <p>The head exposes two potential interfaces. The first is an <a class="reference external" href="http://wiki.ros.org/actionlib#Client-Server_Interaction">ActionServer</a>
 available on <cite>head_controller/follow_joint_trajectory</cite> which follows a joint trajectory as with the
 arm and torso (described above).</p>
@@ -182,7 +186,7 @@ fields, it points the <cite>head_tilt_link</cite> (which is very near the camera
 axis) towards the <cite>target</cite> point to achieve a similar effect. A <code class="docutils literal notranslate"><span class="pre">min_duration</span></code> or <code class="docutils literal notranslate"><span class="pre">max_velocity</span></code> can also be specified.</p>
 </section>
 <section id="gripper-interface">
-<span id="gripper-api"></span><h2>Gripper Interface<a class="headerlink" href="#gripper-interface" title="Link to this heading">¶</a></h2>
+<span id="gripper-api"></span><h2>Gripper Interface<a class="headerlink" href="#gripper-interface" title="Link to this heading"></a></h2>
 <p><cite>gripper_controller/gripper_action</cite> exposes a
 <a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/GripperCommand.html">control_msgs/GripperCommand</a>
 ActionServer. The gripper command takes in <code class="docutils literal notranslate"><span class="pre">position</span></code> and <code class="docutils literal notranslate"><span class="pre">effort</span></code> as parameters. Generally,
@@ -192,7 +196,7 @@ the closed position, the grasp strength will be determined by the maximum
 effort.</p>
 </section>
 <section id="head-camera-interface">
-<span id="camera-api"></span><h2>Head Camera Interface<a class="headerlink" href="#head-camera-interface" title="Link to this heading">¶</a></h2>
+<span id="camera-api"></span><h2>Head Camera Interface<a class="headerlink" href="#head-camera-interface" title="Link to this heading"></a></h2>
 <p>The head camera exposes several topics of interest:</p>
 <blockquote>
 <div><ul class="simple">
@@ -216,7 +220,7 @@ at 15Hz.</p></li>
 </div></blockquote>
 </section>
 <section id="laser-interface">
-<span id="laser-api"></span><h2>Laser Interface<a class="headerlink" href="#laser-interface" title="Link to this heading">¶</a></h2>
+<span id="laser-api"></span><h2>Laser Interface<a class="headerlink" href="#laser-interface" title="Link to this heading"></a></h2>
 <p><cite>base_scan</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/LaserScan.html">sensor_msgs/LaserScan</a>
 message published at 15Hz.</p>
 <p>Note: the raw laser information as reported by the laser hardware is published to
@@ -224,7 +228,7 @@ message published at 15Hz.</p>
 shadow points.</p>
 </section>
 <section id="imu-interface">
-<span id="imu-api"></span><h2>IMU Interface<a class="headerlink" href="#imu-interface" title="Link to this heading">¶</a></h2>
+<span id="imu-api"></span><h2>IMU Interface<a class="headerlink" href="#imu-interface" title="Link to this heading"></a></h2>
 <p><cite>imu</cite> is a <a class="reference external" href="http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html">sensor_msgs/Imu</a>
 message published at 100Hz. This message contains the linear acceleration and
 rotational velocities as measured by the IMU located in the base of the robot.</p>
@@ -234,7 +238,7 @@ message published at 100Hz.</p>
 <p>The IMUs are not present in the simulated robot.</p>
 </section>
 <section id="resetting-breakers">
-<span id="id5"></span><h2>Resetting Breakers<a class="headerlink" href="#resetting-breakers" title="Link to this heading">¶</a></h2>
+<span id="id5"></span><h2>Resetting Breakers<a class="headerlink" href="#resetting-breakers" title="Link to this heading"></a></h2>
 <p>There are 3 breakers governing power on the fetch. One each for the arm, gripper
 and base. The aux1 and aux2 breakers power the arm and gripper, respectively.
 On the freight research base, aux1_breaker is connected to the aux power connector on

@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorial: Gazebo Simulation &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -97,7 +101,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Tutorial: Gazebo Simulation</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/gazebo.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/gazebo.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -106,7 +110,7 @@
            <div itemprop="articleBody">
              
   <section id="tutorial-gazebo-simulation">
-<h1>Tutorial: Gazebo Simulation<a class="headerlink" href="#tutorial-gazebo-simulation" title="Link to this heading">¶</a></h1>
+<h1>Tutorial: Gazebo Simulation<a class="headerlink" href="#tutorial-gazebo-simulation" title="Link to this heading"></a></h1>
 <p>Fetch and Freight have simulated counterparts using the
 <a class="reference external" href="http://gazebosim.org">Gazebo Simulator</a> which you can install locally on
 your system.</p>
@@ -115,7 +119,7 @@ your system.</p>
 <a class="reference external" href="https://rds.theconstructsim.com/tc_projects/use_project_share_link/4ba9621c-e546-4353-848e-dc7326c8e467">ROSJect link</a> in case you
 want to avoid the installation process.</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
 <p>Before installing the simulation environment, make sure your desktop
 is setup with a standard installation of
 <a class="reference external" href="http://wiki.ros.org/indigo/Installation/Ubuntu">ROS Indigo on Ubuntu 14.04</a> or
@@ -127,7 +131,7 @@ Once your APT repositories are configured, you can install the simulator:</p>
 </div>
 </section>
 <section id="starting-the-simulator">
-<h2>Starting the Simulator<a class="headerlink" href="#starting-the-simulator" title="Link to this heading">¶</a></h2>
+<h2>Starting the Simulator<a class="headerlink" href="#starting-the-simulator" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Never run the simulator on the robot. Simulation requires that
@@ -159,14 +163,14 @@ grasping.</p></li>
 arm and giving the head an initial command.</p>
 </section>
 <section id="simulating-a-freight">
-<h2>Simulating a Freight<a class="headerlink" href="#simulating-a-freight" title="Link to this heading">¶</a></h2>
+<h2>Simulating a Freight<a class="headerlink" href="#simulating-a-freight" title="Link to this heading"></a></h2>
 <p>Freight uses the same launch files as Fetch, simply pass the robot argument:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ roslaunch fetch_gazebo simulation.launch robot:=freight
 </pre></div>
 </div>
 </section>
 <section id="visualizing-with-rviz">
-<h2>Visualizing with RVIZ<a class="headerlink" href="#visualizing-with-rviz" title="Link to this heading">¶</a></h2>
+<h2>Visualizing with RVIZ<a class="headerlink" href="#visualizing-with-rviz" title="Link to this heading"></a></h2>
 <p>Even though Gazebo has a graphical visualization, RVIZ is still the preferred
 tool for interacting with your robot.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
@@ -196,7 +200,7 @@ The default <code class="docutils literal notranslate"><span class="pre">.rviz</
 </figure>
 </section>
 <section id="running-the-mobile-manipulation-demo">
-<span id="mm-demo"></span><h2>Running the Mobile Manipulation Demo<a class="headerlink" href="#running-the-mobile-manipulation-demo" title="Link to this heading">¶</a></h2>
+<span id="mm-demo"></span><h2>Running the Mobile Manipulation Demo<a class="headerlink" href="#running-the-mobile-manipulation-demo" title="Link to this heading"></a></h2>
 <p>There is a fully integrated demo showing navigation, perception
 and MoveIt working together on the robot in simulation. To run the
 demo, start Gazebo simulator with the playground:</p>
@@ -230,7 +234,7 @@ table.</p></li>
 </div></blockquote>
 </section>
 <section id="launch-it-on-rosds">
-<h2>Launch it on ROSDS<a class="headerlink" href="#launch-it-on-rosds" title="Link to this heading">¶</a></h2>
+<h2>Launch it on ROSDS<a class="headerlink" href="#launch-it-on-rosds" title="Link to this heading"></a></h2>
 <figure class="align-centered align-center">
 <a class="reference internal image-reference" href="_images/rosds.png"><img alt="_images/rosds.png" src="_images/rosds.png" style="width: 100%;" /></a>
 </figure>
@@ -251,7 +255,7 @@ to start:</p>
 </figure>
 </section>
 <section id="simulation-vs-real-robots">
-<h2>Simulation vs. Real Robots<a class="headerlink" href="#simulation-vs-real-robots" title="Link to this heading">¶</a></h2>
+<h2>Simulation vs. Real Robots<a class="headerlink" href="#simulation-vs-real-robots" title="Link to this heading"></a></h2>
 <p>The simulated robot may not be identical to the real robot. In fact, the
 real robot is likely quite a bit better behaved. Also:</p>
 <blockquote>

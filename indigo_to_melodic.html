@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROS Melodic + Ubuntu 18.04 &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -86,7 +90,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">ROS Melodic + Ubuntu 18.04</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/indigo_to_melodic.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/indigo_to_melodic.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -95,7 +99,7 @@
            <div itemprop="articleBody">
              
   <section id="ros-melodic-ubuntu-18-04">
-<h1>ROS Melodic + Ubuntu 18.04<a class="headerlink" href="#ros-melodic-ubuntu-18-04" title="Link to this heading">¶</a></h1>
+<h1>ROS Melodic + Ubuntu 18.04<a class="headerlink" href="#ros-melodic-ubuntu-18-04" title="Link to this heading"></a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Rarely, issues may occur with some installs. You should ensure that
@@ -107,7 +111,7 @@ Fetch and Freight robots.  Other than the process of upgrading a robot, there
 should be minimal effect on using your robot.  If you observe an issue, please
 let us know via a support ticket.</p>
 <section id="known-issues">
-<h2>Known issues<a class="headerlink" href="#known-issues" title="Link to this heading">¶</a></h2>
+<h2>Known issues<a class="headerlink" href="#known-issues" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The PS3 controller does not work as well on 18.04 as it did on 14.04. To achieve
@@ -122,7 +126,7 @@ If you use Gazebo, please check the status of this <a class="reference external"
 </div>
 </section>
 <section id="upgrading-your-robot-to-ros-melodic-ubuntu-18-04">
-<h2>Upgrading Your Robot to ROS Melodic + Ubuntu 18.04<a class="headerlink" href="#upgrading-your-robot-to-ros-melodic-ubuntu-18-04" title="Link to this heading">¶</a></h2>
+<h2>Upgrading Your Robot to ROS Melodic + Ubuntu 18.04<a class="headerlink" href="#upgrading-your-robot-to-ros-melodic-ubuntu-18-04" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Read this document in full to ensure you understand the procedures.  It is
@@ -132,7 +136,7 @@ Ensure your colleagues are on board with doing this upgrade.</p>
 <p>This document is a procedure for <strong>replacing the contents</strong> of your robot’s SSD
 with an Ubuntu 18.04 install and ROS Melodic.  All files will be erased!</p>
 <section id="before-upgrade">
-<h3>Before Upgrade<a class="headerlink" href="#before-upgrade" title="Link to this heading">¶</a></h3>
+<h3>Before Upgrade<a class="headerlink" href="#before-upgrade" title="Link to this heading"></a></h3>
 <p>Back up files from the robot!  All files will be erased, so make sure to save
 files specific to your research work. There are a few categories of files to back up:</p>
 <ol class="arabic simple">
@@ -167,7 +171,7 @@ automatically set up networking on your robot correctly:</p>
 or other hardware configuration changes were made to get them working.</p>
 </section>
 <section id="automated-installer-18-04-and-ros-melodic-install">
-<h3>AUTOMATED INSTALLER: 18.04 and ROS Melodic Install<a class="headerlink" href="#automated-installer-18-04-and-ros-melodic-install" title="Link to this heading">¶</a></h3>
+<h3>AUTOMATED INSTALLER: 18.04 and ROS Melodic Install<a class="headerlink" href="#automated-installer-18-04-and-ros-melodic-install" title="Link to this heading"></a></h3>
 <p>This section guides you through using a custom automated installer that
 will set up Ubuntu with ROS packages and Fetch customizations for robots.
 You can alternately do a manual install, which is outlined in the next section.</p>
@@ -238,7 +242,7 @@ If it is stuck in one of the initial steps before you get to the language select
 screen, you can try re-running the install, or if that fails, recreating the flash drive.</p>
 </section>
 <section id="manual-approach-18-04-install-and-installing-ros-fetch-packages">
-<h3>MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages<a class="headerlink" href="#manual-approach-18-04-install-and-installing-ros-fetch-packages" title="Link to this heading">¶</a></h3>
+<h3>MANUAL APPROACH: 18.04 Install and Installing ROS/Fetch Packages<a class="headerlink" href="#manual-approach-18-04-install-and-installing-ros-fetch-packages" title="Link to this heading"></a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Back up your files as described in the previous section</p>
@@ -307,7 +311,7 @@ melodic-config debian install again.</p>
 </section>
 </section>
 <section id="post-install-validation">
-<h2>Post-install Validation<a class="headerlink" href="#post-install-validation" title="Link to this heading">¶</a></h2>
+<h2>Post-install Validation<a class="headerlink" href="#post-install-validation" title="Link to this heading"></a></h2>
 <p>This is a direct continuation of either of the previous sections’ procedure.
 It is assumed that your robot is still runstopped.</p>
 <p>Verify that things are working.  All of the following steps assume that you are
@@ -454,7 +458,7 @@ have additional customizations to restore)</p></li>
 </ol>
 </section>
 <section id="compatibility-of-other-computers-used-with-the-robot">
-<h2>Compatibility of Other Computers Used with the Robot<a class="headerlink" href="#compatibility-of-other-computers-used-with-the-robot" title="Link to this heading">¶</a></h2>
+<h2>Compatibility of Other Computers Used with the Robot<a class="headerlink" href="#compatibility-of-other-computers-used-with-the-robot" title="Link to this heading"></a></h2>
 <p>For working with a robot running ROS Melodic, we recommend using an 18.04 Ubuntu
 machine that also has ROS Melodic installed.</p>
 <ul class="simple">
@@ -473,7 +477,7 @@ first, you may need to change the “Fixed frame” from e.g. ‘map’ to ‘od
 </ul>
 </section>
 <section id="not-supported-upgrading-from-14-04-to-18-04-via-16-04">
-<h2>Not Supported: Upgrading from 14.04 to 18.04 (via 16.04)<a class="headerlink" href="#not-supported-upgrading-from-14-04-to-18-04-via-16-04" title="Link to this heading">¶</a></h2>
+<h2>Not Supported: Upgrading from 14.04 to 18.04 (via 16.04)<a class="headerlink" href="#not-supported-upgrading-from-14-04-to-18-04-via-16-04" title="Link to this heading"></a></h2>
 <p>Fetch Robotics does not recommend this approach and <em>cannot</em> provide support for this.
 However, if you desire to try to upgrade, the following may be helpful:</p>
 <ul class="simple">
@@ -486,9 +490,9 @@ installing it.</p></li>
 </ul>
 </section>
 <section id="appendices">
-<h2>Appendices<a class="headerlink" href="#appendices" title="Link to this heading">¶</a></h2>
+<h2>Appendices<a class="headerlink" href="#appendices" title="Link to this heading"></a></h2>
 <section id="subsequent-upgrade-notes">
-<h3>Subsequent upgrade notes<a class="headerlink" href="#subsequent-upgrade-notes" title="Link to this heading">¶</a></h3>
+<h3>Subsequent upgrade notes<a class="headerlink" href="#subsequent-upgrade-notes" title="Link to this heading"></a></h3>
 <p>When doing an upgrade of the robot, always follow the steps at
 <a class="reference external" href="http://docs.fetchrobotics.com/care_and_feeding.html#updating-your-robot">Updating Your Robot</a>.</p>
 <p>Particularly if you upgraded to 18.04 prior to August 2019, when doing an upgrade
@@ -501,7 +505,7 @@ of packages via <code class="docutils literal notranslate"><span class="pre">sud
 <p>It is fine to select “install the package maintainer’s version.”</p>
 </section>
 <section id="accessing-boot-menu-on-fetch-robots">
-<h3>Accessing Boot Menu on Fetch Robots<a class="headerlink" href="#accessing-boot-menu-on-fetch-robots" title="Link to this heading">¶</a></h3>
+<h3>Accessing Boot Menu on Fetch Robots<a class="headerlink" href="#accessing-boot-menu-on-fetch-robots" title="Link to this heading"></a></h3>
 <p>You may need to access the boot menu in order to boot from a USB flash
 drive and install Ubuntu 18.04.  Due to different computer motherboards used in the
 past, Fetch research robots may be using one of two BIOS flavors.  Older robots
@@ -515,13 +519,13 @@ press F7 to access the boot menu.</p></li>
 <p>If you fail to get into the boot menu, you can restart the computer and try again.</p>
 </section>
 <section id="disk-filling-issue">
-<h3>Disk filling issue<a class="headerlink" href="#disk-filling-issue" title="Link to this heading">¶</a></h3>
+<h3>Disk filling issue<a class="headerlink" href="#disk-filling-issue" title="Link to this heading"></a></h3>
 <p>Some robots may encounter an issue where Gnome3 fills the disk by spamming /var/log/syslog.
 This issue has a fix that is not available via <cite>apt</cite> yet, but can be manually done:
 <a class="reference external" href="https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1772677/comments/63">see comments here</a>.</p>
 </section>
 <section id="ensuring-robot-s-ethernet-ports-are-configured-correctly">
-<h3>Ensuring robot’s ethernet ports are configured correctly<a class="headerlink" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly" title="Link to this heading">¶</a></h3>
+<h3>Ensuring robot’s ethernet ports are configured correctly<a class="headerlink" href="#ensuring-robot-s-ethernet-ports-are-configured-correctly" title="Link to this heading"></a></h3>
 <p>If you previously did the upgrade to Ubuntu 18.04 prior to August 2019, you should make
 the following fix to the ethernet IP specifications to avoid issues with internet
 access/routing:</p>

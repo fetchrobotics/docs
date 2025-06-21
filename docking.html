@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorial: Auto Docking &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -93,7 +97,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Tutorial: Auto Docking</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/docking.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/docking.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -102,7 +106,7 @@
            <div itemprop="articleBody">
              
   <section id="tutorial-auto-docking">
-<h1>Tutorial: Auto Docking<a class="headerlink" href="#tutorial-auto-docking" title="Link to this heading">¶</a></h1>
+<h1>Tutorial: Auto Docking<a class="headerlink" href="#tutorial-auto-docking" title="Link to this heading"></a></h1>
 <p>Fetch Robotics has released a ROS package for automatically docking your robot
 with a Fetch charging dock. This package uses the scanning laser range finder
 to detect the profile of the charge dock and steers the robot onto the dock.
@@ -110,7 +114,7 @@ Since the profile of the charge dock must be clearly visible, it is important
 that there is separation between docks and there are not any laser-height obstacles
 on either side of the dock.</p>
 <section id="running-the-docking-node">
-<h2>Running the Docking Node<a class="headerlink" href="#running-the-docking-node" title="Link to this heading">¶</a></h2>
+<h2>Running the Docking Node<a class="headerlink" href="#running-the-docking-node" title="Link to this heading"></a></h2>
 <p>But default, the auto docking node is launched at robot startup (via
 <cite>/etc/ros/noetic/robot.launch</cite>)</p>
 <p>A PS4 controller can be used to initiate docking and undocking as described below:</p>
@@ -132,7 +136,7 @@ leave obstacles on the charge dock.</p>
 </div>
 </section>
 <section id="manually-running-the-auto-docking-nodes">
-<h2>Manually Running the Auto Docking Nodes<a class="headerlink" href="#manually-running-the-auto-docking-nodes" title="Link to this heading">¶</a></h2>
+<h2>Manually Running the Auto Docking Nodes<a class="headerlink" href="#manually-running-the-auto-docking-nodes" title="Link to this heading"></a></h2>
 <p>To manually start the auto docking node:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">fetch_auto_dock</span> <span class="n">auto_dock</span><span class="o">.</span><span class="n">launch</span>
 </pre></div>
@@ -143,7 +147,7 @@ interface. A second and third nodes monitor the PS4 joystick in order to trigger
 docking/undocking.</p>
 </section>
 <section id="auto-docking-programmatically">
-<h2>Auto Docking Programmatically<a class="headerlink" href="#auto-docking-programmatically" title="Link to this heading">¶</a></h2>
+<h2>Auto Docking Programmatically<a class="headerlink" href="#auto-docking-programmatically" title="Link to this heading"></a></h2>
 <p>The auto dock node exposes a ROS <a class="reference external" href="http://wiki.ros.org/actionlib/DetailedDescription#Action_Interface_.26_Transport_Layer">action interface</a>
 which can be used to dock the robot. This action interface is also used by the
 demonstration python script.</p>

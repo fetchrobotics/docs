@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Switching your robot to using a PS4 controller &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -86,7 +90,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Switching your robot to using a PS4 controller</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/ps4.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/ps4.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -95,7 +99,7 @@
            <div itemprop="articleBody">
              
   <section id="switching-your-robot-to-using-a-ps4-controller">
-<h1>Switching your robot to using a PS4 controller<a class="headerlink" href="#switching-your-robot-to-using-a-ps4-controller" title="Link to this heading">¶</a></h1>
+<h1>Switching your robot to using a PS4 controller<a class="headerlink" href="#switching-your-robot-to-using-a-ps4-controller" title="Link to this heading"></a></h1>
 <p>This procedure guides you in updating your robot to be controlled
 with a PS4 controller.</p>
 <p>If you are just trying to re-pair you PS4 controller, you can skip to the
@@ -117,7 +121,7 @@ for PlayStation 4</em>).</p></li>
 <p>Third party controllers may not work. Only Sony PS4 controllers have been tested.</p>
 </div>
 <section id="upgrade-your-fetch-robot-s-packages">
-<h2>Upgrade your Fetch robot’s packages<a class="headerlink" href="#upgrade-your-fetch-robot-s-packages" title="Link to this heading">¶</a></h2>
+<h2>Upgrade your Fetch robot’s packages<a class="headerlink" href="#upgrade-your-fetch-robot-s-packages" title="Link to this heading"></a></h2>
 <p>Run the following to upgrade packages that are relevant:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt update
 sudo apt install --only-upgrade ros-noetic-*
@@ -129,7 +133,7 @@ sudo apt install ./$ROBOTTYPE-noetic-config.deb -y
 </div>
 </section>
 <section id="disable-the-ps3-s-ps3joy-driver-service">
-<h2>Disable the PS3’s ps3joy driver/service<a class="headerlink" href="#disable-the-ps3-s-ps3joy-driver-service" title="Link to this heading">¶</a></h2>
+<h2>Disable the PS3’s ps3joy driver/service<a class="headerlink" href="#disable-the-ps3-s-ps3joy-driver-service" title="Link to this heading"></a></h2>
 <p>The following commands will disable the ps3joy systemd service:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">ps3joy</span> <span class="n">stop</span>
 <span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">disable</span> <span class="n">ps3joy</span>
@@ -137,7 +141,7 @@ sudo apt install ./$ROBOTTYPE-noetic-config.deb -y
 </div>
 </section>
 <section id="restart-bluetooth-and-pair-ps4-controller">
-<h2>Restart Bluetooth and Pair PS4 Controller<a class="headerlink" href="#restart-bluetooth-and-pair-ps4-controller" title="Link to this heading">¶</a></h2>
+<h2>Restart Bluetooth and Pair PS4 Controller<a class="headerlink" href="#restart-bluetooth-and-pair-ps4-controller" title="Link to this heading"></a></h2>
 <p>Since ps3joy disables the default Bluetooth service, the following is needed to start
 it again:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">bluetooth</span> <span class="n">restart</span>
@@ -172,7 +176,7 @@ To re-connect the controller, just pressing the center button is required.  Some
 it may take a couple tries.</p>
 </section>
 <section id="enable-the-ds4drv-driver-service-for-the-ps4-controller">
-<h2>Enable the ds4drv driver/service for the PS4 controller<a class="headerlink" href="#enable-the-ds4drv-driver-service-for-the-ps4-controller" title="Link to this heading">¶</a></h2>
+<h2>Enable the ds4drv driver/service for the PS4 controller<a class="headerlink" href="#enable-the-ds4drv-driver-service-for-the-ps4-controller" title="Link to this heading"></a></h2>
 <p>Next we enable the new service (created by the updated install of fetch-noetic-config):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">daemon</span><span class="o">-</span><span class="n">reload</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">ps4joy</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">service</span> <span class="n">ps4joy</span> <span class="n">start</span>
 </pre></div>
@@ -180,7 +184,7 @@ it may take a couple tries.</p>
 <p>This is a custom service that launches <a class="reference external" href="https://github.com/chrippa/ds4drv">ds4drv</a>.</p>
 </section>
 <section id="set-the-robot-to-use-the-ps4-controller">
-<h2>Set the robot to use the PS4 controller<a class="headerlink" href="#set-the-robot-to-use-the-ps4-controller" title="Link to this heading">¶</a></h2>
+<h2>Set the robot to use the PS4 controller<a class="headerlink" href="#set-the-robot-to-use-the-ps4-controller" title="Link to this heading"></a></h2>
 <p>To enable the PS4 controller inputs to move the robot, a param needs to be set in
 /etc/ros/noetic/robot.launch.</p>
 <p>If your robot is using a robot.launch file that you restored after installing ROS Noetic, you
@@ -205,7 +209,7 @@ may need to make the following modification to your robot.launch file to add the
 </section>
 </section>
 <section id="troubleshooting">
-<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h1>
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h1>
 <p>If you run into issues, check the following when the controller is connected:</p>
 <ul class="simple">
 <li><p>Does <code class="docutils literal notranslate"><span class="pre">jstest</span> <span class="pre">/dev/ps4joy</span></code> reflect movement of the PS4 controller when it is connected?</p></li>
@@ -214,7 +218,7 @@ may need to make the following modification to your robot.launch file to add the
 </ul>
 </section>
 <section id="reverting-back-to-using-ps3-controller">
-<h1>Reverting back to using PS3 controller<a class="headerlink" href="#reverting-back-to-using-ps3-controller" title="Link to this heading">¶</a></h1>
+<h1>Reverting back to using PS3 controller<a class="headerlink" href="#reverting-back-to-using-ps3-controller" title="Link to this heading"></a></h1>
 <p>While not recommended, in case you encounter issues and need to switch back, the below
 outlines the steps to revert the procedures above:</p>
 <ol class="arabic simple">

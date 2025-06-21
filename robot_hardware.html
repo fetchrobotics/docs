@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robot Hardware Overview &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -129,7 +133,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Robot Hardware Overview</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/robot_hardware.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/robot_hardware.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -138,9 +142,9 @@
            <div itemprop="articleBody">
              
   <section id="robot-hardware-overview">
-<h1>Robot Hardware Overview<a class="headerlink" href="#robot-hardware-overview" title="Link to this heading">¶</a></h1>
+<h1>Robot Hardware Overview<a class="headerlink" href="#robot-hardware-overview" title="Link to this heading"></a></h1>
 <section id="mechanism-terminology">
-<h2>Mechanism Terminology<a class="headerlink" href="#mechanism-terminology" title="Link to this heading">¶</a></h2>
+<h2>Mechanism Terminology<a class="headerlink" href="#mechanism-terminology" title="Link to this heading"></a></h2>
 <p>The Fetch and Freight kinematics are defined by using the concepts of
 joints, links, and coordinate frames. The robot URDF (unified robot
 description format) model specifies the attributes (kinematic tree,
@@ -152,20 +156,20 @@ continuous fixed, prismatic, floating, or planar). Fixed joints are
 typically used to describe the relationship between two rigidly joined
 components in the robot.</p>
 <section id="link">
-<h3>Link<a class="headerlink" href="#link" title="Link to this heading">¶</a></h3>
+<h3>Link<a class="headerlink" href="#link" title="Link to this heading"></a></h3>
 <p>The links for the Fetch and Freight are defined in the URDF description
 that are located in the fetch_description or freight_description
 package respectively.</p>
 </section>
 <section id="frame">
-<h3>Frame<a class="headerlink" href="#frame" title="Link to this heading">¶</a></h3>
+<h3>Frame<a class="headerlink" href="#frame" title="Link to this heading"></a></h3>
 <p>Frames represent the coordinate frames of links, detected objects,
 sensors, or the location of another robot in the world. Frames are
 define relative to other frames and the transformations between each
 frame is tracked using TF.</p>
 </section>
 <section id="joint">
-<h3>Joint<a class="headerlink" href="#joint" title="Link to this heading">¶</a></h3>
+<h3>Joint<a class="headerlink" href="#joint" title="Link to this heading"></a></h3>
 <p>A joints define the relationship between links and are defined in the
 URDF description that can be found in the fetch_description or
 freight_description package respectively. In the Fetch and Freight the
@@ -177,7 +181,7 @@ instead of force or torque. Position, and velocity are both used to
 describe linear and angular motion of a joint.</p>
 </section>
 <section id="fetch-home-pose">
-<h3>Fetch Home Pose<a class="headerlink" href="#fetch-home-pose" title="Link to this heading">¶</a></h3>
+<h3>Fetch Home Pose<a class="headerlink" href="#fetch-home-pose" title="Link to this heading"></a></h3>
 <p>The home pose of the Fetch robot is used to describe the joint
 positions in a consistent manner. The home pose is defined as the
 robot arm straight out in front of the robot with all x-axes aligned,
@@ -188,7 +192,7 @@ are not at the joint zero and the URDF of the Fetch contains the
 offsets for each joint.</p>
 </section>
 <section id="coordinate-system">
-<h3>Coordinate System<a class="headerlink" href="#coordinate-system" title="Link to this heading">¶</a></h3>
+<h3>Coordinate System<a class="headerlink" href="#coordinate-system" title="Link to this heading"></a></h3>
 <p>The coordinate frames for all links in the Fetch and Freight are defined
 with positive z-axis up, positive x-axis forward, and positive y-axis
 to the robot-left when Fetch is in the home pose. All joint angle
@@ -197,7 +201,7 @@ of the joint results in positive motion around a positive axis of a
 joint coordinate frame (i.e. right handed).</p>
 </section>
 <section id="naming-conventions">
-<h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Link to this heading">¶</a></h3>
+<h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Link to this heading"></a></h3>
 <p>In general, the names for a link, a joint, and frame will be similar
 (e.g. shoulder_pan_link, shoulder_pan_joint, and
 shoulder_pan_frame). Short prefixes are used to describe the location
@@ -213,17 +217,17 @@ direction of joint motion.</p>
 </section>
 </section>
 <section id="mechanical-overview">
-<h2>Mechanical Overview<a class="headerlink" href="#mechanical-overview" title="Link to this heading">¶</a></h2>
+<h2>Mechanical Overview<a class="headerlink" href="#mechanical-overview" title="Link to this heading"></a></h2>
 <p>Do not operate Fetch or Freight before reviewing the mechanical
 information listed below.</p>
 <section id="environmental">
-<h3>Environmental<a class="headerlink" href="#environmental" title="Link to this heading">¶</a></h3>
+<h3>Environmental<a class="headerlink" href="#environmental" title="Link to this heading"></a></h3>
 <p>The Fetch and Freight Research Edition Robots are indoor laboratory
 robots. Operating outside this type of environment could cause
 damage to the Fetch and Freight robots, and injury or death to
 operators.</p>
 <section id="drive-surface">
-<h4>Drive Surface<a class="headerlink" href="#drive-surface" title="Link to this heading">¶</a></h4>
+<h4>Drive Surface<a class="headerlink" href="#drive-surface" title="Link to this heading"></a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>The drive surface of the Fetch must be capable of supporting the
@@ -238,7 +242,7 @@ and fail to drive. A commercial carpet or tile is recommended.</p></li>
 </div></blockquote>
 </section>
 <section id="incline-surface">
-<h4>Incline Surface<a class="headerlink" href="#incline-surface" title="Link to this heading">¶</a></h4>
+<h4>Incline Surface<a class="headerlink" href="#incline-surface" title="Link to this heading"></a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Fetch and Freight are ready for ADA-compliant ramps, which are at no
@@ -248,7 +252,7 @@ are unsafe and may be a tipping hazard.</p></li>
 </div></blockquote>
 </section>
 <section id="water">
-<h4>Water<a class="headerlink" href="#water" title="Link to this heading">¶</a></h4>
+<h4>Water<a class="headerlink" href="#water" title="Link to this heading"></a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Fetch and Freight have not been tested for any type of contact with water
@@ -260,7 +264,7 @@ circuitry and the mechanism.</p></li>
 </div></blockquote>
 </section>
 <section id="temperature-and-humidity">
-<h4>Temperature and Humidity<a class="headerlink" href="#temperature-and-humidity" title="Link to this heading">¶</a></h4>
+<h4>Temperature and Humidity<a class="headerlink" href="#temperature-and-humidity" title="Link to this heading"></a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Fetch and Freight are designed to run in environments between 15C and 35C.</p></li>
@@ -271,7 +275,7 @@ Never use Fetch or Freight around stoves or ovens.</p></li>
 </section>
 </section>
 <section id="forces-and-torques">
-<h3>Forces and Torques<a class="headerlink" href="#forces-and-torques" title="Link to this heading">¶</a></h3>
+<h3>Forces and Torques<a class="headerlink" href="#forces-and-torques" title="Link to this heading"></a></h3>
 <p>Joint position, velocity, and force limits are implemented in the
 Fetch and Freight URDF file as well as in firmware. Firmware implements
 additional power limits. These joint limits control the range of
@@ -354,7 +358,7 @@ velocity or torque limit is not specified, no value is enforced.</p>
 </table>
 </section>
 <section id="joint-limits-and-types">
-<h3>Joint Limits and Types<a class="headerlink" href="#joint-limits-and-types" title="Link to this heading">¶</a></h3>
+<h3>Joint Limits and Types<a class="headerlink" href="#joint-limits-and-types" title="Link to this heading"></a></h3>
 <p>The position limits for Fetch and Freight are specified below. These
 “hard limits” are the maximum travel for the mechanism.</p>
 <table class="docutils align-default">
@@ -430,7 +434,7 @@ velocity or torque limit is not specified, no value is enforced.</p>
 </table>
 </section>
 <section id="mount-points">
-<h3>Mount Points<a class="headerlink" href="#mount-points" title="Link to this heading">¶</a></h3>
+<h3>Mount Points<a class="headerlink" href="#mount-points" title="Link to this heading"></a></h3>
 <p>Fetch and Freight both have mount points on top of the robot
 base. Fetch also has mount points on the head and gripper. The table
 below lists the fasteners that should be used and the max torques to
@@ -471,7 +475,7 @@ On older robots, this depth may be limited to 4mm.</p>
 </div>
 </section>
 <section id="gripper-modularity-interface">
-<h3>Gripper Modularity Interface<a class="headerlink" href="#gripper-modularity-interface" title="Link to this heading">¶</a></h3>
+<h3>Gripper Modularity Interface<a class="headerlink" href="#gripper-modularity-interface" title="Link to this heading"></a></h3>
 <p>The gripper interface is modular, allowing the gripper to be replaced with alternate
 configurations. The gripper interface is based on an ISO mechanical standard,
 Ethernet communications and 24V power. For further details, contact Fetch Robotics
@@ -479,7 +483,7 @@ for the <cite>Gripper Interface Specification</cite> document.</p>
 </section>
 </section>
 <section id="electrical-overview">
-<h2>Electrical Overview<a class="headerlink" href="#electrical-overview" title="Link to this heading">¶</a></h2>
+<h2>Electrical Overview<a class="headerlink" href="#electrical-overview" title="Link to this heading"></a></h2>
 <p>Internally, Fetch and Freight have a number of circuit boards,
 communication buses, and other components which
 handle power distribution and motion control. The system
@@ -522,7 +526,7 @@ in the robot base. The batteries are connected in series, providing the nominal
 24V power rail for the robot. These batteries are kept charged by the mainboard (see
 <a class="reference internal" href="care_and_feeding.html#charging"><span class="std std-ref">Charging</span></a>).</p>
 <section id="breakers">
-<span id="id1"></span><h3>Breakers<a class="headerlink" href="#breakers" title="Link to this heading">¶</a></h3>
+<span id="id1"></span><h3>Breakers<a class="headerlink" href="#breakers" title="Link to this heading"></a></h3>
 <p>There are several breakers within the robot. These are designed in order to prevent
 damage to the robot if cabling should become worn or shorted out, or in the case
 of sudden, unexpected overload of a joint. The table below describes each breaker,
@@ -563,7 +567,7 @@ with the mainboard.</p>
 </figure>
 </section>
 <section id="power-disconnect-switch">
-<span id="power-disconnect"></span><h3>Power Disconnect Switch<a class="headerlink" href="#power-disconnect-switch" title="Link to this heading">¶</a></h3>
+<span id="power-disconnect"></span><h3>Power Disconnect Switch<a class="headerlink" href="#power-disconnect-switch" title="Link to this heading"></a></h3>
 <p>The power disconnect is on the lower back of the robot. This switch
 cuts the power between the battery and the mainboard. It also acts as
 a breaker, limiting the total current that can be delivered by the
@@ -573,14 +577,14 @@ batteries.</p>
 </figure>
 </section>
 <section id="runstop">
-<h3>Runstop<a class="headerlink" href="#runstop" title="Link to this heading">¶</a></h3>
+<h3>Runstop<a class="headerlink" href="#runstop" title="Link to this heading"></a></h3>
 <p>The runstop is used to stop all operation of the joints. It works by disabling
 the base, arm and gripper breakers. When the runstop is pressed, the drivers
 will not be able to communicate with the MCBs, and thus their position and
 other data will not update in RVIZ nor the runtime monitor.</p>
 </section>
 <section id="access-panel">
-<span id="id2"></span><h3>Access Panel<a class="headerlink" href="#access-panel" title="Link to this heading">¶</a></h3>
+<span id="id2"></span><h3>Access Panel<a class="headerlink" href="#access-panel" title="Link to this heading"></a></h3>
 <p>Fetch and Freight both have an access panel with 2 USB, an Ethernet, and an
 HD Video port. All of these ports are connected directly to the onboard
 computer. In addition, Fetch has an extra USB port on the head.</p>
@@ -625,7 +629,7 @@ blinking until the computer has successfully shut down, and then power
 will be disconnected.</p>
 </section>
 <section id="freight-extensibility-interfaces">
-<h3>Freight Extensibility Interfaces<a class="headerlink" href="#freight-extensibility-interfaces" title="Link to this heading">¶</a></h3>
+<h3>Freight Extensibility Interfaces<a class="headerlink" href="#freight-extensibility-interfaces" title="Link to this heading"></a></h3>
 <figure class="align-centered align-center">
 <a class="reference internal image-reference" href="_images/f100-connector-faceplates.png"><img alt="_images/f100-connector-faceplates.png" src="_images/f100-connector-faceplates.png" style="width: 60%;" /></a>
 </figure>
@@ -641,7 +645,7 @@ described in <a class="reference internal" href="api_overview.html#resetting-bre
 </section>
 </section>
 <section id="motion-control">
-<h2>Motion Control<a class="headerlink" href="#motion-control" title="Link to this heading">¶</a></h2>
+<h2>Motion Control<a class="headerlink" href="#motion-control" title="Link to this heading"></a></h2>
 <p>Each joint has a dedicated motor controller board (MCB) with a dedicated
 microcontroller. The real-time components of the controls run on the
 MCBs, while the robot computer streams commands to the MCBs.</p>
@@ -670,9 +674,9 @@ robot computer and send commands to the MCBs using the
 robot_controllers_interface package.</p>
 </section>
 <section id="sensor-overview">
-<h2>Sensor Overview<a class="headerlink" href="#sensor-overview" title="Link to this heading">¶</a></h2>
+<h2>Sensor Overview<a class="headerlink" href="#sensor-overview" title="Link to this heading"></a></h2>
 <section id="base-laser">
-<h3>Base Laser<a class="headerlink" href="#base-laser" title="Link to this heading">¶</a></h3>
+<h3>Base Laser<a class="headerlink" href="#base-laser" title="Link to this heading"></a></h3>
 <p>Both Fetch and Freight have a SICK TIM571 scanning range finder. The
 laser has a range of 25m, 220° field of view, 15Hz update rate
 and angular resolution of 1/3°. The laser publishes both distance
@@ -680,20 +684,20 @@ and RSSI (Received Signal Strength Indication)
 to the <strong>base_scan</strong> topic.</p>
 </section>
 <section id="imu">
-<h3>IMU<a class="headerlink" href="#imu" title="Link to this heading">¶</a></h3>
+<h3>IMU<a class="headerlink" href="#imu" title="Link to this heading"></a></h3>
 <p>The mainboard of Fetch and Freight have a 6-axis inertial measurement
 unit (IMU). The gyroscope within the IMU is capable of measuring
 +/-2000 degrees per second, while the accelerometers are capable of
 measuring +/-2g. See <a class="reference internal" href="api_overview.html#imu-api"><span class="std std-ref">IMU Interface</span></a> for details on the ROS API.</p>
 </section>
 <section id="head-camera">
-<h3>Head Camera<a class="headerlink" href="#head-camera" title="Link to this heading">¶</a></h3>
+<h3>Head Camera<a class="headerlink" href="#head-camera" title="Link to this heading"></a></h3>
 <p>Fetch has a Primesense Carmine 1.09 short-range RGBD sensor. This
 camera is best calibrated in the 0.35-1.4m range. See <a class="reference internal" href="api_overview.html#camera-api"><span class="std std-ref">Head Camera Interface</span></a>
 for details on the ROS API.</p>
 </section>
 <section id="gripper-sensors">
-<h3>Gripper Sensors<a class="headerlink" href="#gripper-sensors" title="Link to this heading">¶</a></h3>
+<h3>Gripper Sensors<a class="headerlink" href="#gripper-sensors" title="Link to this heading"></a></h3>
 <p>In addition to the position and effort feedback of the gripper joint, the
 gripper incorporates a 6-axis inertial measurement unit (IMU). The gyroscope within
 the IMU is capable of measuring +/-2000 degrees per second, while the

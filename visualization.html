@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorial: Visualization &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -92,7 +96,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Tutorial: Visualization</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/visualization.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/visualization.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -101,9 +105,9 @@
            <div itemprop="articleBody">
              
   <section id="tutorial-visualization">
-<h1>Tutorial: Visualization<a class="headerlink" href="#tutorial-visualization" title="Link to this heading">¶</a></h1>
+<h1>Tutorial: Visualization<a class="headerlink" href="#tutorial-visualization" title="Link to this heading"></a></h1>
 <section id="visualizing-with-rviz">
-<span id="rviz"></span><h2>Visualizing with RVIZ<a class="headerlink" href="#visualizing-with-rviz" title="Link to this heading">¶</a></h2>
+<span id="rviz"></span><h2>Visualizing with RVIZ<a class="headerlink" href="#visualizing-with-rviz" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rosrun rviz rviz
 </pre></div>
@@ -131,7 +135,7 @@ The default <code class="docutils literal notranslate"><span class="pre">.rviz</
 </figure>
 </section>
 <section id="using-the-runtime-monitor">
-<h2>Using the Runtime Monitor<a class="headerlink" href="#using-the-runtime-monitor" title="Link to this heading">¶</a></h2>
+<h2>Using the Runtime Monitor<a class="headerlink" href="#using-the-runtime-monitor" title="Link to this heading"></a></h2>
 <p>Fetch and Freight publish ROS diagnostics messages. These are human-readable
 messages that inform users of the robot system state. The <cite>runtime_monitor</cite>,
 part of <code class="docutils literal notranslate"><span class="pre">rqt_robot_plugins</span></code> can be used to view diagnostics from your

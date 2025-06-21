@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorial: Calibrating Fetch &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -99,7 +103,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Tutorial: Calibrating Fetch</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/calibration.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/calibration.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -108,7 +112,7 @@
            <div itemprop="articleBody">
              
   <section id="tutorial-calibrating-fetch">
-<h1>Tutorial: Calibrating Fetch<a class="headerlink" href="#tutorial-calibrating-fetch" title="Link to this heading">¶</a></h1>
+<h1>Tutorial: Calibrating Fetch<a class="headerlink" href="#tutorial-calibrating-fetch" title="Link to this heading"></a></h1>
 <p>Calibrating your Fetch Research Edition Robot is essential to getting
 the best performance. Fetch Robotics recommends re-calibrating the robot
 after every shipping or travel excursion your robot undertakes.</p>
@@ -118,7 +122,7 @@ after every shipping or travel excursion your robot undertakes.</p>
 Research Edition Robot.  This page is only applicable to the Fetch.</p>
 </div>
 <section id="understanding-calibration">
-<h2>Understanding Calibration<a class="headerlink" href="#understanding-calibration" title="Link to this heading">¶</a></h2>
+<h2>Understanding Calibration<a class="headerlink" href="#understanding-calibration" title="Link to this heading"></a></h2>
 <p>The <cite>fetch_calibration</cite> package provides a method of making sure that the
 hand-eye coordination of the robot is well calibrated. Calibration involves:</p>
 <blockquote>
@@ -150,7 +154,7 @@ are calibrated. Their updated values are stored in robot.launch.</p></li>
 </div></blockquote>
 </section>
 <section id="calibrate-robot-tool">
-<h2>Calibrate Robot Tool<a class="headerlink" href="#calibrate-robot-tool" title="Link to this heading">¶</a></h2>
+<h2>Calibrate Robot Tool<a class="headerlink" href="#calibrate-robot-tool" title="Link to this heading"></a></h2>
 <p>The <cite>fetch_calibration</cite> package provides a tool called <cite>calibrate_robot</cite>
 which fully automates tasks related to calibration. Once you have sourced
 the ROS setup.bash, running <cite>calibrate_robot</cite> without any arguments will
@@ -183,7 +187,7 @@ has not yet been calibrated):</p>
 </div>
 </section>
 <section id="running-calibration">
-<h2>Running Calibration<a class="headerlink" href="#running-calibration" title="Link to this heading">¶</a></h2>
+<h2>Running Calibration<a class="headerlink" href="#running-calibration" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Calibration will cause the arm to move through the environment. Raise the
@@ -222,7 +226,7 @@ back to the previous calibration with:</p>
 </div>
 </section>
 <section id="calibrating-fetch-torso">
-<span id="torso-calibration"></span><h2>Calibrating Fetch Torso<a class="headerlink" href="#calibrating-fetch-torso" title="Link to this heading">¶</a></h2>
+<span id="torso-calibration"></span><h2>Calibrating Fetch Torso<a class="headerlink" href="#calibrating-fetch-torso" title="Link to this heading"></a></h2>
 <p>When the torso controller board is first powered, it uses measurements from two different
 position sensors to determine the absolute starting position of the torso.
 Once the absolute starting position of the torso is determined, the position measurement
@@ -249,7 +253,7 @@ the robot drivers will be stopped and the robot arm will not hold its position.
 Because of this, the arm should be tucked or soft fabric or cardboard
 should be placed between arm and base to avoid scratching any covers.</p>
 <section id="torso-calibration-procedure">
-<h3>Torso Calibration Procedure<a class="headerlink" href="#torso-calibration-procedure" title="Link to this heading">¶</a></h3>
+<h3>Torso Calibration Procedure<a class="headerlink" href="#torso-calibration-procedure" title="Link to this heading"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>During torso calibration the arm will not hold position.
@@ -279,7 +283,7 @@ and is required in some situations.</p></li>
 </ol>
 </section>
 <section id="calibration-output">
-<h3>Calibration Output<a class="headerlink" href="#calibration-output" title="Link to this heading">¶</a></h3>
+<h3>Calibration Output<a class="headerlink" href="#calibration-output" title="Link to this heading"></a></h3>
 <p>Once the tool has completed the calibration procedure it will check the expected results of calibration.
 If everything checks out, the <code class="docutils literal notranslate"><span class="pre">torso_calibrate</span> <span class="pre">calibrate</span></code> will output something similar to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERIFY</span> <span class="n">PASSED</span> <span class="p">:</span> <span class="nb">max</span> <span class="n">sensor</span> <span class="n">error</span> <span class="n">of</span> <span class="mf">0.0116824</span> <span class="ow">is</span> <span class="n">within</span> <span class="n">acceptable</span> <span class="n">limit</span>
@@ -297,7 +301,7 @@ The accuracy of the torso position measurement is unrelated to this value.</p>
 </div>
 </section>
 <section id="output-when-verifying-new-torso-calibration">
-<h3>Output When Verifying New Torso Calibration<a class="headerlink" href="#output-when-verifying-new-torso-calibration" title="Link to this heading">¶</a></h3>
+<h3>Output When Verifying New Torso Calibration<a class="headerlink" href="#output-when-verifying-new-torso-calibration" title="Link to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">torso_calibrate</span> <span class="pre">verify</span></code> will produce output stating whether sensors are well
 calibrated. If the sensor calibration is good, then this command will
 output something similar to:</p>

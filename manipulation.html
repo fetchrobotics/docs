@@ -5,10 +5,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorial: Manipulation &mdash; Fetch &amp; Freight Research Edition Noetic documentation</title>
-      <link rel="stylesheet" href="_static/override.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/override.css?v=113dbd17" />
 
   
   
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=88552153"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -96,7 +100,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Tutorial: Manipulation</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fetchrobotics/docs/blob/master/source/manipulation.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fetchrobotics/docs/blob/noetic-docs/source/manipulation.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -105,10 +109,10 @@
            <div itemprop="articleBody">
              
   <section id="tutorial-manipulation">
-<h1>Tutorial: Manipulation<a class="headerlink" href="#tutorial-manipulation" title="Link to this heading">¶</a></h1>
+<h1>Tutorial: Manipulation<a class="headerlink" href="#tutorial-manipulation" title="Link to this heading"></a></h1>
 <p>Once you have Fetch running, you can start moving the arm with MoveIt.</p>
 <section id="getting-started-demo">
-<h2>Getting Started Demo<a class="headerlink" href="#getting-started-demo" title="Link to this heading">¶</a></h2>
+<h2>Getting Started Demo<a class="headerlink" href="#getting-started-demo" title="Link to this heading"></a></h2>
 <p>The easiest way to run MoveIt is to run the demo launch file,
 which does not require any simulator or robot and brings up a
 fully configured RVIZ instance:</p>
@@ -121,11 +125,11 @@ and use interactive markers to create new locations to plan
 to and from.</p>
 </section>
 <section id="running-the-pick-and-place-demo">
-<h2>Running the Pick and Place Demo<a class="headerlink" href="#running-the-pick-and-place-demo" title="Link to this heading">¶</a></h2>
+<h2>Running the Pick and Place Demo<a class="headerlink" href="#running-the-pick-and-place-demo" title="Link to this heading"></a></h2>
 <p>See <a class="reference internal" href="gazebo.html#mm-demo"><span class="std std-ref">Running the Mobile Manipulation Demo</span></a>.</p>
 </section>
 <section id="running-moveit-on-a-robot">
-<h2>Running MoveIt on a Robot<a class="headerlink" href="#running-moveit-on-a-robot" title="Link to this heading">¶</a></h2>
+<h2>Running MoveIt on a Robot<a class="headerlink" href="#running-moveit-on-a-robot" title="Link to this heading"></a></h2>
 <p>To run MoveIt on a real or simulated robot, launch the
 move_group.launch file from the <code class="docutils literal notranslate"><span class="pre">fetch_moveit_config</span></code> package:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;$ roslaunch fetch_moveit_config move_group.launch
@@ -138,7 +142,7 @@ or use the programming interface, <code class="docutils literal notranslate"><sp
 or <a class="reference external" href="http://docs.ros.org/indigo/api/pr2_moveit_tutorials/html/planning/scripts/doc/move_group_python_interface_tutorial.html">Python</a>.</p>
 </section>
 <section id="simple-moveit-disco-example">
-<h2>Simple MoveIt Disco Example<a class="headerlink" href="#simple-moveit-disco-example" title="Link to this heading">¶</a></h2>
+<h2>Simple MoveIt Disco Example<a class="headerlink" href="#simple-moveit-disco-example" title="Link to this heading"></a></h2>
 <p>This python script will run the robot through a simple disco dance motion.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
@@ -215,7 +219,7 @@ or <a class="reference external" href="http://docs.ros.org/indigo/api/pr2_moveit
 </div>
 </section>
 <section id="simple-moveit-wave-example">
-<h2>Simple MoveIt Wave Example<a class="headerlink" href="#simple-moveit-wave-example" title="Link to this heading">¶</a></h2>
+<h2>Simple MoveIt Wave Example<a class="headerlink" href="#simple-moveit-wave-example" title="Link to this heading"></a></h2>
 <p>This python script will cause the robot to do a simple “wave-like” motion
 until the script is stopped with ctrl-c</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
@@ -293,7 +297,7 @@ until the script is stopped with ctrl-c</p>
 </div>
 </section>
 <section id="more-information-and-tutorials-on-moveit">
-<h2>More information and Tutorials on MoveIt<a class="headerlink" href="#more-information-and-tutorials-on-moveit" title="Link to this heading">¶</a></h2>
+<h2>More information and Tutorials on MoveIt<a class="headerlink" href="#more-information-and-tutorials-on-moveit" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="https://moveit.ros.org/">General information</a> and <a class="reference external" href="http://docs.ros.org/en/melodic/api/moveit_tutorials/html/index.html">Tutorials</a> available at moveit.ros.org.</p>
 </section>
 </section>
