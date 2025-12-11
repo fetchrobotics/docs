@@ -1,6 +1,11 @@
 Introduction
 ============
 
+.. note::
+   **Product Discontinuation Notice:** The Fetch and Freight Research Edition robots
+   are no longer supported or sold by Zebra Technologies as of 2024. This documentation is preserved for
+   existing users and historical reference.
+
 This manual is intended to help users successfully install, use, and develop
 code on Fetch and Freight Research Edition robots. The software installed on
 both robots is based on ROS. Please visit ros.org to learn more about ROS.
