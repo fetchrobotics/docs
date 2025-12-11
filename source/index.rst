@@ -4,6 +4,11 @@
 Fetch & Freight Manual
 ----------------------
 
+.. note::
+   **Product Discontinuation Notice:** The Fetch and Freight Research Edition robots
+   are no longer supported or sold by Zebra Technologies as of 2024. This documentation is preserved for
+   existing users and historical reference.
+
 This manual can also be downloaded as a `PDF <http://docs.fetchrobotics.com/FetchRobotics.pdf>`_.
 
 .. toctree::
